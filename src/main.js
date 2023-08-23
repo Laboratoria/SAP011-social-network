@@ -4,9 +4,11 @@
 
 // myFunction();
 
+import { register } from "./lib/register.js";
+
 function getContent(fragmentId) {
   const pages = {
-    home: "This is the Home page. Welcome to my site.",
+    home: register,
     about: "This page will describe what my site is about",
     contact: "Contact me on this page if you have any questions",
   };
