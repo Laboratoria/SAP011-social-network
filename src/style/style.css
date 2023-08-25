@@ -7,6 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
     /* border: dotted 1px #000; */
 }
 
@@ -29,7 +30,8 @@ main {
 
 #main-register p {
     text-align: center;
-    font-size: 0.9rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6rem;
     margin-bottom: 30px;
 }
 
@@ -43,16 +45,16 @@ main {
     flex-direction: column;
 }
 
-#main-register div #figures {
-    display: none;
-}
-
-
-#main-register div #form-container {
-    width: 85%;
-    height: 600px;
-    border-radius: 20px;
+#main-register #form-container {
+    width: 80%;
+    height: 450px;
+    border-radius: 25px;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 30px;
     background-color: #fff;
 }
 
@@ -60,6 +62,67 @@ main {
     width: 200px;
     height: 200px;
     position: absolute;
+}
+
+#green-ball {
+    background-color: #33bbc5;
+    top: 160px;
+    left: -80px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+#purple-ball {
+    top: 460px;
+    right: 0;
+    z-index: -1;
+}
+
+#purple-ball img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+}
+
+#main-register #form-container img {
+    height: 65px;
+    width: 65px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#form-container form {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6em;
+    color: grey;
+    margin: 0.7em 0;
+    text-transform: uppercase;
+}
+
+.input {
+    height: 35px;
+    background-color: #D8D9DA;
+    border: none;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+#submit {
+    width: 70%;
+    height: 35px;
+    border: none;
+    align-self: center;
+    margin-top: 40px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #33bbc5;
 }
 
 @media (min-width: 1024px) {
@@ -77,14 +140,41 @@ main {
         justify-content: space-evenly;
     }
 
-    #main-register div #figures {
-        display: block;
-        width: 55%;
-        border: dotted 1px blue;
+    #main-register #form-container {
+        width: 50%;
+        height: fit-content;
+        padding-bottom: 30px;
     }
 
-    #main-register div #form-container {
-        border: dotted 1px blue;
-        width: 40%;
+    #green-ball {
+        top: 80px;
+        left: 300px;
     }
+
+    #purple-ball {
+        top: 520px;
+        right: 300px;
+        background-color: #614bc3;
+        border-radius: 50%;
+    }
+    
+    #purple-ball img {
+        display: none;
+    }
+
+    #main-register #form-container img {
+        height: 85px;
+        width: 85px;
+        margin-top: 1.5em;
+        margin-bottom: 0;
+    }
+
+    #form-container form {
+        width: 55%;
+    }
+
+    label {
+        font-size: 0.8em;
+    }
+
 }
