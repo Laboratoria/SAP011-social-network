@@ -13,6 +13,10 @@ function fillMain() {
 
 fillMain();
 
+function goToTimeline() {}
+
+toTimeline.addEventListner("click", goToTimeline);
+
 // function getContent(fragmentId) {
 //   const pages = {
 //     home: register,
