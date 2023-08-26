@@ -114,17 +114,27 @@ main {
   display: none;
 }
 
+#main-register #purple-ball,
 #main-welcome #purple-ball {
+  top: 440px;
+  right: 0;
+  z-index: -2;
+}
+
+#main-welcome #purple {
   top: 280px;
   right: 0;
   z-index: -2;
 }
 
+#main-welcome #purple img {
+    width: 330px;
+    z-index: -2;
+}
+
 #main-register #purple-ball img {
   width: 200px;
   height: 200px;
-  top: 280px;
-  right: 0;
   z-index: -1;
 }
 
@@ -229,22 +239,22 @@ footer p {
     z-index: -1;
   }
 
+  #main-register #purple-ball {
+    display: none;
+  }
   #main-welcome #green-ball {
     display: none;
   }
 
-  #main-welcome #purple-ball {
-    top: 200px;
+  #main-welcome #purple {
+    top: 220px;
+    right: 0;
+    z-index: -2;
   }
-
-  #main-welcome #purple-ball img {
-    top: 200px;
-    width: 600px;
-  }
-
-  #main-register #purple-ball {
-    display: none;
-    z-index: -4;
+  
+  #main-welcome #purple img {
+      width: 560px;
+      z-index: -2;
   }
 
   #main-register #form-container img {
