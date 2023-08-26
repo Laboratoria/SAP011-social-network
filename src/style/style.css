@@ -114,8 +114,8 @@ main {
   display: none;
 }
 
-#purple-ball {
-  top: 440px;
+#main-welcome #purple-ball {
+  top: 280px;
   right: 0;
   z-index: -2;
 }
@@ -196,6 +196,10 @@ footer p {
     font-size: 2.5rem;
   }
 
+  #main-welcome h1 {
+    font-size: 3rem;
+  }
+
   #main-register #container {
     display: flex;
     flex-direction: row;
@@ -227,6 +231,15 @@ footer p {
 
   #main-welcome #green-ball {
     display: none;
+  }
+
+  #main-welcome #purple-ball {
+    top: 200px;
+  }
+
+  #main-welcome #purple-ball img {
+    top: 200px;
+    width: 600px;
   }
 
   #main-register #purple-ball {
