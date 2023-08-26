@@ -35,6 +35,8 @@ export default `
         </form>
         </div>
 
+        <p><a href="#welcome">Tela de boas-vindas</a></p>
+        
         <div class="decoration" id="green-ball"></div>
         <div id="purple-div"></div>
         <div class="decoration" id="purple-ball">

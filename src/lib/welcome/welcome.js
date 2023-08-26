@@ -7,7 +7,7 @@ export default `
           realizado com sucesso!
         </h3>
 
-        <a href="#register" id="toTimeline">Ver postagens</a>
+        <a href="#timeline" id="toTimeline">Ver postagens</a>
 
         <div class="decoration" id="green-ball"></div>
         <div class="decoration" id="purple">

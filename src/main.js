@@ -2,14 +2,17 @@
 
 // myFunction();
 
+import home from "./lib/home/home.js";
 import register from "./lib/register/register.js";
 import welcome from "./lib/welcome/welcome.js";
+import timeline from "./lib/timeline/timeline.js";
 
 function getContent(fragmentId) {
   const pages = {
-    home: ` Estamos na Home <br> Acesse a tela de boas-vindas do link: <a href="#welcome">Welcome</a>`,
+    home: home,
     register: register,
     welcome: welcome,
+    timeline: timeline,
   };
 
   return pages[fragmentId];
