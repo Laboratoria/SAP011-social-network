@@ -10,7 +10,7 @@ function getContent(fragmentId) {
     home: ` Estamos na Home <br> Acesse a tela de boas-vindas do link: <a href="#welcome">Welcome</a>`,
     register: `<section id="main-register">
     <h1>Crie sua conta</h1>
-    <p><a href="">Já é registrado? Faça Login.</a></p>
+    <p><a href="#home">Já é registrado? Faça Login.</a></p>
 
     <div id="form-container">
       <img src="./img/photo-profile.png" alt="foto de perfil ilustrativa" />
@@ -44,11 +44,10 @@ function getContent(fragmentId) {
       </form>
     </div>
 
-    <a href="#home">Voltar para Home</a>
-
     <div class="decoration" id="green-ball"></div>
+    <div id="purple-div"></div>
     <div class="decoration" id="purple-ball">
-      <img src="./img/purple-ball.png" alt="" />
+          <img src="./img/purple-ball.png" alt="" id="half-ball"/>
     </div>
   </section>`,
 
