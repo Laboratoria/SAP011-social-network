@@ -1,5 +1,5 @@
 export default () => {
-  const content = `
+  const register = `
                 <h1>Crie sua conta</h1>
                 <p><a href="">Já é registrado? Faça Login.</a></p>
         
@@ -33,6 +33,6 @@ export default () => {
                 <div class="decoration" id="purple-ball">
                 <img src="./img/purple-ball.png" alt="" />
                 </div>
-                <p>by Julia Ribeiro e Vanessa Ponte</p>
+
         `;
 };
