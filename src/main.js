@@ -1,7 +1,3 @@
-// import { myFunction } from './lib/index.js';
-
-// myFunction();
-
 import home from "./lib/home/home.js";
 import register from "./lib/register/register.js";
 import welcome from "./lib/welcome/welcome.js";
