@@ -1,4 +1,6 @@
-export default `
+export const register = () => {
+  const container = document.getElementById("app");
+  const screen = `
         <section id="main-register">
         <h1>Crie sua conta</h1>
         <p><a href="#home">Já é registrado? Faça Login.</a></p>
@@ -43,5 +45,7 @@ export default `
                 <img src="./img/purple-ball.png" alt="" id="half-ball"/>
         </div>
         </section>
-
         `;
+
+  container.innerHTML = screen;
+};
