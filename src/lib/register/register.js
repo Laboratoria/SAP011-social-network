@@ -1,4 +1,4 @@
-export const register = () => {
+export default () => {
   const container = document.getElementById("app");
   const screen = `
         <section id="main-register">
@@ -6,12 +6,12 @@ export const register = () => {
         <p><a href="#home">Já é registrado? Faça Login.</a></p>
 
         <div id="form-container">
-        <img src="./img/photo-profile.png" alt="foto de perfil ilustrativa" />
+        <img src="././img/photo-profile.png" alt="foto de perfil ilustrativa" />
         <form action="">
-        <label for="name">Nome</label>
-        <input class="input" type="text" id="nomeId" required name="name" />
+        <label for="nameId">Nome</label>
+        <input class="input" type="text" id="nameId" required name="name" autocomplete="on" />
 
-        <label for="email">E-mail</label>
+        <label for="emailId">E-mail</label>
         <input
                 class="input"
                 type="text"
@@ -19,9 +19,10 @@ export const register = () => {
                 placeholder="seunome@email.com"
                 required
                 name="email"
+                autocomplete="on"
         />
 
-        <label for="password">Senha</label>
+        <label for="passwordId">Senha</label>
         <input
                 class="input"
                 type="password"
@@ -30,7 +31,7 @@ export const register = () => {
                 name="password"
         />
 
-        <label for="date">Data de nascimento</label>
+        <label for="birthId">Data de nascimento</label>
         <input class="input" type="date" id="birthId" />
 
         <input id="submit" type="submit" class="send" value="Enviar" />
@@ -48,4 +49,13 @@ export const register = () => {
         `;
 
   container.innerHTML = screen;
+
+  const nameId = document.getElementById("nameId");
+
+  function captureName() {
+    const nameValue = nameId.value;
+    console.log(nameValue);
+  }
+
+  nameId.addEventListener("blur", captureName);
 };

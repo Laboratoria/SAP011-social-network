@@ -1,4 +1,4 @@
-export const home = () => {
+export default () => {
   const container = document.getElementById("app");
   const screen = `
     <section id="main-home">
