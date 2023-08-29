@@ -1,24 +1,22 @@
-import home from "./lib/home/home.js";
+import { home } from "./lib/home/home.js";
 import { register } from "./lib/register/register.js";
-import welcome from "./lib/welcome/welcome.js";
-import timeline from "./lib/timeline/timeline.js";
-
-// function getContent(fragmentId) {
-//   const pages = {
-//     home: home,
-//     register: register,
-//     welcome: welcome,
-//     timeline: timeline,
-//   };
-
-//   return pages[fragmentId];
-// }
+import { welcome } from "./lib/welcome/welcome.js";
+import { timeline } from "./lib/timeline/timeline.js";
 
 function loadContent() {
   const fragmentId = location.hash.substring(1);
   console.log(fragmentId);
   if (fragmentId === "register") {
     register();
+  }
+  if (fragmentId === "welcome") {
+    welcome();
+  }
+  if (fragmentId === "timeline") {
+    timeline();
+  }
+  if (fragmentId === "home") {
+    home();
   }
 }
 
@@ -27,11 +25,4 @@ if (!location.hash) {
 }
 
 loadContent();
-
 window.addEventListener("hashchange", loadContent);
-
-// function loadContent() {
-//   const contentDiv = document.getElementById("app");
-//   const fragmentId = location.hash.substring(1);
-//   contentDiv.innerHTML = getContent(fragmentId);
-// }

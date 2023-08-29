@@ -1,4 +1,6 @@
-export default `
+export const welcome = () => {
+  const container = document.getElementById("app");
+  const screen = `
   <section id="main-welcome">
         <h1>Boas-vindas!</h1>
 
@@ -15,8 +17,5 @@ export default `
         </div>
       </section>
     `;
-
-// export const myFunction = () => {
-//   // aqui tu codigo
-//   console.log('Hola mundo!');
-// };
+  container.innerHTML = screen;
+};
