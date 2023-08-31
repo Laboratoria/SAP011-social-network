@@ -51,11 +51,25 @@ export default () => {
   container.innerHTML = screen;
 
   const nameId = document.getElementById("nameId");
+  const emailId = document.getElementById("emailId");
 
   function captureName() {
     const nameValue = nameId.value;
     console.log(nameValue);
+
+    const re = /\d/;
+    if (re.test(nameValue)) {
+      alert("Somente letras, por favor");
+    } else {
+      console.log(`O nome digitado foi ${nameValue}`);
+    }
+  }
+
+  function captureEmail() {
+    const emailValue = emailId.value;
+    console.log(emailValue);
   }
 
   nameId.addEventListener("blur", captureName);
+  emailId.addEventListener("blur", captureEmail);
 };

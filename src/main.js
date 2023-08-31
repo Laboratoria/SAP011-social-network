@@ -1,4 +1,4 @@
-import home from "./lib/home/home.js";
+import login from "./lib/login/login.js";
 import register from "./lib/register/register.js";
 import welcome from "./lib/welcome/welcome.js";
 import timeline from "./lib/timeline/timeline.js";
@@ -17,12 +17,12 @@ function loadContent() {
       timeline();
       break;
     default:
-      home();
+      login();
   }
 }
 
 if (!location.hash) {
-  location.hash = "#home";
+  location.hash = "#login";
 }
 
 loadContent();
