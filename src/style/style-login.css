@@ -22,6 +22,7 @@ main {
     /* border: solid 1px red; */
 }
 
+#main-reset,
 #main-login {
     height: 100%;
     display: flex;
@@ -31,6 +32,7 @@ main {
     margin-bottom: 20px;
 }
 
+#main-reset h1,
 #main-login h1 {
     text-align: center;
     font-size: 3.4rem;
@@ -46,11 +48,25 @@ main {
     margin-bottom: 50px;
 }
 
+#main-reset #form-container h4 {
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    margin-top: 2em;
+}
+
+#main-reset  #form-container  p {
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.8rem;
+}
+
 #main-login p a {
     text-decoration: none;
     color: blue;
 }
 
+#main-reset #form-container,
 #main-login #form-container {
     width: 80%;
     height: 400px;
@@ -64,6 +80,10 @@ main {
     background-color: #fff;
 }
 
+#main-reset #form-container {
+    margin-top: 80px;
+}
+
 #form-container p {
     margin: 10px 0 10px 0;
 }
@@ -71,7 +91,6 @@ main {
 #main-login #form-container p a {
     text-decoration: none;
     color: blue;
-
 }
 
 #main-login #form-container form {
@@ -81,6 +100,18 @@ main {
     padding-top: 40px;
 }  
 
+#main-reset #form-container form {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}  
+
+#main-reset #form-container form p {
+    margin: 40px 0;
+}  
+
+#main-reset label,
 #main-login label {
     font-family: "DM Sans", sans-serif;
     font-size: 0.6em;
@@ -88,7 +119,8 @@ main {
     margin: 0.7em 0;
     text-transform: uppercase;
 }
-  
+
+#main-reset .input,
 #main-login .input {
     height: 35px;
     background-color: #d8d9da;
@@ -129,6 +161,7 @@ main {
     background-color: #1893F8;
 }
 
+#main-reset #submit,
 #main-login #toRegister {
     width: 55%;
     height: 35px;
@@ -145,6 +178,7 @@ main {
     background-color: #33BBC5;
 }
 
+#main-reset #green-ball,
 #main-login #green-ball {
     width: 200px;
     height: 200px;
@@ -156,10 +190,12 @@ main {
     z-index: -1;
 }
 
+#main-reset #purple-ball,
 #main-login #purple-ball {
     display: none;
 }
 
+#main-reset #half-ball,
 #main-login #half-ball {
     width: 200px;
     height: 200px;
@@ -169,6 +205,7 @@ main {
     z-index: -2;
 }
 
+#main-reset #half-ball img,
 #main-login #half-ball img {
     width: 200px;
     height: 200px;
@@ -183,16 +220,19 @@ main {
 }
 
 @media (min-width: 1024px) {
+    #main-reset h1,
     #main-login h1 {
         font-size: 3.5rem;
     }
 
+    #main-reset #form-container,
     #main-login #form-container {
         width: 50%;
         height: fit-content;
         padding-bottom: 30px;
     }
 
+    #main-reset #form-container form,
     #main-login #form-container form {
         width: 55%;
         display: flex;
@@ -204,24 +244,29 @@ main {
         width: 200px;
     }
 
+    #main-reset #submit,
     #main-login #toRegister,
     #main-login #loginGoogle {
         width: 200px;
     }
 
+    #main-reset #green-ball,
     #main-login #green-ball {
-        top: 100px;
-        left: 300px;
+        top: 140px;
+        left: 280px;
     }
 
+    #main-reset #half-ball,
     #main-login #half-ball {
         display: none;
     }
     
+    #main-reset #half-ball img,
     #main-login #half-ball img {
         display: none;
     }
 
+    #main-reset #purple-ball,
     #main-login #purple-ball {
         display: block;
         width: 200px;
@@ -229,8 +274,8 @@ main {
         border-radius: 50%;
         background-color: #614bc3;
         position: absolute;
-        top: 500px;
-        right: 300px;
+        top: 440px;
+        right: 280px;
         z-index: -1;
     }
 
@@ -238,7 +283,7 @@ main {
         height: 110px;
         z-index: -1;
         position: absolute;
-        bottom: 0;
-        left: 680px;
+        bottom: -50px;
+        left: 0px;
     }
 }

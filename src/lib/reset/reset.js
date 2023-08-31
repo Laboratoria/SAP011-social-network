@@ -1,34 +1,39 @@
 export default () => {
   const container = document.getElementById("app");
   const screen = `
-        <section id="main-recuperacao">
-        <h1>MyPet</h1>
-        <h3>Redefinir de Senha</h3>
+      <section id="main-reset">
+      <h1>MyPet</h1>
+
+      <div id="form-container">
+        <h4>Redefinição de Senha</h4>
         <p>Confirme seu e-mail</p>
 
-        <div id="form-container">
         <form action="">
-        <label for="email">E-mail</label>
-        <p><input class="input" type="text" id="email" placeholder="seunome@email.com" required name="email" /></p>
+          <label for="email">E-mail</label>
+            <input
+              class="input"
+              type="text"
+              id="email"
+              placeholder="seunome@email.com"
+              required
+              name="email"
+            />
 
-        <div class="espaço-redefinir">
-        <a href="#resetpassword" id="btn-redefinir-senha">Enviar</a>
-        </div>
-
-        <p>Você receberá um e-mail com o link para cadastrar uma nova senha.</p>
-
+            <p>
+              Você receberá um e-mail com o link para cadastrar uma nova senha.
+            </p>
+            
+            <a href="#resetpassword" id="submit">Enviar</a>
+            
         </form>
+      </div>
 
-        </div>
-
-        <div class="decoration" id="green-ball"></div>
-        <div id="purple-div"></div>
-        <div class="decoration" id="purple-ball">
-            <img src="./img/purple-ball.png" alt="" id="half-ball"/>
-        </div>
-        <div class="decoration" id="girl-dog">
-        <img src="./img/girl-image.png" alt=""></div>
-        </section>
+      <div class="decoration" id="green-ball"></div>
+      <div class="decoration" id="half-ball">
+        <img src="./img/purple-ball.png" alt="">
+      </div>
+      <div class="decoration" id="purple-ball"></div>
+    </section>
     `;
 
   container.innerHTML = screen;
