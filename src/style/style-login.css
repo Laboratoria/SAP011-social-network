@@ -33,8 +33,212 @@ main {
 
 #main-login h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 3.4rem;
     color: #614bc3;
     margin-bottom: 0;
+    color: #344D67;
 }  
 
+#main-login p {
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.7rem;
+    margin-bottom: 50px;
+}
+
+#main-login p a {
+    text-decoration: none;
+    color: blue;
+}
+
+#main-login #form-container {
+    width: 80%;
+    height: 400px;
+    border-radius: 25px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+
+#form-container p {
+    margin: 10px 0 10px 0;
+}
+
+#main-login #form-container p a {
+    text-decoration: none;
+    color: blue;
+
+}
+
+#main-login #form-container form {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}  
+
+#main-login label {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.6em;
+    color: grey;
+    margin: 0.7em 0;
+    text-transform: uppercase;
+}
+  
+#main-login .input {
+    height: 35px;
+    background-color: #d8d9da;
+    border: none;
+    border-radius: 10px;
+    padding: 0 10px;
+    color: grey;
+}
+
+#main-login #submit {
+    width: 100%;
+    height: 35px;
+    border: none;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.9em;
+    align-self: center;
+    margin-top: 25px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #614bc3;
+}
+
+#main-login #loginGoogle {
+    width: 85%;
+    height: 35px;
+    border: none;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.9em;
+    text-decoration: none;
+    align-self: center;
+    text-align: center;
+    padding-top: 8px;
+    margin-top: 10px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #1893F8;
+}
+
+#main-login #toRegister {
+    width: 55%;
+    height: 35px;
+    border: none;
+    text-decoration: none;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.9em;
+    padding-top: 8px;
+    align-self: center;
+    text-align: center;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #33BBC5;
+}
+
+#main-login #green-ball {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #33BBC5;
+    position: absolute;
+    top: 140px;
+    left: -80px;
+    z-index: -1;
+}
+
+#main-login #purple-ball {
+    display: none;
+}
+
+#main-login #half-ball {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 460px;
+    right: 0;
+    z-index: -2;
+}
+
+#main-login #half-ball img {
+    width: 200px;
+    height: 200px;
+}
+
+#main-login #girl {
+    height: 105px;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media (min-width: 1024px) {
+    #main-login h1 {
+        font-size: 3.5rem;
+    }
+
+    #main-login #form-container {
+        width: 50%;
+        height: fit-content;
+        padding-bottom: 30px;
+    }
+
+    #main-login #form-container form {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+    }  
+
+    #main-login #form-container #submit {
+        width: 200px;
+    }
+
+    #main-login #toRegister,
+    #main-login #loginGoogle {
+        width: 200px;
+    }
+
+    #main-login #green-ball {
+        top: 100px;
+        left: 300px;
+    }
+
+    #main-login #half-ball {
+        display: none;
+    }
+    
+    #main-login #half-ball img {
+        display: none;
+    }
+
+    #main-login #purple-ball {
+        display: block;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #614bc3;
+        position: absolute;
+        top: 500px;
+        right: 300px;
+        z-index: -1;
+    }
+
+    #main-login #girl {
+        height: 110px;
+        z-index: -1;
+        position: absolute;
+        bottom: 0;
+        left: 680px;
+    }
+}

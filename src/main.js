@@ -2,6 +2,8 @@ import login from "./lib/login/login.js";
 import register from "./lib/register/register.js";
 import welcome from "./lib/welcome/welcome.js";
 import timeline from "./lib/timeline/timeline.js";
+import reset from "./lib/reset/reset.js";
+import newpassword from "./lib/newpassword/newpassword.js";
 
 function loadContent() {
   const fragmentId = location.hash.substring(1);
@@ -9,6 +11,12 @@ function loadContent() {
   switch (fragmentId) {
     case "register":
       register();
+      break;
+    case "reset":
+      reset();
+      break;
+    case "newpassword":
+      newpassword();
       break;
     case "welcome":
       welcome();
