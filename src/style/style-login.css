@@ -254,6 +254,7 @@ main {
         font-size: 3.5rem;
     }
 
+    #main-newpassword #form-container,
     #main-reset #form-container,
     #main-login #form-container {
         width: 50%;
@@ -261,6 +262,7 @@ main {
         padding-bottom: 30px;
     }
 
+    #main-newpassword #form-container form,
     #main-reset #form-container form,
     #main-login #form-container form {
         width: 55%;
@@ -273,28 +275,33 @@ main {
         width: 200px;
     }
 
+    #main-newpassword #submit,
     #main-reset #submit,
     #main-login #toRegister,
     #main-login #loginGoogle {
         width: 200px;
     }
 
+    #main-newpassword #green-ball,
     #main-reset #green-ball,
     #main-login #green-ball {
         top: 140px;
         left: 280px;
     }
 
+    #main-newpassword #half-ball,
     #main-reset #half-ball,
     #main-login #half-ball {
         display: none;
     }
     
+    #main-newpassword #half-ball img,
     #main-reset #half-ball img,
     #main-login #half-ball img {
         display: none;
     }
 
+    #main-newpassword #purple-ball,
     #main-reset #purple-ball,
     #main-login #purple-ball {
         display: block;
