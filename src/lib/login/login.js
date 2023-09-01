@@ -2,7 +2,7 @@ export default () => {
   const content = document.getElementById("app");
   const screen = `
       <section id="main-login">
-      <h1>MyPet</h1>
+      <img id="logo" src="./img/logo-login.png" alt="MyPet Logo">
       <p>Faça o login para continuar</p>
 
       <div id="form-container">

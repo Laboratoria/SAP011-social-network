@@ -2,7 +2,7 @@ export default () => {
   const container = document.getElementById("app");
   const screen = `
       <section id="main-reset">
-      <h1>MyPet</h1>
+      <img id="logo" src="./img/logo-login.png" alt="MyPet Logo">
 
       <div id="form-container">
         <h4>Redefinição de Senha</h4>

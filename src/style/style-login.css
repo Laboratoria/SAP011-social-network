@@ -32,14 +32,19 @@ main {
     margin-bottom: 20px;
 }
 
-#main-reset h1,
-#main-login h1 {
+#main-reset h1 {
     text-align: center;
     font-size: 3.4rem;
     color: #614bc3;
     margin-bottom: 0;
     color: #344D67;
-}  
+}
+
+#main-reset #logo,
+#main-login #logo {
+    height: 80px;
+    margin-top: 20px;
+}
 
 #main-login p {
     text-align: center;
@@ -212,7 +217,7 @@ main {
 }
 
 #main-login #girl {
-    height: 105px;
+    height: 95px;
     z-index: -1;
     position: absolute;
     bottom: 0;
@@ -280,10 +285,6 @@ main {
     }
 
     #main-login #girl {
-        height: 110px;
-        z-index: -1;
-        position: absolute;
-        bottom: -50px;
-        left: 0px;
+        display: none;
     }
 }

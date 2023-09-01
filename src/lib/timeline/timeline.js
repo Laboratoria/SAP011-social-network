@@ -2,8 +2,11 @@ export default () => {
   const container = document.getElementById("app");
   const screen = `
     <section id="main-timeline">
-    <h1>Aqui fica a timeline</h1> 
-    <p><a href="#home">Voltar para Home</a></p>
+      <div id="div-logo">
+          <img src="./img/logo-top-timeline.png" alt="MyPet logo">
+      </div>
+      <p> Estamos na timeline </p>
+      <a href="#login">Voltar para login</a>
     </section>`;
   container.innerHTML = screen;
 };

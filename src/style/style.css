@@ -22,6 +22,17 @@ main {
   /* border: solid 1px red; */
 }
 
+/* FORMATAÇÃO DA TIMELINE */
+#main-timeline #div-logo {
+  display: flex;
+  justify-content: center;
+}
+/* FIM DA FORMATAÇÃO DA TIMELINE */
+
+#main-timeline #div-logo img {
+  height: 36px;
+}
+
 #main-home h1,
 #main-register h1,
 #main-welcome h1,
