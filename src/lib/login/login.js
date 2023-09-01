@@ -27,7 +27,7 @@ export default () => {
           <input id="submit" type="submit" class="login" value="Login" />
         </form>
 
-        <a href="#timeline" id="loginGoogle">Login com Google</a>
+        <a href="#" id="loginGoogle">Login com Google</a>
 
         <p><a href="#reset">Esqueceu a senha?</a></p>
         <p>Não tem conta?</p>

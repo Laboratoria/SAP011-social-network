@@ -23,7 +23,7 @@ export default () => {
               Você receberá um e-mail com o link para cadastrar uma nova senha.
             </p>
             
-            <a href="#resetpassword" id="submit">Enviar</a>
+            <a href="#newpassword" id="submit">Enviar</a>
             
         </form>
       </div>
