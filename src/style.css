@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+}
+
+header{
+    background-color: #7ed957;
+    border: 1px solid #7ed957;
+    height: 60px;
+}
+
+#containerUser{
+    display: flex;
+    align-items: center;
+}
+
+footer{
+    background-color: #7ed957;
+    border: 1px solid #7ed957;
+    bottom: 0%;
+    position: fixed;
+    width: 100%;   
+}
+
+#containerIcons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.icons{
+    width: 8vw;   
+}
