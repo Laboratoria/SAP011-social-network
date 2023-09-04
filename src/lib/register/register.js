@@ -31,9 +31,6 @@ export default () => {
                 name="password"
         />
 
-        <label for="birthId">Data de nascimento</label>
-        <input class="input" type="date" id="birthId" />
-
         <input id="submit" type="submit" class="send" value="Enviar" />
         </form>
         </div>

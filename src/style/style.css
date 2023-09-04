@@ -145,7 +145,7 @@ main {
 #main-register #form-container img {
   height: 65px;
   width: 65px;
-  margin-top: 1em;
+  margin-top: 2.5em;
   margin-bottom: 1em;
 }
 #main-register #form-container form {
@@ -236,7 +236,7 @@ footer p {
   #main-register #form-container img {
     height: 85px;
     width: 85px;
-    margin-top: 1.5em;
+    margin-top: 2.5em;
     margin-bottom: 0;
   }
   #main-register #form-container form {
@@ -246,16 +246,4 @@ footer p {
     font-size: 0.8em;
   }
 }
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
   
