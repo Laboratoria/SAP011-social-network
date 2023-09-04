@@ -2,4 +2,4 @@
 
 import { myFunction } from './lib/index.js';
 
-myFunction(); //testando
+myFunction(); //testando122
