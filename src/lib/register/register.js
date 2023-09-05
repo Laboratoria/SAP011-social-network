@@ -1,6 +1,6 @@
-export default () => {
-  const container = document.getElementById("app");
-  const screen = `
+import { createUser } from "../../firebase/auth.js";
+
+const screen = `
         <section id="main-register">
         <h1>Crie sua conta</h1>
         <p><a href="#home">Já é registrado? Faça Login.</a></p>
@@ -34,8 +34,6 @@ export default () => {
         <input id="submit" type="submit" class="send" value="Enviar" />
         </form>
         </div>
-
-        <p><a href="#welcome">Tela de boas-vindas</a></p>
         
         <div class="decoration" id="green-ball"></div>
         <div id="purple-div"></div>
@@ -45,28 +43,31 @@ export default () => {
         </section>
         `;
 
+export default () => {
+  const container = document.getElementById("app");
   container.innerHTML = screen;
 
-  const nameId = document.getElementById("nameId");
   const emailId = document.getElementById("emailId");
+  const passwordId = document.getElementById("passwordId");
 
-  function captureName() {
-    const nameValue = nameId.value;
-    console.log(nameValue);
+  function captureData(event) {
+    event.preventDefault();
 
-    const re = /\d/;
-    if (re.test(nameValue)) {
-      alert("Somente letras, por favor");
-    } else {
-      console.log(`O nome digitado foi ${nameValue}`);
-    }
+    const emailUser = emailId.value;
+    const passwordUser = passwordId.value;
+
+    createUser(emailUser, passwordUser);
+
+    // location.hash = "#welcome";
   }
 
-  function captureEmail() {
-    const emailValue = emailId.value;
-    console.log(emailValue);
-  }
-
-  nameId.addEventListener("blur", captureName);
-  emailId.addEventListener("blur", captureEmail);
+  const submit = document.getElementById("submit");
+  submit.addEventListener("click", captureData);
 };
+
+//   const re = /\d/;
+//   if (re.test(nameValue)) {
+//     alert("Somente letras, por favor");
+//   } else {
+//     console.log(`O nome digitado foi ${nameValue}`);
+//   }
