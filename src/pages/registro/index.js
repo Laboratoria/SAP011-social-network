@@ -1,8 +1,7 @@
 export default () => {
     const container = document.createElement("div");
     const template = `
-       <h1> Login </h1>
-       <a href="./#registro">Sing Up</a>
+       <h1> Registro </h1>
        `;
     container.innerHTML = template;
     return container;
