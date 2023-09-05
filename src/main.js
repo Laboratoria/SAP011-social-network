@@ -3,38 +3,38 @@
 import login from './lib/login/index.js';
 // import home from './lib/home/index.js';
 // import password from './lib/password/index.js';
-// import register from './lib/register/index.js';
+import register from './lib/register/index.js';
 
 // import { myFunction } from './lib/index.js';
 
-// myFunction(); 
+// myFunction();
 
 const main = document.querySelector('#root');
 
 const init = () => {
-    window.addEventListener('hashchange', () => {
+  window.addEventListener('hashchange', () => {
     main.innerHTML = '';
-        switch (window.location.hash) {
-            case '/':
-                main.appendChild(login());              
-                break;
-            case '#Password':
-                main.appendChild(password());              
-                break;
-            case '#Register':
-                main.appendChild(register());              
-                break;
-            case '#Home':
-                main.appendChild(home());              
-                break;
-            default:
-                main.appendChild(login());              
-                break;
-        }
-    });
+    switch (window.location.hash) {
+      case '/':
+        main.appendChild(login());
+        break;
+      case '#Password':
+        main.appendChild(password());
+        break;
+      case '#Register':
+        main.appendChild(register());
+        break;
+      case '#Home':
+        main.appendChild(home());
+        break;
+      default:
+        main.appendChild(login());
+        break;
+    }
+  });
 };
 
-window.addEventListener("load", () => {
-    main.appendChild(login());
-    init();
-  });
+window.addEventListener('load', () => {
+  main.appendChild(login());
+  init();
+});
