@@ -3,7 +3,6 @@ import login from "./pages/login/index.js";
 import favorite from "./pages/favorite/index.js";
 import registro from "./pages/registro/index.js";
 
-
 const main = document.querySelector("#root");
 const int = () => {
     window.addEventListener("hashchange", () => {  //mudança de rota hashchange
@@ -21,6 +20,7 @@ const int = () => {
         case "#registro":
            main.appendChild(registro());
             break;
+
         default:
             main.appendChild(home());
     }
