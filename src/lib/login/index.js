@@ -1,6 +1,6 @@
 import firstLogo from '../../assets/Logo-White.png'; // Importa a primeira imagem do logo.
 import girl from '../../assets/Composition-Background.png'; // Importa a imagem de fundo com uma garota.
-import googleIcon from '../../assets/googlelogo.png'; // Importa o ícone do Google.
+import googleIcon from '../../assets/Google-Logo.png'; // Importa o ícone do Google.
 
 export default () => {
   const loginContainer = document.createElement('div'); // Cria um elemento div para o contêiner de login.
@@ -14,25 +14,23 @@ export default () => {
 
       <main>
         <form class='section-login'>
+        <div class='container-login'> 
           <h2> Faça login no Eldoria <h2>
-          <input type='email' name='email' id='email-login' placeholder='E-mail'>  
-          <input type='password' name='password' id='key-login' placeholder='Senha'> 
-          <button type='button' class='button-singIn' id='button-login'> Conecte-se </button>
-          <a href=''>Esqueceu sua senha?</a>
-          <p>ou</p>
-          <div class='container-google'>
-            <span class='txt-login'> Faça login com sua conta Google: </span>
-            <button type='button' class='button-google'>
-              <img src='${googleIcon}' class='icon-google' alt='logo-google'> 
-            </button>
+          <div class='input-login'> 
+          <input type='email' name='email' id='email-login' class='input-login' placeholder='E-mail'>  
+          <input type='password' name='password' id='key-login' class='input-login' placeholder='Senha'> 
           </div>
-          <hr class='hr-login'>
+          <button type='button' class='button-singIn' id='button-login'> Conecte-se </button>
+          <button type='button' class='button-password'> Esqueceu sua senha? </button>
+          <p class='text-or'>ou</p>
+            <button type='button' class='button-google'>
+              <img src='${googleIcon}' class='icon-google' alt='logo-google'> Faça login com o Google
+            </button>
           <p class='txt-account'>Não tem uma conta?</p>
           <button type='button' id='button-register'> Inscrever-se </button>
-
         </form>
 
-        <img src='${girl}' alt='girl-background' class='girl'> 
+       
       </main>
     `;
 
