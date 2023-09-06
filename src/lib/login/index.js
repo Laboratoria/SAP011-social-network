@@ -17,26 +17,23 @@ export default () => {
         <div class='container-login'> 
           <h2> Faça login no Eldoria <h2>
           <div class='input-login'> 
-          <input type='email' name='email' id='email-login' class='input-login' placeholder='E-mail'>  
-          <input type='password' name='password' id='key-login' class='input-login' placeholder='Senha'> 
+          <input type='email' name='email' id='email-login' class='login-email' placeholder='E-mail'>  
+          <input type='password' name='password' id='key-login' class='login-password' placeholder='Senha'> 
           </div>
-          <button type='button' class='button-singIn' id='button-login'> Conecte-se </button>
           <button type='button' class='button-password'> Esqueceu sua senha? </button>
+          <button type='button' class='button-singIn' id='button-login'> Conecte-se </button>
           <p class='text-or'>ou</p>
             <button type='button' class='button-google'>
-              <img src='${googleIcon}' class='icon-google' alt='logo-google'> Faça login com o Google
-            </button>
+              <img src='${googleIcon}' class='icon-google' alt='logo-google'> Faça login com o Google </button>
           <p class='txt-account'>Não tem uma conta?</p>
-          <button type='button' id='button-register'> Inscrever-se </button>
+          <button type='button' id='btn-register'> Inscrever-se </button>
         </form>
-
-       
       </main>
     `;
 
   loginContainer.innerHTML = content; // Insere o conteúdo HTML dentro do contêiner.
 
-  const buttonRegister = loginContainer.querySelector('#button-register'); // Seleciona o botão de registro.
+  const buttonRegister = loginContainer.querySelector('#btn-register'); // Seleciona o botão de registro.
   buttonRegister.addEventListener('click', () => {
     window.location.hash = '#Register'; // Redireciona para a âncora '#Register' ao clicar.
   });
@@ -46,8 +43,7 @@ export default () => {
     const email = loginContainer.querySelector('#email-login'); // Captura o campo de e-mail.
     const password = loginContainer.querySelector('#key-login');
     // Captura o campo de senha.
-
-  });
+});
 
   return loginContainer;
 };

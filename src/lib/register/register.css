@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+    
+body {
+  background-color: #22A6C4;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px ; 
+}
+
+.logo {
+  width: auto;
+  height: 55px;
+}
+        
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.section-register{
+  border: 1px solid white;
+  border-radius: 12px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 40px 0px;
+  height: 100vw;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-register{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+      
+.name-register, .email-register, .key-register{
+  padding-left: 15px; 
+  border-radius: 20px;
+  height: 35px;  
+  width: 240px;
+  margin-bottom: 10px;
+}
+
+.btn-signIn{
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  height: 42px;
+  width: 250px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.click-here, .text-register {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 13.5px;
+  margin-top: 10px;  
+  cursor: pointer; 
+}
+

@@ -12,16 +12,18 @@ export default () => {
       </header>
 
       <main>
-        <form class='section-login'>
+        <form class='section-register'>
           <h2> Criar uma nova conta <h2>
-          <input type='text' name='name' id='name-register' placeholder='Nome do usuário'>  
-          <input type='email' name='email' id='email-register' placeholder='E-mail'>            
-          <input type='password' name='password' id='key-register' placeholder='Senha'> 
-          <button type='button' class='button-singIn' id='button-register'> Inscrever-se </button>
-          <p>Já é registrado?</p><a href=''>Entre aqui</a>
+          <div class='input-register'>
+          <input type='text' name='name' class='name-register' placeholder='Nome do usuário'>  
+          <input type='email' name='email' class='email-register' placeholder='E-mail'>            
+          <input type='password' name='password' class='key-register' placeholder='Senha'> 
+          </div>
+          <button type='button' class='btn-signIn' id='button-register'> Inscrever-se </button>
+          <p class='text-register'>Já é registrado?</p>
+          <button type='button' class='click-here' id='enter-here'> Entre aqui </button>
         </form>
 
-        <img src='${girl}' alt='girl-background' class='girl'> 
       </main>
     `;
 
@@ -29,9 +31,17 @@ export default () => {
 
   const register = loginContainer.querySelector('#button-register');
   register.addEventListener('click', () => {
-    const user = loginContainer.querySelector('#name-register');
-    const email = loginContainer.querySelector('#email-register');
-    const password = loginContainer.querySelector('#key-register');
+    window.location.hash = '#Home'; // Redireciona para a âncora '#Register' ao clicar.
+  });
+
+  // const enter = loginContainer.querySelector('#enter-here');
+  // register.addEventListerner('click', () => {
+  //   window.location.hash = '/';
+  // });
+  
+  const user = loginContainer.querySelector('#name-register');
+  const email = loginContainer.querySelector('#email-register');
+  const password = loginContainer.querySelector('#key-register');
 
     // if (user.value === '' || email.value === '' || password.value === '') {
     //   alert('Por favor, preencha todos os campos.');
@@ -39,6 +49,7 @@ export default () => {
       
     // }
   
-});
+
 return loginContainer;
+
 };
