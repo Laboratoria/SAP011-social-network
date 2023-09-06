@@ -62,10 +62,3 @@ export default () => {
   const submit = document.getElementById("submit");
   submit.addEventListener("click", captureData);
 };
-
-//   const re = /\d/;
-//   if (re.test(nameValue)) {
-//     alert("Somente letras, por favor");
-//   } else {
-//     console.log(`O nome digitado foi ${nameValue}`);
-//   }
