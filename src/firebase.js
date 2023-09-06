@@ -1,12 +1,20 @@
 import {app} from './firebaseConfig.js';
+import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 
-FirebaseError.initializeApp(app);
+const auth = getAuth(app);
 
-console('antes');
-FirebaseError.auth().signInWithEmailAndPassword("abf.ferreirac@gmail.com", "123456789").then(response => {
-    console.log('sucess', response)
+export function login () {
+    signInWithEmailAndPassword(auth, "abf.ferreirac@gmail.com", "123456789")
+  .then((userCredential) => {
+    // Signed in 
+    console.log("deu certo!")
+    const user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log("deu errado!", error.code, error.message)
+  });
+}
 
-}).catch(error => {
-    console.log('error', error)
-});
-console.log('depois')
