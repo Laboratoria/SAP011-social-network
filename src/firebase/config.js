@@ -17,3 +17,4 @@ export const firebaseApp = {
 // Initialize Firebase
 const app = initializeApp(firebaseApp);
 const auth = getAuth(app);
+

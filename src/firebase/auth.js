@@ -4,6 +4,8 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signInWithPopup,  
+  GoogleAuthProvider,
 } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
 
 import { firebaseApp } from "./config.js";
@@ -39,4 +41,29 @@ function signIn(email, password) {
     });
 }
 
-export { createUser, signIn };
+const provider = new GoogleAuthProvider();
+
+function signGoogle() {
+   signInWithPopup(auth, provider)
+  .then((result) => {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    // The signed-in user info.
+    const user = result.user;
+    // IdP data available using getAdditionalUserInfo(result)
+    // ...
+    location.hash = "#timeline";
+    }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+}
+
+export { createUser, signIn, signGoogle };
