@@ -1,22 +1,22 @@
-export default () => {
-  const content = document.getElementById("app");
-  const screen = `
+import { signIn } from "../../firebase/auth.js";
+
+const screen = `
       <section id="main-login">
       <img id="logo" src="./img/logo-login.png" alt="MyPet Logo">
       <p>Faça o login para continuar</p>
 
       <div id="form-container">
         <form action="">
-          <label for="email">E-mail</label>
+          <label for="emailId">E-mail</label>
           <input
             class="input"
             type="text"
-            id="email"
+            id="emailId"
             placeholder="seunome@email.com"
             required
             email="email"
           />
-          <label for="password">Senha</label>
+          <label for="passwordId">Senha</label>
           <input
             class="input"
             type="password"
@@ -26,8 +26,8 @@ export default () => {
           />
           <input id="submit" type="submit" class="login" value="Login" />
         </form>
-
-        <a href="#" id="loginGoogle">Login com Google</a>
+  
+        <a href="#timeline" id="loginGoogle">Login com Google</a>
 
         <p><a href="#reset">Esqueceu a senha?</a></p>
         <p>Não tem conta?</p>
@@ -43,5 +43,22 @@ export default () => {
     </section>
 `;
 
+export default () => {
+  const content = document.getElementById("app");
   content.innerHTML = screen;
+
+  const emailId = document.getElementById("emailId");
+  const passwordId = document.getElementById("passwordId");
+
+  function captureData(event) {
+    event.preventDefault();
+
+    const emailUser = emailId.value;
+    const passwordUser = passwordId.value;
+
+    signIn(emailUser, passwordUser);
+  }
+
+  const submit = document.getElementById("submit");
+  submit.addEventListener("click", captureData);
 };
