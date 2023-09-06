@@ -1,7 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
 
-const firebaseApp = {
+
+export const firebaseApp = {
   apiKey: "AIzaSyA41Dab9eY4PHp_wsvUVa9e8nYCsfLSUl8",
   authDomain: "mypet-network.firebaseapp.com",
   projectId: "mypet-network",
@@ -14,3 +15,4 @@ const firebaseApp = {
 // Initialize Firebase
 const app = initializeApp(firebaseApp);
 const auth = getAuth(app);
+
