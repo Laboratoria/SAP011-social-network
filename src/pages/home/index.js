@@ -4,6 +4,7 @@ export default () => {
         <h1>HOME</>
      `;
     container.innerHTML = template;
+    
     return container;
 
 }
