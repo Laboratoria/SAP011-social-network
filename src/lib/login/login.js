@@ -1,4 +1,4 @@
-import { signIn } from "../../firebase/auth.js";
+import { signIn, signGoogle } from "../../firebase/auth.js";
 
 const screen = `
       <section id="main-login">
@@ -61,4 +61,13 @@ export default () => {
 
   const submit = document.getElementById("submit");
   submit.addEventListener("click", captureData);
+
+  function test(event) {
+    event.preventDefault();
+
+    signGoogle();
+  }
+
+  const loginGoogle = document.getElementById("loginGoogle");
+  loginGoogle.addEventListener("click", test);
 };
