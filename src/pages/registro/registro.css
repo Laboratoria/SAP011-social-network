@@ -44,7 +44,7 @@
 #text-slogan {
     color: #7ED957;
     font: bold;
-    font-size: 26px;
+    font-size: 20px;
     text-align: center;
     margin-left: -950px;
     margin-top: -30px;
@@ -166,12 +166,23 @@ a:hover {
     color: rgb(41, 153, 22);
 }
 
+@media screen and (min-width: 300px) {
+
+#texto-registro {
+   font-size: 16px;
+}
+
+}
+
 @media screen and (min-width: 1025px) {
 
     .container-forms {
         margin-right: 0px;
         align-items: flex-end;
         background-color: transparent;
+        float: left;
+        margin-left: 400px;
+        margin-top: 50px;
     }
 
     #logo-registro {
@@ -184,13 +195,6 @@ a:hover {
     #logo-registro img {
         width: 500px;
         height: 500px;
-    }
-
-    .container-forms {
-        float: left;
-        margin-left: 200px;
-        margin-top: 50px;
-
     }
 
     #text-slogan {
@@ -209,21 +213,15 @@ a:hover {
     .container-forms {
         float: left;
         margin-left: 100px;
-        margin-top: 250px;
         background-color: transparent;
-
     }
 
     #logo-registro {
         margin-top: 100px;
     }
+   }
 
-    #logo-registro img {
-        width: 350px;
-        height: 350px;
-    }
-
-    @media screen and (min-width: 1280px) {
+   /* @media screen and (min-width: 1280px) {
 
         .container-forms {
             margin-right: 0px;
@@ -235,7 +233,7 @@ a:hover {
         #logo-registro {
             text-align: start;
             margin-top: 100px;
-            margin-left: 130px;
+            margin-left: 500px;
             background-color: #7ed957;
         }
     
@@ -271,5 +269,4 @@ a:hover {
             margin-left: 300px;
             margin-top: 50px;
         }
-    }
-}
+    }*/
