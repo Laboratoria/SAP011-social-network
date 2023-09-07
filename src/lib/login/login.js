@@ -1,4 +1,7 @@
-import { signIn, signGoogle } from "../../firebase/auth.js";
+import {
+  signIn,
+  signGoogle,
+} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
 
 const screen = `
       <section id="main-login">
