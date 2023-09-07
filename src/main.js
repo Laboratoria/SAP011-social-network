@@ -8,7 +8,7 @@ const int = () => {
     window.addEventListener("hashchange", () => {  //mudança de rota hashchange
     main.innerHTML = "";
     switch (window.location.hash) {
-        case " ":
+        case "#home":
             main.appendChild(home());
             break;
         case "#login":
@@ -27,6 +27,6 @@ const int = () => {
     })
 }
     window.addEventListener("load", () => {
-    main.appendChild(home());
+    main.appendChild(login());
     int();
 })
