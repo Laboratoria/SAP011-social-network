@@ -1,10 +1,9 @@
 export default () => {
     const container = document.createElement('div');
     const template = `
-     <h1> HOME</h1>
-     <p> Receitas Saudáveis.</p>
+        <h1>HOME</>
      `;
     container.innerHTML = template;
     return container;
-    
+
 }
