@@ -15,7 +15,7 @@ const init = () => {
   window.addEventListener('hashchange', () => {
     main.innerHTML = '';
     switch (window.location.hash) {
-      case '/':
+      case '':
         main.appendChild(login());
         break;
       case '#Password':

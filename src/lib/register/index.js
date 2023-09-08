@@ -34,10 +34,11 @@ export default () => {
     window.location.hash = '#Home'; // Redireciona para a âncora '#Register' ao clicar.
   });
 
-  // const enter = loginContainer.querySelector('#enter-here');
-  // register.addEventListerner('click', () => {
-  //   window.location.hash = '/';
-  // });
+  const enter = loginContainer.querySelector('#enter-here');
+  enter.addEventListener('click', () => {
+    window.location.hash = '';
+  });
+  
   
   const user = loginContainer.querySelector('#name-register');
   const email = loginContainer.querySelector('#email-register');
