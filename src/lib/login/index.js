@@ -1,5 +1,5 @@
 import firstLogo from '../../assets/Logo-White.png'; // Importa a primeira imagem do logo.
-import girl from '../../assets/Composition-Background.png'; // Importa a imagem de fundo com uma garota.
+import girl from '../../assets/Composition-Background1.png'; // Importa a imagem de fundo com uma garota.
 import googleIcon from '../../assets/Google-Logo.png'; // Importa o ícone do Google.
 
 export default () => {
@@ -7,11 +7,14 @@ export default () => {
   loginContainer.classList.add('login-container'); // Adiciona a classe 'login-container' ao elemento.
 
   const content = `
+      <div class='images'>
       <header class='header-login'>
-        <img src='${firstLogo}' alt='logo-eldoria' class='logo'> 
+        <img src='${firstLogo}' alt='logo-eldoria' class='logo-login'> 
         <p>Dedicado a todos os entusiastas de literatura fantástica</p>
       </header>
-
+      <img src='${girl}' class='img-girl' alt='Desenho de uma menina lendo'>
+      </div>
+      
       <main>
         <form class='section-login'>
         <div class='container-login'> 
@@ -42,8 +45,38 @@ export default () => {
   buttonLogin.addEventListener('click', () => {
     const email = loginContainer.querySelector('#email-login'); // Captura o campo de e-mail.
     const password = loginContainer.querySelector('#key-login');
+    window.location.hash = '#Home'; // Redireciona para a âncora '#Register' ao clicar.
+
     // Captura o campo de senha.
-});
+    // Tenta fazer login com as informações fornecidas.
+  //   login(email.value, password.value)
+  //   .then(() => {
+  //     window.location.hash = '#Home'; // Redireciona para a âncora '#Home' em caso de sucesso.
+  //   })
+  //   .catch((error) => {
+  //     if (error.message === 'Firebase: Error (auth/user-not-found).') {
+  //       alert('User not found'); // Exibe um alerta se o usuário não for encontrado.
+  //     } else if (error.message === 'Firebase: Error (auth/wrong-password)') {
+  //       alert('Password not found'); // Exibe um alerta se a senha estiver incorreta.
+  //     }
+  //   });
+  // });
+
+  // const googleButton = loginContainer.querySelector('.button-google');
+  // googleButton.addEventListener('click', () => {
+  //   // alert('botão google ok');
+  //   googleLogin()
+  //     .then(() => {
+  //       window.location.hash = '#Home';
+  //     })
+  //     // eslint-disable-next-line no-unused-vars
+  //     .catch((error) => {
+  //       alert('Erro ao efetuar login com o Google!');
+  //     });
+  });
 
   return loginContainer;
 };
+
+
+
