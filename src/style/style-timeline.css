@@ -33,7 +33,26 @@
 #feed {
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#feed-container {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#input-container {
+  display: flex;
+}
+
+#input-container input {
+  width: 100%;
+  align-self: self-end;
 }
 
 #functions {
