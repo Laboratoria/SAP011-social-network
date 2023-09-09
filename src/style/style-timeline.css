@@ -56,6 +56,22 @@
   /* border: solid 1px purple; */
 }
 
+#feed-container p {
+  text-align: center;
+}
+
+#feed-container div {
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  align-items: center;
+}
+
 #feed-container img {
   width: 200px;
 }

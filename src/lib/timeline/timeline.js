@@ -10,10 +10,7 @@ const screen = `
           <div id="feed">
 
             <div id="feed-container">
-              <div id="empty-feed">
-                <p>Ainda não temos postagens por aqui.</p>
-                <img src="./img/angry-cat.gif" alt="Cat Meme">
-              </div>
+                <p id="empty-feed">Ainda não temos postagens por aqui. <br><br> <img src="./img/angry-cat.gif" alt="Cat Meme"></p>
             </div>
 
             <div id="input-container">
@@ -56,14 +53,6 @@ export default () => {
     if (postPlace.value !== "" && erased) {
       const post = document.createElement("div");
       post.innerHTML = postPlace.value;
-      post.style.width = "90%";
-      post.style.height = "fit-content";
-      post.style.display = "flex";
-      post.style.flexWrap = "wrap";
-      post.style.backgroundColor = "#fff";
-      post.style.margin = "5px 0";
-      post.style.padding = "5px";
-      post.style.alignItems = "center";
 
       document.getElementById("feed-container").appendChild(post);
 
@@ -73,14 +62,6 @@ export default () => {
     } else if (postPlace.value !== "" && !erased) {
       const post = document.createElement("div");
       post.innerHTML = postPlace.value;
-      post.style.width = "90%";
-      post.style.height = "fit-content";
-      post.style.display = "flex";
-      post.style.flexWrap = "wrap";
-      post.style.backgroundColor = "#fff";
-      post.style.margin = "5px 0";
-      post.style.padding = "5px";
-      post.style.alignItems = "center";
 
       document.getElementById("feed-container").appendChild(post);
 
