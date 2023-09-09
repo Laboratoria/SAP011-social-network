@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&family=Quicksand:wght@400;600;700&display=swap');
+
+body {
+
+    background-color: #D9BACA;
+}
+
+head {
+    color: #D2398A;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-style: normal;
+    filter: blur (2px);
+    text-align: center;
+}
+
+main div {
+    width: 482px;
+    height: 809px;
+    border-radius: 10px;
+    background: rgba(147, 144, 144, 0.39);
+}
+
+#email, #senha {
+    width: 434px;
+    height: 88px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #FAFAFA;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+p #email, p #senha {
+    color: #1E1E1E;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#botaoEntrar {
+    border-radius: 8px;
+    background: #D2398A;
+    width: 282px;
+    height: 88px; 
+    color: #FFF;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;  
+}
+
+#entrarGoogle {
+    color: rgba(102, 103, 100, 0.92);
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+nav img {
+    width: 87px;
+    height: 85px;
+    flex-shrink: 0;
+}
+
+
+#criarConta {
+    color: rgba(102, 103, 100, 0.92);
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#botaoCadastro { 
+    color: rgba(210, 57, 138, 0.99);
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+}

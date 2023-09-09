@@ -1,15 +1,28 @@
 export default () => {
-  const cadastro = document.createElement(`div`);
-  const ancora = document.createElement("a");
-  const conteudo = `
-  <h1>Cadastro</h1>
-  <a  href="#cadastro./src/lib/Linha do Tempo/linhaDoTempo.js" >Linha do tempo</a>
-  `;
+  const cadastro = document.createElement('div');
 
-  cadastro.appendChild(ancora);
+  const conteudo = ` 
 
-  ancora.textContent = conteudo;
-  ancora.href = "#telaInicial";
+  <html>
+  <head>
+    <title id="tituloPagina">Criar Conta</title>
+  </head>
+  <body>
+    <main>
+    <div>
+      <form id="formulario">
+        <h1>Criar Conta</h1>
+        <label><input id="nomeUsuario" type="text" name="nome"><input></label>
+        <label> <input id= "email" type="email" name="email"><input></label>
+        <label> <input id= "senha" type="password" name="senha"><input></label>
+        <label><input id="dataNascimento" type="date" name="dataDeNascimento"><input></label>
+        <a id="criarConta" href="#linhaDoTempo">Criar conta</a>
+      </form>
+      </div>
+    </main>
+  </body>
+</html>`;
 
+  cadastro.innerHTML = conteudo;
   return cadastro;
 };
