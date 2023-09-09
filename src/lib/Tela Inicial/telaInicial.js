@@ -16,11 +16,11 @@ export default () => {
             <p>Senha</p>
             <input type="password" name="password">
             <br>
-            <a href="#about">Entrar</a>
+            <a href="#linhaDoTempo">Entrar</a>
           </form>
           <nav>
             <p>Não tem conta?</p>
-            <a href="#contact">Crie agora</a>
+            <a href="#cadastro">Crie agora</a>
           </nav>
         </main>
       </body>
