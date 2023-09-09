@@ -89,11 +89,14 @@
   width: 80%;
   height: 30px;
   align-self: self-start;
+  margin-bottom: 10px;
   /* border-right: none; */
 }
 
 #input-container button {
   width: 10%;
+  height: 30px;
+  border-color: #D0D4CE;
   background-color: #fff;
   align-self: self-start;
   /* border-left: none; */
@@ -158,6 +161,42 @@
 
   #feed {
     width: 80%;
+  }
+
+  #feed-container::-webkit-scrollbar-track{
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+    border-radius:0;
+    background-color: #D0D4CE;
+  }
+  
+  #feed-container::-webkit-scrollbar{
+    width: 6px;
+    background-color: #D0D4CE;
+  }
+  
+  #feed-container::-webkit-scrollbar-thumb{
+    border-radius:0;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #344d67;
+  }
+
+  #input-container input {
+    height: 34px;
+  }
+  
+  #input-container button {
+    width: 34px;
+    height: 34px;
+    background-color: #fff;
+    align-self: self-start;
+    padding: 0;
+    /* border-left: none; */
+  }
+  
+  #input-container button img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
   }
 
   #functions {
