@@ -17,7 +17,7 @@ const firebaseConfig = {
   measurementId: "G-4QHRRVYFKP",
 };
 
-// Initialize Firebase
+// Responsável por inicializar o firebase
 export const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);

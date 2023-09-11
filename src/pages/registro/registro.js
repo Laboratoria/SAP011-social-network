@@ -1,6 +1,7 @@
 import { addDoc, getDocs, query, where } from "firebase/firestore";
 import { createUser, dbUsers } from "../../firebaseConfig";
 
+// Essa função é responsável por validar o email
 async function validateEmail(email) {
   if (!email) {
     form.email().classList.add("error-input");
@@ -36,6 +37,7 @@ async function validateEmail(email) {
   return isValid;
 }
 
+// Essa função é responsável por validar o nome
 async function onChangeName() {
   const name = form.name().value;
   document.getElementById("name-required-error").style.display = name
@@ -52,6 +54,7 @@ async function onChangeName() {
   await toggleRegisterButtonDisable();
 }
 
+// Essa função é responsável por validar o email
 async function onChangeEmail() {
   const email = form.email().value;
   form.emailRequiredError().style.display = email ? "none" : "block";
@@ -61,6 +64,7 @@ async function onChangeEmail() {
   await toggleRegisterButtonDisable();
 }
 
+// Essa função é responsável por validar a senha
 async function onChangePassword() {
   const password = form.password().value;
   form.passwordRequiredError().style.display = password ? "none" : "block";
@@ -78,6 +82,7 @@ async function onChangePassword() {
   await toggleRegisterButtonDisable();
 }
 
+// Essa função é responsável por validar a confirmação de senha
 async function onChangeConfirmPassword() {
   validatePasswordMatch();
   await toggleRegisterButtonDisable();
@@ -96,12 +101,12 @@ function validatePasswordMatch() {
     form.confirmPassword().classList.add("error-input");
   }
 }
-
+// Essa função é responsável por validar o formulário
 async function toggleRegisterButtonDisable() {
   const isValid = !(await isFormValid());
   form.registerButton().disabled = isValid;
 }
-
+// Essa função é responsável por validar o formulário
 async function isFormValid() {
   const email = form.email().value;
   if (!email || !(await validateEmail(email))) {
@@ -121,6 +126,7 @@ async function isFormValid() {
   return true;
 }
 
+//Aqui é onde eu pego os elementos do html
 const form = {
   confirmPassword: () => document.getElementById("confirmPassword"),
   confirmPasswordDoesntMatchError: () =>
@@ -138,7 +144,7 @@ const form = {
   registerButton: () => document.getElementById("register-button"),
   togglePassword: () => document.getElementsByClassName("toggle-password"),
 };
-
+// Essa função é responsável por mostrar ou ocultar a senha
 function toggleTypePassword() {
   const inputTarget = this.getAttribute("data-target");
   const inputElement = form[inputTarget]();
@@ -150,7 +156,7 @@ function toggleTypePassword() {
   const icon = type === "password" ? "Hide" : "Show";
   this.setAttribute("src", `./img/${icon}.png`);
 }
-
+// Essa função é responsável por criar a conta no firebase
 async function createAccountFirebase() {
   const email = form.email().value;
   const name = form.name().value;
@@ -170,7 +176,7 @@ async function createAccountFirebase() {
       alert(errorMessage);
     });
 }
-
+// Essa função é responsável por criar a conta
 async function handleCreateAccount() {
   await onChangeConfirmPassword();
   await onChangePassword();
@@ -184,6 +190,7 @@ async function handleCreateAccount() {
   createAccountFirebase();
 }
 
+// Essa função é responsável por chamar as funções de validação
 export function bindEvents() {
   form.confirmPassword().addEventListener("change", onChangeConfirmPassword);
   form.password().addEventListener("change", onChangePassword);
