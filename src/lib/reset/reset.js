@@ -1,6 +1,6 @@
-export default () => {
-  const container = document.getElementById("app");
-  const screen = `
+import { resetLink } from "../../firebase/auth.js";
+
+const screen = `
       <section id="main-reset">
       <img id="logo" src="./img/logo-login.png" alt="MyPet Logo">
 
@@ -23,8 +23,8 @@ export default () => {
               Você receberá um e-mail com o link para cadastrar uma nova senha.
             </p>
             
-            <a href="#newpassword" id="submit">Enviar</a>
-            
+            <input id="submit" type="submit" value="Enviar E-mail" />
+                        
         </form>
       </div>
 
@@ -36,5 +36,21 @@ export default () => {
     </section>
     `;
 
-  container.innerHTML = screen;
-};
+export default () => {
+  const content = document.getElementById("app");
+  content.innerHTML = screen;
+
+  const emailUser = document.getElementById("email");
+
+  function newPassword() {
+  
+    const emailValue = emailUser.value;
+  
+      resetLink(emailValue);
+    };
+
+  const btn = document.getElementById("submit");
+
+  btn.addEventListener("click", newPassword);
+  
+  };

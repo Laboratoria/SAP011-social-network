@@ -62,12 +62,12 @@ export default () => {
   const submit = document.getElementById("submit");
   submit.addEventListener("click", captureData);
 
-  function test(event) {
+  function signInGoogle(event) {
   event.preventDefault();
 
     signGoogle();
   }
 
   const loginGoogle = document.getElementById("loginGoogle");
-  loginGoogle.addEventListener("click", test);
+  loginGoogle.addEventListener("click", signInGoogle);
 };

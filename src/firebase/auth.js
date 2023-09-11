@@ -6,6 +6,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,  
   GoogleAuthProvider,
+  sendPasswordResetEmail,
 } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
 
 import { firebaseApp } from "./config.js";
@@ -43,8 +44,8 @@ function signIn(email, password) {
 
 const provider = new GoogleAuthProvider();
 
-function signGoogle() {
-   signInWithPopup(auth, provider)
+async function signGoogle() {
+await  signInWithPopup(auth, provider)
   .then((result) => {
     // This gives you a Google Access Token. You can use it to access the Google API.
     const credential = GoogleAuthProvider.credentialFromResult(result);
@@ -53,8 +54,7 @@ function signGoogle() {
     const user = result.user;
     // IdP data available using getAdditionalUserInfo(result)
     // ...
-    location.hash = "#timeline";
-    }).catch((error) => {
+   }).catch((error) => {
     // Handle Errors here.
     const errorCode = error.code;
     const errorMessage = error.message;
@@ -64,6 +64,21 @@ function signGoogle() {
     const credential = GoogleAuthProvider.credentialFromError(error);
     // ...
   });
+  location.hash = "#timeline";
 }
 
-export { createUser, signIn, signGoogle };
+async function resetLink(email) {
+await sendPasswordResetEmail(auth, email)
+  .then(() => {
+    // Password reset email sent!
+    // ..
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
+  location.hash = "#login";
+}
+
+export { createUser, signIn, signGoogle, resetLink };
