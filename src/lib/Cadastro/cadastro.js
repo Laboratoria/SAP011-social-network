@@ -8,7 +8,7 @@ export default () => {
     <title id="tituloPagina">Criar Conta</title>
   </head>
   <body>
-    <main>
+    <main id="mainCadastro"
     <div>
       <form id="formulario">
         <h1>Criar Conta</h1>
@@ -16,7 +16,7 @@ export default () => {
         <label> <input id= "email" type="email" name="email"><input></label>
         <label> <input id= "senha" type="password" name="senha"><input></label>
         <label><input id="dataNascimento" type="date" name="dataDeNascimento"><input></label>
-        <a id="criarConta" href="#linhaDoTempo">Criar conta</a>
+        <a id="criarContaCadastro" href="#linhaDoTempo">Criar conta</a>
       </form>
       </div>
     </main>

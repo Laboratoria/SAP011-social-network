@@ -4,23 +4,25 @@ export default () => {
   const conteudo = `
     <html>
       <head>
-        <title id="tituloPagina">BUG DOS MILLENNIALS</title>
+        <title>BUG DOS MILLENNIALS</title>
       </head>
       <body>
-        <main>
+        <main id="mainTelaInicial">
         <div>
           <form>
-            <h1>BUG DOS MILLENNIALS</h1>
-            <label> <input id= "email" type="email" name="email"><input></label>
-            <label> <input id= "senha" type="password" name="senha"><input></label>
+            <h1 id= "tituloPagina">BUG DOS <br> MILLENNIALS</h1>
+            <hr><label> <p id="emailDaTela">Email</p> <input id= "emailTelaInicial" type="email name="email"></input></label>
+            <label> <p id="senhaDaTela">Senha</p> <input id= "senhaTelaInicial" type="password" name="senha"></input></label>
             <a id="botaoEntrar" href="#linhaDoTempo">Entrar</a>
           </form>
           <nav>
             <p id="entrarGoogle">Entre com sua conta Google</p>
             <img id="logoGoogle" src="imagens/logo google.png"><img>
-            <p id="criarConta">Não tem conta?</p>
+            <div id="novaConta"
+            <p id="criarConta">Não tem conta?</p> 
             <a id="botaoCadastro" href="#cadastro">Crie agora</a>
-          </nav>
+          </div>
+            </nav>
           </div>
         </main>
       </body>

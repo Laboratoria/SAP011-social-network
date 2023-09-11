@@ -5,13 +5,13 @@ body {
 head {
     color: #D2398A;
     text-align: center;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     width: 352px;
-    height: 48px;   
+    height: 48px;
 }
 
 main div {
@@ -21,24 +21,26 @@ main div {
     background: rgba(147, 144, 144, 0.39);
 }
 
-#nomeUsuario, #email, #senha, #dataNascimento {
+#nomeUsuario,
+#email,
+#senha,
+#dataNascimento {
     width: 434px;
     height: 88px;
     flex-shrink: 0;
     border-radius: 8px;
-    background: #FAFAFA;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
 }
 
-#criarConta {
+#criarContaCadastro {
     border-radius: 8px;
     background: #D2398A;
     width: 282px;
-    height: 88px; 
+    height: 88px;
     color: #FFF;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 36px;
     font-style: normal;
-    font-weight: 700;  
+    font-weight: 700;
 }

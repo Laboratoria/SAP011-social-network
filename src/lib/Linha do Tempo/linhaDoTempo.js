@@ -5,7 +5,7 @@ export default () => {
   <html>
   <body>
   <header>Usuário</header>
-  <a href="#home">Sair</a>
+  <a href="#telaInicial">Sair</a>
   </body>
   </html>
   `;

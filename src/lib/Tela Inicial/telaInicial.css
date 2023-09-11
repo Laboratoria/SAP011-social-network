@@ -1,39 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&family=Quicksand:wght@400;600;700&display=swap');
 
 body {
-
     background-color: #D9BACA;
+
+
 }
 
-head {
+#tituloPagina {
     color: #D2398A;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-weight: 700;
     font-style: normal;
     filter: blur (2px);
     text-align: center;
+    padding-top: 100px;
+
+}
+hr {
+    color: black;
 }
 
-main div {
-    width: 482px;
+#mainTelaInicial {
+    width: 45px;
     height: 809px;
     border-radius: 10px;
     background: rgba(147, 144, 144, 0.39);
 }
 
-#email, #senha {
+#emailTelaInicial,
+#senhaTelaInicial {
     width: 434px;
     height: 88px;
     flex-shrink: 0;
     border-radius: 8px;
     background: #FAFAFA;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
 }
 
-p #email, p #senha {
+#emailDaTela,
+#senhaDaTela {
     color: #1E1E1E;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -44,45 +51,56 @@ p #email, p #senha {
     border-radius: 8px;
     background: #D2398A;
     width: 282px;
-    height: 88px; 
+    height: 88px;
     color: #FFF;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 36px;
     font-style: normal;
-    font-weight: 700;  
+    font-weight: 700px;
 }
 
 #entrarGoogle {
     color: rgba(102, 103, 100, 0.92);
     text-align: center;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin-top: 10px;
 }
 
 nav img {
-    width: 87px;
-    height: 85px;
+    width: 65px;
+    height: 65px;
     flex-shrink: 0;
+    margin-left: 180px;
 }
 
+#novaConta{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    margin-top: -400px;
+    margin-left: 120px;
+}
 
 #criarConta {
     color: rgba(102, 103, 100, 0.92);
     text-align: center;
-    font-family: Inter;
-    font-size: 20px;
+    font-family: Inter, sans-serif;
+    font-size: 25px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
 }
 
-#botaoCadastro { 
+#botaoCadastro {
     color: rgba(210, 57, 138, 0.99);
     text-align: center;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
