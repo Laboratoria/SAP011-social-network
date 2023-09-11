@@ -42,15 +42,13 @@ export default () => {
 
   const emailUser = document.getElementById("email");
 
-  function newPassword() {
-  
+  function newPassword(event) {
+    event.preventDefault();
     const emailValue = emailUser.value;
-  
-      resetLink(emailValue);
-    };
+
+    resetLink(emailValue);
+  }
 
   const btn = document.getElementById("submit");
-
   btn.addEventListener("click", newPassword);
-  
-  };
+};
