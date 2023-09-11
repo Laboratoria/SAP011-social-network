@@ -16,6 +16,19 @@
     height: 50px;
 }
 
+.error {
+    color: rgb(236, 59, 59);
+    font-size: 12px;
+    display: none;
+    margin-top: 5px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+input.error-input {
+    border: 1px solid rgb(236, 59, 59);
+}
+
 /*permanente*/
 .senha-input {
     position: relative;
@@ -23,8 +36,8 @@
 
 .senha-input img {
     position: absolute;
-    right: -50px;
-    top: 35%;
+    right: 10px;
+    top: 50%;
     transform: translateY(-50%);
     background-color: transparent;
 }
@@ -35,15 +48,14 @@
 
 .confirme-input img {
     position: absolute;
-    right: -50px;
-    top: 40%;
+    right: 10px;
+    top: 50%;
     transform: translateY(-50%);
     background-color: transparent;
 }
 
 #text-slogan {
     color: #7ED957;
-    font: bold;
     font-size: 20px;
     text-align: center;
     margin-left: -950px;
@@ -100,6 +112,17 @@ a:link {
     margin-left: 10px;
 }
 
+.form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-field li {
+    width: 100%;
+}
+
 input {
     border-radius: 20px;
     padding-bottom: 10px;
@@ -109,11 +132,9 @@ input {
     background-color: #9edf83;
     border: none;
     outline: none;
-    margin-bottom: 20px;
-    margin-left: 60px;
     color: white;
-    font: bold;
     font-size: 16px;
+    width: 100%;
 }
 
 .main-registro {
@@ -122,6 +143,7 @@ input {
     width: 68%;
     flex-direction: column;
     position: relative;
+    margin: 0 auto;
 }
 
 .container-registro {
@@ -144,10 +166,13 @@ button {
     padding-bottom: 10px;
     width: 100%;
     margin-bottom: 15px;
-    margin-left: 60px;
     color: rgb(41, 153, 22);
-    font: bold;
     font-size: 20px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 button:hover {
@@ -168,9 +193,9 @@ a:hover {
 
 @media screen and (min-width: 300px) {
 
-#texto-registro {
-   font-size: 16px;
-}
+    #texto-registro {
+        font-size: 16px;
+    }
 
 }
 
@@ -180,8 +205,6 @@ a:hover {
         margin-right: 0px;
         align-items: flex-end;
         background-color: transparent;
-        float: left;
-        margin-left: 400px;
         margin-top: 50px;
     }
 
@@ -211,17 +234,15 @@ a:hover {
 
 @media screen and (min-width: 600px) {
     .container-forms {
-        float: left;
-        margin-left: 100px;
         background-color: transparent;
     }
 
     #logo-registro {
         margin-top: 100px;
     }
-   }
+}
 
-   /* @media screen and (min-width: 1280px) {
+/* @media screen and (min-width: 1280px) {
 
         .container-forms {
             margin-right: 0px;
@@ -243,7 +264,6 @@ a:hover {
         }
     
         .container-forms {
-            float: left;
             margin-left: 200px;
             margin-top: 50px;
     
@@ -265,7 +285,6 @@ a:hover {
     @media screen and (min-width: 540px) {
 
         .container-forms {
-            float: left;
             margin-left: 300px;
             margin-top: 50px;
         }

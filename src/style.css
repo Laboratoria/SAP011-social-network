@@ -1,37 +1,39 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
-header{
+header {
     background-color: #7ed957;
     border: 1px solid #7ed957;
     height: 60px;
 }
 
-#containerUser{
+#containerUser {
     display: flex;
     align-items: center;
 }
 
-footer{
+footer {
     background-color: #7ed957;
     border: 1px solid #7ed957;
     bottom: 0%;
     position: fixed;
-    width: 100%;   
+    width: 100%;
 }
 
-#containerIcons{
+#containerIcons {
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
 }
 
-.icons{
-    width: 8vw;   
+.icons {
+    width: 8vw;
 }
+
 main {
     background-color: white;
 }
