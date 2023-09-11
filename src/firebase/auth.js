@@ -6,6 +6,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
+  signOut,
 } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
 
 import { firebaseApp } from "./config.js";
@@ -67,4 +68,15 @@ function signGoogle() {
     });
 }
 
-export { createUser, signIn, signGoogle };
+async function exit() {
+  await signOut(auth)
+    .then(() => {
+      // Sign-out successful.
+    })
+    .catch((error) => {
+      // An error happened.
+    });
+  location.hash = "#login";
+}
+
+export { createUser, signIn, signGoogle, exit };

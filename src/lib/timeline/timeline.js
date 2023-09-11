@@ -1,3 +1,5 @@
+import { exit } from "../../firebase/auth.js";
+
 const screen = `
       <section id="main-timeline">
         <div id="div-logo">
@@ -36,6 +38,9 @@ const screen = `
 export default () => {
   const container = document.getElementById("app");
   container.innerHTML = screen;
+
+  const exitBtn = document.getElementById("signout-button");
+  exitBtn.addEventListener("click", exit);
 
   const backToTop = document.querySelector("#home-button");
   const feed = document.querySelector("#feed-container");
