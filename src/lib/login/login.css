@@ -22,21 +22,22 @@ header p {
     font-size: 17px;
     color: white;
     text-align: center;
-    margin-top: 15px;
+    margin: 15px 0px 45px;
+    font-weight: 500;
 }
     
-.container-login{
+.section-login{
     border: 1px solid white;
     border-radius: 12px;
     background-color: white;
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 20px 40px 0px;
     height: 100vw;
-    padding: 20px;
+    padding: 30px;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
 
 main {
@@ -80,25 +81,28 @@ h2{
     background-color: transparent;
     border: none;
     color: black;
-    font-size: 11px;
+    font-size: 15px;
     margin-bottom: 18px;  
     cursor: pointer; 
     display: flex;
     margin-left: auto;
+    text-decoration: none;
 }
 
 #btn-register {
     background-color: transparent;
     border: none;
     color: black;
-    font-size: 13.5px;
-    margin-top: 10px;  
+    font-size: 15px;
+    margin-top: 8px;  
     cursor: pointer; 
+    text-decoration: none;
 }
 
 .text-or{
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 15px 0px;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .button-google {
@@ -122,41 +126,86 @@ h2{
 .txt-account{
     margin-top: 25px;
     font-size: 16px;
+    font-weight: 700;
 }
 
-.img-girl{
+.img-girl {
     display: none;
 }
+
+.img-girl-tablet {
+    display: none;
+}
+
 
 footer {
     display: none;
 }
 
-@media (min-width: 700px) {
+/* Para tablets */
+@media (min-width: 767px) and (max-width: 1023px) {
+    .logo-login {
+        height: 8vh;
+        width: 30vh;
+    }
+   
+    header p {
+        font-size: 23px;
+        margin-top: 15px;
+    }
 
-    .img-girl {
-        display: block;
-        height: 24vw;
-        width: 27vw;
-        margin: 15px 0px 20px;
+    .images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .login-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 18px;
+        flex-direction: column;
+    }
+
+    .section-login{
+        margin: 100px 40px 0px;
+        height: 42vh;
+        padding: 35px 35px 25px;
+    }
+
+    .text-or{
+        font-size: 16px;
+    }
+
+    .button-password{
+        font-size: 14px;
+
+    }
+}
+
+
+/* Para telas maiores */
+@media screen and (min-width: 1024px) {
+    .img-girl { 
+        display: block;
+        height: 24vw;
+        width: 27vw;
+        margin: 20px 0px;
+    }
+
+    .login-container {
+        display: flex;
+        justify-content: center;
     }
 
     .logo-login {
-        width: 150px;
-        height:35px;
+        height: 8vh;
+        width: 30vh;
     }
 
     header p {
-        font-size: 11px;
+        font-size: 15px;
         margin-top: 10px;
-        font-weight: 500;
     }
 
     .header-login {
@@ -167,49 +216,49 @@ footer {
     }
 
     h2{
-        font-size: 10px;
-        margin: 8px 0px 8px;
+        font-size: 20px;
+        margin: 8px 0px 20px;
     }
     
     .login-email, .login-password {
-        height: 21px;  
-        width: 110px;
-        font-size: 8px;
+        height: 35px;  
+        width: 233px;
+        font-size: 10px;
     }
 
     input::placeholder {
-        font-size: 7px;
+        font-size: 10px;
     }    
 
     .button-password {
-        font-size: 7px;
-        margin-bottom: 12px;  
+        font-size: 12px;
+        margin-bottom: 22px;  
     }
 
     .button-singIn {
-        height: 25px;
-        width: 128.5px;
-        font-size: 7.5px;
+        height: 42px;
+        width: 250px;
+        font-size: 15px;
     }
     
     #btn-register {
-        font-size: 7.5px; 
+        font-size: 13.5px; 
         margin-top: 6px;  
     }
 
     .text-or{
-        font-size: 9px;
+        font-size: 15px;
         margin: 10px 0px;
     }
     
     .button-google {
-        height: 25px;
-        width: 128.5px;
-        font-size: 7.5px;
+        height: 42px;
+        width: 250px;
+        font-size: 15px;
     } 
     
     .icon-google {
-        width: 12px;
+        width: 25px;
     }  
 
     .images {
@@ -217,37 +266,51 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 110px;
     }   
 
     .section-login {
-        display: flex;
-        flex-direction: column;
+       margin-top: 15vw;
+       display: flex;
+       flex-direction: column;
+       margin-left: 8vw;
+       height: 50vh;
+       margin-bottom: 20px;
+       
     }
 
-    .container-login {
-        height: 29vw;
-        width: 19vw;
-        margin-bottom: 20px;
-    }
-
-.footer-info {
+    .footer-info {
         display: flex;
         background-color: #197B91;
         text-align: center;
         justify-content: center;
-        font-size: 10px;
+        align-items: center;
+        font-size: 16px;
         color: white;
-        height: 35px;
+        height: 53px;
         width: 100%;
         margin-top: auto;
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
+        cursor: pointer;
+    }
+    
+    .footer-info a {
+        color: white;
+        text-decoration: none; 
     }
 
     .txt-account{
-        margin-top: 10px;
-        font-size: 10px;
+        margin-top: 20px;
+        font-size: 13.5px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .section-login {
+        height:40vh;
+        padding: 35px 50px 25px;
     }
 }

@@ -1,19 +1,22 @@
 import firstLogo from '../../assets/Logo-White.png'; // Importa a primeira imagem do logo.
-import girl from '../../assets/Composition-Background.png'; // Importa a imagem de fundo com uma garota.
+import girl from '../../assets/Composition-Background1.png'; // Importa a imagem de fundo com uma garota.
 
 export default () => {
   const loginContainer = document.createElement('div'); // Cria um elemento div para o contêiner de login.
   loginContainer.classList.add('register-container'); // Adiciona a classe 'login-container' ao elemento.
 
   const content = `
+    <div class='images-register'>
       <header class='header-login'>
-        <img src='${firstLogo}' alt='logo-eldoria" class='logo'> 
+        <img src='${firstLogo}' alt='logo-eldoria' class='logo'> 
         <p>Dedicado a todos os entusiastas de literatura fantástica</p>
       </header>
+      <img src='${girl}' class='img-girl-register' alt='Desenho de uma menina lendo'>
+      </div>
 
       <main>
         <form class='section-register'>
-          <h2> Criar uma nova conta <h2>
+          <h2 class='new-account-register'> Criar uma nova conta <h2> 
           <div class='input-register'>
           <input type='text' name='name' class='name-register' placeholder='Nome do usuário'>  
           <input type='email' name='email' class='email-register' placeholder='E-mail'>            
@@ -21,7 +24,7 @@ export default () => {
           </div>
           <button type='button' class='btn-signIn' id='button-register'> Inscrever-se </button>
           <p class='text-register'>Já é registrado?</p>
-          <button type='button' class='click-here' id='enter-here'> Entre aqui </button>
+          <a class='click-here' id='enter-here'> Entre aqui </a>
         </form>
 
       </main>

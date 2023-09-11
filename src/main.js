@@ -18,13 +18,13 @@ const init = () => {
       case '':
         main.appendChild(login());
         break;
-      case '#Password':
+      case '#password':
         main.appendChild(password());
         break;
-      case '#Register':
+      case '#register':
         main.appendChild(register());
         break;
-      case '#Home':
+      case '#home':
         main.appendChild(home());
         break;
       default:

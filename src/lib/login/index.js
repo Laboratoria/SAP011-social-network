@@ -17,19 +17,18 @@ export default () => {
       
       <main>
         <form class='section-login'>
-        <div class='container-login'> 
-          <h2> Faça login no Eldoria <h2>
+          <h2> Faça login no Eldoria </h2>
           <div class='input-login'> 
           <input type='email' name='email' id='email-login' class='login-email' placeholder='E-mail'>  
           <input type='password' name='password' id='key-login' class='login-password' placeholder='Senha'> 
           </div>
-          <button type='button' class='button-password'> Esqueceu sua senha? </button>
+          <a class='button-password' href ='#password'> Esqueceu sua senha? </a>
           <button type='button' class='button-singIn' id='button-login'> Conecte-se </button>
           <p class='text-or'>ou</p>
             <button type='button' class='button-google'>
               <img src='${googleIcon}' class='icon-google' alt='logo-google'> Faça login com o Google </button>
           <p class='txt-account'>Não tem uma conta?</p>
-          <button type='button' id='btn-register'> Inscrever-se </button>
+          <a id='btn-register' href ='#register'> Inscrever-se </a>
         </form>
       </main>
     `;
