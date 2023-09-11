@@ -166,10 +166,11 @@
     padding-left: 38rem;
   }
 
-  #main-timeline #div-logo .logoout {
+  #main-timeline #div-logo .logout {
     height: 36px;
     padding: 0 2px;
     align-self: flex-end;
+    cursor: pointer;
   }
   
   #container {
@@ -212,8 +213,12 @@
     border-top: none;
   }
 
-  #functions a img {
-    height: 40px;
+  #functions button {
+    cursor: pointer;
+  }
+
+  #functions button img {
+    height: 35px;
   }
   
 }
