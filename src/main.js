@@ -1,6 +1,6 @@
 import cadastro from './lib/Cadastro/cadastro.js';
-import linhaDoTempo from './lib/Linha do Tempo/linhaDoTempo.js';
-import telaInicial from './lib/Tela Inicial/telaInicial.js';
+import linhaDoTempo from './lib/LinhaDoTempo/linhaDoTempo.js';
+import telaInicial from './lib/TelaInicial/telaInicial.js';
 
 const conteudo = document.querySelector('#conteudo');
 

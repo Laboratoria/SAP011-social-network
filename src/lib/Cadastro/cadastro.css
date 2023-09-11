@@ -2,34 +2,55 @@ body {
     background-color: #D9BACA;
 }
 
-head {
+#criarContaTitulo {
     color: #D2398A;
     text-align: center;
-    font-family: Inter, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     width: 352px;
     height: 48px;
+    padding-top: 70px;
+    margin-left: 20px;
+    border-bottom: 2px solid #D2398A;
 }
 
-main div {
-    width: 482px;
-    height: 809px;
+#fundoCadastro {
+    width: 365px;
+    height: 640px;
     border-radius: 10px;
     background: rgba(147, 144, 144, 0.39);
+    padding-top: 40px;
+    margin: 0 auto;
 }
 
 #nomeUsuario,
 #email,
 #senha,
 #dataNascimento {
-    width: 434px;
-    height: 88px;
+    width: 300px;
+    height: 65px;
     flex-shrink: 0;
     border-radius: 8px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#dataNascimento{
+    margin-bottom: 65px;
+}
+
+.campoCadastro{
+    font-family: 'inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    color:#1e1e1e;
+    margin-bottom: -30px;
+    margin-left: 30px;
 
 }
 
@@ -39,8 +60,12 @@ main div {
     width: 282px;
     height: 88px;
     color: #FFF;
-    font-family: Inter, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 36px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 700px;
+    margin-left: 70px;
+    
+    padding: 20px 25px 25px 30px;
+    text-decoration: none;
 }
