@@ -1,5 +1,5 @@
 export default () => {
-  const container = document.createElement("div");
+  const container = document.createElement('div');
 
   const conteudo = `
     <html>
