@@ -294,12 +294,16 @@ footer {
         bottom: 0;
         left: 0;
         right: 0;
-        cursor: pointer;
     }
     
-    .footer-info a {
+    .footer-info p {
         color: white;
         text-decoration: none; 
+    }
+
+    .fa-brands, .fa-github {
+        color:white;
+        cursor: pointer;
     }
 
     .txt-account{
