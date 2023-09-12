@@ -2,7 +2,15 @@ export default () => {
   const cadastro = document.createElement('div');
 
   const conteudo = ` 
-      <h1 id="criarContaTitulo">Crie sua Conta</h1>
+      <div id="conteudo-desktop-cadastro">
+       <div id="cadastro-imagem-texto">
+        <p id="texto1-desktop-cadastro">Conectados pela <br> nostalgia</p>
+        <img id="imagem-desktop" src="imagens/imagemTelaInicial.png"></img>
+        <p id="texto2-desktop-cadastro">Se você também é jovem pra ser velho
+        e velho pra ser jovem, junte se a nós!</p>
+        </div>
+        <div>
+        <h1 id="criarContaTitulo">Crie sua Conta</h1>
         <section id="fundoCadastro">
       <form id="formulario">
         <label> <p class = "campoCadastro"> Nome </p> <input id="nomeUsuario" type="text" name="nome"></input></label>
@@ -12,6 +20,8 @@ export default () => {
         <a id="criarContaCadastro" href="#linhaDoTempo">Criar conta</a>
       </form>
         </section>
+        </div>
+        </div>
       
 `;
 
