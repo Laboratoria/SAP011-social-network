@@ -61,6 +61,9 @@ export default () => {
 
       document.getElementById("feed-container").appendChild(post);
 
+      // Mostrar inforrmações do usuário
+      // userInfo();
+
       erased.parentNode.removeChild(erased);
 
       postPlace.value = "";
