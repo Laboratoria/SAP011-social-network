@@ -155,7 +155,7 @@ body {
     display: flex;
 }
 
-#cadastro-imagem-texto{
+#cadastro-imagem-texto{ 
     display: block;  
     margin-left: 150px; 
     width: 80%;
