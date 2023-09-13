@@ -16,8 +16,8 @@ export default () => {
         <label> <p class = "campoCadastro"> Nome </p> <input id="nomeUsuario" type="text" name="nome"></input></label>
         <label> <p class = "campoCadastro"> Email </p> <input id= "email" type="email" name="email"></input></label>
         <label> <p class = "campoCadastro"> Senha </p> <input id= "senha" type="password" name="senha"></input></label>
-        <label> <p class = "campoCadastro"> Data de Nascimento </p> <input id="dataNascimento" type="date" name="dataDeNascimento"></input></label>
-        <a id="criarContaCadastro" href="#linhaDoTempo">Criar conta</a>
+        <label> <p class = "campoCadastro"> Confirmar senha </p> <input id="confirmarSenha" type="password" name="confirmarSenha"></input></label>
+        <a id="criarContaCadastro" href="#telaInicial">Criar conta</a>
       </form>
         </section>
         </div>

@@ -13,23 +13,25 @@ body {
     width: 352px;
     height: 48px;
     padding-top: 70px;
-    margin-left: 90px;
+    margin-left: 85px;
+    margin-right: -50px;
     border-bottom: 2px solid #D2398A;
 }
 
 #fundoCadastro {
     width: 400px;
-    height: 550px;
+    height: 500px;
     border-radius: 10px;
     background: rgba(147, 144, 144, 0.39);
     padding-top: 70px;
     margin: auto;
+    margin-bottom: 50px;
 }
 
 #nomeUsuario,
 #email,
 #senha,
-#dataNascimento {
+#confirmarSenha {
     width: 280px;
     height: 60px;
     flex-shrink: 0;
@@ -40,7 +42,7 @@ body {
     margin-top: 30px;
 }
 
-#dataNascimento{
+#confirmarSenha{
     margin-bottom: 55px;
 }
 
@@ -128,7 +130,7 @@ body {
 #nomeUsuario,
 #email,
 #senha,
-#dataNascimento {
+#confirmarSenha {
     margin-top: 10px;
 }
 
@@ -136,7 +138,7 @@ body {
     margin-bottom: -10px;
 }
 
-#dataNascimento{
+#confirmarSenha{
     margin-bottom: 42px;
 }
 
@@ -159,13 +161,14 @@ body {
     display: block;  
     margin-left: 150px; 
     width: 80%;
+    margin-top: 5px;
 }  
 
 #texto1-desktop-cadastro{
     font-size: 30px;
     margin-top: 90px;
     width: 80%;
-    margin-left: 20px;
+    margin-left: 60px;
 }
 
 #texto2-desktop-cadastro{
@@ -177,19 +180,20 @@ body {
 #cadastro-imagem-texto img{
     width: 600px;
     height: 450px;
-    margin-left: -15px;
+    margin-left: 100px;
 }
 
 #fundoCadastro{
     margin-right: 200px;
     height: 480px;
     width: 480px;
+    padding-bottom: 30px;
 }
 
 #nomeUsuario,
 #email,
 #senha,
-#dataNascimento {
+#confirmarSenha {
     margin-left: 65px;
     width: 350px;
 }
@@ -199,7 +203,7 @@ body {
 }
 
 
-#dataNascimento{
+#confirmarSenha{
     margin-bottom: 40px;
 }
 
