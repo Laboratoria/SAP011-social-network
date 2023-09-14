@@ -1,5 +1,3 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
 import { getDatabase } from "firebase/database";
 
 // TODO: Replace the following with your app's Firebase project configuration
@@ -16,25 +14,4 @@ const firebaseConfig = {
   databaseURL: "https://mypet-network-default-rtdb.firebaseio.com/",
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-// Initialize Firebase
-const auth = getAuth(app);
-// Initialize Realtime Database and get a reference to the service
 const database = getDatabase(app);
-
-// PARA RECEBER INFORMAÇÕES DO USUÁRIO
-const user = auth.currentUser;
-
-if (user !== null) {
-  // The user object has basic properties such as display name, email, etc.
-  const displayName = user.displayName;
-  const email = user.email;
-  const photoURL = user.photoURL;
-  const emailVerified = user.emailVerified;
-
-  // The user's ID, unique to the Firebase project. Do NOT use
-  // this value to authenticate with your backend server, if
-  // you have one. Use User.getToken() instead.
-  const uid = user.uid;
-}

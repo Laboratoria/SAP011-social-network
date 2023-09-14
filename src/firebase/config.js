@@ -1,8 +1,5 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
-// https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js
-
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
-// https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
 export const firebaseApp = {
   apiKey: "AIzaSyA41Dab9eY4PHp_wsvUVa9e8nYCsfLSUl8",
@@ -15,6 +12,5 @@ export const firebaseApp = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseApp);
-const auth = getAuth(app);
-
+export const app = initializeApp(firebaseApp);
+export const auth = getAuth(app);

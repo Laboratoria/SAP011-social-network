@@ -63,7 +63,7 @@ export default () => {
   submit.addEventListener("click", captureData);
 
   function signInGoogle(event) {
-  event.preventDefault();
+    event.preventDefault();
 
     signGoogle();
   }

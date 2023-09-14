@@ -1,5 +1,3 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
-
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -8,12 +6,11 @@ import {
   GoogleAuthProvider,
   sendPasswordResetEmail,
   signOut,
-} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
+} from "firebase/auth";
 
-import { firebaseApp } from "./config.js";
+import { app } from "./config.js";
 
 // Initialize Firebase
-const app = initializeApp(firebaseApp);
 const auth = getAuth(app);
 
 async function createUser(email, password) {
