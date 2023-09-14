@@ -1,7 +1,7 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+import { initializeApp } from "firebase/app";
 // https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js
 
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
+import { getAuth } from "firebase/auth";
 // https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js
 
 export const firebaseApp = {

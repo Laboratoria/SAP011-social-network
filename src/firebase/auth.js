@@ -1,4 +1,4 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+import { initializeApp } from "firebase/app";
 
 import {
   getAuth,
@@ -8,7 +8,7 @@ import {
   GoogleAuthProvider,
   sendPasswordResetEmail,
   signOut,
-} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
+} from "firebase/auth";
 
 import { firebaseApp } from "./config.js";
 
@@ -27,7 +27,9 @@ async function createUser(email, password) {
       const errorMessage = error.message;
       // ..
     });
-  location.hash = "#welcome";
+  // location.hash = "#welcome";
+
+
 }
 
 async function signIn(email, password) {
@@ -40,7 +42,7 @@ async function signIn(email, password) {
       const errorCode = error.code;
       const errorMessage = error.message;
     });
-  location.hash = "#timeline";
+  //location.hash = "#timeline";
 }
 
 const provider = new GoogleAuthProvider();
@@ -66,7 +68,7 @@ async function signGoogle() {
       const credential = GoogleAuthProvider.credentialFromError(error);
       // ...
     });
-  location.hash = "#timeline";
+  //location.hash = "#timeline";
 }
 
 async function resetLink(email) {
