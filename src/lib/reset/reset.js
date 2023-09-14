@@ -46,7 +46,7 @@ export default () => {
     event.preventDefault();
     const emailValue = emailUser.value;
 
-    resetLink(emailValue);
+    resetLink(emailValue).then(location.hash = "#login");
   }
 
   const btn = document.getElementById("submit");

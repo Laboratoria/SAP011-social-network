@@ -47,3 +47,32 @@ describe('signIn', () => {
     expect(signInWithEmailAndPassword).toHaveBeenCalledWith(getAuth(), email, password);
   });
 });
+
+describe('signOut', () => {
+  it('Deslogar', async () => {
+    await signOut();
+    expect(signOut).toHaveBeenCalled();
+  });
+});
+
+// nao funciona 
+
+describe('signInGoogle', () => {
+  it('Login com Google account', async () => {
+     signInWithPopup.mockResolvedValueOnce();
+
+    await signGoogle();
+
+    expect(typeof signGoogle).toBe('function');
+    expect(signInWithPopup).toHaveBeenCalledTimes(1);
+    expect(signInWithPopup).toHaveBeenCalledWith(undefined, provider);
+  });
+});
+
+describe('resetLink', () => {
+  it('Enviar email com link de redefinição', () => {
+    sendPasswordResetEmail.mockResolvedValue();
+    resetLink();
+    expect(sendPasswordResetEmail).toHaveBeenCalledTimes(1);
+  });
+});

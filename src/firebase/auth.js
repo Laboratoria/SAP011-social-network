@@ -82,7 +82,7 @@ async function resetLink(email) {
       const errorMessage = error.message;
       // ..
     });
-  location.hash = "#login";
+  //location.hash = "#login";
 }
 
 async function exit() {
