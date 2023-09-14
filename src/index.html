@@ -12,5 +12,29 @@
   <body>
     <main id="conteudo"></main>
     <script src="main.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-auth-compat.js"></script>
+    <script type="module">
+
+      const email = document.querySelector('emailTelaInicial');
+      const senha = document.querySelector('#senhaTelaInicial');
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCf11TF3T5MQEPvA84gCejQ6SndIiwS66M",
+        authDomain: "bug-dos-millennials.firebaseapp.com",
+        projectId: "bug-dos-millennials",
+        storageBucket: "bug-dos-millennials.appspot.com",
+        messagingSenderId: "860927681811",
+        appId: "1:860927681811:web:79f9035bde939ec1b1e6e6"
+      };
+      firebase.initializeApp(firebaseConfig);
+      console.log('antes')
+      firebase.auth().signInWithEmailAndPassword("jucielegomes.s@hotmail.com", "123456").then(response =>{
+        console.log('success', response)
+      }).catch(error => {
+        console.log('error', error)
+      })
+      console.log('depois')
+    </script>
   </body>
 </html>

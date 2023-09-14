@@ -14,7 +14,7 @@ export default () => {
           <form>
           <label> <p id="emailDaTela">Email</p> <input id= "emailTelaInicial" type="email name="email"></input></label>
           <label> <p id="senhaDaTela">Senha</p> <input id= "senhaTelaInicial" type="password" name="senha"></input></label>
-          <a id="botaoEntrar" href="#linhaDoTempo">Entrar</a>
+          <button id="botaoEntrar">Entrar</button>
         </form>
         <nav>
           <p id="entrarGoogle">Entre com sua conta Google</p>

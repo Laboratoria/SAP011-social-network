@@ -26,4 +26,15 @@ const iniciarPagina = () => {
     iniciarPagina();
   });
 };
+
 iniciarPagina();
+
+const botaoEntrar = document.querySelector('#botaoEntrar');
+function login() {
+  botaoEntrar.addEventListener('click', () => {
+    window.location.hash = linhaDoTempo();
+  });
+}
+login();
+
+// Console.log(login());
