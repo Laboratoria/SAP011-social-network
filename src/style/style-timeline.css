@@ -78,20 +78,89 @@
 }
 
 #feed-container div {
-  width: 88%;
+  width: 90%;
   height: fit-content;
   display: flex;
   flex-wrap: wrap;
   background-color: #fff;
   margin: 5px 0;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 0 10px;
+  border-radius: 20px;
   align-items: center;
 }
 
 #feed-container img {
   width: 200px;
 }
+
+/* FORMATAÇÃO DOS POST */
+#feed-container div .post {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  padding: 0;
+}
+
+#feed-container div .post .user-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: start;
+  padding: 0;
+  border-radius: 0;
+  /* border: solid 1px red; */
+}
+
+#feed-container div .post .user-info img {
+  width: 45px;
+  margin-top: 5px;
+}
+
+#feed-container div .post .post-text {
+  width: 82%;
+  display: flex;
+  flex-direction: column;
+  /* border: solid 1px blue; */
+  padding: 0;
+}
+
+#feed-container div .post .post-text p {
+  width: 95%;
+  margin: 0;
+  text-align: start;
+  padding-left: 8px;
+}
+
+#feed-container div .post .post-text .username {
+  padding-bottom: 8px;
+  font-weight: bold;
+}
+
+#feed-container div .post .likes {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  /* border: solid 1px green; */
+  padding: 0;
+}
+
+#feed-container div .post .likes p {
+  margin: 0;
+  padding-right: 8px;
+}
+
+#feed-container div .post .likes img {
+  width: 24px;
+  padding-right: 8px;
+}
+
+
+
+/* FIM FORMATAÇÃO DOS POST */
 
 #input-container {
   height: 6%;
@@ -180,6 +249,10 @@
 
   #feed {
     width: 80%;
+  }
+
+  #feed-container div .post .post-text {
+    width: 92%;
   }
 
   #input-container input {

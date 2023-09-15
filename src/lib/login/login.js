@@ -56,7 +56,7 @@ export default () => {
     const emailUser = emailId.value;
     const passwordUser = passwordId.value;
 
-    signIn(emailUser, passwordUser).then(location.hash = "welcome")
+    signIn(emailUser, passwordUser).then((location.hash = "timeline"));
   }
 
   const submit = document.getElementById("submit");
@@ -65,7 +65,7 @@ export default () => {
   function signInGoogle(event) {
     event.preventDefault();
 
-    signGoogle().then(location.hash = "#timeline");
+    signGoogle().then((location.hash = "#timeline"));
   }
 
   const loginGoogle = document.getElementById("loginGoogle");
