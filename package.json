@@ -22,7 +22,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.19.4",
+    "@babel/core": "^7.22.19",
+    "@babel/preset-env": "^7.22.15",
     "eslint": "^8.3.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.18.2",
@@ -42,5 +43,8 @@
     "createdAt": "2023-08-14T14:43:09.410Z",
     "version": "6.6.0",
     "commit": "24f5a51ee0a15f345b59fcd2ef44c3616abdfce5"
+  },
+  "dependencies": {
+    "firebase": "^9.23.0"
   }
 }
