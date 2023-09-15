@@ -56,7 +56,7 @@ export default () => {
     const emailUser = emailId.value;
     const passwordUser = passwordId.value;
 
-    createUser(emailUser, passwordUser);
+    createUser(emailUser, passwordUser).then(location.hash = "#welcome");
   }
 
   const submit = document.getElementById("submit");
