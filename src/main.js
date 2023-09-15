@@ -2,8 +2,6 @@ import cadastro from './lib/Cadastro/cadastro.js';
 import linhaDoTempo from './lib/LinhaDoTempo/linhaDoTempo.js';
 import telaInicial from './lib/TelaInicial/telaInicial.js';
 
-
-
 const conteudo = document.querySelector('#conteudo');
 
 const iniciarPagina = () => {
@@ -31,7 +29,6 @@ const iniciarPagina = () => {
 
 iniciarPagina();
 
-
 // const botaoEntrar = document.querySelector('#botaoEntrar');
 // document.addEventListener('DOMContentLoaded', function() {
 // });
@@ -41,6 +38,5 @@ iniciarPagina();
 // }
 
 // botaoEntrar.addEventListener('click', login);
-
 
 // Console.log(login());
