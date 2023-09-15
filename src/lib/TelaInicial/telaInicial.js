@@ -12,6 +12,7 @@ export default () => {
           <h1 id= "tituloPagina"class="tituloPagina">BUG DOS <br> MILLENNIALS</h1>
         <section id="fundoTelaInicial">
           <form >
+          <div id="usuarioNaoEncontrado"></div>
           <label> <p id="emailDaTela">Email</p> <input id= "emailTelaInicial" type="email name="email"></input></label>
           <label> <p id="senhaDaTela">Senha</p> <input id= "senhaTelaInicial" type="password" name="senha"></input></label>
           <button id="botaoEntrar">Entrar</button>
@@ -31,6 +32,7 @@ export default () => {
 
   container.innerHTML = conteudo;
 
+
   const botaoEntrar = container.querySelector('#botaoEntrar');
 
 
@@ -38,22 +40,32 @@ export default () => {
     event.preventDefault();
     const email = container.querySelector("#emailTelaInicial").value;
     const senha = container.querySelector("#senhaTelaInicial").value;
-    // console.log('antes')
     firebase.auth().signInWithEmailAndPassword(email,senha).then(response =>{
       window.location.hash = '#linhaDoTempo';
       console.log('success', response)
     }).catch(error => {
-    alert(capturarErro(error));
+    capturarErro(error);
     })
   }
-
+ const usuarioNaoEncontrado = container.querySelector("#usuarioNaoEncontrado");
   function capturarErro(error){
+   usuarioNaoEncontrado.textContent = ""; 
     if (error.code == "auth/user-not-found"){
-      return "Usuário não encontrado";
-    } 
-    return error.message;
+     usuarioNaoEncontrado.textContent = "Usuário não encontrado";
+    } else {
+      return error.message;
+    }
   }
   
+  botaoEntrar.addEventListener('click', login);
+
+  
+  firebase.auth().onAuthStateChanged(function(user){
+    if(user) {
+      window.location.hash = "#linhaDoTempo"
+    }
+  })
+
   botaoEntrar.addEventListener('click', login);
 
   return container;
