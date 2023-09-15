@@ -4,6 +4,7 @@ import welcome from "./lib/welcome/welcome.js";
 import timeline from "./lib/timeline/timeline.js";
 import reset from "./lib/reset/reset.js";
 import newpassword from "./lib/newpassword/newpassword.js";
+import { checkLogin } from "./firebase/auth.js";
 
 function loadContent() {
   const fragmentId = location.hash.substring(1);
@@ -33,5 +34,6 @@ if (!location.hash) {
   location.hash = "#login";
 }
 
+checkLogin();
 loadContent();
 window.addEventListener("hashchange", loadContent);

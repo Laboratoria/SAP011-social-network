@@ -1,4 +1,4 @@
-import { exit } from "../../firebase/auth.js";
+import { exit, getUserInfo } from "../../firebase/auth.js";
 
 const screen = `
       <section id="main-timeline">
@@ -51,28 +51,63 @@ export default () => {
   const postButton = document.getElementById("publish-button");
   const postPlace = document.getElementById("postPlace");
 
+  // const user = getUserInfo();
+  function teste() {
+    console.log(getUserInfo());
+  }
+  teste();
+
+  // FUNÇÃO DE POSTAR CONTEÚDO
   function postIt() {
+    // console.log(user.email);
     console.log(postPlace.value);
     const erased = document.getElementById("empty-feed");
 
     if (postPlace.value !== "" && erased) {
       const post = document.createElement("div");
-      post.innerHTML = postPlace.value;
+
+      // LAYOUT DA POSTAGEM
+      const postLayout = `
+        <div class="post">
+          <div class="user-info">
+            <img src="./img/post-photo1-no-bg.png" alt="Foto do perfil">
+            <div class="post-text">
+              <p class="username">@meu-pet-é-lindo diz:</p>
+              <p class="text">${postPlace.value}</p>
+            </div>
+          </div>
+          <div class="likes">
+            <p>0</p>
+            <img class="heart" src="./img/post-no-likes.png" alt="Likes">
+          </div>
+        </div>`;
+
+      post.innerHTML = postLayout;
 
       document.getElementById("feed-container").appendChild(post);
-
-      // Mostrar inforrmações do usuário
-      // userInfo();
-
       erased.parentNode.removeChild(erased);
-
       postPlace.value = "";
     } else if (postPlace.value !== "" && !erased) {
       const post = document.createElement("div");
-      post.innerHTML = postPlace.value;
 
+      // LAYOUT DA POSTAGEM
+      const postLayout = `
+        <div class="post">
+          <div class="user-info">
+            <img src="./img/post-photo1-no-bg.png" alt="Foto do perfil">
+            <div class="post-text">
+              <p class="username">@meu-pet-é-lindo diz:</p>
+              <p class="text">${postPlace.value}</p>
+            </div>
+          </div>
+          <div class="likes">
+            <p>0</p>
+            <img class="heart" src="./img/post-no-likes.png" alt="Likes">
+          </div>
+        </div>`;
+
+      post.innerHTML = postLayout;
       document.getElementById("feed-container").appendChild(post);
-
       postPlace.value = "";
     }
   }
