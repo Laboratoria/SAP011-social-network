@@ -24,7 +24,9 @@ async function createUser(email, password) {
       const errorMessage = error.message;
       // ..
     });
-  location.hash = "#welcome";
+  // location.hash = "#welcome";
+
+
 }
 
 async function signIn(email, password) {
@@ -37,7 +39,7 @@ async function signIn(email, password) {
       const errorCode = error.code;
       const errorMessage = error.message;
     });
-  location.hash = "#timeline";
+  //location.hash = "#timeline";
 }
 
 const provider = new GoogleAuthProvider();
@@ -63,7 +65,7 @@ async function signGoogle() {
       const credential = GoogleAuthProvider.credentialFromError(error);
       // ...
     });
-  location.hash = "#timeline";
+  //location.hash = "#timeline";
 }
 
 async function resetLink(email) {
@@ -77,7 +79,7 @@ async function resetLink(email) {
       const errorMessage = error.message;
       // ..
     });
-  location.hash = "#login";
+  //location.hash = "#login";
 }
 
 async function exit() {
