@@ -108,6 +108,8 @@ main {
   align-items: center;
   margin-bottom: 30px;
   background-color: #fff;
+  box-shadow: inset 10px -10px 20px #a8a8a8,
+              inset -10px 10px 20px #ffffff;
 }
 
 #main-register .decoration,
@@ -238,8 +240,10 @@ footer p {
   }
 
   #green-ball {
-    top: 80px;
-    left: 300px;
+    top: 100px;
+    left: 280px;
+    box-shadow: inset 10px -10px 20px #227b82,
+                inset -10px 10px 20px #44fbff;
   }
 
   #main-register #purple-div {
@@ -247,11 +251,13 @@ footer p {
     width: 200px;
     height: 200px;
     background-color: #614bc3;
-    top: 500px;
-    right: 300px;
+    top: 440px;
+    right: 280px;
     border-radius: 50%;
     position: absolute;
     z-index: -1;
+    box-shadow: inset 10px -10px 20px #403281,
+                inset -10px 10px 20px #8265ff;
   }
 
   #main-register #purple-ball {
