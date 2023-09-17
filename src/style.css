@@ -32,28 +32,33 @@ body{
 
 }
 
-.login-container{
-    
-    
-    background-color: rgba(255, 255, 255, 0.192);
-    text-align: center;
-    justify-content: center;
+.login-container{      
+   
+    text-align: left;    
     display: flex;
     align-content: center;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.20);
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25) inset;
-    backdrop-filter: blur(20px);
-
-    border: 0;
-    border-radius: 10px;
-    width: 60%;
+    background: rgba(255, 255, 255, 0.20);    
+    backdrop-filter: blur(20px);    
+    width: 70%;
     margin: 0 auto;
     padding: 5%;
-    display: flex;
-    gap: 20px;
-
-
-
+    flex-direction: column;
+    gap: 5px; 
+    
   
+}
+
+button {
+    align-items: center;
+    font-family: BarlowSemiCondensed-SemiBold;
+    width: 150px;
+    height: 30px;
+    line-height: 20px;    
+    margin: 0px;
+    border-radius: 5px;
+    background: #1B481A;
+    color: #FFFFFF;
+
+    
 }
