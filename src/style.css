@@ -1,3 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box; 
+  }
+
+
+
 button[disabled]{
     opacity: 0.7;
     
@@ -16,14 +25,35 @@ body{
 
 }
 
-h3{
+.titulo{
+    text-align: center;
+    color: hsl(0, 0%, 97%);
+    
 
 }
 
 .login-container{
+    
+    
     background-color: rgba(255, 255, 255, 0.192);
     text-align: center;
     justify-content: center;
     display: flex;
     align-content: center;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.20);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25) inset;
+    backdrop-filter: blur(20px);
+
+    border: 0;
+    border-radius: 10px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 5%;
+    display: flex;
+    gap: 20px;
+
+
+
+  
 }

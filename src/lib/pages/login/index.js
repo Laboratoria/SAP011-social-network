@@ -3,7 +3,7 @@ export const login = () => {
   container.innerHTML = `
     <!--<form action="feed.html>" --!>
     <form class="login-container"> 
-      <h3>Login<h3>
+      <h3 class="titulo">LOGIN<h3>
         <label>E-mail:</label>
           <input name="email" class="email" placeholder="seu@email.com">
           <div class="error">E-mail e obrigatorio</div>
