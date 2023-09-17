@@ -1,8 +1,7 @@
-
 export const register = () => {
-    const container =document.createElement("section");
-    container.innerHTML = `
-    <form>
+  const container = document.createElement('section');
+  container.innerHTML = `
+  <form class="login-container"> 
       <h1>Bem vindo a Green Med(a)<h1>
         <label>E-mail:</label>
           <input type="email" class="email" placeholder="digite seu@e-mail.com">
@@ -15,5 +14,5 @@ export const register = () => {
           <button type="button" id="Gmail">Gmail</button>
     </form>
     `;
-    return container
-  };
+  return container;
+};

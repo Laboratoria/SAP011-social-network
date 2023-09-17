@@ -1,9 +1,29 @@
 button[disabled]{
     opacity: 0.7;
+    
 }
 
 .error{
     color: white;
     background-color: red;
     display: none;
+}
+
+body{
+    background-image: url(Imagens/cannabis-sementes-de-cannabis-oleo-de-cannabis-colocado-no-chao-de-madeira-com-uma-arvore-verde-ao-fundo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+h3{
+
+}
+
+.login-container{
+    background-color: rgba(255, 255, 255, 0.192);
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-content: center;
 }
