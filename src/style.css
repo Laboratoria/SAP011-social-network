@@ -75,8 +75,7 @@ body{
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.20);    
     backdrop-filter: blur(20px);    
-    width: 70%;
-    height: 550px;
+    width: 80%;
     margin: 0 auto;
     padding: 5%;
     flex-direction: column;
@@ -93,10 +92,8 @@ body{
         margin-right: 150px;
         margin-top: 100px;
     }
-    button{
-        width: %;
     }
-}
+
 
 button {
     align-items: center;
@@ -106,12 +103,14 @@ button {
     width: 150px;
     height: 30px;
     line-height: 20px;
-    margin-left: 20%;    
+    margin-left: 25%;    
     margin-top: 20px;;
     border-radius: 5px;
     background: #1B481A;
     color: #FFFFFF;
     box-shadow: 5px 5px 10px 0px rgba(3, 3, 3, 0.952); 
+    margin-top: 5px;
+    
     
 }
 
@@ -119,4 +118,15 @@ button:hover{
     background-color: #FFFFFF;
     color: #1B481A;
 
+}
+
+.email {
+    padding: 8px;
+    border-radius: 5px;
+    
+}
+
+.key{
+    padding: 8px;
+    border-radius: 5px;
 }
