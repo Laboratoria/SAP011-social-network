@@ -11,15 +11,17 @@ export const login = () => {
           <br>
 
         <label>Senha:</label>
-          <input name="password" class="key" placeholder="digite sua senha.">
+          <input name="password" class="key" placeholder="Digite sua senha.">
           <div class="error">Senha e obrigatoria</div>
           <div class="error">Senha invalida</div>
-          <button type="button" class="solid" disable="true"id="register" value="cadastrar">Cadastrar</button>
-          <button type="button" class="clear" disable="true" id="recover">recuperar senha</button>
+          <button type="button" class="clear" disable="true" id="enter">Entrar</button>
+          <button type="button" class="clear" disable="true" id="recover">Recuperar senha</button>
+          <button type="button" class="solid" disable="true"id="register" value="cadastrar">Cadastre-se</button>
+          
           <br>
           
-          <label>Preencher com o:</label>
-          <button id="Gmail" >Gmail</button>
+          <label>Faça login com sua conta:</label>
+          <button id="Gmail" >Google</button>
     </form>
     `;
   return container;
