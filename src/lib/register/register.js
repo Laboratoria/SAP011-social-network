@@ -1,4 +1,4 @@
-import { createUser } from "../../firebase/auth.js";
+import { createUser } from "../../firebase/auth";
 
 const screen = `
         <section id="main-register">
@@ -8,6 +8,7 @@ const screen = `
         <div id="form-container">
         <img src="././img/photo-profile.png" alt="foto de perfil ilustrativa" />
         <form action="">
+
         <label for="nameId">Nome</label>
         <input class="input" type="text" id="nameId" required name="name" autocomplete="on" />
 
@@ -56,7 +57,7 @@ export default () => {
     const emailUser = emailId.value;
     const passwordUser = passwordId.value;
 
-    createUser(emailUser, passwordUser).then(location.hash = "#welcome");
+    createUser(emailUser, passwordUser).then((location.hash = "#welcome"));
   }
 
   const submit = document.getElementById("submit");
