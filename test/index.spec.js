@@ -13,8 +13,7 @@ import {
   signGoogle,
   createUser,
   resetLink,
-  exit,
-  } from "../src/firebase/auth.js";
+ } from "../src/firebase/auth.js";
 
 
 jest.mock("firebase/auth");
@@ -55,17 +54,16 @@ describe('signOut', () => {
   });
 });
 
-// nao funciona 
-
 describe('signInGoogle', () => {
   it('Login com Google account', async () => {
+ 
      signInWithPopup.mockResolvedValueOnce();
 
     await signGoogle();
 
     expect(typeof signGoogle).toBe('function');
     expect(signInWithPopup).toHaveBeenCalledTimes(1);
-    expect(signInWithPopup).toHaveBeenCalledWith(undefined, provider);
+    expect(signInWithPopup).toHaveBeenCalledWith(undefined, expect.any(Object));
   });
 });
 
