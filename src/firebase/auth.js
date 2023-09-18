@@ -58,7 +58,7 @@ async function signIn(email, password) {
   //location.hash = "#timeline";
 }
 
-const provider = new GoogleAuthProvider();
+//const provider = new GoogleAuthProvider();
 
 async function signGoogle() {
   await signInWithPopup(auth(), provider)
@@ -76,7 +76,7 @@ async function signGoogle() {
       const errorCode = error.code;
       const errorMessage = error.message;
       // The email of the user's account used.
-      const email = error.customData.email;
+      // const email = error.customData.email;
       // The AuthCredential type that was used.
       const credential = GoogleAuthProvider.credentialFromError(error);
       // ...
