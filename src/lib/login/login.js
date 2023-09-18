@@ -1,7 +1,7 @@
 import { signIn, signGoogle } from "../../firebase/auth.js";
 import logo from "../../img/logo-login.png";
-import ball from "../../img/logo-login.png";
-import girl from "../../img/logo-login.png";
+import ball from "../../img/purple-ball.png";
+import girl from "../../img/girl-image.png";
 
 const screen = `
       <section id="main-login">
