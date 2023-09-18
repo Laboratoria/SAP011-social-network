@@ -32,7 +32,7 @@ async function createUser(email, password) {
 export const checkLogin = () => {
   onAuthStateChanged(auth(), (user) => {
     if (user) {
-      window.location.href = "#timeline";
+      // window.location.href = "#timeline";
       // return user.email;
       console.log("usuário logado");
     } else {
@@ -81,7 +81,7 @@ async function signGoogle() {
       const credential = GoogleAuthProvider.credentialFromError(error);
       // ...
     });
-  //location.hash = "#timeline";
+  // location.hash = "#timeline";
 }
 
 async function resetLink(email) {
