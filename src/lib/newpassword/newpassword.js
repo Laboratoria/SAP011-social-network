@@ -1,7 +1,9 @@
+import logo from "../../img/logo-login.png";
+import ball from "../../img/logo-login.png";
 
 const screen = `
       <section id="main-newpassword">
-      <img id="logo" src="./img/logo-login.png" alt="MyPet Logo">
+      <img id="logo" src="${logo}" alt="MyPet Logo">
 
       <div id="form-container">
           <h4>Redefinição de Senha</h4>
@@ -30,7 +32,7 @@ const screen = `
 
             <div class="decoration" id="green-ball"></div>
             <div class="decoration" id="half-ball">
-              <img src="./img/purple-ball.png" alt="">
+              <img src="${ball}" alt="">
             </div>
             <div class="decoration" id="purple-ball"></div>
 
@@ -39,17 +41,13 @@ const screen = `
       </section>`;
 
 export default () => {
-    const content = document.getElementById("app");
-    content.innerHTML = screen;
+  const content = document.getElementById("app");
+  content.innerHTML = screen;
 
-    const submit = document.getElementById("submit");
-    submit.addEventListener("click", newPassword);
+  const submit = document.getElementById("submit");
+  submit.addEventListener("click", newPassword);
 
-    function newPassword(event) {
-      event.preventDefault(); 
-      
-    }
-  
+  function newPassword(event) {
+    event.preventDefault();
+  }
 };
-
-

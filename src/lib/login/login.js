@@ -1,8 +1,11 @@
 import { signIn, signGoogle } from "../../firebase/auth.js";
+import logo from "../../img/logo-login.png";
+import ball from "../../img/logo-login.png";
+import girl from "../../img/logo-login.png";
 
 const screen = `
       <section id="main-login">
-      <img id="logo" src="./img/logo-login.png" alt="MyPet Logo">
+      <img id="logo" src="${logo}" alt="MyPet Logo">
       <p>Faça o login para continuar</p>
 
       <div id="form-container">
@@ -36,10 +39,10 @@ const screen = `
 
       <div class="decoration" id="green-ball"></div>
       <div class="decoration" id="half-ball">
-        <img src="./img/purple-ball.png" alt="">
+        <img src="${ball}" alt="">
       </div>
       <div id="purple-ball"></div>
-      <img id="girl" src="./img/girl-image.png" alt="">
+      <img id="girl" src="${girl}" alt="">
     </section>
 `;
 

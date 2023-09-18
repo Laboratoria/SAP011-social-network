@@ -1,8 +1,10 @@
 import { resetLink } from "../../firebase/auth.js";
+import logo from "../../img/logo-login.png";
+import ball from "../../img/logo-login.png";
 
 const screen = `
       <section id="main-reset">
-      <img id="logo" src="./img/logo-login.png" alt="MyPet Logo">
+      <img id="logo" src="${logo}" alt="MyPet Logo">
 
       <div id="form-container">
         <h4>Redefinição de Senha</h4>
@@ -30,7 +32,7 @@ const screen = `
 
       <div class="decoration" id="green-ball"></div>
       <div class="decoration" id="half-ball">
-        <img src="./img/purple-ball.png" alt="">
+        <img src="${ball}" alt="">
       </div>
       <div class="decoration" id="purple-ball"></div>
     </section>
@@ -46,7 +48,7 @@ export default () => {
     event.preventDefault();
     const emailValue = emailUser.value;
 
-    resetLink(emailValue).then(location.hash = "#login");
+    resetLink(emailValue).then((location.hash = "#login"));
   }
 
   const btn = document.getElementById("submit");

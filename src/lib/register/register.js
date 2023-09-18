@@ -1,4 +1,6 @@
 import { createUser } from "../../firebase/auth";
+import profile from "../../img/photo-profile.png";
+import ball from "../../img/logo-login.png";
 
 const screen = `
         <section id="main-register">
@@ -6,7 +8,7 @@ const screen = `
         <p><a href="#home">Já é registrado? Faça Login.</a></p>
 
         <div id="form-container">
-        <img src="././img/photo-profile.png" alt="foto de perfil ilustrativa" />
+        <img src="${profile}" alt="foto de perfil ilustrativa" />
         <form action="">
 
         <label for="nameId">Nome</label>
@@ -39,7 +41,7 @@ const screen = `
         <div class="decoration" id="green-ball"></div>
         <div id="purple-div"></div>
         <div class="decoration" id="purple-ball">
-                <img src="./img/purple-ball.png" alt="" id="half-ball"/>
+                <img src="${ball}" alt="" id="half-ball"/>
         </div>
         </section>
         `;

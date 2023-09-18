@@ -1,36 +1,44 @@
 import { exit, getUserInfo } from "../../firebase/auth.js";
+import meme from "../../img/angry-cat.gif";
+import feedLogo from "../../img/logo-top-timeline.png";
+import exitIcon from "../../img/feed-exit-icon.png";
+import sendIcon from "../../img/send-button-white.png";
+import homeIcon from "../../img/feed-home-icon.png";
+import searchIcon from "../../img/feed-search-icon.png";
+import postIcon from "../../img/feed-post-icon.png";
+import profileIcon from "../../img/feed-profile-icon.png";
 
 const screen = `
       <section id="main-timeline">
         <div id="div-logo">
-            <img class="logo" src="./img/logo-top-timeline.png" alt="MyPet logo">
+            <img class="logo" src="${feedLogo}" alt="MyPet logo">
 
-            <button id="signout-button" type="button"><img class="logout" src="./img/exit-icon.png" alt=""></button>
+            <button id="signout-button" type="button"><img class="logout" src="${exitIcon}" alt=""></button>
             
         </div>
 
           <div id="feed">
 
             <div id="feed-container">
-                <p id="empty-feed">Ainda não temos postagens por aqui. <br><br> <img src="./img/angry-cat.gif" alt="Cat Meme"></p>
+                <p id="empty-feed">Ainda não temos postagens por aqui. <br><br> <img src="${meme}" alt="Cat Meme"></p>
             </div>
 
             <div id="input-container">
               <input type="text" name="post" placeholder="Publique algo" id="postPlace"/>
-              <button id="publish-button" type="button"><img src="./img/send-button-white.png" alt="Send Button"></button>
+              <button id="publish-button" type="button"><img src="${sendIcon}" alt="Send Button"></button>
             </div>
 
           </div>
 
           <div id="functions">
 
-            <button id="home-button" type="button"><img src="./img/feed-home-icon.png" alt=""></button>
+            <button id="home-button" type="button"><img src="${homeIcon}" alt=""></button>
 
-            <button id="search-button" type="button"><img src="./img/feed-search-icon.png" alt="sair"></button>
+            <button id="search-button" type="button"><img src="${searchIcon}" alt="sair"></button>
 
-            <button id="my-post-button" type="button"><img src="./img/feed-post-icon.png" alt="minhas postagens"></button>
+            <button id="my-post-button" type="button"><img src="${postIcon}" alt="minhas postagens"></button>
 
-            <button id="profile-button" type="button"><img src="./img/feed-profile-icon.png" alt="meu perfil"></button>
+            <button id="profile-button" type="button"><img src="${profileIcon}" alt="meu perfil"></button>
 
         </div>
       </section>`;

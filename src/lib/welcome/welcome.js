@@ -1,3 +1,5 @@
+import welcomePerson from "../../img/person-in-ball.png";
+
 export default () => {
   const container = document.getElementById("app");
   const screen = `
@@ -13,7 +15,7 @@ export default () => {
 
         <div class="decoration" id="green-ball"></div>
         <div class="decoration" id="purple">
-          <img src="./img/person-in-ball.png" alt="" />
+          <img src="${welcomePerson}" alt="Person decoration" />
         </div>
       </section>
     `;
