@@ -58,7 +58,7 @@ async function signIn(email, password) {
   //location.hash = "#timeline";
 }
 
-//const provider = new GoogleAuthProvider();
+const provider = new GoogleAuthProvider();
 
 async function signGoogle() {
   await signInWithPopup(auth(), provider)
