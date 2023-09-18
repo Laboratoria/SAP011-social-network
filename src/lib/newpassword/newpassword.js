@@ -1,5 +1,5 @@
 import logo from "../../img/logo-login.png";
-import ball from "../../img/logo-login.png";
+import ball from "../../img/purple-ball.png";
 
 const screen = `
       <section id="main-newpassword">

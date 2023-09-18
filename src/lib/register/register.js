@@ -1,6 +1,6 @@
 import { createUser } from "../../firebase/auth";
 import profile from "../../img/photo-profile.png";
-import ball from "../../img/logo-login.png";
+import ball from "../../img/purple-ball.png";
 
 const screen = `
         <section id="main-register">
