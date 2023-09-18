@@ -42,9 +42,10 @@ async function signIn(email, password) {
   //location.hash = "#timeline";
 }
 
-const provider = new GoogleAuthProvider();
+//const provider = new GoogleAuthProvider();
 
 async function signGoogle() {
+  const provider = new GoogleAuthProvider();
   await signInWithPopup(auth, provider)
     .then((result) => {
       // This gives you a Google Access Token. You can use it to access the Google API.
@@ -60,7 +61,7 @@ async function signGoogle() {
       const errorCode = error.code;
       const errorMessage = error.message;
       // The email of the user's account used.
-      const email = error.customData.email;
+      // const email = error.customData.email;
       // The AuthCredential type that was used.
       const credential = GoogleAuthProvider.credentialFromError(error);
       // ...

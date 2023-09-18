@@ -56,7 +56,7 @@ export default () => {
     const emailUser = emailId.value;
     const passwordUser = passwordId.value;
 
-    signIn(emailUser, passwordUser).then(location.hash = "welcome")
+    signIn(emailUser, passwordUser).then(location.hash = "timeline")
   }
 
   const submit = document.getElementById("submit");
