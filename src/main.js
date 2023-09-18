@@ -20,7 +20,7 @@ function start() {
         main.appendChild(register());
         break;
       default:
-        main.appendChild(login());
+        main.appendChild(login());//error 
     }
   });
 }
@@ -30,51 +30,21 @@ window.addEventListener('load', () => {
   start();
 });
 
-// const validateField = document.querySelector("key",".email");
-// const email = document.querySelector(".email").value;
-// function validateFields(){
-//     toggleButtonsDisable();
-//     toggleEmailErrors();
-// };
 
-// function isEmailValid(){
-//     if(email){
-//         return false;
-//     }
-//     return validateEmail(email);
-// };
 
-// function toggleEmailErrors(){
-//    const email = document.querySelector(".email").value;
-//     if(!email){
-//     document.querySelector('email-error').style.display = 'block';  
-//     }else{
-//     document.querySelector('email-error').style.display = 'none';
-//}
-// if(validateEmail(email)) {
-//    document.querySelector('email-error').style.display = 'block';  
-//     }else{
-//     document.querySelector('email-error').style.display = 'none';  
-// }
-// };
 
-//function toggleButtonsDisable(){
-//const emailValid = isValidEmail();
-//document.querySelector('.email','.register').disable = !emailValid;
-
-//const passwordValid = isPaswordValid();
-//document.querySelector('.email','.recover').disable = !emailValid;
-//};
 
 // function isPasswordValid(){
-//     const password = documet.querySelector(".key").value;
-//     if(!password){
-//         return false
-//     }
-//     return true;
-
+//   const password = documet.querySelector(".key").value;
+//   if(!password){
+//       return false
+//   }
+//   return true;
 // };
 
-// function validateEmail(email){
-//     return /\S+@\S+\.\S+/.test(email);
+// const passwordValid = isPaswordValid();
+// document.querySelector('.email','.recover').disable = !emailValid;
 // };
+
+
+
