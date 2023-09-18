@@ -20,8 +20,8 @@ export const login = () => {
           
           <br>
           
-          <label>Faça login com sua conta:</label>
-          <button id="Gmail" >Google</button>
+          <label>Faça login com:</label>
+          <button id="Google" >Google</button>
     </form>
     `;
   return container;

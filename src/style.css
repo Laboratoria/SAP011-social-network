@@ -64,22 +64,24 @@ body{
 .titulo{
     text-align: center;
     color: hsl(0, 0%, 97%);
-    
+    margin-bottom: 20px;    
 
 }
 
 .login-container{    
-    text-align: ;    
+    text-align: center;    
     display: flex;
     align-content: center;
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.20);    
     backdrop-filter: blur(20px);    
     width: 70%;
+    height: 550px;
     margin: 0 auto;
     padding: 5%;
     flex-direction: column;
     gap: 5px; 
+    margin-top: 50px;
     
 }
 
@@ -87,21 +89,24 @@ body{
 @media (min-width: 1024px) {
     .login-container {
         display: flex;
-        width: 35%;
-        margin-right: 100px;
+        width: 30%;
+        margin-right: 150px;
         margin-top: 100px;
-
     }
-   
+    button{
+        width: %;
+    }
 }
 
 button {
     align-items: center;
+    display: flex;
+    justify-content: center;
     font-family: BarlowSemiCondensed-SemiBold;
     width: 150px;
     height: 30px;
-    line-height: 20px;    
-    margin: 0px;
+    line-height: 20px;
+    margin-left: 20%;    
     margin-top: 20px;;
     border-radius: 5px;
     background: #1B481A;
