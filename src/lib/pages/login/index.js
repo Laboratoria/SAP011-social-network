@@ -12,10 +12,9 @@ export const login = () => {
 
         <label>Senha:</label>
           <input name="password" class="key" placeholder="Digite sua senha.">
-          <div class="error">Senha e obrigatoria</div>
-          <div class="error">Senha invalida</div>
+          <div class="password error-none">Senha e obrigatoria</div>
+          <div class="password error-none">Senha invalida</div>
           <button type="button" class="email error" disabled id="enter">Entrar</button>
-          <button type="button" class="email error" disabled id="recover">Recuperar senha</button>
           <button type="button" class="solid" disabled="true"id="register" value="cadastrar">Cadastre-se</button>
           
           <br>
@@ -26,7 +25,6 @@ export const login = () => {
     `;
   const validateField = container.querySelector(".email-input");
   validateField.addEventListener('input', function (e) {
-    console.log("teste");
     e.preventDefault();
     toggleButtonsDisable();
     toggleEmailErrors();
