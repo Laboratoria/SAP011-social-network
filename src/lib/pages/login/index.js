@@ -15,7 +15,7 @@ export const login = () => {
           <div class="password error-none">Senha e obrigatoria</div>
           <div class="password error-none">Senha invalida</div>
           <button type="button" class="email error" disabled id="enter">Entrar</button>
-          <button type="button" class="solid" disabled="true"id="register" value="cadastrar">Cadastre-se</button>
+
           
           <br>
           
