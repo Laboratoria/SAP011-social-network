@@ -27,6 +27,9 @@ export const login = () => {
     </div>
 
     `;
+
+  // /*VALIDAÇÃO EM JAVA SCRIPT PARA PAG-LOGIN */
+
   const validateField = container.querySelector('.email-input');
   validateField.addEventListener('input', function (e) {
   e.preventDefault();
