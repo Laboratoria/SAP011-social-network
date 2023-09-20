@@ -22,6 +22,10 @@ export const login = () => {
           <label>Faça login com:</label>
           <button id="Google" >Google</button>
     </form>
+    <div class="login-container">
+    <p>Não tem uma conta?<a href="/#register">Cadastro-se</a></p>
+    </div>
+
     `;
   const validateField = container.querySelector('.email-input');
   validateField.addEventListener('input', function (e) {
