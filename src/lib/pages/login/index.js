@@ -23,7 +23,7 @@ export const login = () => {
           <button id="Google" >Google</button>
     </form>
     <div class="login-container">
-    <p>Não tem uma conta?<a href="/#register">Cadastro-se</a></p>
+    <p>Não tem uma conta?<a href="/#register">Cadastre-se</a></p>
     </div>
 
     `;
