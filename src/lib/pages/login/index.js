@@ -1,5 +1,5 @@
 export const login = () => {
-  const container = document.createElement('section');
+  const container = document.createElement("section");
   container.innerHTML = `
     <!--<form action="feed.html>" --!>
     <form class="login-container"> 
@@ -23,57 +23,53 @@ export const login = () => {
           <button id="Google" >Google</button>
     </form>
     <div class="login-container">
-    <p>Não tem uma conta?<a href="/#register">Cadastro-se</a></p>
+    <p>Não tem uma conta?<a href="/#register">Cadastre-se</a></p>
     </div>
 
     `;
-  const validateField = container.querySelector(".email-input");
+  const validateField = container.querySelector('.email-input');
   validateField.addEventListener('input', function (e) {
-    e.preventDefault();
+  e.preventDefault();
     toggleButtonsDisable();
     toggleEmailErrors();
-  }
-  );
+  });
 
   const errorEmail = container.querySelector('.email-input');
   const enterButton = container.querySelector('#enter');
   function toggleEmailErrors() {
-    enterButton.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (errorEmail.classList.contains("error-none")) {
-        menu.classList.remove("error-none");
-        menu.classList.remove("error-block");
+  enterButton.addEventListener('click', function (e) {
+  e.preventDefault();
+      if (errorEmail.classList.contains('error-none')) {
+        menu.classList.remove('error-none');
+        menu.classList.remove('error-block');
       } else {
-        menu.classList.remove("error-block");
-        menu.classList.remove("error-nobe");
+        menu.classList.remove('error-block');
+        menu.classList.remove('error-nobe');
       }
-    }
-    )
-  };
+    });
+  }
 
   function toggleButtonsDisable() {
-    const emailNotValid = isValidEmail();
-    if(emailNotValid){
+  const emailNotValid = isValidEmail();
+    if (emailNotValid) {
       enterButton.disabled = true;
-    }else{
-      console.log("email valido");
-      enterButton.removeAttribute("disabled");
+    } else {
+      console.log('email valido');
+      enterButton.removeAttribute('disabled');
     }
-    
-  };
+  }
 
   function isValidEmail() {
-    const email = container.querySelector(".email-input").value;
+    const email = container.querySelector('.email-input').value;
     if (email) {
       return false;
     } else {
       return validateEmail(email);
     }
-  };
+  }
 
   function validateEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
-  };
+  }
   return container;
 };
-

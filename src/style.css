@@ -34,22 +34,25 @@ header{
     top: 0;
     left: 0; 
     height: 150px;
+    align-items: center;
+    display: grid;
+    justify-content: center;
     
 
 }
 
 nav {
     display: block;
+    justify-items: start;
+    
     
 
 }
 
 .logo {
-    width: 50%;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    display: flex;
+    width: 20%;    
+    display: grid;
+    
     
 }
 
@@ -124,7 +127,7 @@ button:hover{
 
 }
 
-.email {
+.email-input {
     padding: 8px;
     border-radius: 5px;
     

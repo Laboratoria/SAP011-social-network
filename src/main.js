@@ -23,7 +23,7 @@ function start() {
         main.appendChild(register());
         break;
       default:
-        main.appendChild(login());//error 
+        main.appendChild(login()); // erro Mensagem padrao de erro
     }
   });
 }
@@ -32,11 +32,6 @@ window.addEventListener('load', () => {
   main.appendChild(login());
   start();
 });
-
-
-
-
-
 // function isPasswordValid(){
 //   const password = documet.querySelector(".key").value;
 //   if(!password){
@@ -44,10 +39,6 @@ window.addEventListener('load', () => {
 //   }
 //   return true;
 // };
-
 // const passwordValid = isPaswordValid();
 // document.querySelector('.email','.recover').disable = !emailValid;
 // };
-
-
-

@@ -1,5 +1,5 @@
 export const register = () => {
-  const container = document.createElement('section');
+  const container = document.createElement("section");
   container.innerHTML = `
   <form class="login-container"> 
       <h1>Bem vindo a Green Med(a)<h1>
