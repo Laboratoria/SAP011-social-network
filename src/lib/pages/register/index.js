@@ -1,21 +1,33 @@
 export const register = () => {
   const container = document.createElement("section");
   container.innerHTML = `
-  <form class="login-container"> 
-      <h1>Bem vindo a Green Med(a)<h1>
-        <label>E-mail:</label>
-          <input type="email" class="form" placeholder="seu@e-mail.com">
+  <form class="registro-container"> 
+      <h3 class="titulo">BEM VINDO(A) A MEDGREEN<h3>
+      <label class="config-titulo">Digite seu nome completo:</label>
+        <br>
+          <input type="email" class="email-input" placeholder="Nome completo">
+        <label class="config-titulo">E-mail:</label>
+        <br>
+          <input type="email" class="email-input" placeholder="seu@e-mail.com">
           <div class="email error-none">E-mail e obrigatorio</div>
-        <label>senha:</label>
-          <input type="password" class="form" placeholder="Digite sua senha.">
+          <br>
+        <label class="config-titulo">Senha:</label>
+        <br>
+          <input type="password" class="key" placeholder="Digite sua senha.">
           <div class="password error-none">Senha e obrigatorio</div>
-        <label>Nascimento:</label>
+          <br>
+        <label class="config-titulo">Nascimento:</label>
+        <br>
           <input type="date" id="date" class="form">
+          <br>
           <div class="date error-none">Data e obrigatorio</div>
+          <br>
           <button type="button" class="solid" disable id="enter" value="cadastrar">Cadastrar</button>
-        <label>Faça login com:</label>
+          <br>
+        <label class="config-titulo">Faça login com:</label>
+        <br>
           <button type="button" id="enter">Google</button>
-
+        <br>
           <a href="/#login">Pagina inicial</a>
     </form>
     `;

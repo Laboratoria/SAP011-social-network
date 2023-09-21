@@ -4,13 +4,13 @@ export const login = () => {
     <!--<form action="feed.html>" --!>
     <form class="login-container"> 
       <h3 class="titulo">LOGIN</h3>
-        <label>E-mail:</label>
+        <label class="config-titulo">E-mail:</label>
           <input name="email" class="email-input" placeholder="seu@email.com">
           <div class="email error-none">E-mail e obrigatorio</div>
           <div class="email error-none">E-mail ivalido</div>
           <br>
 
-        <label>Senha:</label>
+        <label class="config-titulo">Senha:</label>
           <input name="password" class="key" placeholder="Digite sua senha.">
           <div class="password error-none">Senha e obrigatoria</div>
           <div class="password error-none">Senha invalida</div>

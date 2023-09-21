@@ -91,12 +91,38 @@ body{
     
 }
 
+.registro-container{    
+    text-align: center;    
+    display: flex;
+    align-content: center;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.20);    
+    backdrop-filter: blur(20px);    
+    width: 80%;
+    
+    margin: 0 auto;
+    padding: 5%;
+    flex-direction: column;
+    gap: 5px; 
+    margin-top: 50px;
+    
+}
+
+@media (min-width: 1024px) {
+    .registro-container {
+        display: flex;
+        width: 40%;
+        margin-right: 50px;
+        margin-top: 100px;
+    }
+    }
+
 /* Media para telas grandes */
 @media (min-width: 1024px) {
     .login-container {
         display: flex;
-        width: 30%;
-        margin-right: 150px;
+        width: 40%;
+        margin-right: 50px;
         margin-top: 100px;
     }
     }
@@ -117,6 +143,7 @@ button {
     color: #FFFFFF;
     box-shadow: 5px 5px 10px 0px rgba(3, 3, 3, 0.952); 
     margin-top: 5px;
+    margin-bottom: 10px;
     
     
 }
@@ -130,10 +157,30 @@ button:hover{
 .email-input {
     padding: 8px;
     border-radius: 5px;
-    
-}
+    margin: 5px 10px 15px 10px;
+    width: 90%;
+    font-size: 15px;
+
+    }
 
 .key{
     padding: 8px;
     border-radius: 5px;
+    margin: 10px;
+    width: 90%;
+    font-size: 15px;
+    margin: 5px 10px 15px 10px;
+}
+
+.config-titulo{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
+
+#date{
+    padding: 8px;
+    border-radius: 5px;
+    width: 90%;
+    font-size: 15px;
+    margin: 5px 10px 15px 10px;
 }
