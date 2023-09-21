@@ -15,6 +15,8 @@ export const register = () => {
           <button type="button" class="solid" disable id="enter" value="cadastrar">Cadastrar</button>
         <label>Faça login com:</label>
           <button type="button" id="enter">Google</button>
+
+          <a href="/#login">Pagina inicial</a>
     </form>
     `;
 
@@ -43,27 +45,27 @@ export const register = () => {
   };
 
   function toggleButtonsDisable() {
-    const emailNotValid = isValidEmail();
-    if(emailNotValid){
+    const passwordNotValid = isValidPassword();
+    if(passwordNotValid){
       enterButton.disabled = true;
     }else{
-      console.log("email valido");
+  
       enterButton.removeAttribute("disabled");
     }
     
   };
 
-  function isValidEmail() {
-    const email = container.querySelector(".email-input").value;
-    if (email) {
+  function isValidPassword() {
+    const password = container.querySelector(".form").value;
+    if (password) {
       return false;
     } else {
-      return validateEmail(email);
+      return validatePassword(password);
     }
   };
 
-  function validateEmail(email) {
-    return /\S+@\S+\.\S+/.test(email);
+  function validatePassword(password) {
+    return /\S+@\S+\.\S+/.test(password);
   };
   return container;
   
