@@ -43,7 +43,7 @@ export const login = () => {
         menu.classList.remove('error-block');
       } else {
         menu.classList.remove('error-block');
-        menu.classList.remove('error-nobe');
+        menu.classList.remove('error-none');
       }
     });
   }
@@ -72,3 +72,7 @@ export const login = () => {
   }
   return container;
 };
+
+
+
+;

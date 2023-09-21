@@ -10,24 +10,16 @@ export const register = () => {
         <br>
           <input type="email" class="email-input" placeholder="seu@e-mail.com">
           <div class="email error-none">E-mail e obrigatorio</div>
-          <br>
-        <label class="config-titulo">Senha:</label>
-        <br>
-          <input type="password" class="key" placeholder="Digite sua senha.">
+        <label>senha:</label>
+          <input type="password" class="form" placeholder="Digite sua senha.">
           <div class="password error-none">Senha e obrigatorio</div>
-          <br>
-        <label class="config-titulo">Nascimento:</label>
-        <br>
+        <label>Nascimento:</label>
           <input type="date" id="date" class="form">
-          <br>
           <div class="date error-none">Data e obrigatorio</div>
-          <br>
           <button type="button" class="solid" disable id="enter" value="cadastrar">Cadastrar</button>
-          <br>
-        <label class="config-titulo">Faça login com:</label>
-        <br>
+        <label>Faça login com:</label>
           <button type="button" id="enter">Google</button>
-        <br>
+
           <a href="/#login">Pagina inicial</a>
     </form>
     `;
@@ -50,7 +42,7 @@ export const register = () => {
         menu.classList.remove("error-block");
       } else {
         menu.classList.remove("error-block");
-        menu.classList.remove("error-nobe");
+        menu.classList.remove("error-none");
       }
     }
     )
@@ -68,7 +60,7 @@ export const register = () => {
   };
 
   function isValidPassword() {
-    const password = container.querySelector(".form").value;
+    const password = container.querySelector(".password").value;
     if (password) {
       return false;
     } else {
@@ -77,8 +69,9 @@ export const register = () => {
   };
 
   function validatePassword(password) {
-    return /\S+@\S+\.\S+/.test(password);
+    return /^\S{8}$/.test(password);
   };
+
   return container;
   
 };
