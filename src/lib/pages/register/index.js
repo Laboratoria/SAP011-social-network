@@ -10,8 +10,8 @@ export const register = () => {
         <br>
           <input type="email" class="email-input" placeholder="seu@e-mail.com">
           <div class="email error-none">E-mail e obrigatorio</div>
-        <label>senha:</label>
-          <input type="password" class="form" placeholder="Digite sua senha.">
+        <label>Senha:</label>
+          <input type="password" class="key" placeholder="Digite sua senha.">
           <div class="password error-none">Senha e obrigatorio</div>
         <label>Nascimento:</label>
           <input type="date" id="date" class="form">
