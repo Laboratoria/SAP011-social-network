@@ -7,14 +7,14 @@ export const register = () => {
           <input type="email" class="form" placeholder="seu@e-mail.com">
           <div class="email error-none">E-mail e obrigatorio</div>
         <label>senha:</label>
-          <input type="password" class="form" placeholder="Digite sua senha.">
+          <input type="password" placeholder="Digite sua senha.">
           <div class="password error-none">Senha e obrigatorio</div>
         <label>Nascimento:</label>
-          <input type="date" id="date" class="form">
+          <input type="date" id="date"
           <div class="date error-none">Data e obrigatorio</div>
-          <button type="button" class="solid" disable id="enter" value="cadastrar">Cadastrar</button>
+          <button type="button" id="enter" disable  value="cadastrar">Cadastrar</button>
         <label>Faça login com:</label>
-          <button type="button" id="enter">Google</button>
+          <button type="button" class="google">Google</button>
 
           <a href="/#login">Pagina inicial</a>
     </form>
@@ -56,7 +56,7 @@ export const register = () => {
   };
 
   function isValidPassword() {
-    const password = container.querySelector(".form").value;
+    const password = container.querySelector(".password").value;
     if (password) {
       return false;
     } else {
@@ -65,8 +65,9 @@ export const register = () => {
   };
 
   function validatePassword(password) {
-    return /\S+@\S+\.\S+/.test(password);
+    return /^\S{8}$/.test(password);
   };
+
   return container;
   
 };
