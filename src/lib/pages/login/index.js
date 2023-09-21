@@ -21,6 +21,7 @@ export const login = () => {
           
           <label>Faça login com:</label>
           <button id="Google" >Google</button>
+          <p>Não tem uma conta?<a href="/#register">Cadastre-se</a></p>
     `;
 
   // /*VALIDAÇÃO EM JAVA SCRIPT PARA PAG-LOGIN */
