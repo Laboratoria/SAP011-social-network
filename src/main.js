@@ -29,6 +29,7 @@ function start() {
 }
 
 window.addEventListener('load', () => {
+  window.location.hash = '';
   main.appendChild(login());
   start();
 });

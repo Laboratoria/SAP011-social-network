@@ -13,13 +13,13 @@ button[disabled]{
 }
 
 .error-block{
+    color: white;
+    background-color: red;
     display: block;
 }
 
 
 .error-none{
-    color: white;
-    background-color: red;
     display: none;
 }
 
@@ -164,6 +164,15 @@ button:hover{
     }
 
 .key{
+    padding: 8px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 90%;
+    font-size: 15px;
+    margin: 5px 10px 15px 10px;
+}
+
+.name{
     padding: 8px;
     border-radius: 5px;
     margin: 10px;
