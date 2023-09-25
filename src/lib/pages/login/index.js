@@ -26,40 +26,57 @@ export const login = () => {
 
   // /*VALIDAÇÃO EM JAVA SCRIPT PARA PAG-LOGIN */
 
-  const validateField = container.querySelector('.email-input');
-  validateField.addEventListener('input', function (e) {
-  e.preventDefault();
+  const validateField = container.querySelector(".key");
+  validateField.addEventListener("input", function (e) {
+    e.preventDefault();
     toggleButtonsDisable();
     toggleEmailErrors();
+    togglePasswordErrors();
   });
 
-  const errorEmail = container.querySelector('.email-input');
-  const enterButton = container.querySelector('#enter');
+  const enterButton = container.querySelector("#enter");
   function toggleEmailErrors() {
-  enterButton.addEventListener('click', function (e) {
-  e.preventDefault();
-      if (errorEmail.classList.contains('error-none')) {
-        menu.classList.remove('error-none');
-        menu.classList.remove('error-block');
+    enterButton.addEventListener("click", function (e) {
+      e.preventDefault();
+      const errorEmail = container.querySelector(".email-input");
+      if (errorEmail.classList.contains("error-none")) {
+        menu.classList.remove("error-none");
+        menu.classList.add("error-block");
       } else {
-        menu.classList.remove('error-block');
-        menu.classList.remove('error-none');
+        errorEmail.classList.contains("error-none");
+        menu.classList.add("error-block");
+        menu.classList.remove("error-none");
+      }
+    });
+  }
+
+  function togglePasswordErrors() {
+    enterButton.addEventListener("click", function (e) {
+      e.preventDefault();
+      const errorSenha = container.querySelector(".key");
+      if (errorSenha.classList.contains("error-none")) {
+        menu.classList.remove("error-none");
+        menu.classList.add("error-block");
+      } else {
+        errorSenha.classList.contains("error-none");
+        menu.classList.add("error-block");
+        menu.classList.remove("error-none");
       }
     });
   }
 
   function toggleButtonsDisable() {
-  const emailNotValid = isValidEmail();
-    if (emailNotValid) {
+    const emailNotValid = isValidEmail();
+    const passwordNotValid = isValidPassword();
+    if (emailNotValid && passwordNotValid) {
       enterButton.disabled = true;
     } else {
-      console.log('email valido');
-      enterButton.removeAttribute('disabled');
+        enterButton.removeAttribute("disabled");
     }
   }
 
   function isValidEmail() {
-    const email = container.querySelector('.email-input').value;
+    const email = container.querySelector(".email-input").value;
     if (email) {
       return false;
     } else {
@@ -70,9 +87,23 @@ export const login = () => {
   function validateEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
   }
+
+  function isValidPassword() {
+    const password = container.querySelector(".key").value;
+    const validate = password.length - 1; //recebe o comprimento da variavel - caracteres da senha
+    if (validate <= 7) {
+      return false;
+    } else {
+      return togglePasswordErrors(password);
+    }
+  }
+
+  function validatePassword(password) {
+    const validatePassword = password.length - 1;
+    if (validatePassword >= 8) {
+      return true;
+    }
+  }
+
   return container;
 };
-
-
-
-;
