@@ -97,13 +97,5 @@ export const login = () => {
       return togglePasswordErrors(password);
     }
   }
-
-  function validatePassword(password) {
-    const validatePassword = password.length - 1;
-    if (validatePassword >= 8) {
-      return true;
-    }
-  }
-
   return container;
 };
