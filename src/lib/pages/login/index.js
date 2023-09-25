@@ -11,7 +11,7 @@ export const login = () => {
           <br>
 
         <label class="config-titulo">Senha:</label>
-          <input name="password" class="key" placeholder="Digite sua senha.">
+          <input type="password" class="key" placeholder="Digite sua senha.">
           <div class="password error-none">Senha e obrigatoria</div>
           <div class="password error-none">Senha invalida</div>
           <button type="button" class="email error" disabled id="enter">Entrar</button>

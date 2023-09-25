@@ -26,7 +26,7 @@ function start() {
         main.appendChild(login()); // erro Mensagem padrao de erro
     }
   });
-}
+} 
 
 window.addEventListener('load', () => {
   window.location.hash = '';
