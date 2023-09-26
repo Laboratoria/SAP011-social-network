@@ -35,17 +35,20 @@ export const login = () => {
   });
 
   const enterButton = container.querySelector("#enter");
+  let email = container.querySelector(".email-input").value;
+  let password = container.querySelector(".key").value;
+
   function toggleEmailErrors() {
     enterButton.addEventListener("click", function (e) {
       e.preventDefault();
-      const errorEmail = container.querySelector(".email-input");
-      if (errorEmail.classList.contains("error-none")) {
-        menu.classList.remove("error-none");
-        menu.classList.add("error-block");
+      const email = container.querySelector(".email-input");
+      if (email.classList.contains("error-none")) {
+        email.classList.remove("error-none");
+        email.classList.add("error-block");
       } else {
-        errorEmail.classList.contains("error-none");
-        menu.classList.add("error-block");
-        menu.classList.remove("error-none");
+        email.classList.contains("error-none");
+        email.classList.add("error-block");
+        email.classList.remove("error-none");
       }
     });
   }
@@ -53,21 +56,21 @@ export const login = () => {
   function togglePasswordErrors() {
     enterButton.addEventListener("click", function (e) {
       e.preventDefault();
-      const errorSenha = container.querySelector(".key");
-      if (errorSenha.classList.contains("error-none")) {
-        menu.classList.remove("error-none");
-        menu.classList.add("error-block");
+      const password = container.querySelector(".key");
+      if (password.classList.contains("error-none")) {
+        password.classList.remove("error-none");
+        password.classList.add("error-block");
       } else {
-        errorSenha.classList.contains("error-none");
-        menu.classList.add("error-block");
-        menu.classList.remove("error-none");
+        password.classList.contains("error-none");
+        password.classList.add("error-block");
+        password.classList.remove("error-none");
       }
     });
   }
 
-  function toggleButtonsDisable() {
-    const emailNotValid = isValidEmail();
-    const passwordNotValid = isValidPassword();
+  function toggleButtonsDisable(email, password) {
+    const emailNotValid = isValidEmail(email);
+    const passwordNotValid = isValidPassword(password);
     if (emailNotValid && passwordNotValid) {
       enterButton.disabled = true;
     } else {
@@ -75,24 +78,22 @@ export const login = () => {
     }
   }
 
-  function isValidEmail() {
-    const email = container.querySelector(".email-input").value;
-    if (email) {
-      return false;
+  function isValidEmail(email) {
+    const  parameter = /^\S+@\S+\.\S+$/;
+    const validate = parameter.test(email);
+    if (validate) {
+       //firebase email valido aqui!
+      console.log("email valido");
     } else {
-      return validateEmail(email);
+      toggleEmailErrors(email)
     }
   }
 
-  function validateEmail(email) {
-    return /\S+@\S+\.\S+/.test(email);
-  }
 
-  function isValidPassword() {
-    const password = container.querySelector(".key").value;
+  function isValidPassword(password) {
     const validate = password.length - 1; //recebe o comprimento da variavel - caracteres da senha
-    if (validate <= 7) {
-      return false;
+    if (validate >= 8) {
+      console.log("senha valida");
     } else {
       return togglePasswordErrors(password);
     }
