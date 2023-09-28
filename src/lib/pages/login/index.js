@@ -75,7 +75,6 @@ export const login = () => {
     });
   }
 
-  
 
   function toggleButtonsDisable(email, password) {
     const emailNotValid = isValidEmail(email);
