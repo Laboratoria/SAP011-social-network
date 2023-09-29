@@ -1,3 +1,5 @@
+//main.js é a porta de entrada, eventos de home e login são printados aqui
+
 import home from "./pages/home/home.js";
 import about from "./pages/about/about.js";
 import feed from "./pages/feed/feed.js";

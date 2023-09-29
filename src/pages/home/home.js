@@ -1,15 +1,16 @@
+import logo from './src/img/logotipo.png';
+
 export default () => {
   const container = document.createElement('div'); //a div adiciona todo o template
 
   const template = `
-      <body>
-        <header>
-          <img src="src/img/logotipo.png" alt="Logotipo">
-        </header>
+          <figure class="restaurant-logo">
+          <img src=${logo} alt="Logotipo">
+          </figure>
         
       <h2>titulo</h2>
       <p>paragrafo</p></>
-      </body>
+      
       `;
 
   container.innerHTML = template;
