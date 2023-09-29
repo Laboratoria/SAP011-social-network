@@ -92,7 +92,7 @@ export const register = () => {
     function toggleDateErrors(date){
       enterButton.addEventListener("click", function (e) {
         e.preventDefault();
-        if (date.value.length < 8) {
+        if (age <= 18) {
           dateMessage.classList.remove("error-none");
           dateMessage.classList.add("error-block");
         } else {
@@ -125,20 +125,18 @@ export const register = () => {
       return password.length >= 8;  
     }
 
-    function isValidDate() {
+    function isValidDate(date) {
       const ageMin = 18; 
       const currentDate = new Date(); 
       const currentYear = currentDate.getFullYear();
-      const age = currentYear - date.value;
-      console.log(birthYear)
-      if(age >= ageMin){
-        return true
-      }
-
+      const age = currentYear - parseInt(date.value);
+        return age, ageMin
     }
 
-  return container
+  return container    
+    
 };
+
   
    
   
