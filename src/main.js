@@ -1,6 +1,8 @@
 import home from "./pages/home/home.js";
 import about from "./pages/about/about.js";
 import feed from "./pages/feed/feed.js";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
 const main = document.querySelector("#root");
 
 const init = () => {
@@ -25,3 +27,18 @@ window.addEventListener("load", () => {
   main.appendChild(home());
   init();
 });
+
+//firebase:
+
+const auth = getAuth();
+createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });

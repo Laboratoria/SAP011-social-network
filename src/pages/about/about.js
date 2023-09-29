@@ -3,9 +3,11 @@ export default () => {
 
     const template = `
       <h2>about</h2>
-      <p>conteudo</p></>
+      <p>conteudo</p>
       `;
-
+// window.querySelector("#teste").addEventListener("click"); () => {
+//     window.location.hash = "#feed";
+// };
     container.innerHTML = template;
     return container;
     };
