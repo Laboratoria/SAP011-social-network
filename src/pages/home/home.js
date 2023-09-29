@@ -1,4 +1,4 @@
-import logo from './src/img/logotipo.png';
+// import logo from "../../img/logotipo.png";
 
 export default () => {
   const container = document.createElement('div'); //a div adiciona todo o template
@@ -7,7 +7,7 @@ export default () => {
         <body>
           <header>
             <figure class="restaurant-logo">
-              <img src=${logo} alt="Logotipo">
+              // <img src=${logo} alt="Logotipo">
             </figure>
           </header>
           
