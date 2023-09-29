@@ -6,26 +6,26 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 const main = document.querySelector("#root");
 
 const init = () => {
-    window.addEventListener("hashchange", () => {
-        main.innerHTML = "";
-    switch(window.location.hash){
-        case " ":
-            main.appendChild(home());
-            break;
-        case "#about":
-            main.appendChild(about());
-            break;
-        case "#feed":
-            main.appendChild(feed());
-            break;
-            default:
-                main.appendChild(home());
+  window.addEventListener("hashchange", () => {
+    main.innerHTML = "";
+    switch (window.location.hash) {
+      case " ":
+        main.appendChild(home());
+        break;
+      case "#about":
+        main.appendChild(about());
+        break;
+      case "#feed":
+        main.appendChild(feed());
+        break;
+      default:
+        main.appendChild(home());
     }
-})
-}
+  });
+};
 window.addEventListener("load", () => {
-    main.appendChild(home());
-    init();
+  main.appendChild(home());
+  init();
 });
 
 //firebase:
