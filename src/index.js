@@ -1,4 +1,3 @@
-//funções relacionadas ao firebase
+// funções relacionadas ao firebase
 
-
-window.addEventListener('load',)
+window.addEventListener('load')

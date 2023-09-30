@@ -1,5 +1,5 @@
 // importamos la funcion que vamos a testear
-import home from './pages/home/home.js';
+import home from '../src/pages/home/home.js';
 
 describe('home', () => {
   it('deveria ser uma função', () => {

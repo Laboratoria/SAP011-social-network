@@ -1,12 +1,12 @@
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'; // não temos ainda
-import home from './pages/home/home.js';
+import home from './pages/home/home.js'; // segunda ação criada
 import about from './pages/about/about.js';
 import feed from './pages/feed/feed.js';
 
-const main = document.querySelector('#root');
+const main = document.querySelector('#root'); // terceira ação feita, pega a main lá no index.html
 
 const init = () => {
-  window.addEventListener('hashchange', () => {
+  window.addEventListener('hashchange', () => { // 5ª ação cada vez que a hash é alterada o evento "escuta"
     main.innerHTML = '';
     switch (window.location.hash) {
       case '':
@@ -23,8 +23,8 @@ const init = () => {
     }
   });
 };
-window.addEventListener('load', () => {
-  main.appendChild(home());
+window.addEventListener('load', () => { // primeira ação construída
+  main.appendChild(home()); // quarta ação, appendChild cria um "filho" - home
   init();
 });
 
