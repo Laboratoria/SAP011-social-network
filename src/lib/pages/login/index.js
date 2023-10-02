@@ -3,29 +3,27 @@ export const login = () => {
   container.innerHTML = `
     <!--<form action="feed.html>" --!>
     <form class="login-container"> 
-      <h3 class="titulo">LOGIN</h3>
-        <label class="config-titulo">E-mail:</label>
-          <input name="email" class="email-input" placeholder="seu@email.com">
-          <div class = "error-none" id="email-error">E-mail e obrigatorio ou invalido</div>
+    <h3 class="titulo">LOGIN</h3>
+    <label class="config-titulo">E-mail:</label>
+    <input name="email" class="email-input" placeholder="seu@email.com">
+    <div class = "error-none" id="email-error">E-mail e obrigatorio ou invalido</div>
     
-          <br>
-
-        <label class="config-titulo">Senha:</label>
-          <input type="password" class="key" placeholder="Digite sua senha.">
-          <div class="error-none" id="password-error">Senha esta invalida e é obrigatoria </div>
+    <label class="config-titulo">Senha:</label>
+    <input type="password" class="key" placeholder="Digite sua senha.">
+    <div class="error-none" id="password-error">Senha esta invalida e é obrigatoria </div>
           
-          <div class="send-container"> 
-            <button type="button" class="email-error"  id="enter">Entrar</button>
-          </div>
+    <div class="send-container"> 
+     <button type="button" class="email-error" id="enter">Entrar</button>
+    </div>
           
-          <br>
-          <div class="social-container">
-             <button id="Google">
-              <img src="../../../Imagens/icon-google01.png"> </img>             
-              <h1>Login com Google</h1>
-            </button>
-            <p>Não tem uma conta?<a href="/#register">Cadastre-se</a></p>
-          </div>
+    
+    <div class="social-container">
+      <button id="Google">
+        <img src="../../../Imagens/icon-google01.png"> </img>             
+        <h1>Login com Google</h1>
+      </button>
+      <p>Não tem uma conta?<a href="/#register">Cadastre-se</a></p>
+    </div>
     `;
 
   // /*VALIDAÇÃO EM JAVA SCRIPT PARA PAG-LOGIN */

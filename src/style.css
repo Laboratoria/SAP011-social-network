@@ -8,7 +8,7 @@
 
 button:disabled,
 button[disabled]{
-     opacity: 0.7; 
+    opacity: 0.7; 
     
 }
 
@@ -44,13 +44,8 @@ nav {
 }
 
 .logo {
-    width: 20rem;
-
-    
-    
+    width: 20rem;    
         
-     
-    
 }
 
 
@@ -99,7 +94,7 @@ body{
     margin: 0 auto;
     padding: 5%;
     flex-direction: column;
-    gap: 5px; 
+    gap: 1rem; 
     margin-top: 50px;
     
 }
@@ -128,6 +123,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 3rem ;
 }
 
 .send-container > button  {
@@ -149,7 +145,8 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 0.8rem ;
+    gap: 2rem ;
+    padding-top: 1rem;
 }
 
 
@@ -164,6 +161,7 @@ body{
     box-shadow: 5px 5px 10px 0px rgba(3, 3, 3, 0.952); 
     padding: 0.5rem 1rem;
     gap: 1rem;     
+    
    
 }
 
