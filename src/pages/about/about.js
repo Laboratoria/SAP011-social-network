@@ -5,8 +5,7 @@ export default () => {
       <h2>about</h2>
       <p>conteudo</p>
       <input type= "">
-      <button>Click Aqui</button>
-      </input>
+
       `;
   // window.querySelector("#teste").addEventListener("click"); () => {
   //     window.location.hash = "#feed";
