@@ -25,7 +25,7 @@ export const register = () => {
 
       <div class="social-container">           
         <button type="button" id="gmail">
-          <img src="../../../Imagens/icon-google01.png"> </img>             
+          <img src="../../../Imagens/icon-google01.png"></img>             
           <h1>Login com Google</h1>
         </button>
         <a href="/#login">Pagina inicial</a>

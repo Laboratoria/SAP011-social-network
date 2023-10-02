@@ -19,7 +19,7 @@ export const login = () => {
     
     <div class="social-container">
       <button id="Google">
-        <img src="../../../Imagens/icon-google01.png"> </img>             
+        <img src="../../../Imagens/icon-google01.png"></img>             
         <h1>Login com Google</h1>
       </button>
       <p>Não tem uma conta?<a href="/#register">Cadastre-se</a></p>
