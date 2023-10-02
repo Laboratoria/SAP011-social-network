@@ -1,16 +1,24 @@
-*{
+* {
     margin: 0;
-    background:#9b4922 ;
+    padding: 0;
+
+}
+
+html {
+scroll-behavior: smooth;
 }
 
 body{
 
 }
-
 footer {
-    display: flex;
-    justify-content: center;
-    position:sticky;
-    align-items: flex-end;
-    background-color: aqua;
+    align-items: center;
+
+}
+#container {
+    background-color: #9b4922;
+}
+img {
+  text-align: center;
+  margin: 1rem;
 }
