@@ -3,9 +3,11 @@ export default () => {
 
     const template = `
       <h2>titulo</h2>
-      <p>paragrafo</p></>
+      <p>paragrafo</p>
       `;
 
     container.innerHTML = template;
     return container;
     };
+
+    
