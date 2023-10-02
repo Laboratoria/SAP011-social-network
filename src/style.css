@@ -8,8 +8,13 @@ html {
 scroll-behavior: smooth;
 }
 
-body{
-
+body {
+    background-color: #9b4922;
+}
+h1 {
+    align-items: center;
+    font-family: "Chonburi";
+    font-size: normal;
 }
 footer {
     align-items: center;
