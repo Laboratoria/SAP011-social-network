@@ -1,14 +1,12 @@
 *{
     margin: 0;
-    
 }
 
-html{
-    
+button{
+    background-color: aqua;
 }
-
 body{
-
+    background:#9b4922;
 }
 
 footer {
