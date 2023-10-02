@@ -14,14 +14,18 @@ export const login = () => {
           <input type="password" class="key" placeholder="Digite sua senha.">
           <div class="error-none" id="password-error">Senha esta invalida e é obrigatoria </div>
           
-          <button type="button" class="email error" disabled id="enter">Entrar</button>
-
+          <div class="send-container"> 
+            <button type="button" class="email-error"  id="enter">Entrar</button>
+          </div>
           
           <br>
-          
-          <label>Faça login com:</label>
-          <button id="Google" >Google</button>
-          <p>Não tem uma conta?<a href="/#register">Cadastre-se</a></p>
+          <div class="social-container">
+             <button id="Google">
+              <img src="../../../Imagens/icon-google01.png"> </img>             
+              <h1>Login com Google</h1>
+            </button>
+            <p>Não tem uma conta?<a href="/#register">Cadastre-se</a></p>
+          </div>
     `;
 
   // /*VALIDAÇÃO EM JAVA SCRIPT PARA PAG-LOGIN */
@@ -48,9 +52,11 @@ export const login = () => {
   const enterButton = container.querySelector("#enter");
   
   function toggleEmailErrors(email) {
+    console.log("teste"); 
     enterButton.addEventListener("click", function (e) {
       e.preventDefault();
-      if (email.value=== "" || isValidEmail(email))  {
+      if (email.value=== ""  || isValidEmail(email))  {
+        console.log("teste2");
         emailMessage.classList.contains("error-none");
         emailMessage.classList.remove("error-none");
         emailMessage.classList.add("error-block");
@@ -88,14 +94,14 @@ export const login = () => {
 
   function isValidEmail(email) {
    const parameter = /^\S+@\S+\.\S+$/;
-   console.log(parameter.test(email));
-   return parameter.test(email); //retorna falso 
+   console.log("teste3",!parameter.test(email));
+   return parameter.test(email);  
    
   }
   
   function isValidPassword(password) {
     console.log(password.length >= 8, password);
-     return password.length >= 8; //false sempre
+     return password.length <= 8; //false sempre
      
   }
 
