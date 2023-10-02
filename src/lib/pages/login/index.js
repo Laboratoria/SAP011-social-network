@@ -1,6 +1,7 @@
 export const login = () => {
   const container = document.createElement("section");
   container.innerHTML = `
+
     <!--<form action="feed.html>" --!>
     <form class="login-container"> 
     <h3 class="titulo">LOGIN</h3>
@@ -14,8 +15,7 @@ export const login = () => {
           
     <div class="send-container"> 
      <button type="button" class="email-error" id="enter">Entrar</button>
-    </div>
-          
+    </div>          
     
     <div class="social-container">
       <button id="Google">
@@ -26,7 +26,7 @@ export const login = () => {
     </div>
     `;
 
-  // /*VALIDAÇÃO EM JAVA SCRIPT PARA PAG-LOGIN */
+ /*VALIDAÇÃO EM JAVA SCRIPT PARA PAG-LOGIN */
   const email = container.querySelector(".email-input");
   const password = container.querySelector(".key");
   const emailMessage = container.querySelector("#email-error");
