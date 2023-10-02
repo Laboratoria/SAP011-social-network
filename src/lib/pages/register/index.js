@@ -37,27 +37,26 @@ export const register = () => {
     const dateMessage = container.querySelector(".error-none")
     const enterButton = container.querySelector("#enter");
   
-    const validateEmail = container.querySelector(".email-input");
-    validateEmail.addEventListener("input", function (e) {
-      e.preventDefault();
-      toggleButtonsDisable(email, password, date);
-      toggleEmailErrors(email);
-  
-    });
-  
-    const validatePassword = container.querySelector(".key");
-    validatePassword.addEventListener("input", function (e) {
-      e.preventDefault();
-      toggleButtonsDisable(email, password, date);
-      togglePasswordErrors(password);
-    });
-
     const validateDate = container.querySelector(".form");
     validateDate.addEventListener("input", function (e) {
       e.preventDefault();
-      toggleButtonsDisable(email, password, date);
       toggleDateErrors(date);
   
+    });
+
+    const validateEmail = container.querySelector(".email-input");
+    validateEmail.addEventListener("input", function (e) {
+      e.preventDefault();
+      toggleEmailErrors(email);
+  
+    });
+
+    const validatePassword = container.querySelector(".key");
+    validatePassword.addEventListener("input", function (e) {
+      e.preventDefault();
+      togglePasswordErrors(password);
+      toggleButtonsDisable(email, password, date);
+      
     });
     
     function toggleEmailErrors(email) {
@@ -103,7 +102,7 @@ export const register = () => {
       })
     };
 
-    function toggleButtonsDisable(email, password) {
+    function toggleButtonsDisable(email, password, date) {
       const emailValid = isValidEmail(email.value);
       const passwordValid = isValidPassword(password.value);
       const dateValid = isValidDate(date.value);
@@ -114,23 +113,30 @@ export const register = () => {
       }
     }
 
-    function isValidEmail() {
+    function isValidEmail(email) {
       const parameter = /^\S+@\S+\.\S+$/;
       console.log(parameter.test(email));
       return parameter.test(email); 
     }
      
-    function isValidPassword() {
-      console.log(password.length >= 8, password);
-      return password.length >= 8;  
+    function isValidPassword(password) {
+      const validPass = parseInt(password);
+      console.log(validPass.length >= 8, password);
+      return validPass.length >= 8;  
     }
 
     function isValidDate(date) {
       const ageMin = 18; 
       const currentDate = new Date(); 
       const currentYear = currentDate.getFullYear();
-      const age = currentYear - parseInt(date.value);
-        return age, ageMin
+      const age = currentYear - new Date(date).getFullYear();
+      console.log(age, currentYear, date, new Date(date).getFullYear());
+        if(age >= ageMin){
+           
+          return true
+        }else{
+          toggleDateErrors(date)
+        }
     }
 
   return container    
