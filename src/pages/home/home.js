@@ -4,12 +4,28 @@ export default () => {
   const container = document.createElement('div'); // adiciona o template
 
   const template = `
-    <form> // Alycia que fez essa parte
-    <input type= "email" placeholder="E-mail" name="email"/>
-    <input type="password" placeholder="Senha" name="senha"/>
-    </form>
+    <section> // Alycia
+      <form id="email"> 
+        <label>Email</label>
+        <input type= "email" placeholder="seu@email.com" name="email"/>
+      </form>
 
-    
+      <form id="email-password">
+        <label>Senha</label>
+        <input type="password" placeholder="digite a senha" name="senha"/>
+      </form>
+    </section>
+    <p> ----------------------------- OU -------------------------------- </p>
+    <section> // Pam 
+      <form id ="google-button">
+        <button> Botão do Google </button>
+      </form>
+
+      <form id="register-login">
+        <button>Cadastrar</button>
+        <button>Entrar</button>
+      </form>
+    </section>
       `;
 
   container.innerHTML = template; // coloco o conteúdo do template dentro do innerhtml
