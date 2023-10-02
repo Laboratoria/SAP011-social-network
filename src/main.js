@@ -5,11 +5,11 @@ import feed from './pages/feed/feed.js';
 
 const main = document.querySelector('#root'); // terceira ação feita, pega a main lá no index.html
 
-const init = () => {
+const init = () => { // função que inicializa a página, analiza as mudanças de hash
   window.addEventListener('hashchange', () => { // 5ª ação cada vez que a hash é alterada o evento "escuta"
-    main.innerHTML = '';
+    main.innerHTML = ''; // vai apagar todas as informações antes de trazer a hash nova
     switch (window.location.hash) {
-      case '':
+      case '': // se for vazio ele vai mostrar a home
         main.appendChild(home());
         break;
       case '#about':
