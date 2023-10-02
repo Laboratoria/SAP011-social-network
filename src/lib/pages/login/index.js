@@ -1,30 +1,32 @@
 export const login = () => {
   const container = document.createElement("section");
   container.innerHTML = `
+
     <!--<form action="feed.html>" --!>
     <form class="login-container"> 
-      <h3 class="titulo">LOGIN</h3>
-        <label class="config-titulo">E-mail:</label>
-          <input name="email" class="email-input" placeholder="seu@email.com">
-          <div class = "error-none" id="email-error">E-mail e obrigatorio ou invalido</div>
+    <h3 class="titulo">LOGIN</h3>
+    <label class="config-titulo">E-mail:</label>
+    <input name="email" class="email-input" placeholder="seu@email.com">
+    <div class = "error-none" id="email-error">E-mail e obrigatorio ou invalido</div>
     
-          <br>
-
-        <label class="config-titulo">Senha:</label>
-          <input type="password" class="key" placeholder="Digite sua senha.">
-          <div class="error-none" id="password-error">Senha esta invalida e é obrigatoria </div>
+    <label class="config-titulo">Senha:</label>
+    <input type="password" class="key" placeholder="Digite sua senha.">
+    <div class="error-none" id="password-error">Senha esta invalida e é obrigatoria </div>
           
-          <button type="button" class="email error" disabled id="enter">Entrar</button>
-
-          
-          <br>
-          
-          <label>Faça login com:</label>
-          <button id="Google" >Google</button>
-          <p>Não tem uma conta?<a href="/#register">Cadastre-se</a></p>
+    <div class="send-container"> 
+     <button type="button" class="email-error" id="enter">Entrar</button>
+    </div>          
+    
+    <div class="social-container">
+      <button id="Google">
+        <img src="../../../Imagens/icon-google01.png"></img>             
+        <h1>Login com Google</h1>
+      </button>
+      <p>Não tem uma conta?<a href="/#register">Cadastre-se</a></p>
+    </div>
     `;
 
-  // /*VALIDAÇÃO EM JAVA SCRIPT PARA PAG-LOGIN */
+ /*VALIDAÇÃO EM JAVA SCRIPT PARA PAG-LOGIN */
   const email = container.querySelector(".email-input");
   const password = container.querySelector(".key");
   const emailMessage = container.querySelector("#email-error");
@@ -48,9 +50,11 @@ export const login = () => {
   const enterButton = container.querySelector("#enter");
   
   function toggleEmailErrors(email) {
+    console.log("teste"); 
     enterButton.addEventListener("click", function (e) {
       e.preventDefault();
-      if (email.value=== "" || isValidEmail(email))  {
+      if (email.value=== ""  || isValidEmail(email))  {
+        console.log("teste2");
         emailMessage.classList.contains("error-none");
         emailMessage.classList.remove("error-none");
         emailMessage.classList.add("error-block");
@@ -88,14 +92,14 @@ export const login = () => {
 
   function isValidEmail(email) {
    const parameter = /^\S+@\S+\.\S+$/;
-   console.log(parameter.test(email));
-   return parameter.test(email); //retorna falso 
+   console.log("teste3",!parameter.test(email));
+   return parameter.test(email);  
    
   }
   
   function isValidPassword(password) {
     console.log(password.length >= 8, password);
-     return password.length >= 8; //false sempre
+     return password.length <= 8; //false sempre
      
   }
 

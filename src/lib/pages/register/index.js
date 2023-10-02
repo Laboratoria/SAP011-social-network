@@ -2,30 +2,35 @@ export const register = () => {
   const container = document.createElement("section");
     container.innerHTML = `
     <form class="registro-container"> 
-        <h3 class="titulo">BEM VINDO(A) A MEDGREEN<h3>
-        <label class="config-titulo">Digite seu nome completo:</label>
-          <input type="name" class="name" placeholder="Nome completo">
-          <div class="error-none" id="name">Data e obrigatorio</div>
-          <br>
-        <label class="config-titulo">Nascimento:</label>
-            <input type="date" id="date" class="form">
-            <div id ="date" class="error-none">Data e obrigatorio</div>
-        <label class="config-titulo">E-mail:</label>
-          <br>
-            <input type="email" class="email-input" placeholder="seu@e-mail.com">
-            <div class="error-none" id ="email-error">E-mail e obrigatorio</div>
+      <h3 class="titulo">BEM VINDO(A) A MEDGREEN<h3>
+      <label class="config-titulo">Digite seu nome completo:</label>
+      <input type="name" class="name" placeholder="Nome completo">
+      <div class="error-none" id="name">Data e obrigatorio</div>
+          
+      <label class="config-titulo">Nascimento:</label>
+      <input type="date" id="date" class="form">
+      <div id ="date" class="error-none">Data e obrigatorio</div>
+      <label class="config-titulo">E-mail:</label>
+          
+      <input type="email" class="email-input" placeholder="seu@e-mail.com">
+      <div class="error-none" id ="email-error">E-mail e obrigatorio</div>
 
-        <label class="config-titulo">Senha:</label>
-            <input type="password" class="key" placeholder="Digite sua senha.">
-            <div class="error-none" id="password-error">Senha e obrigatorio</div>
+      <label class="config-titulo">Senha:</label>
+      <input type="password" class="key" placeholder="Digite sua senha.">
+      <div class="error-none" id="password-error">Senha e obrigatorio</div>
+      
+      <div class="send-container">
+        <button type="button" class="confirm" disabled id="enter" value="cadastrar">Cadastrar</button>
+      </div>
 
-            <button type="button" class="confirm" disabled id="enter" value="cadastrar">Cadastrar</button>
+      <div class="social-container">           
+        <button type="button" id="gmail">
+          <img src="../../../Imagens/icon-google01.png"></img>             
+          <h1>Login com Google</h1>
+        </button>
+        <a href="/#login">Pagina inicial</a>
+      </div>
 
-        <label class="config-titulo">Faça login com:</label>
-        
-            <button type="button" id="gmail">Google</button>
-
-            <a href="/#login">Pagina inicial</a>
       </form>
       `;
 
