@@ -1,9 +1,15 @@
 // página com botões de email, senha, google e cadastrar
+import logotipo from '../../img/logo.png';
 
 export default () => {
   const container = document.createElement('div'); // adiciona o template
 
   const template = `
+  //Adicionar a logotipo
+    <header>
+    <img class="logo-header" src=${logotipo} alt="Mulher segurando um prato com alimentos">
+    </header>
+
     <section> // Alycia
       <form id="email"> 
         <label>Email</label>
@@ -29,10 +35,16 @@ export default () => {
       `;
 
   container.innerHTML = template; // coloco o conteúdo do template dentro do innerhtml
-  const registerBtn = container.querySelector('#register-btn');
-  registerBtn.addEventListener('click', () => {
+  const registerBtn = container.querySelector('#register-btn'); // variável que pega a ação do botão
+  registerBtn.addEventListener('click', () => { // cadastrar e cria a página de cadastro
     console.log('cliquei');
     window.location.hash = '#register'; // para abrir a página de register
+  });
+
+  const enterBtn = container.querySelector('#enter-btn');
+  enterBtn.addEventListener('click', () => {
+    console.log('entrei');
+    window.location.hash = '#feed'; // manda para o feed
   });
   return container; // vai mostrar na tela o conteudo do template home, o container é a div criada
 };
