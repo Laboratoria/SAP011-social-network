@@ -15,19 +15,24 @@ export default () => {
         <input type="password" placeholder="digite a senha" name="senha"/>
       </form>
     </section>
-    <p> ----------------------------- OU -------------------------------- </p>
+    <p> --------------- OU -----------------</p>
     <section> // Pam 
       <form id ="google-button">
         <button> Botão do Google </button>
       </form>
 
       <form id="register-login">
-        <button>Cadastrar</button>
-        <button>Entrar</button>
+        <button id="register-btn">Cadastrar</button>
+        <button id="enter-btn">Entrar</button>
       </form>
     </section>
       `;
 
   container.innerHTML = template; // coloco o conteúdo do template dentro do innerhtml
+  const registerBtn = container.querySelector('#register-btn');
+  registerBtn.addEventListener('click', () => {
+    console.log('cliquei');
+    window.location.hash = '#register'; // para abrir a página de register
+  });
   return container; // vai mostrar na tela o conteudo do template home, o container é a div criada
 };

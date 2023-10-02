@@ -1,19 +1,23 @@
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'; // não temos ainda
 import home from './pages/home/home.js'; // segunda ação criada
 import about from './pages/about/about.js';
+import register from './pages/register/register.js';
 import feed from './pages/feed/feed.js';
 
 const main = document.querySelector('#root'); // terceira ação feita, pega a main lá no index.html
 
 const init = () => { // função que inicializa a página, analiza as mudanças de hash
   window.addEventListener('hashchange', () => { // 5ª ação cada vez que a hash é alterada o evento "escuta"
-    main.innerHTML = ''; // vai apagar todas as informações antes de trazer a hash nova
+    main.innerHTML = ' '; // vai apagar todas as informações antes de trazer a hash nova
     switch (window.location.hash) {
       case '': // se for vazio ele vai mostrar a home
         main.appendChild(home());
         break;
       case '#about':
         main.appendChild(about());
+        break;
+      case '#register':
+        main.appendChild(register());
         break;
       case '#feed':
         main.appendChild(feed());
@@ -30,15 +34,15 @@ window.addEventListener('load', () => { // primeira ação construída
 
 // firebase:
 
-const auth = getAuth();
-createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
+// const auth = getAuth();
+// createUserWithEmailAndPassword(auth, email, password)
+//   .then((userCredential) => {
+//     // Signed in
+//     const user = userCredential.user;
+//     // ...
+//   })
+//   .catch((error) => {
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//     // ..
+//   });

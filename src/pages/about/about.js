@@ -1,3 +1,5 @@
+import logotipo from '../../img/logo-about.png';
+
 export default () => {
   const container = document.createElement('div');
 
@@ -28,12 +30,17 @@ export default () => {
       
       para Laboratória 2023
       </p>
+
+        <figure>
+          <img src=${logotipo} alt='logo' class='logotipo'>
+        </figure>
       </section>
       `;
 
   // window.querySelector("#about").addEventListener("click") () => {
   //     window.location.hash = "#about";
   // };
+
   container.innerHTML = template;
   return container;
 };
