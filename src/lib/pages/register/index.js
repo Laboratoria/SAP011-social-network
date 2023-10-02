@@ -5,13 +5,12 @@ export const register = () => {
       <h3 class="titulo">BEM VINDO(A) A MEDGREEN<h3>
       <label class="config-titulo">Digite seu nome completo:</label>
       <input type="name" class="name" placeholder="Nome completo">
-      <div class="error-none" id="name">Data e obrigatorio</div>
           
       <label class="config-titulo">Nascimento:</label>
       <input type="date" id="date" class="form">
       <div id ="date" class="error-none">Data e obrigatorio</div>
-      <label class="config-titulo">E-mail:</label>
-          
+
+      <label class="config-titulo">E-mail:</label>   
       <input type="email" class="email-input" placeholder="seu@e-mail.com">
       <div class="error-none" id ="email-error">E-mail e obrigatorio</div>
 
@@ -67,7 +66,7 @@ export const register = () => {
     function toggleEmailErrors(email) {
       enterButton.addEventListener("input", function (e) {
         e.preventDefault();
-        if (email.value=== "" || isValidEmail(email))  {
+        if (email.value === "" || isValidEmail(email))  {
           emailMessage.classList.contains("error-none");
           emailMessage.classList.remove("error-none");
           emailMessage.classList.add("error-block");
@@ -75,7 +74,6 @@ export const register = () => {
           emailMessage.classList.add("error-block");
           emailMessage.classList.remove("error-none");
         }
-        console.log(emailMessage);
       });
     };
   
@@ -83,7 +81,7 @@ export const register = () => {
     function togglePasswordErrors(password) {
       enterButton.addEventListener("click", function (e) {
         e.preventDefault();
-        if (password.value.length < 8) {
+        if (password.value === ""  || isValidPassword(password) === false) {
           passwordMessage.classList.remove("error-none");
           passwordMessage.classList.add("error-block");
         } else {
@@ -96,14 +94,13 @@ export const register = () => {
     function toggleDateErrors(date){
       enterButton.addEventListener("click", function (e) {
         e.preventDefault();
-        if (age <= 18) {
+        if (date <= 18) {
           dateMessage.classList.remove("error-none");
           dateMessage.classList.add("error-block");
         } else {
           dateMessage.classList.add("error-block");
           dateMessage.classList.remove("error-none");
         }
-        console.log(date.value);
       })
     };
 
@@ -111,6 +108,7 @@ export const register = () => {
       const emailValid = isValidEmail(email.value);
       const passwordValid = isValidPassword(password.value);
       const dateValid = isValidDate(date.value);
+      console.log(emailValid, passwordValid, dateValid);
       if (emailValid && passwordValid && dateValid) {
         enterButton.removeAttribute("disabled");
       } else {
@@ -120,14 +118,13 @@ export const register = () => {
 
     function isValidEmail(email) {
       const parameter = /^\S+@\S+\.\S+$/;
-      console.log(parameter.test(email));
       return parameter.test(email); 
     }
      
     function isValidPassword(password) {
-      const validPass = parseInt(password);
-      console.log(validPass.length >= 8, password);
-      return validPass.length >= 8;  
+      if(password.length -1 >= 7){
+        return true
+      }  
     }
 
     function isValidDate(date) {
@@ -137,10 +134,7 @@ export const register = () => {
       const age = currentYear - new Date(date).getFullYear();
       console.log(age, currentYear, date, new Date(date).getFullYear());
         if(age >= ageMin){
-           
           return true
-        }else{
-          toggleDateErrors(date)
         }
     }
 
