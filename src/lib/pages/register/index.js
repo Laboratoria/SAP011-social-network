@@ -25,7 +25,7 @@ export const register = () => {
       <div class="social-container">           
         <button type="button" id="gmail">
           <img src="../../../Imagens/icon-google01.png"></img>             
-          <h1>Login com Google</h1>
+          <h1>Cadastre-se com Google</h1>
         </button>
         <a href="/#login">Pagina inicial</a>
       </div>
@@ -36,8 +36,8 @@ export const register = () => {
     const email = container.querySelector(".email-input");
     const password = container.querySelector(".key");
     const date = container.querySelector("#date")
-    const emailMessage = container.querySelector("error-none");
-    const passwordMessage = container.querySelector("error-none");
+    const emailMessage = container.querySelector(".error-none");
+    const passwordMessage = container.querySelector(".error-none");
     const dateMessage = container.querySelector(".error-none")
     const enterButton = container.querySelector("#enter");
   
@@ -85,8 +85,9 @@ export const register = () => {
           passwordMessage.classList.remove("error-none");
           passwordMessage.classList.add("error-block");
         } else {
-          passwordMessage.classList.add("error-block");
-          passwordMessage.classList.remove("error-none");
+          console.log(passwordMessage);
+          passwordMessage.classList.add("error-none");
+          passwordMessage.classList.remove("error-block");
         }
       });
     };
