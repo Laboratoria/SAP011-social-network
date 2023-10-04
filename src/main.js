@@ -1,19 +1,21 @@
-import home from "./pages/home/home.js";
-import about from "./pages/about/about.js";
-import feed from "./pages/feed/feed.js";
-const main = document.querySelector("#root");
+// import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'; // não temos ainda
+import home from './pages/home/home.js'; // segunda ação criada
+import about from './pages/about/about.js';
+import feed from './pages/feed/feed.js';
 
-const init = () => {
-  window.addEventListener("hashchange", () => {
-    main.innerHTML = "";
+const main = document.querySelector('#root'); // terceira ação feita, pega a main lá no index.html
+
+const init = () => { // função que inicializa a página, analiza as mudanças de hash
+  window.addEventListener('hashchange', () => { // 5ª ação cada vez que a hash é alterada o evento "escuta"
+    main.innerHTML = ''; // vai apagar todas as informações antes de trazer a hash nova
     switch (window.location.hash) {
-      case " ":
+      case '': // se for vazio ele vai mostrar a home
         main.appendChild(home());
         break;
-      case "#about":
+      case '#about':
         main.appendChild(about());
         break;
-      case "#feed":
+      case '#feed':
         main.appendChild(feed());
         break;
       default:
@@ -21,7 +23,22 @@ const init = () => {
     }
   });
 };
-window.addEventListener("load", () => {
-  main.appendChild(home());
+window.addEventListener('load', () => { // primeira ação construída
+  main.appendChild(home()); // quarta ação, appendChild cria um "filho" - home
   init();
 });
+
+// firebase:
+
+// const auth = getAuth();
+// createUserWithEmailAndPassword(auth, email, password)
+//   .then((userCredential) => {
+//     // Signed in
+//     const user = userCredential.user;
+//     // ...
+//   })
+//   .catch((error) => {
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//     // ..
+//   });

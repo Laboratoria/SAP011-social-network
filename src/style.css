@@ -1,16 +1,29 @@
-*{
+* {
     margin: 0;
-    
-}
-
-html{
-    
-}
-
-body{
+    padding: 0;
 
 }
 
+html {
+scroll-behavior: smooth;
+}
+
+body {
+    background-color: #9b4922;
+}
+h1 {
+    align-items: center;
+    font-family: "Chonburi";
+    font-size: normal;
+}
 footer {
-    background-color: aqua;
+    align-items: center;
+
+}
+#container {
+    background-color: #9b4922;
+}
+img {
+  text-align: center;
+  margin: 1rem;
 }
