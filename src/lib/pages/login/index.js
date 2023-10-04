@@ -35,7 +35,6 @@ export const login = () => {
   const validateEmail = container.querySelector(".email-input");
   validateEmail.addEventListener("input", function (e) {
     e.preventDefault();
-    toggleButtonsDisable(email, password);
     toggleEmailErrors(email);
 
   });
@@ -59,8 +58,8 @@ export const login = () => {
         emailMessage.classList.remove("error-none");
         emailMessage.classList.add("error-block");
       } else {
-        emailMessage.classList.add("error-block");
-        emailMessage.classList.remove("error-none");
+        emailMessage.classList.add("error-none");
+        emailMessage.classList.remove("error-block");
       }
       console.log(emailMessage);
     });
@@ -74,8 +73,8 @@ export const login = () => {
         passwordMessage.classList.remove("error-none");
         passwordMessage.classList.add("error-block");
       } else {
-        passwordMessage.classList.add("error-block");
-        passwordMessage.classList.remove("error-none");
+        passwordMessage.classList.add("error-none");
+        passwordMessage.classList.remove("error-block");
       }
     });
   }
@@ -98,8 +97,7 @@ export const login = () => {
   }
   
   function isValidPassword(password) {
-    console.log(password.length >= 8, password);
-     return password.length <= 8; //false sempre
+     return password.length >= 8; //false sempre
      
   }
 
