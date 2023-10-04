@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+    
+body {
+  background-color: #22A6C4;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px ; 
+}
+
+.images-register{
+  text-align: center;
+}
+
+.logo {
+  width: auto;
+  height: 55px;
+}
+        
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-register{
+  border: 1px solid white;
+  border-radius: 12px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vw;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-register{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+      
+.name-register, .email-register, .key-register{
+  padding-left: 15px; 
+  border-radius: 20px;
+  height: 35px;  
+  width: 233px;
+  margin-bottom: 18px;
+  border: 1px solid black;
+}
+
+.btn-signIn{
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  height: 42px;
+  width: 250px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border: 1px solid black;
+
+}
+
+.click-here {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 13.5px;
+  margin-top: 10px;  
+  cursor: pointer; 
+  font-weight: 400;
+}
+
+.text-register {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 13.5px;
+  margin-top: 10px;  
+  cursor: pointer; 
+}
+
+.img-girl-register {
+  display: none;
+}
+
+/* Para tablets */
+@media (min-width: 767px) and (max-width: 1023px) {
+  .logo {
+    height: 8vh;
+    width: 30vh;
+  }
+  
+  header p {
+  font-size: 23px;
+  margin-top: 15px;
+  }
+ 
+  .section-register{
+    margin: 100px 40px 0px;
+    height: 42vh;
+    padding: 35px 35px 25px;
+  }
+  
+  .img-girl-register{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  
+    .images-register{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 110px;      
+    }
+
+    .img-girl-register{
+      display: block;
+      height: 24vw;
+      width: 27vw;
+      margin: 20px 0px;
+      
+    }
+
+    .register-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+  }
+
+    .logo {
+      height: 8vh;
+      width: 30vh;
+    }
+    
+    header p {
+    font-size: 23px;
+    margin-top: 15px;
+    }
+      
+
+    .section-register{
+      margin-top: 13.6vw;
+      display: flex;
+      flex-direction: column;
+      margin-left: 8vw;
+      height: 50vh;
+      margin-bottom: 20px;
+    }
+
+    .new-account-register {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    input::placeholder {
+      font-size: 13px;
+  }   
+}
+
+@media (min-width: 1920px) {
+  .img-girl-register {
+    display: block;
+  }
+
+  .section-register {
+      height: 40vh;
+      padding: 35px 50px 25px;
+  
+  }
+}
