@@ -1,4 +1,4 @@
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'; // não temos ainda
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import home from './pages/home/home.js'; // segunda ação criada
 import about from './pages/about/about.js';
 import register from './pages/register/register.js';
@@ -32,7 +32,18 @@ window.addEventListener('load', () => { // primeira ação construída
   init();
 });
 
-// firebase:
+// função login
+
+export function login(email, password) {
+  const auth = getAuth();
+  return signInWithEmailAndPassword(auth, email, password);
+}
+
+// função para cadastrar usuário
+export function registerEmail(email, password) {
+  const auth = getAuth();
+  return createUserWithEmailAndPassword(auth, email, password);
+}
 
 // const auth = getAuth();
 // createUserWithEmailAndPassword(auth, email, password)

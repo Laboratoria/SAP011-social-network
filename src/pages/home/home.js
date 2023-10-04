@@ -34,6 +34,7 @@ export default () => {
     </section>
       `;
 
+  // botão cadastrar
   container.innerHTML = template; // coloco o conteúdo do template dentro do innerhtml
   const registerBtn = container.querySelector('#register-btn'); // variável que pega a ação do botão
   registerBtn.addEventListener('click', () => { // cadastrar e cria a página de cadastro
@@ -41,6 +42,7 @@ export default () => {
     window.location.hash = '#register'; // para abrir a página de register
   });
 
+  // botão entrar
   const enterBtn = container.querySelector('#enter-btn');
   enterBtn.addEventListener('click', () => {
     console.log('entrei');
