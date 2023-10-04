@@ -2,7 +2,7 @@ export default () => {
   const container = document.createElement('div');
 
   const template = `
-      <h2>feed</h2>
+      <h2>Este é o feed de notícias</h2>
       <p>conteudo</p></>
       `;
 
