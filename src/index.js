@@ -2,4 +2,4 @@
 import { login } from './pages/main.js';
 
 // DOM
-window.addEventListener('load')
+window.addEventListener('load');
