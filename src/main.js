@@ -1,4 +1,4 @@
-// import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'; // não temos ainda
+// main apenas para rodar a SPA
 import home from './pages/home/home.js'; // segunda ação criada
 import about from './pages/about/about.js';
 import feed from './pages/feed/feed.js';
