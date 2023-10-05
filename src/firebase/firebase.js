@@ -1,7 +1,7 @@
 // funções de autenticação e armazenamento (storage) do firebase
 
 import {
-  // entrar com google
+  // entrgar com google
   getAuth,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
