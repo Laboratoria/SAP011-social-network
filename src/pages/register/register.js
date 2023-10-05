@@ -26,8 +26,17 @@ export default () => {
         <input type="password" placeholder= "Confirme sua senha..." name="senha"/>
       </form>
     </section>
+
+    <form id="register-login">
+        <button id="confirm-btn">Cadastrar</button>
+      </form>
     `;
   container.innerHTML = template;
+  // criar evento click do confirm-btn
+
+  // fazer a chamada da função registerEmail (localizada no firebase.js)
   return container;
   // executar a função registerEmail através da manipulação de DOM
+
+  
 };
