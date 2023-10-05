@@ -1,3 +1,6 @@
+// importar a função que cria o usuário
+import { registerEmail } from "../../firebase/firebase";
+
 export default () => {
   const container = document.createElement('div');
 
@@ -26,4 +29,5 @@ export default () => {
     `;
   container.innerHTML = template;
   return container;
+  // executar a função registerEmail através da manipulação de DOM
 };

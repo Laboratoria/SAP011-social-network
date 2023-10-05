@@ -1,16 +1,35 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app';
-import { getAnalytics } from 'firebase/analytics';
+// funções de autenticação e armazenamento (storage) do firebase
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyCvxZw39ZirFFbjPYTrxTOeTjdk_nCvJgc',
-  authDomain: 'rede-social-25fa5.firebaseapp.com',
-  projectId: 'rede-social-25fa5',
-  storageBucket: 'rede-social-25fa5.appspot.com',
-  messagingSenderId: '742669874515',
-  appId: '1:742669874515:web:2b867facd9a39a70805da6',
-  measurementId: 'G-PN29GLXYNE',
-};
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+import {
+  // entrar com google
+  getAuth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+
+} from 'firebase/auth';
+
+// função login
+
+export function login(email, password) {
+  const auth = getAuth();
+  return signInWithEmailAndPassword(auth, email, password);
+}
+
+// função para cadastrar usuário
+export function registerEmail(email, password) {
+  const auth = getAuth();
+  return createUserWithEmailAndPassword(auth, email, password);
+}
+
+// const auth = getAuth();
+// createUserWithEmailAndPassword(auth, email, password)
+//   .then((userCredential) => {
+//     // Signed in
+//     const user = userCredential.user;
+//     // ...
+//   })
+//   .catch((error) => {
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//     // ..
+//   });
