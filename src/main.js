@@ -2,6 +2,7 @@
 // import { initializeApp } from 'firebase/app';
 import { login } from './lib/pages/login/index.js';
 import { register } from './lib/pages/register/index.js';
+import './style.css';
 
 // const app = initializeApp(firebaseConfig);
 

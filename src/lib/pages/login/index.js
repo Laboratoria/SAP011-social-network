@@ -16,7 +16,7 @@ export const login = () => {
     <div class="error-none" id="password-error">Senha esta invalida e é obrigatoria </div>
           
     <div class="send-container"> 
-     <button type="button" class="email-error" disabled id="enter">Entrar</button>
+     <button type="submit" class="email-error" disabled id="enter">Entrar</button>
     </div>          
     
     <div class="social-container">
@@ -32,32 +32,13 @@ export const login = () => {
  /*VALIDAÇÃO EM JAVA SCRIPT PARA PAG-LOGIN */
  const email = container.querySelector(".email-input");
  const password = container.querySelector(".key");
- const date = container.querySelector("#date")
  const emailMessage = container.querySelector(".error-none");
  const passwordMessage = container.querySelector(".error-none");
  const enterButton = container.querySelector("#enter");
-
-
- const validateEmail = container.querySelector(".email-input");
- validateEmail.addEventListener("input", function (e) {
-   e.preventDefault();
-   toggleEmailErrors(email);
-
- });
-
- const validatePassword = container.querySelector(".key");
- validatePassword.addEventListener("input", function (e) {
-   e.preventDefault();
-   togglePasswordErrors(password);
-   toggleButtonsDisable(email, password, date);
-   
- });
+ const form = container.querySelector(".login-container");
  
- function toggleEmailErrors(email) {
-   enterButton.addEventListener("input", function (e) {
-     e.preventDefault();
+   enterButton.addEventListener("click", function () {
      if (email.value === "" || isValidEmail(email))  {
-       emailMessage.classList.contains("error-none");
        emailMessage.classList.remove("error-none");
        emailMessage.classList.add("error-block");
      } else {
@@ -65,25 +46,8 @@ export const login = () => {
        emailMessage.classList.remove("error-none");
      }
    });
- };
-
  
- function togglePasswordErrors(password) {
-   enterButton.addEventListener("click", function (e) {
-     e.preventDefault();
-     if (password.value === ""  || isValidPassword(password) === false) {
-       passwordMessage.classList.remove("error-none");
-       passwordMessage.classList.add("error-block");
-     } else {
-       console.log(passwordMessage);
-       passwordMessage.classList.add("error-none");
-       passwordMessage.classList.remove("error-block");
-     }
-   });
- };
-
-
- function toggleButtonsDisable(email, password) {
+   password.addEventListener("input", function () {
    const emailValid = isValidEmail(email.value);
    const passwordValid = isValidPassword(password.value);
    console.log(emailValid, passwordValid);
@@ -92,7 +56,7 @@ export const login = () => {
    } else {
      enterButton.disabled = true;
    }
- }
+ });
 
  function isValidEmail(email) {
    const parameter = /^\S+@\S+\.\S+$/;
@@ -105,12 +69,23 @@ export const login = () => {
    }  
  }
 
-  enterButton.addEventListener("click", function(){
+ enterButton.addEventListener("click", function () {
+  if (password.value === ""  || isValidPassword(password) === false) {
+    passwordMessage.classList.remove("error-none");
+    passwordMessage.classList.add("error-block");
+  } else {
+    passwordMessage.classList.add("error-none");
+    passwordMessage.classList.remove("error-block");
+  }
+});
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
     const verifyEmail = container.querySelector(".email-input").value;
     const verifyPassword = container.querySelector(".key").value;
     verifyLogin(verifyEmail, verifyPassword)
     .then(()=> {
-      window.location.hash = "#feed";
+      console.log("login valido");
       main.appendChild(feed());
     })
     .catch(()=>{
