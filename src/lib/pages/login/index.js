@@ -1,3 +1,5 @@
+import { verifyRegister } from "../../../firebase/firebaseAuth";
+
 export const login = () => {
   const container = document.createElement("section");
   container.innerHTML = `
@@ -22,84 +24,90 @@ export const login = () => {
         <img src="../../../Imagens/icon-google01.png"></img>             
         <h1>Login com Google</h1>
       </button>
+      <p>Esqueceu a senha?<a href="paranaoesquecer.com">Redefinir senha</a></p>
       <p>Não tem uma conta?<a href="/#register">Cadastre-se</a></p>
     </div>
     `;
 
  /*VALIDAÇÃO EM JAVA SCRIPT PARA PAG-LOGIN */
-  const email = container.querySelector(".email-input");
-  const password = container.querySelector(".key");
-  const emailMessage = container.querySelector("#email-error");
-  const passwordMessage = container.querySelector("#password-error");
+ const email = container.querySelector(".email-input");
+ const password = container.querySelector(".key");
+ const date = container.querySelector("#date")
+ const emailMessage = container.querySelector(".error-none");
+ const passwordMessage = container.querySelector(".error-none");
+ const enterButton = container.querySelector("#enter");
 
-  const validateEmail = container.querySelector(".email-input");
-  validateEmail.addEventListener("input", function (e) {
-    e.preventDefault();
-    toggleEmailErrors(email);
 
-  });
+ const validateEmail = container.querySelector(".email-input");
+ validateEmail.addEventListener("input", function (e) {
+   e.preventDefault();
+   toggleEmailErrors(email);
 
-  const validatePassword = container.querySelector(".key");
-  validatePassword.addEventListener("input", function (e) {
-    e.preventDefault();
-    toggleButtonsDisable(email, password);
-    togglePasswordErrors(password);
-  });
+ });
 
-  const enterButton = container.querySelector("#enter");
-  
-  function toggleEmailErrors(email) {
-    console.log("teste"); 
-    enterButton.addEventListener("click", function (e) {
-      e.preventDefault();
-      if (email.value=== ""  || isValidEmail(email))  {
-        console.log("teste2");
-        emailMessage.classList.contains("error-none");
-        emailMessage.classList.remove("error-none");
-        emailMessage.classList.add("error-block");
-      } else {
-        emailMessage.classList.add("error-none");
-        emailMessage.classList.remove("error-block");
-      }
-      console.log(emailMessage);
-    });
-  }
-
-  function togglePasswordErrors() {
-    enterButton.addEventListener("click", function (e) {
-      e.preventDefault();
-      const password = container.querySelector(".key");
-      if (password.value.length < 8) {
-        passwordMessage.classList.remove("error-none");
-        passwordMessage.classList.add("error-block");
-      } else {
-        passwordMessage.classList.add("error-none");
-        passwordMessage.classList.remove("error-block");
-      }
-    });
-  }
-
-  function toggleButtonsDisable(email, password) {
-    const emailValid = isValidEmail(email.value);
-    const passwordValid = isValidPassword(password.value);
-    if (emailValid && passwordValid) {
-      enterButton.removeAttribute("disabled");
-    } else {
-      enterButton.disabled = true;
-    }
-  }
-
-  function isValidEmail(email) {
-   const parameter = /^\S+@\S+\.\S+$/;
-   console.log("teste3",!parameter.test(email));
-   return parameter.test(email);  
+ const validatePassword = container.querySelector(".key");
+ validatePassword.addEventListener("input", function (e) {
+   e.preventDefault();
+   togglePasswordErrors(password);
+   toggleButtonsDisable(email, password, date);
    
-  }
+ });
+ 
+ function toggleEmailErrors(email) {
+   enterButton.addEventListener("input", function (e) {
+     e.preventDefault();
+     if (email.value === "" || isValidEmail(email))  {
+       emailMessage.classList.contains("error-none");
+       emailMessage.classList.remove("error-none");
+       emailMessage.classList.add("error-block");
+     } else {
+       emailMessage.classList.add("error-block");
+       emailMessage.classList.remove("error-none");
+     }
+   });
+ };
+
+ 
+ function togglePasswordErrors(password) {
+   enterButton.addEventListener("click", function (e) {
+     e.preventDefault();
+     if (password.value === ""  || isValidPassword(password) === false) {
+       passwordMessage.classList.remove("error-none");
+       passwordMessage.classList.add("error-block");
+     } else {
+       console.log(passwordMessage);
+       passwordMessage.classList.add("error-none");
+       passwordMessage.classList.remove("error-block");
+     }
+   });
+ };
+
+
+ function toggleButtonsDisable(email, password) {
+   const emailValid = isValidEmail(email.value);
+   const passwordValid = isValidPassword(password.value);
+   console.log(emailValid, passwordValid);
+   if (emailValid && passwordValid) {
+     enterButton.removeAttribute("disabled");
+   } else {
+     enterButton.disabled = true;
+   }
+ }
+
+ function isValidEmail(email) {
+   const parameter = /^\S+@\S+\.\S+$/;
+   return parameter.test(email); 
+ }
   
-  function isValidPassword(password) {
-     return password.length >= 8; //false sempre
-     
-  }
+ function isValidPassword(password) {
+   if(password.length >= 8){
+     return true
+   }  
+ }
+
+  enterButton.addEventListener("click", function(email, password){
+    verifyRegister(email, password);
+  });
 
   return container;
 };

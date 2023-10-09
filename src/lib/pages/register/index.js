@@ -1,3 +1,5 @@
+
+
 export const register = () => {
   const container = document.createElement("section");
     container.innerHTML = `
@@ -133,9 +135,11 @@ export const register = () => {
       const currentDate = new Date(); 
       const currentYear = currentDate.getFullYear();
       const age = currentYear - new Date(date).getFullYear();
-      console.log(age, currentYear, date, new Date(date).getFullYear());
+      
         if(age >= ageMin){
           return true
+        }else{
+          return false
         }
     }
 
