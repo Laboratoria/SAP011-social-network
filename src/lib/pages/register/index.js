@@ -27,7 +27,7 @@ export const register = () => {
           <img src="../../../Imagens/icon-google01.png"></img>             
           <h1>Cadastre-se com Google</h1>
         </button>
-        <a href="/#login">Pagina inicial</a>
+        <a class="login-a" href="/#login"> Pagina inicial </a>
       </div>
 
       </form>

@@ -22,7 +22,7 @@ export const login = () => {
         <img src="../../../Imagens/icon-google01.png"></img>             
         <h1>Login com Google</h1>
       </button>
-      <p>Não tem uma conta?<a href="/#register">Cadastre-se</a></p>
+      <p>Não tem uma conta?<a class=" login-a" href="/#register"> Cadastre-se</a></p>
     </div>
     `;
 
