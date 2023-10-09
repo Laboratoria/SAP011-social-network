@@ -24,6 +24,7 @@ export const login = () => {
         <img src="../../../Imagens/icon-google01.png"></img>             
         <h1>Login com Google</h1>
       </button>
+      <p>Esqueceu a senha?<a href="paranaoesquecer.com">Redefinir senha</a></p>
       <p>Não tem uma conta?<a href="/#register">Cadastre-se</a></p>
     </div>
     `;
