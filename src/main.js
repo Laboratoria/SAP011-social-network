@@ -35,7 +35,7 @@ window.addEventListener('load', () => { // primeira ação construída
 
 // função login
 
-<<<<<<<<< Temporary merge branch 1
+
 export function login(email, password) {
   const auth = getAuth();
   return signInWithEmailAndPassword(auth, email, password);
