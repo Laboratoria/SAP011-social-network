@@ -1,5 +1,4 @@
-
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
+// na main só precisa das SPA e das telas
 import home from './pages/home/home.js'; // segunda ação criada
 import about from './pages/about/about.js';
 import register from './pages/register/register.js';
@@ -32,18 +31,3 @@ window.addEventListener('load', () => { // primeira ação construída
   main.appendChild(home()); // quarta ação, appendChild cria um "filho" - home
   init();
 });
-
-// função login
-
-<<<<<<<<< Temporary merge branch 1
-export function login(email, password) {
-  const auth = getAuth();
-  return signInWithEmailAndPassword(auth, email, password);
-}
-
-// função para cadastrar usuário
-export function registerEmail(email, password) {
-  const auth = getAuth();
-  return createUserWithEmailAndPassword(auth, email, password);
-}
-
