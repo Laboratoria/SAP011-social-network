@@ -5,11 +5,14 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  onAuthStateChanged, // avisa o status do usuário (online ou não)
+  // onAuthStateChanged, avisa o status do usuário (online ou não)
 
 } from 'firebase/auth';
 
 import { app } from './config.js';
+
+// função autenticação
+
 
 // função para cadastrar usuário
 export function registerEmail(email, password) {

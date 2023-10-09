@@ -1,5 +1,6 @@
 // importar a função que cria o usuário
 import { registerEmail } from "../../firebase/firebase";
+import { login } from "../../firebase/firebase";
 
 export default () => {
   const container = document.createElement('div');
@@ -38,8 +39,11 @@ export default () => {
     window.location.hash = '#feed';
   });
   // fazer a chamada da função registerEmail (localizada no firebase.js)
-  return container;
-  // executar a função registerEmail através da manipulação de DOM
 
   
+  // executar a função registerEmail através da manipulação de DOM
+
+
+
+  return container;
 };
