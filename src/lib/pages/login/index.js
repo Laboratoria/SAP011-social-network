@@ -1,4 +1,4 @@
-import { verifyRegister } from "../../../firebase/firebaseAuth";
+import { verifyLogin } from "../../../firebase/firebaseAuth";
 
 export const login = () => {
   const container = document.createElement("section");
@@ -105,8 +105,17 @@ export const login = () => {
    }  
  }
 
-  enterButton.addEventListener("click", function(email, password){
-    verifyRegister(email, password);
+  enterButton.addEventListener("click", function(){
+    const verifyEmail = container.querySelector(".email-input").value;
+    const verifyPassword = container.querySelector(".key").value;
+    verifyLogin(verifyEmail, verifyPassword)
+    .then(()=> {
+      window.location.hash = "#feed";
+      main.appendChild(feed());
+    })
+    .catch(()=>{
+      alert("Erro ao relizar o login, verifique se seus dados estao corretos e tente novamente");
+    })
   });
 
   return container;
