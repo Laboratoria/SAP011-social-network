@@ -15,12 +15,13 @@ import { app } from './config.js';
 
 // função para cadastrar usuário
 export function registerEmail(email, password) {
-    const auth = getAuth();
+    const auth = getAuth(app);
     return createUserWithEmailAndPassword(auth, email, password);
 }
 
 // função login
 export function login(email, password) {
-  const auth = getAuth();
+  console.log(email, password)
+  const auth = getAuth(app);
   return signInWithEmailAndPassword(auth, email, password);
 }

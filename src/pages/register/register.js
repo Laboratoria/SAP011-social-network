@@ -9,7 +9,7 @@ export default () => {
     <section>
       <form id="cadastro-name">
         <label>Nome:</label>
-        <input type="texto" placeholder="Digite seu nome..." name="nome"/>
+        <input type="texto" id ="cadastro-name" placeholder="Digite seu nome..." name="nome"/>
       </form>
 
       <form id="cadastro-email"> 
@@ -43,18 +43,20 @@ export default () => {
 
   // executar a função registerEmail através da manipulação de DOM
   const confirmBtn = container.querySelector('#confirm-btn');
-  confirmBtn.addEventListener('click', () => {
-    const email = document.getElementById('cadastro-email');
-    const password = document.getElementById('cadastro-password');
-    const cadastroName = document.getElementById('cadastro-name');
-    const confirmPassword = document.getElementById('confirm-password');
-
+  confirmBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    const email = container.querySelector('#email-id').value;
+    const password = container.querySelector('#password-id').value;
+    const cadastroName = container.querySelector('#cadastro-name').value;
+    const confirmPassword = container.querySelector('#confirm-password').value;
+    console.log(email, password)
     registerEmail(email, password, cadastroName, confirmPassword)
       .then(() => { //Será executado se der certo
         window.location.hash = "#feed";
       })
-      .catch(() => { //Será executado se der erro
-        error.innerHtml = "Erro ao logar!!"
+      .catch((error) => { //Será executado se der erro
+        console.log(error)
+        alert('erro') 
       })
   });
   return container;
