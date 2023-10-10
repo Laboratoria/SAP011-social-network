@@ -1,6 +1,6 @@
 // importar a função que cria o usuário
-import { registerEmail } from "../../firebase/firebase";
-import { login } from "../../firebase/firebase";
+import { registerEmail } from '../../firebase/firebase';
+import { login } from '../../firebase/firebase';
 
 export default () => {
   const container = document.createElement('div');
@@ -40,7 +40,6 @@ export default () => {
   // });
   // fazer a chamada da função registerEmail (localizada no firebase.js)
 
-
   // executar a função registerEmail através da manipulação de DOM
   const confirmBtn = container.querySelector('#confirm-btn');
   confirmBtn.addEventListener('click', (event) => {
@@ -49,16 +48,15 @@ export default () => {
     const password = container.querySelector('#password-id').value;
     const cadastroName = container.querySelector('#cadastro-name').value;
     const confirmPassword = container.querySelector('#confirm-password').value;
-    console.log(email, password)
+    console.log(email, password);
     registerEmail(email, password, cadastroName, confirmPassword)
-      .then(() => { //Será executado se der certo
-        window.location.hash = "#feed";
+      .then(() => { // Será executado se der certo
+        window.location.hash = '#feed';
       })
-      .catch((error) => { //Será executado se der erro
-        console.log(error)
-        alert('erro') 
-      })
+      .catch((error) => { // Será executado se der erro
+        console.log(error);
+        alert('erro'); 
+      });
   });
   return container;
 };
-

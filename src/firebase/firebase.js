@@ -12,16 +12,15 @@ import { app } from './config.js';
 
 // função autenticação
 
-
 // função para cadastrar usuário
 export function registerEmail(email, password) {
-    const auth = getAuth(app);
-    return createUserWithEmailAndPassword(auth, email, password);
+  const auth = getAuth(app);
+  return createUserWithEmailAndPassword(auth, email, password);
 }
 
 // função login
 export function login(email, password) {
-  console.log(email, password)
+  console.log(email, password);
   const auth = getAuth(app);
   return signInWithEmailAndPassword(auth, email, password);
 }
