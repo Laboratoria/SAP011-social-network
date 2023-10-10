@@ -1,5 +1,5 @@
 // na main só precisa das SPA e das telas
-import register from './pages/register/register.js'
+import register from './pages/register/register.js';
 import home from './pages/home/home.js'; // segunda ação criada
 import about from './pages/about/about.js';
 import feed from './pages/feed/feed.js';
