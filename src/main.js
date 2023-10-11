@@ -2,6 +2,7 @@
 // import { initializeApp } from 'firebase/app';
 import { login } from './lib/pages/login/index.js';
 import { register } from './lib/pages/register/index.js';
+import { feed } from './lib/pages/feed/index.js';
 import './style.css';
 
 // const app = initializeApp(firebaseConfig);
@@ -19,7 +20,7 @@ function start() {
         main.innerHTML = ''; // Limpa o conteudo existente em 'main'
         main.appendChild(login());
         break;
-      case '#login':
+      case '#feed':
         main.innerHTML = ''; // Limpa o conteudo existente em 'main'
         main.appendChild(feed());
         break;

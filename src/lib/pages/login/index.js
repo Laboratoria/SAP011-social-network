@@ -89,7 +89,7 @@ export const login = () => {
     verifyLogin(verifyEmail, verifyPassword)
       .then(() => {
         console.log("login valido");
-        window.location.hash = "/#feed";
+        window.location.hash = "feed";
       })
       .catch((error) => {
         console.error(error);
