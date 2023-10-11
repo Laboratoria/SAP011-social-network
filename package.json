@@ -45,5 +45,9 @@
   "dependencies": {
     "firebase": "^10.4.0",
     "i": "^0.3.7"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "author": ""
 }

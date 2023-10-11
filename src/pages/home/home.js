@@ -5,7 +5,6 @@ export default () => {
   const container = document.createElement('div'); // adiciona o template
 
   const template = `
-  //Adicionar a logotipo
     <header>
     <img class="logo-header" src=${logotipo} alt="Mulher segurando um prato com alimentos">
     </header>
@@ -34,8 +33,13 @@ export default () => {
     </section>
       `;
 
-  // botão cadastrar
   container.innerHTML = template; // coloco o conteúdo do template dentro do innerhtml
+
+  // email e senha
+
+  // botão do google
+
+  // botão cadastrar
   const registerBtn = container.querySelector('#register-btn'); // variável que pega a ação do botão
   registerBtn.addEventListener('click', () => { // cadastrar e cria a página de cadastro
     console.log('cliquei');
@@ -48,5 +52,6 @@ export default () => {
     console.log('entrei');
     window.location.hash = '#feed'; // manda para o feed
   });
+
   return container; // vai mostrar na tela o conteudo do template home, o container é a div criada
 };
