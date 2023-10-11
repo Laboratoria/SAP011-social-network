@@ -29,68 +29,72 @@ export const login = () => {
     </div>
     `;
 
- /*VALIDAÇÃO EM JAVA SCRIPT PARA PAG-LOGIN */
- const email = container.querySelector(".email-input");
- const password = container.querySelector(".key");
- const emailMessage = container.querySelector(".error-none");
- const passwordMessage = container.querySelector(".error-none");
- const enterButton = container.querySelector("#enter");
- const form = container.querySelector(".login-container");
- 
-   enterButton.addEventListener("click", function () {
-     if (email.value === "" || isValidEmail(email))  {
-       emailMessage.classList.remove("error-none");
-       emailMessage.classList.add("error-block");
-     } else {
-       emailMessage.classList.add("error-block");
-       emailMessage.classList.remove("error-none");
-     }
-   });
- 
-   password.addEventListener("input", function () {
-   const emailValid = isValidEmail(email.value);
-   const passwordValid = isValidPassword(password.value);
-   console.log(emailValid, passwordValid);
-   if (emailValid && passwordValid) {
-     enterButton.removeAttribute("disabled");
-   } else {
-     enterButton.disabled = true;
-   }
- });
+  /*VALIDAÇÃO EM JAVA SCRIPT PARA PAG-LOGIN */
+  const email = container.querySelector(".email-input");
+  const password = container.querySelector(".key");
+  const emailMessage = container.querySelector(".error-none");
+  const passwordMessage = container.querySelector(".error-none");
+  const enterButton = container.querySelector("#enter");
+  const form = container.querySelector(".login-container");
 
- function isValidEmail(email) {
-   const parameter = /^\S+@\S+\.\S+$/;
-   return parameter.test(email); 
- }
-  
- function isValidPassword(password) {
-   if(password.length >= 8){
-     return true
-   }  
- }
+  enterButton.addEventListener("click", function () {
+    if (email.value === "" || isValidEmail(email)) {
+      emailMessage.classList.remove("error-none");
+      emailMessage.classList.add("error-block");
+    } else {
+      emailMessage.classList.add("error-block");
+      emailMessage.classList.remove("error-none");
+    }
 
- enterButton.addEventListener("click", function () {
-  if (password.value === ""  || isValidPassword(password) === false) {
-    passwordMessage.classList.remove("error-none");
-    passwordMessage.classList.add("error-block");
-  } else {
-    passwordMessage.classList.add("error-none");
-    passwordMessage.classList.remove("error-block");
+    if (password.value === "" || isValidPassword(password) === false) {
+      passwordMessage.classList.remove("error-none");
+      passwordMessage.classList.add("error-block");
+    } else {
+      passwordMessage.classList.add("error-none");
+      passwordMessage.classList.remove("error-block");
+    }
+  });
+
+  function toggleButtonDisable () {
+    const emailValid = isValidEmail(email.value);
+    const passwordValid = isValidPassword(password.value);
+    console.log(emailValid, passwordValid);
+    if (emailValid && passwordValid) {
+      enterButton.removeAttribute("disabled");
+    } else {
+      enterButton.disabled = true;
+    }
   }
-});
 
-  form.addEventListener("submit", function(e){
+  email.addEventListener("input", toggleButtonDisable);
+  password.addEventListener("input", toggleButtonDisable);
+  
+
+  function isValidEmail(email) {
+    const parameter = /^\S+@\S+\.\S+$/;
+    return parameter.test(email);
+  }
+
+  function isValidPassword(password) {
+    if (password.length >= 8) {
+      return true
+    }
+  }
+
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
+
     const verifyEmail = container.querySelector(".email-input").value;
     const verifyPassword = container.querySelector(".key").value;
     verifyLogin(verifyEmail, verifyPassword)
-    .then(()=> {
-      console.log("login valido");
-      main.appendChild(feed());
-    })
-    .catch(()=>{
-      alert("Erro ao relizar o login, verifique se seus dados estao corretos e tente novamente");
-    })
+      .then(() => {
+        console.log("login valido");
+        window.location.hash = "/#feed";
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("Erro ao relizar o login, verifique se seus dados estao corretos e tente novamente");
+      })
   });
 
   return container;
