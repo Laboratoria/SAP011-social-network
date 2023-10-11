@@ -1,5 +1,7 @@
 // página com botões de email, senha, google e cadastrar
 import logotipo from '../../img/logo.png';
+import { login } from '../../firebase/firebase';
+
 // importar cada função de cada ação, login e senho, login pelo google
 export default () => {
   const container = document.createElement('div'); // adiciona o template
@@ -12,12 +14,12 @@ export default () => {
     <section> // Alycia
       <form id="email"> 
         <label>Email</label>
-        <input type= "email" placeholder="seu@email.com" name="email"/>
+        <input type= "email" id="email-login" placeholder="seu@email.com" name="email"/>
       </form>
 
       <form id="email-password">
         <label>Senha</label>
-        <input type="password" placeholder="digite a senha" name="senha"/>
+        <input type="password" id= "password-login" placeholder="digite a senha" name="senha"/>
       </form>
     </section>
     <p> --------------- OU -----------------</p>
@@ -48,9 +50,21 @@ export default () => {
 
   // botão entrar
   const enterBtn = container.querySelector('#enter-btn');
-  enterBtn.addEventListener('click', () => {
+  enterBtn.addEventListener('click', (event) => {
     console.log('entrei');
-    window.location.hash = '#feed'; // manda para o feed
+    event.preventDefault();
+    const email = container.querySelector('#email-login').value;
+    const password = container.querySelector('#password-login').value;
+    login(email, password)
+      .then(() => {
+        // Será executado se der certo
+        window.location.hash = '#feed';
+      })
+      .catch((error) => {
+        // Será executado se der erro
+        console.log(error);
+        alert('erro');
+      });
   });
 
   return container; // vai mostrar na tela o conteudo do template home, o container é a div criada
