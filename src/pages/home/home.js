@@ -1,6 +1,7 @@
 // página com botões de email, senha, google e cadastrar
 import logotipo from '../../img/logo.png';
 import { login } from '../../firebase/firebase';
+import { registerEmail } from '../../firebase/firebase';
 
 // importar cada função de cada ação, login e senho, login pelo google
 export default () => {
@@ -43,9 +44,20 @@ export default () => {
 
   // botão cadastrar
   const registerBtn = container.querySelector('#register-btn'); // variável que pega a ação do botão
-  registerBtn.addEventListener('click', () => { // cadastrar e cria a página de cadastro
+  registerBtn.addEventListener('click', (event) => {
+    // cadastrar e cria a página de cadastro
     console.log('cliquei');
-    window.location.hash = '#register'; // para abrir a página de register
+    event.preventDefault();
+    const email = container.querySelector('#email-login').value;
+    const password = container.querySelector('#password-login').value;
+    registerEmail(email, password)
+      .then(() => {
+        window.location.hash = '#register'; // para abrir a página de register
+      })
+      .catch((error) => {
+        console.log(error);
+        alert('erro ao cadastrar');
+      });
   });
 
   // botão entrar
