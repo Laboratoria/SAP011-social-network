@@ -33,12 +33,6 @@ export default () => {
       </form>
     `;
   container.innerHTML = template;
-  // criar evento click do confirm-btn
-  // const confirmBtn = document.getElementById('confirm-btn');
-  // confirmBtn.addEventListener('click', () => {
-  //   window.location.hash = '#feed';
-  // });
-  // fazer a chamada da função registerEmail (localizada no firebase.js)
 
   // executar a função registerEmail através da manipulação de DOM
   const confirmBtn = container.querySelector('#confirm-btn');

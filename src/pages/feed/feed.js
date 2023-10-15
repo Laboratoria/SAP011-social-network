@@ -22,6 +22,6 @@ maxlength="200" rows=5 cols=20>
   container.querySelector('#post-btn').addEventListener('click', () => {
     const newPost = container.querySelector('#new-post-txt').value;
     console.log(newPost);
-  })
+  });
   return container;
 };
