@@ -47,16 +47,7 @@ export default () => {
     // cadastrar e cria a página de cadastro
     console.log('cliquei');
     event.preventDefault();
-    const email = container.querySelector('#email-login').value;
-    const password = container.querySelector('#password-login').value;
-    registerEmail(email, password)
-      .then(() => {
-        window.location.hash = '#register'; // para abrir a página de register
-      })
-      .catch((error) => {
-        console.log(error);
-        alert('erro ao cadastrar');
-      });
+    window.location.hash = '#register'; // para abrir a página de register
   });
 
   // botão entrar
