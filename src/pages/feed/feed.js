@@ -1,3 +1,5 @@
+import { createPost } from "../../firebase/firestore";
+
 export default () => {
   const container = document.createElement('div');
 
@@ -21,7 +23,16 @@ maxlength="200" rows=5 cols=20>
   container.innerHTML = template;
   container.querySelector('#post-btn').addEventListener('click', () => {
     const newPost = container.querySelector('#new-post-txt').value;
+    createPost()
     console.log(newPost);
   });
   return container;
 };
+
+// armazenar no firebase
+// adição(addDoc), leitura (getDoc), atualizar (UpdateDoc), deletar (deletDoc) metódos do firestore
+// adição precisa de um id, firebase cria com getDoc
+
+
+// printar o post em tela
+// firebase lê o banco de dados e armazena na array, depois printa
