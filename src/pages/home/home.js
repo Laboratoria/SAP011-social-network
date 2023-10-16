@@ -1,6 +1,6 @@
 // página com botões de email, senha, google e cadastrar
 import logotipo from '../../img/logo.png';
-import { login, registerEmail } from '../../firebase/firebase';
+import { login } from '../../firebase/firebase';
 
 // importar cada função de cada ação, login e senho, login pelo google
 export default () => {
