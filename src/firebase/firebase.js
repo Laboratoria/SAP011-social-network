@@ -2,34 +2,25 @@
 import {
   // entrar com google
   getAuth,
-  signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+
+  // onAuthStateChanged, avisa o status do usuário (online ou não)
 
 } from 'firebase/auth';
 
-// função login
+import { app } from './config.js';
 
-export function login(email, password) {
-  const auth = getAuth();
-  return signInWithEmailAndPassword(auth, email, password);
-}
+// função autenticação
 
 // função para cadastrar usuário
 export function registerEmail(email, password) {
-  const auth = getAuth();
+  const auth = getAuth(app);
   return createUserWithEmailAndPassword(auth, email, password);
 }
 
-
-// const auth = getAuth();
-// createUserWithEmailAndPassword(auth, email, password)
-//   .then((userCredential) => {
-//     // Signed in
-//     const user = userCredential.user;
-//     // ...
-//   })
-//   .catch((error) => {
-//     const errorCode = error.code;
-//     const errorMessage = error.message;
-//     // ..
-//   });
+// função login
+export function login(email, password) {
+  const auth = getAuth(app);
+  return signInWithEmailAndPassword(auth, email, password);
+}

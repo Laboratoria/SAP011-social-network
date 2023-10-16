@@ -1,8 +1,7 @@
-
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
+// na main só precisa das SPA e das telas
+import register from './pages/register/register.js';
 import home from './pages/home/home.js'; // segunda ação criada
 import about from './pages/about/about.js';
-import register from './pages/register/register.js';
 import feed from './pages/feed/feed.js';
 
 const main = document.querySelector('#root'); // terceira ação feita, pega a main lá no index.html
@@ -32,18 +31,3 @@ window.addEventListener('load', () => { // primeira ação construída
   main.appendChild(home()); // quarta ação, appendChild cria um "filho" - home
   init();
 });
-
-// função login
-
-
-export function login(email, password) {
-  const auth = getAuth();
-  return signInWithEmailAndPassword(auth, email, password);
-}
-
-// função para cadastrar usuário
-export function registerEmail(email, password) {
-  const auth = getAuth();
-  return createUserWithEmailAndPassword(auth, email, password);
-}
-
