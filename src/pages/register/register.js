@@ -1,6 +1,5 @@
 // importar a função que cria o usuário
 import { registerEmail } from '../../firebase/firebase';
-import { login } from '../../firebase/firebase';
 
 export default () => {
   const container = document.createElement('div');
