@@ -1,4 +1,5 @@
 import { verifyLogin } from "../../../firebase/firebaseAuth";
+import { GoogleAuthProvider } from "firebase/auth";
 
 export const login = () => {
   const container = document.createElement("section");
@@ -36,6 +37,11 @@ export const login = () => {
   const passwordMessage = container.querySelector(".error-none");
   const enterButton = container.querySelector("#enter");
   const form = container.querySelector(".login-container");
+  const gmail = container.querySelector("#Google");
+
+  gmail.addEventListener("click", function () {
+    GoogleAuthProvider();
+  });
 
   enterButton.addEventListener("click", function () {
     if (email.value === "" || isValidEmail(email)) {

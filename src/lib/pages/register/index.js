@@ -1,8 +1,9 @@
-
+import { verifyRegister } from "../../../firebase/firebaseAuth";
+import { GoogleAuthProvider } from "firebase/auth";
 
 export const register = () => {
   const container = document.createElement("section");
-    container.innerHTML = `
+  container.innerHTML = `
     <form class="registro-container"> 
       <h3 class="titulo">BEM VINDO(A) A MEDGREEN<h3>
       <label class="config-titulo">Digite seu nome completo:</label>
@@ -21,7 +22,7 @@ export const register = () => {
       <div class="error-none" id="password-error">Senha e obrigatorio</div>
       
       <div class="send-container">
-        <button type="button" class="confirm" disabled id="enter" value="cadastrar">Cadastrar</button>
+        <button type="submit" class="confirm" disabled id="enter" value="cadastrar">Cadastrar</button>
       </div>
 
       <div class="social-container">           
@@ -35,119 +36,114 @@ export const register = () => {
       </form>
       `;
 
-    const email = container.querySelector(".email-input");
-    const password = container.querySelector(".key");
-    const date = container.querySelector("#date")
-    const emailMessage = container.querySelector(".error-none");
-    const passwordMessage = container.querySelector(".error-none");
-    const dateMessage = container.querySelector(".error-none")
-    const enterButton = container.querySelector("#enter");
-  
-    const validateDate = container.querySelector(".form");
-    validateDate.addEventListener("input", function (e) {
-      e.preventDefault();
-      toggleDateErrors(date);
-  
-    });
+  const email = container.querySelector(".email-input");
+  const password = container.querySelector(".key");
+  const date = container.querySelector("#date")
+  const emailMessage = container.querySelector(".error-none");
+  const passwordMessage = container.querySelector(".error-none");
+  const dateMessage = container.querySelector(".error-none")
+  const enterButton = container.querySelector("#enter");
 
-    const validateEmail = container.querySelector(".email-input");
-    validateEmail.addEventListener("input", function (e) {
-      e.preventDefault();
-      toggleEmailErrors(email);
-  
-    });
+  const validateDate = container.querySelector(".form");
+  validateDate.addEventListener("input", function (e) {
+    e.preventDefault();
+    toggleRegisterErrors(email, password, date);
 
-    const validatePassword = container.querySelector(".key");
-    validatePassword.addEventListener("input", function (e) {
-      e.preventDefault();
-      togglePasswordErrors(password);
-      toggleButtonsDisable(email, password, date);
-      
-    });
-    
-    function toggleEmailErrors(email) {
-      enterButton.addEventListener("input", function (e) {
-        e.preventDefault();
-        if (email.value === "" || isValidEmail(email))  {
-          emailMessage.classList.contains("error-none");
-          emailMessage.classList.remove("error-none");
-          emailMessage.classList.add("error-block");
-        } else {
-          emailMessage.classList.add("error-block");
-          emailMessage.classList.remove("error-none");
-        }
-      });
-    };
-  
-    
-    function togglePasswordErrors(password) {
-      enterButton.addEventListener("click", function (e) {
-        e.preventDefault();
-        if (password.value === ""  || isValidPassword(password) === false) {
-          passwordMessage.classList.remove("error-none");
-          passwordMessage.classList.add("error-block");
-        } else {
-          console.log(passwordMessage);
-          passwordMessage.classList.add("error-none");
-          passwordMessage.classList.remove("error-block");
-        }
-      });
-    };
-  
-    function toggleDateErrors(date){
-      enterButton.addEventListener("click", function (e) {
-        e.preventDefault();
-        if (date <= 18) {
-          dateMessage.classList.remove("error-none");
-          dateMessage.classList.add("error-block");
-        } else {
-          dateMessage.classList.add("error-block");
-          dateMessage.classList.remove("error-none");
-        }
-      })
-    };
+  });
 
-    function toggleButtonsDisable(email, password, date) {
-      const emailValid = isValidEmail(email.value);
-      const passwordValid = isValidPassword(password.value);
-      const dateValid = isValidDate(date.value);
-      console.log(emailValid, passwordValid, dateValid);
-      if (emailValid && passwordValid && dateValid) {
-        enterButton.removeAttribute("disabled");
+  function toggleRegisterErrors(email, password, date) {
+    enterButton.addEventListener("input", function (e) {
+      e.preventDefault();
+      if (email.value === "" || isValidEmail(email)) {
+        emailMessage.classList.contains("error-none");
+        emailMessage.classList.remove("error-none");
+        emailMessage.classList.add("error-block");
       } else {
-        enterButton.disabled = true;
+        emailMessage.classList.add("error-block");
+        emailMessage.classList.remove("error-none");
       }
-    }
 
-    function isValidEmail(email) {
-      const parameter = /^\S+@\S+\.\S+$/;
-      return parameter.test(email); 
-    }
-     
-    function isValidPassword(password) {
-      if(password.length -1 >= 7){
-        return true
-      }  
-    }
+      if (password.value === "" || isValidPassword(password) === false) {
+        passwordMessage.classList.remove("error-none");
+        passwordMessage.classList.add("error-block");
+      } else {
+        console.log(passwordMessage);
+        passwordMessage.classList.add("error-none");
+        passwordMessage.classList.remove("error-block");
+      }
 
-    function isValidDate(date) {
-      const ageMin = 18; 
-      const currentDate = new Date(); 
-      const currentYear = currentDate.getFullYear();
-      const age = currentYear - new Date(date).getFullYear();
-      
-        if(age >= ageMin){
-          return true
-        }else{
-          return false
-        }
-    }
+      if (date <= 18) {
+        dateMessage.classList.remove("error-none");
+        dateMessage.classList.add("error-block");
+      } else {
+        dateMessage.classList.add("error-block");
+        dateMessage.classList.remove("error-none");
+      }
+    })
+  };
 
-  return container    
-    
+  function toggleButtonsDisable() {
+    const emailValid = isValidEmail(email.value);
+    const passwordValid = isValidPassword(password.value);
+    const dateValid = isValidDate(date.value);
+    console.log(emailValid, passwordValid, dateValid);
+    if (emailValid && passwordValid && dateValid) {
+      enterButton.removeAttribute("disabled");
+    } else {
+      enterButton.disabled = true;
+    }
+  }
+
+  email.addEventListener("input", toggleButtonsDisable);
+  password.addEventListener("input", toggleButtonsDisable);
+  date.addEventListener("input", toggleButtonsDisable);
+
+  function isValidEmail(email) {
+    const parameter = /^\S+@\S+\.\S+$/;
+    return parameter.test(email);
+  }
+
+  function isValidPassword(password) {
+    if (password.length - 1 >= 7) {
+      return true
+    }
+  }
+
+  function isValidDate(date) {
+    const ageMin = 18;
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const age = currentYear - new Date(date).getFullYear();
+    if (age >= ageMin) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  let form = container.querySelector(".registro-container");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const verifyEmail = container.querySelector(".email-input");
+    const verifyPassword = container.querySelector(".key");
+    verifyRegister(verifyEmail, verifyPassword)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        alert("login valido");
+        window.location.hash = "login";
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("Erro ao relizar o cadastro, verifique se seus dados estao corretos e tente novamente");
+      })
+  });
+
+  return container
+
 };
 
-  
-   
-  
+
+
+
 
