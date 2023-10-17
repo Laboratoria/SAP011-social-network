@@ -1,8 +1,6 @@
 import './feed.css';
 
 
-
-
 export const feed = () => {
     const container = document.createElement("section");
     container.innerHTML = `
