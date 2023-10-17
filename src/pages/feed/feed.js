@@ -34,10 +34,12 @@ maxlength="200" rows=5 cols=20>
  lerPosts(exibirPost);
 
  function exibirPost (posts){
- const containerPosts = container.querySelector('#posts');
- containerPosts = `
-
- `
+ const postsExibir = container.querySelector('#posts');
+ const containerPosts = `
+ <label for="containerPosts"></label>
+ <textarea id="containerPosts" minlength="20" maxlength="200" rows=5 cols=20>${posts}</textarea>
+ `;
+ postsExibir.innerHTML = containerPosts;
  };
 
 return container;
