@@ -1,4 +1,4 @@
-
+import './register.css';
 
 export const register = () => {
   const container = document.createElement("section");
