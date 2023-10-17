@@ -1,5 +1,5 @@
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from "firebase/auth";
-import {app} from "./firebase.js"
+import {app} from "./firebaseConfig.js"
 
 export function verifyRegister(email, password){
   const auth = getAuth(app);

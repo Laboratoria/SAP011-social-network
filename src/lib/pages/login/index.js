@@ -6,11 +6,6 @@ import { GoogleAuthProvider } from "firebase/auth";
 export const login = () => {
   const container = document.createElement("section");
   container.innerHTML = `
-    <header class="header">
-    <!-- BARRA DE NAVEGAÇÃO PRINCIPAL -->
-    <img class="logo" src="Imagens/logosvg.svg"> 
-    </header>
-
     <!--<form action="feed.html>" --!>
     <form class="login-container"> 
     <h3 class="titulo">LOGIN</h3>
@@ -95,7 +90,6 @@ export const login = () => {
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-
     const verifyEmail = container.querySelector(".email-input").value;
     const verifyPassword = container.querySelector(".key").value;
     verifyLogin(verifyEmail, verifyPassword)

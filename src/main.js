@@ -1,9 +1,7 @@
-// Este es el punto de entrada de tu aplicacion
-// import { initializeApp } from 'firebase/app';
 import { login } from './lib/pages/login/index.js';
 import { register } from './lib/pages/register/index.js';
 import { feed } from './lib/pages/feed/index.js';
-import  './style.css';
+// import  './style.css';
 
 
 // const app = initializeApp(firebaseConfig);

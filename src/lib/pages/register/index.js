@@ -1,6 +1,5 @@
-import './register.css'
-
 import { verifyRegister } from "../../../firebase/firebaseAuth";
+import './register.css'
 
 export const register = () => {
   const container = document.createElement("section");
@@ -124,15 +123,14 @@ export const register = () => {
 
   let form = container.querySelector(".registro-container");
 
-  form.addEventListener("submit", function (e) {
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const verifyEmail = container.querySelector(".email-input");
-    const verifyPassword = container.querySelector(".key");
+    const verifyEmail = container.querySelector(".email-input").value;
+    const verifyPassword = container.querySelector(".key").value;
     verifyRegister(verifyEmail, verifyPassword)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        alert("login valido");
-        window.location.hash = "login";
+      .then(() => {
+        alert("cadastro realizado");
+        window.location.hash = "feed";
       })
       .catch((error) => {
         console.error(error);
