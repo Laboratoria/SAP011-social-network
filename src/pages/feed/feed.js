@@ -1,7 +1,8 @@
 // import { createPost } from "../../firebase/firestore";
 import { lerPosts } from '../../firebase/firestore.js';
+
 export default () => {
-  const container = document.createElement("div");
+  const container = document.createElement('div');
 
   const template = `
 <header> 
@@ -37,19 +38,18 @@ maxlength="200" rows=5 cols=20>
  `;
   }
 
- lerPosts(exibirPost);
+  lerPosts(exibirPost);
 
- function exibirPost (posts){
- const postsExibir = container.querySelector('#posts');
- const containerPosts = `
+  function exibirPost(posts) {
+    const postsExibir = container.querySelector('#posts');
+    const containerPosts = `
  <label for="containerPosts"></label>
  <textarea id="containerPosts" minlength="20" maxlength="200" rows=5 cols=20>${posts}</textarea>
  `;
- postsExibir.innerHTML = containerPosts;
- };
+    postsExibir.innerHTML = containerPosts;
+  }
 
-return container;
-
+  return container;
 };
 
 // armazenar no firebase
