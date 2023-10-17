@@ -21,7 +21,7 @@ maxlength="200" rows=5 cols=20>
       `;
 
   container.innerHTML = template;
-  
+
   container.querySelector('#post-btn').addEventListener('click', () => {
     const newPost = container.querySelector('#new-post-txt').value;
     // createPost()
@@ -31,38 +31,38 @@ maxlength="200" rows=5 cols=20>
 
 
 
- lerPosts(exibirPost);
+  lerPosts(exibirPost);
 
- function exibirPost (posts){
- const postsExibir = container.querySelector('#posts');
- const containerPosts = `
+  function exibirPost(posts) {
+    const postsExibir = container.querySelector('#posts');
+    const containerPosts = `
  <label for="containerPosts"></label>
  <textarea id="containerPosts" minlength="20" maxlength="200" rows=5 cols=20>${posts}</textarea>
  `;
- postsExibir.innerHTML = containerPosts;
- };
+    postsExibir.innerHTML = containerPosts;
+  };
 
-return container;
+  return container;
 
 };
 
-  // const enterBtn = container.querySelector('#enter-btn');
-  // enterBtn.addEventListener('click', (event) => {
-  //   console.log('entrei');
-  //   event.preventDefault();
-  //   const email = container.querySelector('#email-login').value;
-  //   const password = container.querySelector('#password-login').value;
-  //   login(email, password)
-  //     .then(() => {
-  //       // Será executado se der certo
-  //       window.location.hash = '#feed';
-  //     })
-  //     .catch((error) => {
-  //       // Será executado se der erro
-  //       console.log(error);
-  //       alert('erro');
-  //     });
-  // });
+// const enterBtn = container.querySelector('#enter-btn');
+// enterBtn.addEventListener('click', (event) => {
+//   console.log('entrei');
+//   event.preventDefault();
+//   const email = container.querySelector('#email-login').value;
+//   const password = container.querySelector('#password-login').value;
+//   login(email, password)
+//     .then(() => {
+//       // Será executado se der certo
+//       window.location.hash = '#feed';
+//     })
+//     .catch((error) => {
+//       // Será executado se der erro
+//       console.log(error);
+//       alert('erro');
+//     });
+// });
 
 // armazenar no firebase
 // adição(addDoc), leitura (getDoc), atualizar (UpdateDoc), deletar (deletDoc) metódos do firestore

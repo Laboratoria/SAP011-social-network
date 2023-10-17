@@ -2,7 +2,6 @@ import { collection, query, onSnapshot } from "firebase/firestore";
 import { db } from "./config.js";
 
 export function lerPosts(exibirPosts) {
-console.log('lendo posts')
   const q = query(collection(db, "posts"));
 
   const unsubscribe = onSnapshot(q, (querySnapshot) => {
