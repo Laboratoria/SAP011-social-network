@@ -3,6 +3,11 @@
 export const register = () => {
   const container = document.createElement("section");
     container.innerHTML = `
+    <header class="header">
+      <!-- BARRA DE NAVEGAÇÃO PRINCIPAL -->
+      <img class="logo" src="Imagens/logosvg.svg"> 
+    </header>
+    
     <form class="registro-container"> 
       <h3 class="titulo">BEM VINDO(A) A MEDGREEN<h3>
       <label class="config-titulo">Digite seu nome completo:</label>

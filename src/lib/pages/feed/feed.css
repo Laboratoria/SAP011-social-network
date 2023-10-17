@@ -6,12 +6,29 @@
 
   }
 
-  body{
-    background: red;
-    /* background-image: url(Imagens/cannabis-sementes-de-cannabis-oleo-de-cannabis-colocado-no-chao-de-madeira-com-uma-arvore-verde-ao-fundo.jpg); */
+  .body-feed {
+     background: red;     
     /* background-attachment: fixed;
     background-size: cover; */
+}
 
+.menu-fixo {
+  display: flex;  
+  align-items: center;    
+  margin: 0 auto;
+  gap: 10px;    
+  height: 10rem;
+  z-index: 999;
+  background-color: #556B2F;
+}
+
+.container {
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: double;
+  padding: 10px 140px 0px 140px;
 }
 
 #input-container {

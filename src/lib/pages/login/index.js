@@ -1,8 +1,14 @@
+
+
 import { verifyLogin } from "../../../firebase/firebaseAuth";
 
 export const login = () => {
   const container = document.createElement("section");
   container.innerHTML = `
+    <header class="header">
+    <!-- BARRA DE NAVEGAÇÃO PRINCIPAL -->
+    <img class="logo" src="Imagens/logosvg.svg"> 
+    </header>
 
     <!--<form action="feed.html>" --!>
     <form class="login-container"> 
