@@ -1,7 +1,7 @@
-import { createPost } from "../../firebase/firestore";
-
+// import { createPost } from "../../firebase/firestore";
+import { lerPosts } from '../../firebase/firestore.js';
 export default () => {
-  const container = document.createElement('div');
+  const container = document.createElement("div");
 
   const template = `
 <header> 
@@ -16,23 +16,33 @@ maxlength="200" rows=5 cols=20>
 </textarea>
 <p>
 <button id="post-btn" type="submit">Postar</button><img width="16" height="16" src="https://img.icons8.com/ios/50/hearts--v1.png" alt="hearts--v1"/>
-
+<section id ='posts'></section>
 
       `;
 
   container.innerHTML = template;
+  // escrever as postagens que o usuário escreve na tela
   container.querySelector('#post-btn').addEventListener('click', () => {
     const newPost = container.querySelector('#new-post-txt').value;
-    createPost()
+    // createPost()
     console.log(newPost);
   });
+
+  lerPosts(exibirPost); // aparecer na tela a postagem que está no banco de dados
+
+  function exibirPost(posts) {
+    const containerPosts = container.querySelector('#posts');
+    containerPosts = `
+
+ `;
+  }
+
   return container;
 };
 
 // armazenar no firebase
 // adição(addDoc), leitura (getDoc), atualizar (UpdateDoc), deletar (deletDoc) metódos do firestore
 // adição precisa de um id, firebase cria com getDoc
-
 
 // printar o post em tela
 // firebase lê o banco de dados e armazena na array, depois printa
