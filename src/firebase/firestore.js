@@ -3,8 +3,6 @@ import { collection, addDoc } from 'firebase/firestore';
 import { db } from './config.js';
 // function sendPost
 
-
-
 // createPost
 export async function createPost() {
   const docRef = await addDoc(collection(db, 'posts'), {
