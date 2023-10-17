@@ -1,5 +1,5 @@
-import { createPost } from "../../firebase/firestore";
-
+// import { createPost } from "../../firebase/firestore";
+import { lerPosts } from '../../firebase/firestore.js';
 export default () => {
   const container = document.createElement('div');
 
@@ -16,18 +16,51 @@ maxlength="200" rows=5 cols=20>
 </textarea>
 <p>
 <button id="post-btn" type="submit">Postar</button><img width="16" height="16" src="https://img.icons8.com/ios/50/hearts--v1.png" alt="hearts--v1"/>
-
+<section id ='posts'></section>
 
       `;
 
   container.innerHTML = template;
+  
   container.querySelector('#post-btn').addEventListener('click', () => {
     const newPost = container.querySelector('#new-post-txt').value;
-    createPost()
+    // createPost()
     console.log(newPost);
   });
-  return container;
+
+
+
+
+ lerPosts(exibirPost);
+
+ function exibirPost (posts){
+ const containerPosts = container.querySelector('#posts');
+ containerPosts = `
+
+ `
+ };
+
+return container;
+
 };
+
+  // const enterBtn = container.querySelector('#enter-btn');
+  // enterBtn.addEventListener('click', (event) => {
+  //   console.log('entrei');
+  //   event.preventDefault();
+  //   const email = container.querySelector('#email-login').value;
+  //   const password = container.querySelector('#password-login').value;
+  //   login(email, password)
+  //     .then(() => {
+  //       // Será executado se der certo
+  //       window.location.hash = '#feed';
+  //     })
+  //     .catch((error) => {
+  //       // Será executado se der erro
+  //       console.log(error);
+  //       alert('erro');
+  //     });
+  // });
 
 // armazenar no firebase
 // adição(addDoc), leitura (getDoc), atualizar (UpdateDoc), deletar (deletDoc) metódos do firestore
