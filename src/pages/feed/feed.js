@@ -37,7 +37,19 @@ maxlength="200" rows=5 cols=20>
  `;
   }
 
-  return container;
+ lerPosts(exibirPost);
+
+ function exibirPost (posts){
+ const postsExibir = container.querySelector('#posts');
+ const containerPosts = `
+ <label for="containerPosts"></label>
+ <textarea id="containerPosts" minlength="20" maxlength="200" rows=5 cols=20>${posts}</textarea>
+ `;
+ postsExibir.innerHTML = containerPosts;
+ };
+
+return container;
+
 };
 
 // armazenar no firebase
