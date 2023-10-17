@@ -1,4 +1,6 @@
+import './register.css'
 
+import { verifyRegister } from "../../../firebase/firebaseAuth";
 
 export const register = () => {
   const container = document.createElement("section");
