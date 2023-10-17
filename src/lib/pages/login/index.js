@@ -1,9 +1,15 @@
+import './login.css'
+
 import { verifyLogin } from "../../../firebase/firebaseAuth";
 import { GoogleAuthProvider } from "firebase/auth";
 
 export const login = () => {
   const container = document.createElement("section");
   container.innerHTML = `
+    <header class="header">
+    <!-- BARRA DE NAVEGAÇÃO PRINCIPAL -->
+    <img class="logo" src="Imagens/logosvg.svg"> 
+    </header>
 
     <!--<form action="feed.html>" --!>
     <form class="login-container"> 

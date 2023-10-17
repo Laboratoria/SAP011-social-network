@@ -1,9 +1,8 @@
-import { verifyRegister } from "../../../firebase/firebaseAuth";
-import { GoogleAuthProvider } from "firebase/auth";
+
 
 export const register = () => {
   const container = document.createElement("section");
-  container.innerHTML = `
+    container.innerHTML = `
     <form class="registro-container"> 
       <h3 class="titulo">BEM VINDO(A) A MEDGREEN<h3>
       <label class="config-titulo">Digite seu nome completo:</label>
