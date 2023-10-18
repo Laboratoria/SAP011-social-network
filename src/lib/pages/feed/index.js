@@ -13,9 +13,9 @@ export const feed = () => {
   const container = document.createElement("section");
   container.innerHTML = `
         <div class="container">
-          <img class="#" src="../../../Imagens/Img feed/rede comentarios.png" href="#"></img>       
-          <img class="#" src="../../../Imagens/Img feed/icon.noticias.png" href="#"></img> 
-          <img class="#" src="../../../Imagens/Img feed/artigo 1.png" href="#"></img> 
+          <img class="#" src="${iconFeed}" href="#"></img>       
+          <img class="#" src="${iconNoticias}" href="#"></img> 
+          <img class="#" src="${iconArtigos}" href="#"></img> 
       </div>
       <div id="input-container">
       <h3>name<h3>
