@@ -1,7 +1,6 @@
-import './login.css'
-
 import { verifyLogin } from "../../../firebase/firebaseAuth";
 import { GoogleAuthProvider } from "firebase/auth";
+import './login.css';
 
 export const login = () => {
   const container = document.createElement("section");
