@@ -6,8 +6,8 @@
 //   });
 // });
 
-const user = {
-    user: 'Emi',
-    await createPost(textPost, user);
-    ''
-}
+// const user = {
+//     user: 'Emi',
+//     await createPost(textPost, user);
+//     ''
+// }
