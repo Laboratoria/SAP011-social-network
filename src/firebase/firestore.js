@@ -1,33 +1,41 @@
-import { collection, query, onSnapshot } from 'firebase/firestore';
+import
+{
+  collection,
+  query,
+  onSnapshot,
+  addDoc,
+} from 'firebase/firestore'; // collection são o conjunto de post lá em narnia
 import { db } from './config.js';
 
+// exibPost
 export function lerPosts(exibirPosts) {
 console.log('lendo posts');
   const q = query(collection(db, 'posts'));
 
+  // onSnapshot atualiza em tempo real
+  const posts = [];
   const unsubscribe = onSnapshot(q, (querySnapshot) => {
-    const posts = [];
-    querySnapshot.forEach((doc) => {
+    querySnapshot.forEach((doc) => { // pega cada um dos documentos que está em nárnia
       posts.push(doc.data().text);
     });
-    console.log('Posts', posts.join('', ''));
-    exibirPosts(posts);
+    console.log('Posts', posts.join(''));
+    // console.log('Posts', posts);
+    // são os posts que vieram de narnia e foram jogados numa array que está dentro da const linha 9
+    // exibirPosts(posts);  nao é p firestore que deve exibir o post e sim o feed
     // ao inves de console uma funçao que exibe os posts em tela
   });
+  return posts; // exportar para o feed a função de ler posts
 }
 
-// // criar uma função para cada postagem com parâmetro (ler) retorna o html
-// import { collection, addDoc } from 'firebase/firestore';
-// // function sendPost
+// createPost
+export async function createPost() {
+  const docRef = await addDoc(collection(db, 'posts'), {
+    data: ' ',
+    text: ' ',
+  });
+  console.log('Nova Postagem', docRef.id);
+}
 
-// // createPost
-// export async function createPost() {
-//   const docRef = await addDoc(collection(db, 'cities'), {
-//     name: 'Tokyo',
-//     country: 'Japan',
-//   });
-//   console.log('Document written with ID: ', docRef.id);
-// }
 // deletePost
 
 // Add a new document with a generated id.

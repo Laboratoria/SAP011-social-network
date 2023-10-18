@@ -6,3 +6,4 @@ describe('home', () => {
     expect(typeof home).toBe('function');
   });
 });
+

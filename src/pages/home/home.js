@@ -37,6 +37,8 @@ export default () => {
 
   container.innerHTML = template; // coloco o conteúdo do template dentro do innerhtml
 
+  // fazer um botão para logout dentro do inner container
+
   // email e senha
 
   // botão do google

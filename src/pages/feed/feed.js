@@ -1,5 +1,7 @@
 // import { createPost } from "../../firebase/firestore";
-import { lerPosts } from '../../firebase/firestore.js';
+// import { signOut } from 'firebase/auth';
+import { lerPosts, createPost } from '../../firebase/firestore.js';
+import { exit } from '../../firebase/firebase.js';
 
 export default () => {
   const container = document.createElement('div');
@@ -7,7 +9,8 @@ export default () => {
   const template = `
 <header> 
 <p>
-<button type="submit">Sobre</button> <button type="submit">Sair</button> 
+<button id="about-btn" type="submit">Sobre</button> 
+<button id="exit-btn" type="submit">Sair</button> 
 </header>
 
 <label>Nome</label>
@@ -18,6 +21,7 @@ maxlength="200" rows=5 cols=20>
 <p>
 <button id="post-btn" type="submit">Postar</button><img width="16" height="16" src="https://img.icons8.com/ios/50/hearts--v1.png" alt="hearts--v1"/>
 <section id ='posts'></section>
+
 
       `;
 
@@ -51,6 +55,10 @@ maxlength="200" rows=5 cols=20>
 
   return container;
 };
+
+// botão sair
+const exitBtn = document.querySelector('#exit-btn');
+exitBtn.addEventListener('click', exit);
 
 // armazenar no firebase
 // adição(addDoc), leitura (getDoc), atualizar (UpdateDoc), deletar (deletDoc) metódos do firestore
