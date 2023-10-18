@@ -1,9 +1,11 @@
 // funções de autenticação e armazenamento (storage) do firebase
 import {
-  // entrgar com google
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
+  // signInWithPopup,
+  // GoogleAuthProvider,
   // onAuthStateChanged, avisa o status do usuário (online ou não)
 
 } from 'firebase/auth';
@@ -23,4 +25,17 @@ export function login(email, password) {
   console.log(email, password);
   const auth = getAuth(app);
   return signInWithEmailAndPassword(auth, email, password);
+}
+
+// função logOut
+export function exit() {
+  const auth = getAuth(app);
+  signOut(auth())
+    .then(() =>{
+      //saída com sucesso
+    })
+    .catch((error) => {
+      // deu ruim
+    });
+  window.location.hash = '#home';
 }

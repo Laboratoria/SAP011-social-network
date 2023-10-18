@@ -14,6 +14,6 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig); // inicializar
+export const app = initializeApp(firebaseConfig); // inicialização do aplicativo como um todo
 // const analytics = getAnalytics(app);
-export const db = getFirestore(app); // banco de dados
+export const db = getFirestore(app); // banco de dados, exportado para o feed
