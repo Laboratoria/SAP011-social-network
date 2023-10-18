@@ -1,5 +1,6 @@
 // import { createPost } from "../../firebase/firestore";
 import { lerPosts } from '../../firebase/firestore.js';
+
 export default () => {
   const container = document.createElement('div');
 
