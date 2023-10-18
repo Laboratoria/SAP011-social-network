@@ -1,14 +1,20 @@
+
+
+import  iconFeed  from '../../../Imagens/Img feed/rede comentarios.png';
+import  iconNoticias  from '../../../Imagens/Img feed/icon.noticias.png';
+import  iconArtigos  from '../../../Imagens/Img feed/artigo 1.png';
+
 import { readPosts } from '../../../firebase/firestore';
 import './feed.css';
+
+
 
 export const feed = () => {
   const container = document.createElement("section");
   container.innerHTML = `
         <div class="container">
-          <img class="#" src="../../../Imagens/Img feed/rede comentarios.png" href="#"></img> 
-      
+          <img class="#" src="../../../Imagens/Img feed/rede comentarios.png" href="#"></img>       
           <img class="#" src="../../../Imagens/Img feed/icon.noticias.png" href="#"></img> 
-
           <img class="#" src="../../../Imagens/Img feed/artigo 1.png" href="#"></img> 
       </div>
       <div id="input-container">
