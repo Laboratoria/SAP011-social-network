@@ -67,7 +67,6 @@ export const register = () => {
         passwordMessage.classList.remove("error-none");
         passwordMessage.classList.add("error-block");
       } else {
-        console.log(passwordMessage);
         passwordMessage.classList.add("error-none");
         passwordMessage.classList.remove("error-block");
       }
@@ -86,7 +85,6 @@ export const register = () => {
     const emailValid = isValidEmail(email.value);
     const passwordValid = isValidPassword(password.value);
     const dateValid = isValidDate(date.value);
-    console.log(emailValid, passwordValid, dateValid);
     if (emailValid && passwordValid && dateValid) {
       enterButton.removeAttribute("disabled");
     } else {

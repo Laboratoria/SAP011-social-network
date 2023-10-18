@@ -65,7 +65,6 @@ export const login = () => {
   function toggleButtonDisable () {
     const emailValid = isValidEmail(email.value);
     const passwordValid = isValidPassword(password.value);
-    console.log(emailValid, passwordValid);
     if (emailValid && passwordValid) {
       enterButton.removeAttribute("disabled");
     } else {
@@ -94,7 +93,6 @@ export const login = () => {
     const verifyPassword = container.querySelector(".key").value;
     verifyLogin(verifyEmail, verifyPassword)
       .then(() => {
-        console.log("login valido");
         window.location.hash = "feed";
       })
       .catch((error) => {
