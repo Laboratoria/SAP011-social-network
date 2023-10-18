@@ -1,11 +1,6 @@
 import { readPosts } from '../../../firebase/firestore';
 import './feed.css';
 
-import  iconFeed  from '../../../Imagens/Img feed/rede comentarios.png';
-import  iconNoticias  from '../../../Imagens/Img feed/icon.noticias.png';
-import  iconArtigos  from '../../../Imagens/Img feed/artigo 1.png';
-
-
 
 export const feed = () => {
     const container = document.createElement("section");
@@ -31,7 +26,7 @@ export const feed = () => {
  
       `;
 
-      window.addEventListener('load', () => {
+      container.addEventListener('load', () => {
         readPosts();
       });
     return container;
