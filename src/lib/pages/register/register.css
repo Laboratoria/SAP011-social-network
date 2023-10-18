@@ -29,7 +29,7 @@ button[disabled]{
 header{    
     
     background: #FFFFFF;
-    height: 150px;
+    height: 200px;
     align-items: center;
     display: flex;
     justify-content: center;  
@@ -44,7 +44,7 @@ nav {
 }
 
 .logo {
-    width: 20rem;    
+    height: 20rem;       
         
 }
 

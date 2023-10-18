@@ -6,12 +6,7 @@
 
   }
 
-  body {
-     background: rgb(178, 95, 95);     
-    /* background-attachment: fixed;
-    background-size: cover; */
-}
-
+ 
 .menu-fixo {
   display: flex;  
   align-items: center;    
