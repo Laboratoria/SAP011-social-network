@@ -1,7 +1,6 @@
 import { readPosts } from '../../../firebase/firestore';
 import './feed.css';
 
-
 export const feed = () => {
     const container = document.createElement("section");
     container.innerHTML = `
@@ -28,7 +27,7 @@ export const feed = () => {
  
       `;
 
-      window.addEventListener('load', () => {
+      container.addEventListener('load', () => {
         readPosts();
       });
     return container;
