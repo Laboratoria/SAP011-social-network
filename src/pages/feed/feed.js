@@ -1,6 +1,6 @@
 // import { createPost } from "../../firebase/firestore";
 // import { signOut } from 'firebase/auth';
-import { lerPosts, createPost } from "../../firebase/firestore.js";
+import { lerPosts } from "../../firebase/firestore.js";
 import { exit } from "../../firebase/firebase.js";
 
 export default () => {
