@@ -28,13 +28,13 @@ console.log('lendo posts');
 }
 
 // createPost
-export async function createPost() {
-  const docRef = await addDoc(collection(db, 'posts'), {
-    data: ' ',
-    text: ' ',
-  });
-  console.log('Nova Postagem', docRef.id);
-}
+// export async function createPost() {
+//   const docRef = await addDoc(collection(db, 'posts'), {
+//     data: ' ',
+//     text: ' ',
+//   });
+//   console.log('Nova Postagem', docRef.id);
+// }
 
 // deletePost
 
