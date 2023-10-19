@@ -27,7 +27,7 @@ maxlength="200" rows=5 cols=20>
 
   container.innerHTML = template;
   // escrever as postagens que o usuário escreve na tela
-  container.querySelector('#post-btn').addEventListener('click', () => {
+  container.querySelector('#post-btn').addEventListener('lick', () => {
     const newPost = container.querySelector('#new-post-txt').value;
     // createPost()
     console.log(newPost);
@@ -44,14 +44,12 @@ maxlength="200" rows=5 cols=20>
     postsExibir.innerHTML = containerPosts;
   }
 
+  // botão sair
+  const exitBtn = container.querySelector('#exit-btn');
+  exitBtn.addEventListener('click', exit);
+
   return container;
 };
-
-
-// botão sair
-const exitBtn = document.querySelector('#exit-btn');
-exitBtn.addEventListener('click', exit);
-
 
 // armazenar no firebase
 // adição(addDoc), leitura (getDoc), atualizar (UpdateDoc), deletar (deletDoc) metódos do firestore

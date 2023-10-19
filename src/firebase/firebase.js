@@ -3,7 +3,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut,
+  signOut, // apago?
   // signInWithPopup,
   // GoogleAuthProvider,
   // onAuthStateChanged, avisa o status do usuário (online ou não)
@@ -30,12 +30,12 @@ export function login(email, password) {
 // função logOut
 export function exit() {
   const auth = getAuth(app);
-  signOut(auth())
-    .then(() =>{
-      //saída com sucesso
+  auth.signOut() // certificar-se de como a função é chamada
+    .then(() => {
+      // saída com sucesso
     })
     .catch((error) => {
-      // deu ruim
+      console.error('Erro ao sair', error); // não deixar o catch vazio, captar o erro e expor no console
     });
   window.location.hash = '#home';
 }

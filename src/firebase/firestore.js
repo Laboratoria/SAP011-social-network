@@ -21,12 +21,13 @@ export function lerPosts(exibirPosts) {
 
 // createPost
 // export async function createPost() {
-//   const docRef = await addDoc(collection(db, 'cities'), {
-//     name: 'Tokyo',
-//     country: 'Japan',
+//   const docRef = await addDoc(collection(db, 'posts'), {
+//     data: ' ',
+//     text: ' ',
 //   });
-//   console.log('Document written with ID: ', docRef.id);
+//   console.log('Nova Postagem', docRef.id);
 // }
+
 // deletePost
 
 // Add a new document with a generated id.
