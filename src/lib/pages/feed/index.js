@@ -51,3 +51,8 @@ export const feed = () => {
 
   return container;
 };
+
+
+/* logica 
+
+CRIAR UM */
