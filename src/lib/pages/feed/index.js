@@ -1,9 +1,6 @@
-
-
 import iconFeed from '../../../Imagens/Img feed/rede comentarios.png';
 import iconNoticias from '../../../Imagens/Img feed/icon.noticias.png';
 import iconArtigos from '../../../Imagens/Img feed/artigo 1.png';
-
 import { readPosts } from '../../../firebase/firestore';
 import './feed.css';
 
@@ -24,26 +21,26 @@ export const feed = () => {
         <button id=""></button>
       </div>
 
-      <section id="input-container">
-      <div id="post"></div>
+      <section id="show-container">
+      <div id="post-show"></div>
       </section>
        
       `;
 
-  let viewPost = container.querySelector("#post");
+  let viewPost = container.querySelector("#post-show");
 
   readPosts((posts) => {
     console.log(posts);
+    let template = "";
     posts.forEach(post => {
-      const template = document.createElement('div');
-      template.innerHTML = `<h3>name<h3>
-          <div type="text" id="post">${post.textOfPost}</div>
-          <div type="date"> ${post.dateOfPost}</div>
+      template += `<div><h3>name</h3>
+          <div type="text" id="post-show-text">${post.text}</div>
+          <div type="date"> ${post.date}</div>
           <button id="edit-button" type="button"><img src="" alt="Edit Button"></button>
-          <button id="delete-button" type="button"><img src="" alt="Delete Button"></button>`;
-      viewPost.appendChild(template)
+          <button id="delete-button" type="button"><img src="" alt="Delete Button"></button>
+          </div>`;
     });
-
+      viewPost.innerHTML = template;
   });
 
 
@@ -51,8 +48,3 @@ export const feed = () => {
 
   return container;
 };
-
-
-/* logica 
-
-CRIAR UM */
