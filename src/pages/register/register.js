@@ -48,7 +48,7 @@ export default () => {
       })
       .catch((error) => { // Será executado se der erro
         console.log(error);
-        alert('erro'); 
+        alert('erro');
       });
   });
   return container;

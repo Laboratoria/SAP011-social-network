@@ -11,7 +11,7 @@ export default () => {
     <img class="logo-header" src=${logotipo} alt="Mulher segurando um prato com alimentos">
     </header>
 
-    <section> // Alycia
+    <section> 
       <form id="email"> 
         <label>Email</label>
         <input type= "email" id="email-login" placeholder="seu@email.com" name="email"/>
@@ -23,7 +23,7 @@ export default () => {
       </form>
     </section>
     <p> --------------- OU -----------------</p>
-    <section> // Pam 
+    <section> 
       <form id ="google-button">
         <button> Botão do Google </button>
       </form>
