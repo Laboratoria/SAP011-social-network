@@ -11,7 +11,7 @@ export default () => {
     <img class="logo-header" src=${logotipo} alt="Mulher segurando um prato com alimentos">
     </header>
 
-    <section> // Alycia
+    <section> 
       <form id="email"> 
         <label>Email</label>
         <input type= "email" id="email-login" placeholder="seu@email.com" name="email"/>
@@ -19,11 +19,11 @@ export default () => {
 
       <form id="email-password">
         <label>Senha</label>
-        <input type="password" id= "password-login" placeholder="digite a senha" name="senha"/>
+        <input type="password" id="password-login" placeholder="digite a senha" name="senha"/>
       </form>
     </section>
     <p> --------------- OU -----------------</p>
-    <section> // Pam 
+    <section> 
       <form id ="google-button">
         <button> Botão do Google </button>
       </form>
@@ -66,7 +66,7 @@ export default () => {
       .catch((error) => {
         // Será executado se der erro
         console.log(error);
-        alert('erro');
+        alert('erro ao logar');
       });
   });
 
