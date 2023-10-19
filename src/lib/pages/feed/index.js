@@ -1,6 +1,7 @@
 import iconFeed from '../../../Imagens/Img feed/rede comentarios.png';
 import iconNoticias from '../../../Imagens/Img feed/icon.noticias.png';
 import iconArtigos from '../../../Imagens/Img feed/artigo 1.png';
+
 import { readPosts } from '../../../firebase/firestore';
 import './feed.css';
 
@@ -15,10 +16,10 @@ export const feed = () => {
           <img class="#" src="${iconArtigos}" href="#"></img> 
       </div>
       <div id="input-container">
-      <h3>name<h3>
+       <div><h3>name<h3></div> 
         <input type="text" name="post" placeholder="publicação" id="post"/>
-        <button id="publish-button" type="button"><img src="" alt="Send Button"></button>
-        <button id=""></button>
+        <button id="publish-button" type="button"><img src="${iconEnviar}" alt="Send Button"></button>
+        
       </div>
 
       <section id="show-container">
@@ -48,3 +49,8 @@ export const feed = () => {
 
   return container;
 };
+
+
+/* logica 
+
+CRIAR UM */
