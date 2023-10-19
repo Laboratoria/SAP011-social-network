@@ -1,6 +1,6 @@
 // import { createPost } from "../../firebase/firestore";
 // import { signOut } from 'firebase/auth';
-import { lerPosts, createPost } from '../../firebase/firestore.js';
+import { lerPosts } from '../../firebase/firestore.js';
 import { exit } from '../../firebase/firebase.js';
 
 export default () => {
@@ -33,15 +33,6 @@ maxlength="200" rows=5 cols=20>
     console.log(newPost);
   });
 
-  lerPosts(exibirPost); // aparecer na tela a postagem que está no banco de dados
-
-  function exibirPost(posts) {
-    const containerPosts = container.querySelector('#posts');
-    containerPosts = `
-
- `;
-  }
-
   lerPosts(exibirPost);
 
  function exibirPost (posts){
@@ -56,9 +47,11 @@ maxlength="200" rows=5 cols=20>
   return container;
 };
 
+
 // botão sair
 const exitBtn = document.querySelector('#exit-btn');
 exitBtn.addEventListener('click', exit);
+
 
 // armazenar no firebase
 // adição(addDoc), leitura (getDoc), atualizar (UpdateDoc), deletar (deletDoc) metódos do firestore
