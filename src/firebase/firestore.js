@@ -1,7 +1,7 @@
 import { db } from './firebaseConfig';
 import { collection, query, onSnapshot } from "firebase/firestore";
 
-export function readPosts() {
+export function readPosts(callback) {
     const q = query(collection(db, "posts"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
         const posts = []
@@ -12,6 +12,7 @@ export function readPosts() {
             }
             posts.push(doc.data());
         });
-        console.log("Posts: ", posts.join(", "));
+        // console.log("Posts: ", posts.join(", "));
+        callback(posts);
     });
 };
