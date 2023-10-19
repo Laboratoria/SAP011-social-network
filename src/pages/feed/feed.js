@@ -37,12 +37,15 @@ maxlength="200" rows=5 cols=20>
 
  function exibirPost (posts){
  const postsExibir = container.querySelector('#posts');
- const containerPosts = `
- <label for="containerPosts"></label>
- <textarea id="containerPosts" minlength="20" maxlength="200" rows=5 cols=20>${posts}</textarea>
- `;
-    postsExibir.innerHTML = containerPosts;
-  }
+ posts.forEach(post=> {
+  
+   const containerPosts = `
+   <label for="containerPosts"></label>
+   <textarea id="containerPosts" minlength="20" maxlength="200" rows=5 cols=20>${post}</textarea>
+   `;
+      postsExibir.innerHTML += containerPosts;
+    })
+ };
 
   // botão sair
   const exitBtn = container.querySelector('#exit-btn');

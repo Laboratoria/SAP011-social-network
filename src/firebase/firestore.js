@@ -13,7 +13,8 @@ export function lerPosts(exibirPosts) {
     querySnapshot.forEach((doc) => {	
       posts.push(doc.data().text);	
     });	
-    console.log("Posts", posts.join,(", "));	
+    
+    // console.log("Posts", posts.join,(", "));	
     exibirPosts(posts);	
     // ao inves de console uma funçao que exibe os posts em tela	
   })	
