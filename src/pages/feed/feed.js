@@ -21,8 +21,6 @@ maxlength="200" rows=5 cols=20>
 <p>
 <button id="post-btn" type="submit">Postar</button><img width="16" height="16" src="https://img.icons8.com/ios/50/hearts--v1.png" alt="hearts--v1"/>
 <section id ='posts'></section>
-
-
       `;
 
   container.innerHTML = template;
@@ -35,17 +33,16 @@ maxlength="200" rows=5 cols=20>
 
   lerPosts(exibirPost);
 
- function exibirPost (posts){
- const postsExibir = container.querySelector('#posts');
- posts.forEach(post=> {
-  
-   const containerPosts = `
+  function exibirPost(posts) {
+    const postsExibir = container.querySelector('#posts');
+    posts.forEach((post) => {
+      const containerPosts = `
    <label for="containerPosts"></label>
    <textarea id="containerPosts" minlength="20" maxlength="200" rows=5 cols=20>${post}</textarea>
    `;
       postsExibir.innerHTML += containerPosts;
-    })
- };
+    });
+  }
 
   // botão sair
   const exitBtn = container.querySelector('#exit-btn');
