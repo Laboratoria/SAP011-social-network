@@ -12,6 +12,7 @@ export function lerPosts(exibirPosts) {
     const posts = [];	
     querySnapshot.forEach((doc) => {	
       posts.push(doc.data().text);	
+      
     });	
     
     // console.log("Posts", posts.join,(", "));	

@@ -27,7 +27,7 @@ maxlength="200" rows=5 cols=20>
 
   container.innerHTML = template;
   // escrever as postagens que o usuário escreve na tela
-  container.querySelector('#post-btn').addEventListener('lick', () => {
+  container.querySelector('#post-btn').addEventListener('click', () => {
     const newPost = container.querySelector('#new-post-txt').value;
     // createPost()
     console.log(newPost);
