@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import iconFeed from '../../../Imagens/Img feed/rede comentarios.png';
+import iconNoticias from '../../../Imagens/Img feed/icon.noticias.png';
+import iconArtigos from '../../../Imagens/Img feed/artigo 1.png';
+import iconEnviar from '../../../Imagens/Img feed/icon-enviarposter.png'
+
+>>>>>>> b58abe41a57f43a17ccde1c974ed7ddeaa2b2b0f
 import { readPosts } from '../../../firebase/firestore';
 import {iconFeed} from '../../../Imagens/Imgfeed/rede comentarios.png';
 import {iconNoticias} from '../../../Imagens/Imgfeed/icon.noticias.png';
