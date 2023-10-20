@@ -1,8 +1,7 @@
-import iconFeed from '../../../Imagens/Img feed/rede comentarios.png';
-import iconNoticias from '../../../Imagens/Img feed/icon.noticias.png';
-import iconArtigos from '../../../Imagens/Img feed/artigo 1.png';
-
 import { readPosts } from '../../../firebase/firestore';
+import {iconFeed} from '../../../Imagens/Imgfeed/rede comentarios.png';
+import {iconNoticias} from '../../../Imagens/Imgfeed/icon.noticias.png';
+import {iconArtigos} from '../../../Imagens/Imgfeed/artigo1.png'
 import './feed.css';
 
 
@@ -18,14 +17,11 @@ export const feed = () => {
       <div id="input-container">
        <div><h3>name<h3></div> 
         <input type="text" name="post" placeholder="publicação" id="post"/>
-        <button id="publish-button" type="button"><img src="${iconEnviar}" alt="Send Button"></button>
-        
+        <button id="publish-button" type="button"><img src="${iconEnviar}" alt="Send Button"></button> 
       </div>
-
       <section id="show-container">
       <div id="post-show"></div>
       </section>
-       
       `;
 
   let viewPost = container.querySelector("#post-show");
@@ -43,10 +39,6 @@ export const feed = () => {
     });
       viewPost.innerHTML = template;
   });
-
-
-
-
   return container;
 };
 
