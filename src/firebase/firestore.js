@@ -1,6 +1,10 @@
-import { collection, query, onSnapshot   updateDoc,
-} from 'firebase/firestore';
-
+import
+{
+  collection,
+  query,
+  onSnapshot,
+  addDoc,
+} from 'firebase/firestore'; // collection são o conjunto de post lá em narnia
 import { db } from './config.js';
 
 // import { collection, addDoc } from 'firebase/firestore';
