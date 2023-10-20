@@ -47,7 +47,7 @@ export default () => {
   const registerBtn = container.querySelector('#register-btn'); // variável que pega a ação do botão
   registerBtn.addEventListener('click', (event) => { // cadastrar e cria a página de cadastro
     event.preventDefault();
-    console.log('cliquei');
+    // console.log('cliquei');
     window.location.hash = '#register'; // para abrir a página de register
   });
 

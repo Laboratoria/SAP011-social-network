@@ -1,4 +1,5 @@
-import { collection, query, onSnapshot } from 'firebase/firestore';
+import { collection, query, onSnapshot   updateDoc,
+} from 'firebase/firestore';
 
 import { db } from './config.js';
 
