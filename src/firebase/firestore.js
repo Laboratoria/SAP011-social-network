@@ -4,6 +4,7 @@ import
   query,
   onSnapshot,
   addDoc,
+  updateDoc,
 } from 'firebase/firestore'; // collection são o conjunto de post lá em narnia
 import { db } from './config.js';
 

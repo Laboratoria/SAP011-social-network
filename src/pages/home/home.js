@@ -11,7 +11,7 @@ export default () => {
     <img class="logo-header" src=${logotipo} alt="Mulher segurando um prato com alimentos">
     </header>
 
-    <section> // Alycia
+    <section> 
       <form id="email"> 
         <label>Email</label>
         <input type= "email" id="email-login" placeholder="seu@email.com" name="email"/>
@@ -23,7 +23,7 @@ export default () => {
       </form>
     </section>
     <p> --------------- OU -----------------</p>
-    <section> // Pam 
+    <section> 
       <form id ="google-button">
         <button> Botão do Google </button>
       </form>
@@ -47,7 +47,7 @@ export default () => {
   const registerBtn = container.querySelector('#register-btn'); // variável que pega a ação do botão
   registerBtn.addEventListener('click', (event) => { // cadastrar e cria a página de cadastro
     event.preventDefault();
-    console.log('cliquei');
+    // console.log('cliquei');
     window.location.hash = '#register'; // para abrir a página de register
   });
 

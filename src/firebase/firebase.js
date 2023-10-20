@@ -3,7 +3,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut,
+  // signOut,
   // signInWithPopup,
   // GoogleAuthProvider,
   // onAuthStateChanged, avisa o status do usuário (online ou não)
@@ -35,7 +35,7 @@ export function exit() {
       // saída com sucesso
     })
     .catch((error) => {
-      console.error('Erro ao sair', error); // não deixar o catch vazio, captar o erro e expor no console
+      alert('Erro ao sair', error); // não deixar o catch vazio, captar o erro e expor no console
     });
   window.location.hash = '#home';
 }
