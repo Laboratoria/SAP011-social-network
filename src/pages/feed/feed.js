@@ -1,10 +1,10 @@
 // import { createPost } from "../../firebase/firestore";
 // import { signOut } from 'firebase/auth';
-import { lerPosts, createPost } from "../../firebase/firestore.js";
-import { exit } from "../../firebase/firebase.js";
+import { lerPosts } from '../../firebase/firestore.js';
+import { exit } from '../../firebase/firebase.js';
 
 export default () => {
-  const container = document.createElement("div");
+  const container = document.createElement('div');
 
   const template = `
 <header> 
@@ -27,8 +27,8 @@ maxlength="200" rows=5 cols=20>
 
   container.innerHTML = template;
   // escrever as postagens que o usuário escreve na tela
-  container.querySelector("#post-btn").addEventListener("click", () => {
-    const newPost = container.querySelector("#new-post-txt").value;
+  container.querySelector('#post-btn').addEventListener('click', () => {
+    const newPost = container.querySelector('#new-post-txt').value;
     // createPost()
     console.log(newPost);
   });
@@ -36,7 +36,7 @@ maxlength="200" rows=5 cols=20>
   lerPosts(exibirPost); // aparecer na tela a postagem que está no banco de dados
 
   function exibirPost(posts) {
-    const containerPosts = container.querySelector("#posts");
+    const containerPosts = container.querySelector('#post');
     containerPosts = `
 
  `;
@@ -45,16 +45,17 @@ maxlength="200" rows=5 cols=20>
   lerPosts(exibirPost);
 
   function exibirPost(posts) {
-    const postsExibir = container.querySelector("#posts");
+    const postsExibir = container.querySelector('#posts');
     const containerPosts = `
  <label for="containerPosts"></label>
  <textarea id="containerPosts" minlength="20" maxlength="200" rows=5 cols=20>${posts}</textarea>
  `;
     postsExibir.innerHTML = containerPosts;
   }
+
   // botão sair
-  const exitBtn = container.querySelector("#exit-btn");
-  exitBtn.addEventListener("click", exit);
+  const exitBtn = container.querySelector('#exit-btn');
+  exitBtn.addEventListener('click', exit);
 
   return container;
 };

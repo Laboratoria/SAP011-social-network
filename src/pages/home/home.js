@@ -19,7 +19,7 @@ export default () => {
 
       <form id="email-password">
         <label>Senha</label>
-        <input type="password" id= "password-login" placeholder="digite a senha" name="senha"/>
+        <input type="password" id="password-login" placeholder="digite a senha" name="senha"/>
       </form>
     </section>
     <p> --------------- OU -----------------</p>
@@ -66,7 +66,7 @@ export default () => {
       .catch((error) => {
         // Será executado se der erro
         console.log(error);
-        alert('erro');
+        alert('erro ao logar');
       });
   });
 
