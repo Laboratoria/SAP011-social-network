@@ -15,7 +15,9 @@ export default () => {
 maxlength="200" rows=5 cols=20>
 </textarea>
 
-<button id="post-btn" type="submit">Postar</button><img width="16" height="16" src="https://img.icons8.com/ios/50/hearts--v1.png" alt="hearts--v1"/>
+<button id="post-btn" type="submit" alt="botão de postar">Postar</button>
+<button id="edit-btn" type="submit" alt="botão editar post">Editar</button>
+<img width="16" height="16" src="https://img.icons8.com/ios/50/hearts--v1.png" alt="hearts--v1" alt="curtida coração"/>
 </section>
 
       `;
@@ -45,5 +47,5 @@ maxlength="200" rows=5 cols=20>
 // adição(addDoc), leitura (getDoc), atualizar (UpdateDoc), deletar (deletDoc) metódos do firestore
 // adição precisa de um id, firebase cria com getDoc
 
-// printar o post em tela
-// firebase lê o banco de dados e armazena na array, depois printa
+
+// firebase lê o banco de dados e armazena na array, depois printa em tela
