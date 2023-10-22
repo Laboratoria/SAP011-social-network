@@ -1,61 +1,42 @@
-// import { createPost } from "../../firebase/firestore";
-// import { signOut } from 'firebase/auth';
+import { createPost } from "../../firebase/firestore";
 import { lerPosts } from '../../firebase/firestore.js';
-import { exit } from '../../firebase/firebase.js';
 
 export default () => {
   const container = document.createElement('div');
 
   const template = `
 <header> 
-<p>
-<button id="about-btn" type="submit">Sobre</button> 
-<button id="exit-btn" type="submit">Sair</button> 
+<button type="submit">Sobre</button> <button type="submit">Sair</button> 
 </header>
 
 <label>Nome</label>
-<p>
+<section id="posts">
 <textarea id="new-post-txt" placeholder="Digite seu post aqui..." minlength="20"
 maxlength="200" rows=5 cols=20>
 </textarea>
-<p>
-<button id="post-btn" type="submit">Postar</button><img width="16" height="16" src="https://img.icons8.com/ios/50/hearts--v1.png" alt="hearts--v1"/>
-<section id ='posts'></section>
 
+<button id="post-btn" type="submit">Postar</button><img width="16" height="16" src="https://img.icons8.com/ios/50/hearts--v1.png" alt="hearts--v1"/>
+</section>
 
       `;
 
   container.innerHTML = template;
-  // escrever as postagens que o usuário escreve na tela
+
   container.querySelector('#post-btn').addEventListener('click', () => {
     const newPost = container.querySelector('#new-post-txt').value;
-    // createPost()
     console.log(newPost);
   });
-
-  lerPosts(exibirPost); // aparecer na tela a postagem que está no banco de dados
-
-  function exibirPost(posts) {
-    const containerPosts = container.querySelector('#post');
-    containerPosts = `
-
- `;
-  }
 
   lerPosts(exibirPost);
 
   function exibirPost(posts) {
     const postsExibir = container.querySelector('#posts');
     const containerPosts = `
- <label for="containerPosts"></label>
- <textarea id="containerPosts" minlength="20" maxlength="200" rows=5 cols=20>${posts}</textarea>
+ <label id="container-posts"></label>
+ <textarea id="container-posts" minlength="20" maxlength="200" rows=5 cols=20 readonly>${posts}</textarea>
  `;
     postsExibir.innerHTML = containerPosts;
   }
-
-  // botão sair
-  const exitBtn = container.querySelector('#exit-btn');
-  exitBtn.addEventListener('click', exit);
 
   return container;
 };

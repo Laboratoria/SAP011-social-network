@@ -10,33 +10,41 @@ import { db } from './config.js';
 
 // exibPost
 export function lerPosts(exibirPosts) {
-console.log('lendo posts');
-  const q = query(collection(db, 'posts'));
+// console.log('lendo posts');
+  const q = query(collection(db, 'posts')); // posts é a coleção de dados no firebase
 
   // onSnapshot atualiza em tempo real
   const posts = [];
-  const unsubscribe = onSnapshot(q, (querySnapshot) => {
+  onSnapshot(q, (querySnapshot) => {
     querySnapshot.forEach((doc) => { // pega cada um dos documentos que está em nárnia
-      posts.push(doc.data().text);
+      const obj = {
+        dataDoPost: doc.data().data,
+        textoDoPost: doc.data().text,
+        id: document.id,
+      };
+      posts.push(obj);
+      // posts.push(doc.data().text); // doc é o código de cada e data é o conteúdo
     });
-    console.log('Posts', posts.join(''));
-    // console.log('Posts', posts);
+    // console.log('Posts', posts.join(''));
+    console.log('Posts', posts);
     // são os posts que vieram de narnia e foram jogados numa array que está dentro da const linha 9
-    // exibirPosts(posts);  nao é p firestore que deve exibir o post e sim o feed
-    // ao inves de console uma funçao que exibe os posts em tela
-  });
-  return posts; // exportar para o feed a função de ler posts
+  exibirPosts(posts); // essa função esibe o post na tela, criar no feedjs
 }
 
-// createPost
+// exibir posts
 // export async function createPost() {
 //   const docRef = await addDoc(collection(db, 'posts'), {
 //     data: ' ',
 //     text: ' ',
 //   });
-//   console.log('Nova Postagem', docRef.id);
+//   console.log('Nova Postagem', docRef.id); // 
 // }
 
-// deletePost
+// adicionar e gerenciar dados
 
-// Add a new document with a generated id.
+
+// editPost
+
+
+// likePost (Aline)
+// deletePost (Alycia)
