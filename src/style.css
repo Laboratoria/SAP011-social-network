@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
 
 }
@@ -17,13 +17,63 @@ h1 {
     font-size: normal;
 }
 footer {
-    align-items: center;
 
 }
-#container {
-    background-color: #9b4922;
-}
+
 img {
   text-align: center;
   margin: 1rem;
 }
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+} 
+
+
+
+@media screen and (min-width:300px) and (max-width: 2000px){
+    #containers-login{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        background-color: #efd8c0;
+        color:  #9b4922;
+        margin-left: 10px;
+        font-size: 25px;
+        width: 320px;
+        gap: 10px;
+        margin: auto;
+        margin-top: 120px;
+        align-items: center;
+        border-radius: 13px;
+        text-align: center;
+    }
+    #cadastro-name,
+    #email-id,
+    #password-id,
+    #confirm-password {
+        background-color: #efd8c0;
+        width: 150px;
+        height: 38px;
+        border-color: #9b4922;
+        border-radius: 13px;
+        text-align: center;
+    }
+    #confirm-btn{
+        width: 150px;
+        height: 38px;
+        color: #efd8c0;
+        background-color: #9b4922;
+        border-radius: 13px;
+
+    }
+    #container {
+    background-color: #9b4922;
+}
+}
+

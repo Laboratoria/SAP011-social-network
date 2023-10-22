@@ -3,7 +3,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut, // apago?
+  // signOut, // apago?
   // signInWithPopup,
   // GoogleAuthProvider,
   // onAuthStateChanged, avisa o status do usuário (online ou não)
@@ -22,7 +22,7 @@ export function registerEmail(email, password) {
 
 // função login
 export function login(email, password) {
-  console.log(email, password);
+  // console.log(email, password); era esse console que estava explanando a senha
   const auth = getAuth(app);
   return signInWithEmailAndPassword(auth, email, password);
 }
