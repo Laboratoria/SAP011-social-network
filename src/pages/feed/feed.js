@@ -1,5 +1,6 @@
-import { lerPosts } from '../../firebase/firestore.js';
+import { lerPosts, createPost } from '../../firebase/firestore.js';
 import editbutton from '../../img/editbutton.png';
+import favoritebutton from '../../img/favorite.png';
 
 export default () => {
   const container = document.createElement('div');
@@ -15,20 +16,23 @@ export default () => {
 maxlength="200" rows=5 cols=20>
 </textarea>
 
-<button id="post-btn" type="submit" alt="botão de postar">Postar</button>
+<button id="post-btn" >Postar</button>
 
 </section>
 
       `;
 
   container.innerHTML = template;
-
+  console.log("qualquer coisa mesmo")
+  console.log(container.querySelector('#post-btn'))
   container.querySelector('#post-btn').addEventListener('click', () => {
-    const newPost = container.querySelector('#new-post-txt').value;
-    console.log(newPost);
+    console.log("qualquer coisa");
   });
-
-  lerPosts(exibirPost);
+  // container.querySelector('#post-btn').addEventListener('click', () => {
+  //   console.log("qualquer coisa");
+  //   // const newPost = container.querySelector('#new-post-txt').value;
+  //   // createPost(newPost);
+  // });
 
   function exibirPost(posts) {
     const postsExibir = container.querySelector('#posts');
@@ -37,11 +41,12 @@ maxlength="200" rows=5 cols=20>
       <label id="container-posts"></label>
       <textarea id="container-posts" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
       <img id="edit-btn" alt="botão editar" src="${editbutton}"/>
-      <img width="16" height="16" src="https://img.icons8.com/ios/50/hearts--v1.png" alt="hearts--v1" alt="curtida coração"/>
+      <img id="favorite-btn" alt="curtida coração" src="${favoritebutton}"/>
       `;
       postsExibir.innerHTML += containerPosts;
     });
   }
+  lerPosts(exibirPost);
 
   // editPost
   // const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => { // chamar a função do firestore de edição
@@ -54,7 +59,6 @@ maxlength="200" rows=5 cols=20>
   //       // aviso de erro ao armazenar alteração
   //     }
   //   });
-
 
   return container;
 };

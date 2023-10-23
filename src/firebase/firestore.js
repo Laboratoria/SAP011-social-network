@@ -3,6 +3,7 @@ import {
   query,
   onSnapshot,
   orderBy,
+  addDoc,
   doc,
   updateDoc,
 } from 'firebase/firestore';
@@ -12,7 +13,7 @@ import { db } from './config.js';
 // exibPost
 export function lerPosts(exibirPosts) {
 // console.log('lendo posts');
-  const q = query(collection(db, 'posts'), orderBy('data', 'asc')); // ordenar exibição de posts 
+  const q = query(collection(db, 'posts'), orderBy('data', 'asc')); // ordenar exibição de posts
 
   const posts = [];
   // onSnapshot atualiza em tempo real
@@ -32,14 +33,21 @@ export function lerPosts(exibirPosts) {
   });
 }
 
-// editPost
-export async function editPost(userId, newText, dataPost) {
-  await updateDoc(doc(db, 'posts', userId), {
-    dataDoPost: dataPost,
-    textoDoPost: newText,
-    idUser: userId,
+export async function createPost(textPost) {
+  console.log(textPost);
+  await addDoc(collection(db, 'posts'), {
+    data: new Date(), // pega a data atual
+    text: textPost,
   });
 }
+// editPost
+// export async function editPost(userId, newText, dataPost) {
+//   await updateDoc(doc(db, 'posts', userId), {
+//     dataDoPost: dataPost,
+//     textoDoPost: newText,
+//     idUser: userId,
+//   });
+// }
 
 // likePost (Aline)
 // deletePost (Alycia)
