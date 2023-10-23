@@ -5,35 +5,34 @@ import { login } from '../../firebase/firebase';
 // importar cada função de cada ação, login e senho, login pelo google
 export default () => {
   const container = document.createElement('div'); // adiciona o template
-
   const template = `
-    <header>
-    <img class="logo-header" src=${logotipo} alt="Mulher segurando um prato com alimentos">
-    </header>
-
-    <section> 
-      <form id="email"> 
-        <label>Email</label>
-        <input type= "email" id="email-login" placeholder="seu@email.com" name="email"/>
-      </form>
-
-      <form id="email-password">
-        <label>Senha</label>
-        <input type="password" id="password-login" placeholder="digite a senha" name="senha"/>
-      </form>
-    </section>
-    <p> --------------- OU -----------------</p>
-    <section> 
-      <form id ="google-button">
-        <button> Botão do Google </button>
-      </form>
-
-      <form id="register-login">
-        <button id="register-btn">Cadastrar</button>
-        <button id="enter-btn">Entrar</button>
-      </form>
-    </section>
-      `;
+  <header>
+  <img class="logo-header" id="logotipo" src=${logotipo} alt="Mulher segurando um prato com alimentos">
+</header>
+<br>
+<section class="center-content"> <!-- Usar a classe para centralizar o conteúdo -->
+  <form id="email"> 
+    <label>Email: </label>
+    <input type="email" id="email-login" placeholder=" seu@email.com" name="email"/>
+  </form>
+  <br>
+  <form id="email-password">
+    <label>Senha: </label>
+    <input type="password" id="password-login" placeholder=" digite a senha" name="senha"/>
+  </form>
+  <br>
+  ou
+  <form id="google-button">
+    <button>Botão do Google</button>
+  </form>
+  <br>
+  <form id="register-login">
+    <button id="register-btn">Cadastrar</button>
+    <button id="enter-btn">Entrar</button>
+  </form>
+</section>
+`;
+    
 
   container.innerHTML = template; // coloco o conteúdo do template dentro do innerhtml
 

@@ -7,10 +7,17 @@ export default () => {
   const container = document.createElement('div');
 
   const template = `
-<header> 
+<head> 
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons&display=swap" rel="stylesheet">
 <p>
-<button id="about-btn" type="submit">Sobre</button> 
-<button id="exit-btn" type="submit">Sair</button> 
+<i class="material-icons custom-icon">
+<a href="/#home">home</a></i> <!-- Ícone da página cadastrar-->
+<i class="material-icons custom-icon">
+<a href="/#about">favorite</a></i> <!-- Ícone para ir ao about-->
+<i class="material-icons custom-icon" onclick="irParaExit()">exit_to_app</i> <!-- Ícone para ir ao login -->
+</head>
+<p>
+<button type="submit">Sobre</button> <button type="submit">Sair</button> 
 </header>
 
 <label>Nome</label>
@@ -19,19 +26,26 @@ export default () => {
 maxlength="200" rows=5 cols=20>
 </textarea>
 <p>
-<button id="post-btn" type="submit">Postar</button><img width="16" height="16" src="https://img.icons8.com/ios/50/hearts--v1.png" alt="hearts--v1"/>
+<button id="post-btn" type="submit">Postar</button>/
+<p>
+<i class="material-icons custom-icon like" id="like">
+<a href="/#feed">favorite</a></i> <!-- Ícone de like do post -->
+<p>
 <section id ='posts'></section>
       `;
 
   container.innerHTML = template;
-  // escrever as postagens que o usuário escreve na tela
+  
   container.querySelector('#post-btn').addEventListener('click', () => {
     const newPost = container.querySelector('#new-post-txt').value;
     // createPost()
     console.log(newPost);
   });
 
-  lerPosts(exibirPost);
+
+
+
+ lerPosts(exibirPost);
 
   function exibirPost(posts) {
     const postsExibir = container.querySelector('#posts');
@@ -50,6 +64,24 @@ maxlength="200" rows=5 cols=20>
 
   return container;
 };
+
+  // const enterBtn = container.querySelector('#enter-btn');
+  // enterBtn.addEventListener('click', (event) => {
+  //   console.log('entrei');
+  //   event.preventDefault();
+  //   const email = container.querySelector('#email-login').value;
+  //   const password = container.querySelector('#password-login').value;
+  //   login(email, password)
+  //     .then(() => {
+  //       // Será executado se der certo
+  //       window.location.hash = '#feed';
+  //     })
+  //     .catch((error) => {
+  //       // Será executado se der erro
+  //       console.log(error);
+  //       alert('erro');
+  //     });
+  // });
 
 // armazenar no firebase
 // adição(addDoc), leitura (getDoc), atualizar (UpdateDoc), deletar (deletDoc) metódos do firestore
