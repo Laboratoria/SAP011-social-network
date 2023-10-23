@@ -39,13 +39,13 @@ maxlength="200" rows=5 cols=20>
 
   container.querySelector('#post-btn').addEventListener('click', () => {
     const newPost = container.querySelector('#new-post-txt').value;
-    createPost(newPost)
-    console.log(newPost);
+    createPost(newPost);
   });
 
   function exibirPost(posts) {
     const postsExibir = container.querySelector('#posts');
-    postsExibir.innerHTML = ''; // limpa a tela e começa a colocar os posts em tela
+    postsExibir.innerHTML = ' '; // limpa a tela e começa a colocar os posts em tela
+    console.log('limpei os posts');
     posts.forEach((element) => {
       const containerPosts = `
       <label id="container-posts"></label>
@@ -54,8 +54,10 @@ maxlength="200" rows=5 cols=20>
       <img id="favorite-btn" alt="curtida coração" src="${favoritebutton}"/>
       `;
       postsExibir.innerHTML += containerPosts;
+      console.log('desenhando novos posts')
     });
   }
+
   lerPosts(exibirPost);
 
   // botão sair

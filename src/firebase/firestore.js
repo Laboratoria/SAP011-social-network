@@ -15,9 +15,9 @@ export function lerPosts(exibirPosts) {
 // console.log('lendo posts');
   const q = query(collection(db, 'posts'), orderBy('data', 'asc')); // ordenar exibição de posts
 
-  const posts = [];
   // onSnapshot atualiza em tempo real
   onSnapshot(q, (querySnapshot) => {
+    const posts = [];
     querySnapshot.forEach((document) => { // pega cada um dos documentos que está em nárnia
       const obj = {
         dataDoPost: document.data().data,
@@ -27,7 +27,7 @@ export function lerPosts(exibirPosts) {
       posts.push(obj);
     });
     // console.log('Posts', posts.join(''));
-    console.log('Posts', posts);
+    console.log('esta somando?', posts);
     // são os posts que vieram de narnia e foram jogados numa array que está dentro da const linha 9
     exibirPosts(posts); // essa função exibe o post na tela, criar no feedjs
   });
