@@ -1,4 +1,4 @@
-// import { createPost } from "../../firebase/firestore";
+import { createPost } from "../../firebase/firestore";
 // import { signOut } from 'firebase/auth';
 import { lerPosts } from '../../firebase/firestore.js';
 import { exit } from '../../firebase/firebase.js';
@@ -38,7 +38,7 @@ maxlength="200" rows=5 cols=20>
   container.innerHTML = template;
   container.querySelector('#post-btn').addEventListener('click', () => {
     const newPost = container.querySelector('#new-post-txt').value;
-    // createPost()
+    createPost(newPost);
     console.log(newPost);
   });
 

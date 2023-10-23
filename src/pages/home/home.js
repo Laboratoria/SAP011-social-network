@@ -22,8 +22,8 @@ export default () => {
   </form>
   <br>
   ou
-  <form id="google-button">
-    <button>Botão do Google</button>
+  <form>
+    <button id="google-button">Botão do Google</button>
   </form>
   <br>
   <form id="register-login">
@@ -32,7 +32,6 @@ export default () => {
   </form>
 </section>
 `;
-    
 
   container.innerHTML = template; // coloco o conteúdo do template dentro do innerhtml
 
