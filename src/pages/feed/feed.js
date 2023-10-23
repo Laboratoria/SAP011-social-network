@@ -27,17 +27,15 @@ export default () => {
 maxlength="200" rows=5 cols=20>
 </textarea>
 <p>
-<button id="post-btn" type="submit">Postar</button>/
-<p>
-<i class="material-icons custom-icon like" id="like">
-<a href="/#feed">favorite</a></i> <!-- Ícone de like do post -->
-<p>
+<button id="post-btn" type="submit">Postar</button><img width="16" height="16" src="https://img.icons8.com/ios/50/hearts--v1.png" alt="hearts--v1"/>
 <section id ='posts'></section>
+
+
       `;
 
   container.innerHTML = template;
   // escrever as postagens que o usuário escreve na tela
-  container.querySelector('#post-btn').addEventListener('click', () => {
+  container.querySelector('#post-btn').addEventListener('lick', () => {
     const newPost = container.querySelector('#new-post-txt').value;
     // createPost()
     console.log(newPost);
@@ -47,13 +45,11 @@ maxlength="200" rows=5 cols=20>
 
   function exibirPost(posts) {
     const postsExibir = container.querySelector('#posts');
-    posts.forEach((post) => {
-      const containerPosts = `
-   <label for="containerPosts"></label>
-   <textarea id="containerPosts" minlength="20" maxlength="200" rows=5 cols=20>${post}</textarea>
-   `;
-      postsExibir.innerHTML += containerPosts;
-    });
+    const containerPosts = `
+ <label for="containerPosts"></label>
+ <textarea id="containerPosts" minlength="20" maxlength="200" rows=5 cols=20>${posts}</textarea>
+ `;
+    postsExibir.innerHTML = containerPosts;
   }
 
   // botão sair

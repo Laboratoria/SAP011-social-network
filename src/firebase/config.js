@@ -1,6 +1,5 @@
 import { initializeApp } from 'firebase/app'; // é a primeira importação que deve ser feita
 import { getFirestore } from 'firebase/firestore';
-
 // import { getAnalytics } from 'firebase/analytics'; não é necessário neste momento
 
 const firebaseConfig = {
