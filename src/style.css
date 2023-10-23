@@ -26,7 +26,6 @@ h1 {
     font-family: "Chonburi";
     font-size: normal;
 }
-footer {
 
 footer {
     position: fixed;
@@ -45,60 +44,55 @@ img {
     padding: 0;
 }
 
-a {
-    color: black;
-    text-decoration: none;
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+} 
+
+
+
+@media screen and (min-width:300px) and (max-width: 2000px){
+    #containers-login{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        background-color: #efd8c0;
+        color:  #9b4922;
+        margin-left: 10px;
+        font-size: 25px;
+        width: 320px;
+        gap: 10px;
+        margin: auto;
+        margin-top: 120px;
+        align-items: center;
+        border-radius: 13px;
+        text-align: center;
+    }
+    #cadastro-name,
+    #email-id,
+    #password-id,
+    #confirm-password {
+        background-color: #efd8c0;
+        width: 150px;
+        height: 38px;
+        border-color: #9b4922;
+        border-radius: 13px;
+        text-align: center;
+    }
+    #confirm-btn{
+        width: 150px;
+        height: 38px;
+        color: #efd8c0;
+        background-color: #9b4922;
+        border-radius: 13px;
+
+    }
+    #container {
+    background-color: #9b4922;
+}
 }
 
-.like {
-    color: #efd8c0;
-}
-
-.like:active {
-    color: black;
-}
-
-google-button {
-    width: 80px;
-    height: 40px;
-    background-color: #818c2b;
-    color: #FFF;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#register-btn {
-    width: 80px;
-    height: 40px;
-    background-color: #818c2b;
-    color: #FFF;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#enter-btn {
-    width: 80px;
-    height: 40px;
-    background-color: #efd8c0;
-    color: #9b4922;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#email-login {
-    height: 30px;
-    background-color: #efd8c0;
-    border-radius: 50px;
-}
-
-#password-login {
-    height: 30px;
-    background-color: #efd8c0;
-    border-radius: 50px;
-}
-button {
-    margin: 10px;
-}

@@ -17,7 +17,8 @@ export default () => {
 <i class="material-icons custom-icon" onclick="irParaExit()">exit_to_app</i> <!-- Ícone para ir ao login -->
 </head>
 <p>
-<button type="submit">Sobre</button> <button type="submit">Sair</button> 
+<button id="about-btn" type="submit">Sobre</button> 
+<button id="exit-btn" type="submit">Sair</button> 
 </header>
 
 <label>Nome</label>
@@ -35,17 +36,14 @@ maxlength="200" rows=5 cols=20>
       `;
 
   container.innerHTML = template;
-  
+  // escrever as postagens que o usuário escreve na tela
   container.querySelector('#post-btn').addEventListener('click', () => {
     const newPost = container.querySelector('#new-post-txt').value;
     // createPost()
     console.log(newPost);
   });
 
-
-
-
- lerPosts(exibirPost);
+  lerPosts(exibirPost);
 
   function exibirPost(posts) {
     const postsExibir = container.querySelector('#posts');
@@ -64,24 +62,6 @@ maxlength="200" rows=5 cols=20>
 
   return container;
 };
-
-  // const enterBtn = container.querySelector('#enter-btn');
-  // enterBtn.addEventListener('click', (event) => {
-  //   console.log('entrei');
-  //   event.preventDefault();
-  //   const email = container.querySelector('#email-login').value;
-  //   const password = container.querySelector('#password-login').value;
-  //   login(email, password)
-  //     .then(() => {
-  //       // Será executado se der certo
-  //       window.location.hash = '#feed';
-  //     })
-  //     .catch((error) => {
-  //       // Será executado se der erro
-  //       console.log(error);
-  //       alert('erro');
-  //     });
-  // });
 
 // armazenar no firebase
 // adição(addDoc), leitura (getDoc), atualizar (UpdateDoc), deletar (deletDoc) metódos do firestore
