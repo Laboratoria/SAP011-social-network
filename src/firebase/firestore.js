@@ -3,7 +3,6 @@ import { db } from "./config.js";
 // import { collection, addDoc } from 'firebase/firestore';
 // function sendPost
 
-
 export function lerPosts(exibirPosts) {	
   const q = query(collection(db, "posts"));	
 
