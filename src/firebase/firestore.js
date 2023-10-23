@@ -3,8 +3,8 @@ import {
   query, 
   onSnapshot, 
   orderBy,
-  // addDoc, 
-  // updateDoc, 
+  doc,
+  updateDoc, 
 } from 'firebase/firestore'; 
 // collection são o conjunto de post lá em narnia
 import { db } from './config.js';
@@ -18,14 +18,13 @@ export function lerPosts(exibirPosts) {
   // onSnapshot atualiza em tempo real
   onSnapshot(q, (querySnapshot) => {
     
-    querySnapshot.forEach((doc) => { // pega cada um dos documentos que está em nárnia
+    querySnapshot.forEach((document) => { // pega cada um dos documentos que está em nárnia
       const obj = {
-        dataDoPost: doc.data().data,
-        textoDoPost: doc.data().text,
-        // id: document.id,
+        dataDoPost: document.data().data,
+        textoDoPost: document.data().text,
+        idUser: document.id, // sequência de números e letras lá na collection que identifica o post
       };
       posts.push(obj);
-      // posts.push(doc.data().text); // doc é o código de cada e data é o conteúdo
     });
     // console.log('Posts', posts.join(''));
     console.log('Posts', posts);
@@ -33,20 +32,14 @@ export function lerPosts(exibirPosts) {
   exibirPosts(posts); // essa função exibe o post na tela, criar no feedjs
 }
 
-// exibir posts
-export async function createPost() {
-  const docRef = await addDoc(collection(db, 'posts'), {
-    data: ' ',
-    text: ' ',
-  });
-  console.log('Nova Postagem', docRef.id); // 
-}
-
-// adicionar e gerenciar dados
-
-
 // editPost
-
+export const editPost = async (userId, newText, dataPost) => {
+  await updateDoc(doc(db, 'posts', userId), {
+    dataDoPost: dataPost,
+    textoDoPost: newText,
+    idUser: userId,
+  });
+};
 
 // likePost (Aline)
 // deletePost (Alycia)
