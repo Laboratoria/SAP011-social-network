@@ -43,10 +43,9 @@ maxlength="200" rows=5 cols=20>
     console.log(newPost);
   });
 
-  lerPosts(exibirPost);
-
   function exibirPost(posts) {
     const postsExibir = container.querySelector('#posts');
+    postsExibir.innerHTML = ''; // limpa a tela e começa a colocar os posts em tela
     posts.forEach((element) => {
       const containerPosts = `
       <label id="container-posts"></label>
@@ -59,9 +58,9 @@ maxlength="200" rows=5 cols=20>
   }
   lerPosts(exibirPost);
 
-    // botão sair
-    const exitBtn = container.querySelector('#exit-btn');
-    exitBtn.addEventListener('click', exit);
+  // botão sair
+  const exitBtn = container.querySelector('#exit-btn');
+  exitBtn.addEventListener('click', exit);
 
   // editPost
   // const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
