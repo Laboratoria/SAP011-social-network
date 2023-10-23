@@ -1,38 +1,56 @@
-import
-{
+import {
   collection,
   query,
   onSnapshot,
+  orderBy,
   addDoc,
-} from 'firebase/firestore'; // collection são o conjunto de post lá em narnia
+  doc,
+  updateDoc,
+} from 'firebase/firestore';
+// collection são o conjunto de post lá em narnia
 import { db } from './config.js';
 
-// import { collection, addDoc } from 'firebase/firestore';
-// function sendPost
+// exibPost
+export function lerPosts(exibirPosts) {
+// console.log('lendo posts');
+  const q = query(collection(db, 'posts'), orderBy('data', 'asc')); // ordenar exibição de posts
 
-export function lerPosts(exibirPosts) {	
-  const q = query(collection(db, "posts"));	
+  const posts = [];
+  // onSnapshot atualiza em tempo real
+  onSnapshot(q, (querySnapshot) => {
+    querySnapshot.forEach((document) => { // pega cada um dos documentos que está em nárnia
+      const obj = {
+        dataDoPost: document.data().data,
+        textoDoPost: document.data().text,
+        idUser: document.id, // sequência de números e letras lá na collection que identifica o post
+      };
+      posts.push(obj);
+    });
+    // console.log('Posts', posts.join(''));
+    console.log('Posts', posts);
+    // são os posts que vieram de narnia e foram jogados numa array que está dentro da const linha 9
+    exibirPosts(posts); // essa função exibe o post na tela, criar no feedjs
+  });
+}
 
-
-  const unsubscribe = onSnapshot(q, (querySnapshot) => {	
-    const posts = [];	
-    querySnapshot.forEach((doc) => {	
-      posts.push(doc.data().text);	
-    });	
-    console.log("Posts", posts.join(", "));	
-    exibirPosts(posts);	
-    // ao inves de console uma funçao que exibe os posts em tela	
-  })	
-};
-
-// createPost
 export async function createPost(textPost) {
-  addDoc(collection(db, 'posts'), {
-    data: new Date(),
+  console.log(textPost);
+  await addDoc(collection(db, 'posts'), {
+    data: new Date(), // pega a data atual
     text: textPost,
   });
-  console.log('Nova Postagem', docRef.id);
 }
+// editPost
+// export async function editPost(userId, newText, dataPost) {
+//   await updateDoc(doc(db, 'posts', userId), {
+//     dataDoPost: dataPost,
+//     textoDoPost: newText,
+//     idUser: userId,
+//   });
+// }
+
+// createPost
+
 
 // deletePost
 

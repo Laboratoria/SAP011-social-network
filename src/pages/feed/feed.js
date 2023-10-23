@@ -1,6 +1,6 @@
-import { createPost } from "../../firebase/firestore";
-// import { signOut } from 'firebase/auth';
-import { lerPosts } from '../../firebase/firestore.js';
+import { lerPosts, createPost } from '../../firebase/firestore.js';
+import editbutton from '../../img/editbutton.png';
+import favoritebutton from '../../img/favorite.png';
 import { exit } from '../../firebase/firebase.js';
 
 export default () => {
@@ -36,9 +36,10 @@ maxlength="200" rows=5 cols=20>
       `;
 
   container.innerHTML = template;
+
   container.querySelector('#post-btn').addEventListener('click', () => {
     const newPost = container.querySelector('#new-post-txt').value;
-    createPost(newPost);
+    createPost(newPost)
     console.log(newPost);
   });
 
@@ -46,21 +47,38 @@ maxlength="200" rows=5 cols=20>
 
   function exibirPost(posts) {
     const postsExibir = container.querySelector('#posts');
-    posts.forEach((post) => {
+    posts.forEach((element) => {
       const containerPosts = `
-   <label for="containerPosts"></label>
-   <textarea id="containerPosts" minlength="20" maxlength="200" rows=5 cols=20>${post}</textarea>
-   `;
+      <label id="container-posts"></label>
+      <textarea id="container-posts" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
+      <img id="edit-btn" alt="botão editar" src="${editbutton}"/>
+      <img id="favorite-btn" alt="curtida coração" src="${favoritebutton}"/>
+      `;
       postsExibir.innerHTML += containerPosts;
     });
   }
+  lerPosts(exibirPost);
 
-  // botão sair
-  const exitBtn = container.querySelector('#exit-btn');
-  exitBtn.addEventListener('click', exit);
+    // botão sair
+    const exitBtn = container.querySelector('#exit-btn');
+    exitBtn.addEventListener('click', exit);
+
+  // editPost
+  // const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
+  //     if (buttonEdit) {
+  //       // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
+  //       // pego o texto a ser editado pelo id?
+  //     } else if {
+  //       // alerta de alteração com sucesso 
+  //     } else {
+  //       // aviso de erro ao armazenar alteração
+  //     }
+  //   });
 
   return container;
 };
+
+
 
 // armazenar no firebase
 // adição(addDoc), leitura (getDoc), atualizar (UpdateDoc), deletar (deletDoc) metódos do firestore
