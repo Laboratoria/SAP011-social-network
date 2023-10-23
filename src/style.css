@@ -47,7 +47,6 @@ img {
     margin: 0;
     padding: 0;
 }
-
 a {
     color: black;
     text-decoration: none;
@@ -61,7 +60,7 @@ a {
     color: black;
 }
 
-google-button {
+#google-button {
     width: 80px;
     height: 40px;
     background-color: #818c2b;

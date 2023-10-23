@@ -22,8 +22,8 @@ export default () => {
   </form>
   <br>
   ou
-  <form id="google-button">
-    <button>Botão do Google</button>
+  <form>
+    <button id="google-button">Botão do Google</button>
   </form>
   <br>
   <form id="register-login">
