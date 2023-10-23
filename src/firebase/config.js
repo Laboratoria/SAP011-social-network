@@ -1,6 +1,5 @@
 import { initializeApp } from 'firebase/app'; // é a primeira importação que deve ser feita
 import { getFirestore } from 'firebase/firestore';
-
 // import { getAnalytics } from 'firebase/analytics'; não é necessário neste momento
 
 const firebaseConfig = {
@@ -14,6 +13,6 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig); // inicializar
+export const app = initializeApp(firebaseConfig); // inicialização do aplicativo como um todo
 // const analytics = getAnalytics(app);
-export const db = getFirestore(app); // banco de dados
+export const db = getFirestore(app); // banco de dados, exportado para o feed

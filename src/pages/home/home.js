@@ -32,9 +32,10 @@ export default () => {
   </form>
 </section>
 `;
-    
 
   container.innerHTML = template; // coloco o conteúdo do template dentro do innerhtml
+
+  // fazer um botão para logout dentro do inner container
 
   // email e senha
 
@@ -44,7 +45,7 @@ export default () => {
   const registerBtn = container.querySelector('#register-btn'); // variável que pega a ação do botão
   registerBtn.addEventListener('click', (event) => { // cadastrar e cria a página de cadastro
     event.preventDefault();
-    console.log('cliquei');
+    // console.log('cliquei');
     window.location.hash = '#register'; // para abrir a página de register
   });
 
@@ -63,7 +64,7 @@ export default () => {
       .catch((error) => {
         // Será executado se der erro
         console.log(error);
-        alert('erro');
+        alert('erro ao logar');
       });
   });
 
