@@ -43,13 +43,11 @@ export default () => {
     const password = container.querySelector('#password-id').value;
     const cadastroName = container.querySelector('#cadastro-name').value;
     const confirmPassword = container.querySelector('#confirm-password').value;
-    console.log(email, password);
     registerEmail(email, password, cadastroName, confirmPassword)
       .then(() => { // Será executado se der certo
         window.location.hash = '#feed';
       })
       .catch((error) => { // Será executado se der erro
-        console.log(error);
         alert('erro');
       });
   });

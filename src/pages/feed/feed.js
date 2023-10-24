@@ -1,6 +1,7 @@
-import { lerPosts, createPost, editPost } from '../../firebase/firestore.js';
+import { lerPosts, createPost, editPost, deletePost   } from '../../firebase/firestore.js';
 import editbutton from '../../img/editbutton.png';
 import favoritebutton from '../../img/favorite.png';
+import deletebutton from '../../img/delete.png';
 import { exit } from '../../firebase/firebase.js';
 
 export default () => {
@@ -32,6 +33,7 @@ maxlength="200" rows=5 cols=20>
 <i class="material-icons custom-icon like" id="like">
 <a href="/#feed">favorite</a></i> <!-- Ícone de like do post -->
 <p>
+
 <section id ='posts'></section>
       `;
 
@@ -39,23 +41,28 @@ maxlength="200" rows=5 cols=20>
 
   container.querySelector('#post-btn').addEventListener('click', () => {
     const newPost = container.querySelector('#new-post-txt').value;
-    createPost(newPost)
-    console.log(newPost);
+    createPost(newPost);
   });
 
   function exibirPost(posts) {
     const postsExibir = container.querySelector('#posts');
-    postsExibir.innerHTML = ''; // limpa a tela e começa a colocar os posts em tela
+    postsExibir.innerHTML = ' '; // limpa a tela e começa a colocar os posts em tela
     posts.forEach((element) => {
       const containerPosts = `
       <label id="container-posts"></label>
       <textarea id="container-posts" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
-      <img id="edit-btn" alt="botão editar" data-postid="${element.idPost}" src="${editbutton}"/>
-      <img id="favorite-btn" alt="curtida coração" data-postid="${element.idPost}" src="${favoritebutton}"/>
+      <img id="edit-btn" alt="botão editar" src="${editbutton}" data-postid="${element.idPost}"/>
+      <img id="favorite-btn" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
+      <img id="delete-btn" alt="apagar postagem" class="delete-btn" src="${deletebutton}" data-postid="${element.idPost}" />
       `;
       postsExibir.innerHTML += containerPosts;
     });
   }
+
+   const postDelete =  container.querySelector('#delete-btn').addEventListener('click', () =>{
+    deletePost(postDelete);
+    });
+
   lerPosts(exibirPost);
 
   // botão sair
