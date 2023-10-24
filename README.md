@@ -69,7 +69,7 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 * Google Fonts - https://fonts.google.com/icons
 * Modelo de design - https://www.canva.com/
 
-#Ícones:
+Ícones:
 
 * Home: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 * About/Like: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -77,7 +77,7 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 * Delete: 
 * Sair: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-#Fontes:
+Fontes:
 * Chonburi : https://fonts.google.com/specimen/Chonburi
   
 ## Desenvolvedoras
