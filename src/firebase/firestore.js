@@ -19,12 +19,12 @@ export function lerPosts(exibirPosts) {
   // onSnapshot atualiza em tempo real
   onSnapshot(q, (querySnapshot) => {
     querySnapshot.forEach((document) => { // pega cada um dos documentos que está em nárnia
-      const obj = {
+      const userObj = {
         dataDoPost: document.data().data,
         textoDoPost: document.data().text,
         idPost: document.id, // sequência de números e letras lá na collection que identifica o post
       };
-      posts.push(obj);
+      posts.push(userObj);
     });
     // console.log('Posts', posts.join(''));
     console.log('Posts', posts);
