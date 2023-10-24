@@ -2,7 +2,7 @@
 
 ## Índice
 
-** [1.Prefácio](#1-prefácio)
+* [1.Prefácio](#1-prefácio)
 * [2.Resumo do Projeto](#2-resumo-do-projeto)
 * [3.História de Usuário](#3-historia-de-usuario)
 * [4.Protótipo](#4-protótipo)
@@ -33,9 +33,9 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 
 
 ## 3. História de Usuários
-* * * História de usuário 1: 
-* * * História de usuário 2:
-* * * História de usuário 3:
+*  História de usuário 1: 
+*  História de usuário 2:
+*  História de usuário 3:
 
   
 ## 4. Protótipo
@@ -52,28 +52,28 @@ Desktop
 
 ## 7. Tecnologias e ferramentas utilizadas:
 * Visual Studio Code
-* * * HTML5
-* * * CSS
-* * * Javascript
-* * * Gitbash
-* * * Github
-* * * Firebase
-* * * Canva
-* * * Trello
-* * * Nodejs
-* * *  Vite
+* HTML5
+* CSS
+* Javascript
+* Gitbash
+* Github
+* Firebase
+* Canva
+* Trello
+* Nodejs
+* Vite
   
 ## 8. Melhorias futuras
-* * * Fazer com que o nome do usuário apareça nas postagens 
-* * * Botão Vinculado ao Google esteja em funcionamento para autenticação
-* * * Testes Unitários
+* Fazer com que o nome do usuário apareça nas postagens 
+* Botão Vinculado ao Google esteja em funcionamento para autenticação
+* Testes Unitários
 
 
 ## 9. Créditos
-* * *  Google Fonts - https://fonts.google.com/icons
-* * * Modelo de design - https://www.canva.com/
+* Google Fonts - https://fonts.google.com/icons
+* Modelo de design - https://www.canva.com/
 
 ## Desenvolvedoras
-* *  Aline https://github.com/aliun1 | https://www.linkedin.com/in/alinejvieira/
-* * Alycia "https://github.com/alycia00 | https://www.linkedin.com/in/alyciag2004/
-* * Pamela "https://github.com/PamelitaDandolo | https://www.linkedin.com/in/pameladandolo/
+* Aline https://github.com/aliun1 | https://www.linkedin.com/in/alinejvieira/
+* Alycia "https://github.com/alycia00 | https://www.linkedin.com/in/alyciag2004/
+* Pamela "https://github.com/PamelitaDandolo | https://www.linkedin.com/in/pameladandolo/
