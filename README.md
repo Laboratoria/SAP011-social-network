@@ -41,7 +41,6 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 
   
 ## 4. Protótipo
-![Mobile](Design sem nome (2).png)
 
 ## 5. Testes de Usabilidade
 
