@@ -58,11 +58,11 @@ Desktop
 * Gitbash
 * Github
 * Firebase
-* Canva
-* Trello
 * Nodejs
 * Vite
-  
+* Canva
+* Trello
+
 ## 8. Melhorias futuras
 * Fazer com que o nome do usuário apareça nas postagens 
 * Botão Vinculado ao Google esteja em funcionamento para autenticação
