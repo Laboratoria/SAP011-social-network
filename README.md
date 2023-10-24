@@ -52,7 +52,7 @@ Desktop
 
 ## 7. Tecnologias e ferramentas utilizadas:
 * Visual Studio Code
-* * HTML5
+* * * HTML5
 * CSS
 * Javascript
 * Gitbash
