@@ -45,14 +45,12 @@ export default () => {
   const registerBtn = container.querySelector('#register-btn'); // variável que pega a ação do botão
   registerBtn.addEventListener('click', (event) => { // cadastrar e cria a página de cadastro
     event.preventDefault();
-    // console.log('cliquei');
     window.location.hash = '#register'; // para abrir a página de register
   });
 
   // botão entrar
   const enterBtn = container.querySelector('#enter-btn');
   enterBtn.addEventListener('click', (event) => {
-    console.log('entrei');
     event.preventDefault();
     const email = container.querySelector('#email-login').value;
     const password = container.querySelector('#password-login').value;
@@ -63,7 +61,6 @@ export default () => {
       })
       .catch((error) => {
         // Será executado se der erro
-        console.log(error);
         alert('erro ao logar');
       });
   });
