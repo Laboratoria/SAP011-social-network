@@ -58,18 +58,23 @@ Desktop
 * HTML5
 * CSS
 * Javascript
-* Canva
 * Firebase
-* Trello
 * Visual Studio Code
 * Gitbash
 * Github
-
+* Canva
+* Trello
+* Nodejs
+* Vite
   
 ## 9. Melhorias futuras
+* Fazer com que o nome do usuário apareça nas postagens 
+* Botão Vinculado ao Google esteja em funcionamento para autenticação
+
 
 ## 10. Créditos
 * Google Fonts - https://fonts.google.com/icons
+* Modelo de design - https://www.canva.com/
 
 ## Desenvolvedoras
 * Aline https://github.com/aliun1 | https://www.linkedin.com/in/alinejvieira/
