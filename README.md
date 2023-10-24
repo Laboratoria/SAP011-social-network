@@ -1,7 +1,22 @@
 # Social Network
 ## Índice
 
-[1.Prefácio] (#1-prefácio)
+
+## Índice
+
+* [1. Preâmbulo](#1-preâmbulo)
+* [2. Resumo do projeto](#2-resumo-do-projeto)
+* [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
+* [4. Considerações gerais](#4-considerações-gerais)
+* [5. Critérios mínimos de aceitação do
+  projeto](#5-critérios-mínimos-de-aceitação-do-projeto)
+* [6. Hacker edition](#6-hacker-edition)
+* [7. Considerações técnicas](#7-considerações-técnicas)
+* [8. Pistas, dicas e leituras
+  complementares](#8-pistas-dicas-e-leituras-complementares)
+* [9. Checklist](#9-checklist)
+
+* [1.Prefácio](#1-prefácio)
 * [2.Resumo do Projeto] (#2-resumo-do-projeto).
 * [3.História de Usuário] (#3-historia-de-usuario).
 * [4.Protótipo] (#4-protótipo).
@@ -11,6 +26,8 @@
 * [8.Tecnologias e ferramentas utilizadas] (#8-tecnologias-e-ferramentas-utilizadas).
 * [9.Melhorias futuras] (#9-melhorias-futuras).
 * [10.Créditos] (#10-creditos).
+
+  
 ## 1. Prefácio
 Este é o projeto que nasceu do Bootcamp da Laboratoria: uma aplicação
 web mobile first. Nosso foco é simples, porém significativo. Permitimos
