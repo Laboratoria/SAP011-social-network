@@ -1,4 +1,4 @@
-import { lerPosts, createPost } from '../../firebase/firestore.js';
+import { lerPosts, createPost, likePost } from '../../firebase/firestore.js';
 import editbutton from '../../img/editbutton.png';
 import favoritebutton from '../../img/favorite.png';
 import { exit } from '../../firebase/firebase.js';
@@ -54,6 +54,10 @@ maxlength="200" rows=5 cols=20>
       <img id="favorite-btn" alt="curtida coração" src="${favoritebutton}"/>
       `;
       postsExibir.innerHTML += containerPosts;
+      container.querySelector('#favorite-btn').addEventListener('click', (event) => {
+        console.log(event.target.dataset)
+    //      likePost(likePost);
+          });
       console.log('desenhando novos posts')
     });
   }
@@ -75,10 +79,14 @@ maxlength="200" rows=5 cols=20>
   //       // aviso de erro ao armazenar alteração
   //     }
   //   });
-
+/*
+   container.querySelector('#favorite-btn').addEventListener('click', (event) => {
+    console.log(event.target.dataset)
+//      likePost(likePost);
+      });
+*/
   return container;
 };
-
 
 
 // armazenar no firebase
