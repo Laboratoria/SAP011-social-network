@@ -1,4 +1,5 @@
-# Social Network
+# Rede Social
+
 ## Índice
 
 * [1.Prefácio](#1-prefácio)
@@ -7,10 +8,9 @@
 * [4.Protótipo](#4-protótipo)
 * [5.Testes de Usabilidade](#5-testes-de-usabilidade)
 * [6.Critérios de Pronto](#6-critérios-de-pronto)
-* [7.Testes Unitários](#7-testes-unitarios)
-* [8.Tecnologias e ferramentas utilizadas](#8-tecnologias-e-ferramentas-utilizadas)
-* [9.Melhorias futuras](#9-melhorias-futuras)
-* [10.Créditos](#10-creditos)
+* [7.Tecnologias e ferramentas utilizadas](#8-tecnologias-e-ferramentas-utilizadas)
+* [8.Melhorias futuras](#9-melhorias-futuras)
+* [9.Créditos](#10-creditos)
 
   
 ## 1. Prefácio
@@ -33,7 +33,7 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 
 
 ## 3. História de Usuários
-* História de usuário 1:
+* História de usuário 1: 
 * História de usuário 2:
 * História de usuário 3:
 
@@ -50,29 +50,26 @@ Desktop
 
 ## 6. Critérios de Pronto
 
-
-## 7. Testes Unitários
-
-
-## 8. Tecnologias e ferramentas utilizadas:
-* HTML5
+## 7. Tecnologias e ferramentas utilizadas:
+* Visual Studio Code
+* * HTML5
 * CSS
 * Javascript
-* Firebase
-* Visual Studio Code
 * Gitbash
 * Github
+* Firebase
 * Canva
 * Trello
 * Nodejs
 * Vite
   
-## 9. Melhorias futuras
+## 8. Melhorias futuras
 * Fazer com que o nome do usuário apareça nas postagens 
 * Botão Vinculado ao Google esteja em funcionamento para autenticação
+* Testes Unitários
 
 
-## 10. Créditos
+## 9. Créditos
 * Google Fonts - https://fonts.google.com/icons
 * Modelo de design - https://www.canva.com/
 
