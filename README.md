@@ -2,15 +2,15 @@
 ## Índice
 
 * [1.Prefácio](#1-prefácio)
-* [2.Resumo do Projeto](#2-resumo-do-projeto).
-* [3.História de Usuário](#3-historia-de-usuario).
-* [4.Protótipo](#4-protótipo).
-* [5.Testes de Usabilidade](#5-testes-de-usabilidade).
-* [6.Critérios de Pronto](#6-critérios-de-pronto).
-* [7.Testes Unitários](#7-testes-unitarios).
-* [8.Tecnologias e ferramentas utilizadas](#8-tecnologias-e-ferramentas-utilizadas).
-* [9.Melhorias futuras](#9-melhorias-futuras).
-* [10.Créditos](#10-creditos).
+* [2.Resumo do Projeto](#2-resumo-do-projeto)
+* [3.História de Usuário](#3-historia-de-usuario)
+* [4.Protótipo](#4-protótipo)
+* [5.Testes de Usabilidade](#5-testes-de-usabilidade)
+* [6.Critérios de Pronto](#6-critérios-de-pronto)
+* [7.Testes Unitários](#7-testes-unitarios)
+* [8.Tecnologias e ferramentas utilizadas](#8-tecnologias-e-ferramentas-utilizadas)
+* [9.Melhorias futuras](#9-melhorias-futuras)
+* [10.Créditos](#10-creditos)
 
   
 ## 1. Prefácio
@@ -73,5 +73,5 @@ Desktop
 
 ## Desenvolvedoras
 * Aline https://github.com/aliun1 | https://www.linkedin.com/in/alinejvieira/
-* Alycia href="https://github.com/alycia00 | https://www.linkedin.com/in/alyciag2004/
-* Pamela href="https://github.com/PamelitaDandolo | https://www.linkedin.com/in/pameladandolo/
+* Alycia "https://github.com/alycia00 | https://www.linkedin.com/in/alyciag2004/
+* Pamela "https://github.com/PamelitaDandolo | https://www.linkedin.com/in/pameladandolo/
