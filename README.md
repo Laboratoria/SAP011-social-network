@@ -1,4 +1,4 @@
-# Rede Social
+<p align="center">#Rede Social 🖥 </p>
 
 ![Badge em desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
@@ -41,9 +41,8 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 
   
 ## 4. Protótipo
-<img src="[https://user-images.githubusercontent.com/105131652/186226747-206a5cb6-0390-445f-9ab7-aaa88827750e.jpg](https://onlineconvertfree.com/pt/convert/png/)"/>
+<img src="(https://user-images.githubusercontent.com/105131652/186226747-206a5cb6-0390-445f-9ab7-aaa88827750e.jpg](https://onlineconvertfree.com/pt/convert/png/)"/>
 <img src="https://onlineconvertfree.com/pt/convert/png/)" width="200"/>
-
 
 
 ## 5. Testes de Usabilidade
