@@ -39,7 +39,7 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 
   
 ## 4. Protótipo
-Mobile
+Mobile:
 "C:\Users\55119\Downloads\Design sem nome (2).png"
 "C:\Users\55119\Downloads\Design sem nome (1).png"
 Desktop
