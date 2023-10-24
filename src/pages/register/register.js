@@ -1,13 +1,13 @@
 // importar a função que cria o usuário
 import { registerEmail } from '../../firebase/firebase';
-import { login } from '../../firebase/firebase';
 
 export default () => {
   const container = document.createElement('div');
 
   const template = `
-    <section>
-      <form id="cadastro-name">
+  <section id='containers-login'>
+  <h1>Cadastro</h1>
+      <form id="name-cadastro">
         <label>Nome:</label>
         <input type="texto" id ="cadastro-name" placeholder="Digite seu nome..." name="nome"/>
       </form>
@@ -22,23 +22,18 @@ export default () => {
         <input type="password" id="password-id" placeholder= "Crie sua senha..." name="senha"/>
       </form>
 
-      <form id="confirm-password">
+      <form id="password-confirm">
         <label>Confirmação:</label>
         <input type="password" id="confirm-password" placeholder= "Confirme sua senha..." name="confirmação-senha"/>
       </form>
-    </section>
+    
 
     <form id="register-login">
         <button id="confirm-btn">Cadastrar</button>
       </form>
+      </section>
     `;
   container.innerHTML = template;
-  // criar evento click do confirm-btn
-  // const confirmBtn = document.getElementById('confirm-btn');
-  // confirmBtn.addEventListener('click', () => {
-  //   window.location.hash = '#feed';
-  // });
-  // fazer a chamada da função registerEmail (localizada no firebase.js)
 
   // executar a função registerEmail através da manipulação de DOM
   const confirmBtn = container.querySelector('#confirm-btn');
@@ -53,10 +48,11 @@ export default () => {
       .then(() => { // Será executado se der certo
         window.location.hash = '#feed';
       })
-      .catch((error) => { //Será executado se der erro
-        console.log(error)
-        alert('erro') 
-      })
+      .catch((error) => { // Será executado se der erro
+        console.log(error);
+        alert('erro');
+      });
   });
   return container;
 };
+

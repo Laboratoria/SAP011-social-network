@@ -1,29 +1,155 @@
 * {
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
-
 }
 
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #9b4922;
+    display: flex;
+    justify-content: center;
+    align-items: center, flex-start;
+    height: 100vh;
+    margin: 0;
 }
+
+
+
 h1 {
-    align-items: center;
     font-family: "Chonburi";
     font-size: normal;
 }
-footer {
-    align-items: center;
 
+
+footer {
+    position: fixed;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #efd8c0;
+    color: #0a0a0a;
+    text-align: center;
+    padding: 5px;
 }
-#container {
+
+.container {
     background-color: #9b4922;
 }
+
+
 img {
-  text-align: center;
-  margin: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.like {
+    color: #efd8c0;
+}
+
+.like:active {
+    color: black;
+}
+
+#google-button {
+    width: 80px;
+    height: 40px;
+    background-color: #818c2b;
+    color: #FFF;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#register-btn {
+    width: 80px;
+    height: 40px;
+    background-color: #818c2b;
+    color: #FFF;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#enter-btn {
+    width: 80px;
+    height: 40px;
+    background-color: #efd8c0;
+    color: #9b4922;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#email-login {
+    height: 30px;
+    background-color: #efd8c0;
+    border-radius: 50px;
+}
+
+#password-login {
+    height: 30px;
+    background-color: #efd8c0;
+    border-radius: 50px;
+}
+button {
+    margin: 10px;
+}
+
+
+
+
+
+
+
+@media screen and (min-width:300px) and (max-width: 2000px) {
+    #containers-login {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        background-color: #efd8c0;
+        color: #9b4922;
+        margin-left: 10px;
+        font-size: 25px;
+        width: 320px;
+        gap: 10px;
+        margin: auto;
+        margin-top: 120px;
+        align-items: center;
+        border-radius: 13px;
+        text-align: center;
+    }
+
+    #cadastro-name,
+    #email-id,
+    #password-id,
+    #confirm-password {
+        background-color: #efd8c0;
+        width: 150px;
+        height: 38px;
+        border-color: #9b4922;
+        border-radius: 13px;
+        text-align: center;
+    }
+
+    #confirm-btn {
+        width: 150px;
+        height: 38px;
+        color: #efd8c0;
+        background-color: #9b4922;
+        border-radius: 13px;
+
+    }
+
+    #container {
+        background-color: #9b4922;
+    }
 }
