@@ -1,5 +1,7 @@
 # Rede Social
 
+![Badge em desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+
 ## Índice
 
 * [1.Prefácio](#1-prefácio)
@@ -33,17 +35,15 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 
 
 ## 3. História de Usuários
-*  História de usuário 1: 
-*  História de usuário 2:
+*  História de usuário 1: Cores
+*  História de usuário 2: 
 *  História de usuário 3:
 
   
 ## 4. Protótipo
 Mobile:
-"C:\Users\55119\Downloads\Design sem nome (2).png"
+![Mobile] ("file:///C:/Users/55119/Downloads/Design%20sem%20nome%20(2).pngC:\Users\55119\Downloads\Design sem nome (2).png").
 "C:\Users\55119\Downloads\Design sem nome (1).png"
-Desktop
-
 
 ## 5. Testes de Usabilidade
 
@@ -68,11 +68,21 @@ Desktop
 * Botão Vinculado ao Google esteja em funcionamento para autenticação
 * Testes Unitários
 
-
 ## 9. Créditos
 * Google Fonts - https://fonts.google.com/icons
 * Modelo de design - https://www.canva.com/
 
+#Ícones:
+
+* Home: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+* About/Like: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+* Editar: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+* Delete: 
+* Sair: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+#Fontes:
+* Chonburi : https://fonts.google.com/specimen/Chonburi
+  
 ## Desenvolvedoras
 * Aline https://github.com/aliun1 | https://www.linkedin.com/in/alinejvieira/
 * Alycia "https://github.com/alycia00 | https://www.linkedin.com/in/alyciag2004/
