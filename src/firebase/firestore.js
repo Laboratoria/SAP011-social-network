@@ -22,7 +22,7 @@ export function lerPosts(exibirPosts) {
       const obj = {
         dataDoPost: document.data().data,
         textoDoPost: document.data().text,
-        idUser: document.id, // sequência de números e letras lá na collection que identifica o post
+        idPost: document.id, // sequência de números e letras lá na collection que identifica o post
       };
       posts.push(obj);
     });
@@ -41,13 +41,12 @@ export async function createPost(textPost) {
   });
 }
 // editPost
-// export async function editPost(userId, newText, dataPost) {
-//   await updateDoc(doc(db, 'posts', userId), {
-//     dataDoPost: dataPost,
-//     textoDoPost: newText,
-//     idUser: userId,
-//   });
-// }
+export async function editPost(idPost, newText, dataPost) {
+  await updateDoc(doc(db, 'posts', idPost), {
+    dataDoPost: dataPost,
+    textoDoPost: newText,
+  });
+}
 
 // createPost
 
