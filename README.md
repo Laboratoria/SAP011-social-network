@@ -41,9 +41,7 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 
   
 ## 4. Protótipo
-Mobile:
-![Mobile] ("file:///C:/Users/55119/Downloads/Design%20sem%20nome%20(2).pngC:\Users\55119\Downloads\Design sem nome (2).png").
-"C:\Users\55119\Downloads\Design sem nome (1).png"
+![Mobile](Design sem nome (2).png)
 
 ## 5. Testes de Usabilidade
 
