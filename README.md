@@ -1,6 +1,6 @@
 # Social Network
 ## Índice
-* [1.Prefácio] (#1-prefácio).
+* [1.Prefácio] (#1-prefácio)
 * [2.Resumo do Projeto] (#2-resumo-do-projeto).
 * [3.História de Usuário] (#3-historia-de-usuario).
 * [4.Protótipo] (#4-protótipo).
