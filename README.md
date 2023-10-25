@@ -35,14 +35,14 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 
 
 ## 3. História de Usuários ⌨️
-*  História de usuário 1: 
-*  História de usuário 2: 
-*  História de usuário 3:
+*  História de usuário 1: "Como cliente, solicitou que o verde poderia ser um tom mais fechado"
+*  História de usuário 2: "Login com Facebook. Hoje só uso Facebook pra logar em outros apps pq nem sempre quero conectar meu e-mail principal."
+*  História de usuário 3: "Acho que poderiam pensar em fechar parcerias com alguns restaurantes e fornecer desconto ou algum tipo de benefício aos usuários, algo que também incentive que eles conhecem de fato o estabelecimento"
 
   
 ## 4. Protótipo 🎨
 
-<img src="./src\img\1.png"/>
+
 
 ## 5. Testes de Usabilidade 🗂
 
