@@ -5,7 +5,8 @@ import {
   orderBy,
   addDoc,
   doc,
-  deleteDoc} from 'firebase/firestore';
+  updateDoc,
+} from 'firebase/firestore';
 // collection são o conjunto de post lá em narnia
 import { db } from './config.js';
 

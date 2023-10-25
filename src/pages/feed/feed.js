@@ -47,6 +47,7 @@ maxlength="200" rows=5 cols=20>
       `;
       postsExibir.innerHTML += containerPosts;
     });
+    
   }
 
    const postDelete =  container.querySelector('#delete-btn').addEventListener('click', () =>{
@@ -61,20 +62,21 @@ maxlength="200" rows=5 cols=20>
 
   // editPost
   const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
-      editPost.then(() =>) {
+      editPost(newText, dataPost)
+      .then(() => {
 
-      }
+      }) 
         // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
         // pego o texto a ser editado pelo id?
       
-      .catch{
-        // alerta de alteração não realizada 
-      }
-      
-    };
+      .catch((error) =>{
 
+
+        alert('erro ao atualizar postagem', error);
+      })
+        
   return container;
-};
+});
 
 
 
