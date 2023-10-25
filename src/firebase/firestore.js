@@ -43,8 +43,10 @@ export async function editPost(idPost, newText, dataPost) {
   });
 }
 
-// export function deletePost(){
-//   await deleteDoc(doc(db, "posts", ""));
-  
-// }
+export async function deletePost(idPost, newText, dataPost){
+  await deleteDoc(doc(db, "posts", idPost), {
+  dataDoPost: dataPost,
+  textoDoPost: newText,
+});
+}
 

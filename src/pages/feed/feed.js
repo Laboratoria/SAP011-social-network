@@ -1,8 +1,8 @@
-import { lerPosts, createPost, editPost, deletePost   } from '../../firebase/firestore.js';
+import { lerPosts, createPost, editPost, deletePost } from '../../firebase/firestore.js';
+import { exit } from '../../firebase/firebase.js';
 import editbutton from '../../img/editbutton.png';
 import favoritebutton from '../../img/favorite.png';
 import deletebutton from '../../img/delete.png';
-import { exit } from '../../firebase/firebase.js';
 
 export default () => {
   const container = document.createElement('div');
@@ -59,9 +59,12 @@ maxlength="200" rows=5 cols=20>
     });
   }
 
-   const postDelete =  container.querySelector('#delete-btn').addEventListener('click', () =>{
-    deletePost(postDelete);
-    });
+  const postDelete = container.querySelector('#delete-btn');
+  postDelete.addEventListener('click', () => {
+    deletePost(postDelete)
+  });
+
+  
 
   lerPosts(exibirPost);
 
@@ -70,18 +73,18 @@ maxlength="200" rows=5 cols=20>
   exitBtn.addEventListener('click', exit);
 
   // editPost
-  const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
-      editPost.then(() =>) {
+  // const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
+  //     editPost.then(() =>) {
 
-      }
-        // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
-        // pego o texto a ser editado pelo id?
-      
-      .catch{
-        // alerta de alteração não realizada 
-      }
-      
-    };
+  //     }
+  //       // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
+  //       // pego o texto a ser editado pelo id?
+
+  //     .catch{
+  //       // alerta de alteração não realizada 
+  //     }
+
+  //   };
 
   return container;
 };
