@@ -1,4 +1,4 @@
-import { lerPosts, createPost, editPost, deletePost } from '../../firebase/firestore.js';
+import { lerPosts, createPost, likePost, editPost, deletePost } from '../../firebase/firestore.js';
 import { exit } from '../../firebase/firebase.js';
 import editbutton from '../../img/editbutton.png';
 import favoritebutton from '../../img/favorite.png';
@@ -56,6 +56,10 @@ maxlength="200" rows=5 cols=20>
       <img id="delete-btn" alt="apagar postagem" class="delete-btn" src="${deletebutton}" data-postid="${element.idPost}" />
       `;
       postsExibir.innerHTML += containerPosts;
+      container.querySelector('#favorite-btn').addEventListener('click', (event) => {
+        console.log(event.target.dataset)
+    //      likePost(likePost);
+          });
     });
   }
 
@@ -85,10 +89,14 @@ maxlength="200" rows=5 cols=20>
   //     }
 
   //   };
-
+/*
+   container.querySelector('#favorite-btn').addEventListener('click', (event) => {
+    console.log(event.target.dataset)
+//      likePost(likePost);
+      });
+*/
   return container;
 };
-
 
 
 // armazenar no firebase
