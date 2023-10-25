@@ -76,9 +76,9 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 
 * [Home](https://fonts.google.com/icons?icon.query=user&selected=Material+Symbols+Outlined:face_3:FILL@0;wght@400;GRAD@0;opsz@24)
 * [About & Like](https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0)
-* Editar: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+* [Editar](https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200)
 * Delete: 
-* Sair: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+* [Sair](https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200)
 
 Fontes:
 * Chonburi : https://fonts.google.com/specimen/Chonburi
