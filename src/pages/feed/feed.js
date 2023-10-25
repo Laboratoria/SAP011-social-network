@@ -1,6 +1,8 @@
-import { lerPosts, createPost } from '../../firebase/firestore.js';
+import { lerPosts, createPost, editPost, deletePost   } from '../../firebase/firestore.js';
 import editbutton from '../../img/editbutton.png';
 import favoritebutton from '../../img/favorite.png';
+import deletebutton from '../../img/delete.png';
+import { exit } from '../../firebase/firebase.js';
 
 export default () => {
   const container = document.createElement('div');
@@ -11,60 +13,74 @@ export default () => {
 </header>
 
 <label>Nome</label>
-<section id="posts">
+<p>
 <textarea id="new-post-txt" placeholder="Digite seu post aqui..." minlength="20"
 maxlength="200" rows=5 cols=20>
 </textarea>
+<p>
+<button id="post-btn" type="submit">Postar</button>/
+<p>
+<i class="material-icons custom-icon like" id="like">
+<a href="/#feed">favorite</a></i> <!-- Ícone de like do post -->
+<p>
 
-<button id="post-btn" >Postar</button>
-
-</section>
-
+<section id ='posts'></section>
       `;
 
   container.innerHTML = template;
-  console.log("qualquer coisa mesmo")
-  console.log(container.querySelector('#post-btn'))
+
   container.querySelector('#post-btn').addEventListener('click', () => {
-    console.log("qualquer coisa");
+    const newPost = container.querySelector('#new-post-txt').value;
+    createPost(newPost);
   });
-  // container.querySelector('#post-btn').addEventListener('click', () => {
-  //   console.log("qualquer coisa");
-  //   // const newPost = container.querySelector('#new-post-txt').value;
-  //   // createPost(newPost);
-  // });
 
   function exibirPost(posts) {
     const postsExibir = container.querySelector('#posts');
+    postsExibir.innerHTML = ' '; // limpa a tela e começa a colocar os posts em tela
     posts.forEach((element) => {
       const containerPosts = `
       <label id="container-posts"></label>
       <textarea id="container-posts" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
-      <img id="edit-btn" alt="botão editar" src="${editbutton}"/>
-      <img id="favorite-btn" alt="curtida coração" src="${favoritebutton}"/>
+      <img id="edit-btn" alt="botão editar" src="${editbutton}" data-postid="${element.idPost}"/>
+      <img id="favorite-btn" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
+      <img id="delete-btn" alt="apagar postagem" class="delete-btn" src="${deletebutton}" data-postid="${element.idPost}" />
       `;
       postsExibir.innerHTML += containerPosts;
     });
   }
+
+   const postDelete =  container.querySelector('#delete-btn').addEventListener('click', () =>{
+    deletePost(postDelete);
+    });
+
   lerPosts(exibirPost);
 
+  // botão sair
+  const exitBtn = container.querySelector('#exit-btn');
+  exitBtn.addEventListener('click', exit);
+
   // editPost
-  // chamar a função do firestore de edição
   const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
-      if (buttonEdit) {
+      editPost.then(() =>) {
+
+      }
         // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
         // pego o texto a ser editado pelo id?
-      } else if {
-        // alerta de alteração com sucesso
-      } else {
-        // aviso de erro ao armazenar alteração
+      
+      .catch{
+        // alerta de alteração não realizada 
       }
-    });
+      
+    };
 
   return container;
 };
 
+
+
 // armazenar no firebase
 // adição(addDoc), leitura (getDoc), atualizar (UpdateDoc), deletar (deletDoc) metódos do firestore
 // adição precisa de um id, firebase cria com getDoc
-// firebase lê o banco de dados e armazena na array, depois printa em tela
+
+// printar o post em tela
+// firebase lê o banco de dados e armazena na array, depois printa
