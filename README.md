@@ -8,7 +8,7 @@
 * [2.Resumo do Projeto](#2-resumo-do-projeto)
 * [3.História de Usuário](#3-historia-de-usuario)
 * [4.Protótipo](#4-protótipo)
-* [5.Testes de Usabilidade](#5-testes-de-usabilidade)
+* [5.Objetivos de Aprendizagem](#5-testes-de-usabilidade)
 * [6.Critérios de Pronto](#6-critérios-de-pronto)
 * [7.Tecnologias e ferramentas utilizadas](#8-tecnologias-e-ferramentas-utilizadas)
 * [8.Melhorias futuras](#9-melhorias-futuras)
@@ -43,9 +43,12 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 ## 4. Protótipo 🎨
 
 
-
-## 5. Testes de Usabilidade 🗂
-
+## 5. Objetivos de Aprendizagem 🗂
+* CSS
+* Web APIs
+* Javascript
+* Controle de Versões (Git e GitHub)
+* UI UX Firebase FireStore
 
 ## 6. Critérios de Pronto ✔
 
