@@ -70,7 +70,7 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 
 ## 9. Créditos 🔗
 * [Google Fonts](https://fonts.google.com/icons)
-* [Modelo de design](https://www.canva.com/)
+* [Canva](https://www.canva.com/)
 
 Ícones: 
 
