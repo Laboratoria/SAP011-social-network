@@ -52,6 +52,12 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 * UI UX Firebase FireStore
 
 ## 6. Critérios de Pronto ✔
+* Ser uma SPA
+* Ser responsiva
+* Receber code review de pelo menos uma parceira de outra equipe
+* Fazer testes manuais buscando erros e imperfeições simples
+* Fazer testes de usabilidade e incorporar o feedback dos usuários como melhorias
+* Fazer deploy do aplicativo e marcar a versão (git tag)
 
 ## 7. Tecnologias e ferramentas utilizadas 🔨
 * Visual Studio Code
