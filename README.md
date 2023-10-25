@@ -48,7 +48,7 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 ## 5. Testes de Usabilidade 🗂
 
 
-## 6. Critérios de Pronto 
+## 6. Critérios de Pronto ✔
 
 ## 7. Tecnologias e ferramentas utilizadas 🔨
 * Visual Studio Code
