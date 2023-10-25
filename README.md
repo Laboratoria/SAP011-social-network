@@ -76,7 +76,7 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 * [Home](https://fonts.google.com/icons?icon.query=home&selected=Material+Symbols+Outlined:home:FILL@0;wght@400;GRAD@0;opsz@24)
 * [About & Like](https://fonts.google.com/icons?icon.query=like&selected=Material+Symbols+Outlined:favorite:FILL@0;wght@400;GRAD@0;opsz@24)
 * [Editar](https://fonts.google.com/icons?icon.query=edit&selected=Material+Symbols+Outlined:edit:FILL@0;wght@400;GRAD@0;opsz@24)
-* Delete
+* [Delete](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:delete:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=delete)
 * [Sair](https://fonts.google.com/icons?icon.query=logout&selected=Material+Symbols+Outlined:logout:FILL@0;wght@400;GRAD@0;opsz@24)
 
 Fontes:
