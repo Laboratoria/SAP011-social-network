@@ -65,7 +65,7 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 
 ## 8. Melhorias futuras 🚀
 * Fazer com que o nome do usuário apareça nas postagens 
-* Botão Vinculado ao Google esteja em funcionamento para autenticação
+* Botão Vinculado ao Google esteja em funcionamento para Autenticação
 * Testes Unitários
 
 ## 9. Créditos 🔗
