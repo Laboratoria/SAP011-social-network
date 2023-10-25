@@ -69,8 +69,8 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 * Testes Unitários
 
 ## 9. Créditos 🔗
-* Google Fonts - https://fonts.google.com/icons
-* Modelo de design - https://www.canva.com/
+* [Google Fonts](https://fonts.google.com/icons)
+* [Modelo de design](https://www.canva.com/)
 
 Ícones: 
 
@@ -81,9 +81,9 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 * [Sair](https://fonts.google.com/icons?icon.query=logout&selected=Material+Symbols+Outlined:logout:FILL@0;wght@400;GRAD@0;opsz@24)
 
 Fontes:
-* Chonburi : https://fonts.google.com/specimen/Chonburi
+* [Chonburi](https://fonts.google.com/specimen/Chonburi)
   
 ## Desenvolvedoras 🤝 ❤️
-* Aline https://github.com/aliun1 | https://www.linkedin.com/in/alinejvieira/
-* Alycia https://github.com/alycia00 | https://www.linkedin.com/in/alyciag2004/
-* Pamela https://github.com/PamelitaDandolo | https://www.linkedin.com/in/pameladandolo/
+* Aline - [Github](https://github.com/aliun1) [Linkedin](https://www.linkedin.com/in/alinejvieira/)
+* Alycia - [Github](https://github.com/alycia00) [Linkedin](https://www.linkedin.com/in/alyciag2004/)
+* Pamela - [Github](https://github.com/PamelitaDandolo) [Linkedin](https://www.linkedin.com/in/pameladandolo/)
