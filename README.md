@@ -85,5 +85,5 @@ Fontes:
   
 ## Desenvolvedoras 🤝 ❤️
 * Aline https://github.com/aliun1 | https://www.linkedin.com/in/alinejvieira/
-* Alycia "https://github.com/alycia00 | https://www.linkedin.com/in/alyciag2004/
-* Pamela "https://github.com/PamelitaDandolo | https://www.linkedin.com/in/pameladandolo/
+* Alycia https://github.com/alycia00 | https://www.linkedin.com/in/alyciag2004/
+* Pamela https://github.com/PamelitaDandolo | https://www.linkedin.com/in/pameladandolo/
