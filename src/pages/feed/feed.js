@@ -61,12 +61,13 @@ maxlength="200" rows=5 cols=20>
     //      likePost(likePost);
           });
     });
+    const postDelete = container.querySelector('#delete-btn');
+    postDelete.addEventListener('click', () => {
+      console.log('eu to tentando')
+      deletePost(postDelete)
+    });
   }
 
-  const postDelete = container.querySelector('#delete-btn');
-  postDelete.addEventListener('click', () => {
-    deletePost(postDelete)
-  });
 
   
 
