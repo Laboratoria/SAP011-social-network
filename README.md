@@ -44,6 +44,7 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 
 
 ## 5. Objetivos de Aprendizagem 🗂
+* HTML Semântico
 * CSS
 * Web APIs
 * Javascript
