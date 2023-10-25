@@ -15,7 +15,7 @@
 * [9.Créditos](#10-creditos)
 
   
-## 1. Prefácio
+## 1. Prefácio ✨ 
 Este é o projeto que nasceu do Bootcamp da Laboratoria: uma aplicação
 web mobile first. Nosso foco é simples, porém significativo. Permitimos
 que você se conecte, compartilhe e interaja. Cadastre-se com facilidade,
@@ -23,7 +23,7 @@ publique na timeline, interaja com outras histórias e crie conexões
 autênticas.
 
 
-## 2. Resumo do Projeto
+## 2. Resumo do Projeto 📝
 Este projeto é uma rede social dedicada a promover restaurantes
 de mulheres independentes e empreendedoras. Nosso principal
 objetivo é que com essa plataforma todos possam
@@ -45,10 +45,10 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 <img src="https://onlineconvertfree.com/pt/convert/png/)" width="200"/>
 
 
-## 5. Testes de Usabilidade 
+## 5. Testes de Usabilidade 🗂
 
 
-## 6. Critérios de Pronto
+## 6. Critérios de Pronto 
 
 ## 7. Tecnologias e ferramentas utilizadas 🔨
 * Visual Studio Code
@@ -63,7 +63,7 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 * Canva
 * Trello
 
-## 8. Melhorias futuras ✨
+## 8. Melhorias futuras 🚀
 * Fazer com que o nome do usuário apareça nas postagens 
 * Botão Vinculado ao Google esteja em funcionamento para autenticação
 * Testes Unitários
