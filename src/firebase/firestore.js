@@ -40,14 +40,15 @@ export async function createPost(textPost) {
     text: textPost,
   });
 }
+
 // editPost
-// export async function editPost(userId, newText, dataPost) {
-//   await updateDoc(doc(db, 'posts', userId), {
-//     dataDoPost: dataPost,
-//     textoDoPost: newText,
-//     idUser: userId,
-//   });
-// }
+export async function editPost(userId, newText, dataPost) {
+  await updateDoc(doc(db, 'posts', userId), {
+    dataDoPost: dataPost,
+    textoDoPost: newText,
+    idUser: userId,
+  });
+}
 
 // likePost (Aline)
 // deletePost (Alycia)

@@ -3,7 +3,6 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut, // apago?
   // signInWithPopup,
   // GoogleAuthProvider,
   // onAuthStateChanged, avisa o status do usuário (online ou não)

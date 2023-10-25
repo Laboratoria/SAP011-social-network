@@ -49,21 +49,20 @@ maxlength="200" rows=5 cols=20>
   lerPosts(exibirPost);
 
   // editPost
-  // const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => { // chamar a função do firestore de edição
-  //     if (buttonEdit) {
-  //       // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
-  //       // pego o texto a ser editado pelo id?
-  //     } else if {
-  //       // alerta de alteração com sucesso 
-  //     } else {
-  //       // aviso de erro ao armazenar alteração
-  //     }
-  //   });
+  // chamar a função do firestore de edição
+  const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
+      if (buttonEdit) {
+        // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
+        // pego o texto a ser editado pelo id?
+      } else if {
+        // alerta de alteração com sucesso
+      } else {
+        // aviso de erro ao armazenar alteração
+      }
+    });
 
   return container;
 };
-
-  
 
 // armazenar no firebase
 // adição(addDoc), leitura (getDoc), atualizar (UpdateDoc), deletar (deletDoc) metódos do firestore
