@@ -35,15 +35,14 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 
 
 ## 3. História de Usuários ⌨️
-*  História de usuário 1: Cores
+*  História de usuário 1: 
 *  História de usuário 2: 
 *  História de usuário 3:
 
   
 ## 4. Protótipo 🎨
-<img src="(https://user-images.githubusercontent.com/105131652/186226747-206a5cb6-0390-445f-9ab7-aaa88827750e.jpg](https://onlineconvertfree.com/pt/convert/png/)"/>
-<img src="https://onlineconvertfree.com/pt/convert/png/)" width="200"/>
 
+<img src="./src\img\1.png"/>
 
 ## 5. Testes de Usabilidade 🗂
 
