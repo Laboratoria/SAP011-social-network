@@ -1,6 +1,6 @@
 * {
-    /* margin: 0; */
     padding: 0;
+    font-family: "Chonburi";
 }
 
 html {
@@ -19,7 +19,6 @@ body {
 
 
 h1 {
-    font-family: "Chonburi";
     font-size: normal;
 }
 
@@ -100,6 +99,7 @@ a {
     background-color: #efd8c0;
     border-radius: 50px;
 }
+
 button {
     margin: 10px;
 }
@@ -111,21 +111,24 @@ button {
 
 
 @media screen and (min-width:300px) and (max-width: 2000px) {
+    h1 {
+        color: #f8d2ae;
+    }
+    ::placeholder{
+        color: #9b4922;
+        font-size: 20px;
+        font-style: oblique;
+    }
     #containers-login {
         display: flex;
         flex-direction: column;
-        padding: 10px;
-        background-color: #efd8c0;
-        color: #9b4922;
         margin-left: 10px;
         font-size: 25px;
-        width: 320px;
         gap: 10px;
         margin: auto;
-        margin-top: 120px;
+        margin-top: 70px;
         align-items: center;
         border-radius: 13px;
-        text-align: center;
     }
 
     #cadastro-name,
@@ -133,23 +136,45 @@ button {
     #password-id,
     #confirm-password {
         background-color: #efd8c0;
-        width: 150px;
-        height: 38px;
+        width: 250px;
+        height: 70px;
         border-color: #9b4922;
-        border-radius: 13px;
+        border-radius: 25px;
         text-align: center;
+        color: #9b4922;
+        font-size: 20px;
+        font-style: oblique;
     }
 
     #confirm-btn {
-        width: 150px;
-        height: 38px;
+        width: 200px;
+        height: 50px;
         color: #efd8c0;
-        background-color: #9b4922;
-        border-radius: 13px;
+        background-color: #818c2b;
+        border-radius: 30px;
 
     }
 
     #container {
         background-color: #9b4922;
+    }
+
+    #about {
+        font-size: 25px;
+        margin: 10%;
+        color: #f8d2ae;
+    }
+
+    .logotipo {
+        margin-left: 180px;
+        width: 130px;
+        height: 160px;
+    }
+
+    #desenvolvido {
+        color: #9b4922;
+        align-items: center;
+        font-size: 20px;
+        margin: 0%;
     }
 }

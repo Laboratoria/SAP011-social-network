@@ -34,15 +34,28 @@ export async function createPost(textPost) {
   await addDoc(collection(db, 'posts'), {
     data: new Date(), // pega a data atual
     text: textPost,
+    like: 0,
   });
 }
 
+// export function likePost(postId) {
+//   updateDoc(doc(db, 'posts', postId), {
+//    like: 1,
+//  });
+// }
+
 // editPost
-export async function editPost(userId, newText, dataPost) {
-  await updateDoc(doc(db, 'posts', userId), {
-    dataDoPost: dataPost,
-    textoDoPost: newText,
-    idUser: userId,
+export async function editPost(idPost, newText) {
+  console.log(idPost, newText);
+  await updateDoc(doc(db, 'posts', idPost), {
+    text: newText,
   });
 }
+
+export async function deletePost(idPost){
+  await deleteDoc(doc(db, 'posts', idPost), {
+  idPost: idPost,
+});
+}
+
 

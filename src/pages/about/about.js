@@ -5,7 +5,7 @@ export default () => {
 
   const template = `
       <section id="about">
-      <h2>Sobre nós</h2>
+      <h1>Sobre nós</h1>
 
       <p>Pessoas que buscam conhecer novos restaurantes e 
       desfrutar da culinária brasileira e ao mesmo tempo desejam apoiar 
@@ -20,21 +20,21 @@ export default () => {
       histórias de luta e crescimento, 
       vamos incentivar e exaltar a potência de estabelecimentos locais.</p>
 
-      <p>Desenvolvido por
-
-      Aline Vieira
+      <figure>
+      <img src=${logotipo} alt='logo' class='logotipo'>
+      </figure>
       
-      Alycia Gonçalves
-      
-      Pamela Dándolo
-      
-      para Laboratória 2023
-      </p>
-
-        <figure>
-          <img src=${logotipo} alt='logo' class='logotipo'>
-        </figure>
       </section>
+        <footer id='desenvolvido'>Desenvolvido por
+
+        Aline Vieira
+        
+        Alycia Gonçalves
+        
+        Pamela Dándolo
+        
+        para Laboratória 2023
+        </footer>
       `;
 
   // window.querySelector("#about").addEventListener("click") () => {

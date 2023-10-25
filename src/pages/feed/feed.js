@@ -1,15 +1,15 @@
-import { lerPosts, createPost, editPost, deletePost   } from '../../firebase/firestore.js';
+import { lerPosts, createPost, editPost, deletePost } from '../../firebase/firestore.js';
+import { exit } from '../../firebase/firebase.js';
 import editbutton from '../../img/editbutton.png';
 import favoritebutton from '../../img/favorite.png';
 import deletebutton from '../../img/delete.png';
-import { exit } from '../../firebase/firebase.js';
 
 export default () => {
   const container = document.createElement('div');
 
   const template = `
 <header> 
-<button type="submit">Sobre</button> <button type="submit">Sair</button> 
+<button type="submit">Sobre</button> <button id="exit-btn" type="submit">Sair</button> 
 </header>
 
 <label>Nome</label>
@@ -41,18 +41,36 @@ maxlength="200" rows=5 cols=20>
       const containerPosts = `
       <label id="container-posts"></label>
       <textarea id="container-posts" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
-      <img id="edit-btn" alt="botão editar" src="${editbutton}" data-postid="${element.idPost}"/>
-      <img id="favorite-btn" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
-      <img id="delete-btn" alt="apagar postagem" class="delete-btn" src="${deletebutton}" data-postid="${element.idPost}" />
+      <img class="btn-edit-all" id="edit-btn" alt="botão editar" src="${editbutton}" data-postid="${element.idPost}"/>
+      <img class="btn-favorite-all" id="favorite-btn" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
+      <img class="btn-delete-all" id="delete-btn" alt="apagar postagem" class="delete-btn" src="${deletebutton}" data-postid="${element.idPost}" />
       `;
+
       postsExibir.innerHTML += containerPosts;
+
+      const editAllButtons = container.querySelectorAll(".btn-edit-all"); // armazena numa array e add um event de click em cada btn
+      editAllButtons.forEach((editButton) => {
+        editButton.addEventListener('click', (event) => {
+          console.log('chamando o ícone botão de editar')
+          console.log(event.target.dataset.postid)
+          const novoTexto = 'Novo texto do post da Narooka!'; // habilitar o text area
+          editPost(event.target.dataset.postid, novoTexto)
+        })
+        //método para habilitar edição na textarea
+        // pegar o novo valor da textarea + 
+      })
+      container.querySelector('#favorite-btn').addEventListener('click', (event) => {
+        console.log(event.target.dataset)
+  
+          });
+    });
+    const postDelete = container.querySelector('#delete-btn');
+    postDelete.addEventListener('click', () => {
+      console.log('eu to tentando')
+      deletePost(postDelete)
     });
     
   }
-
-   const postDelete =  container.querySelector('#delete-btn').addEventListener('click', () =>{
-    deletePost(postDelete);
-    });
 
   lerPosts(exibirPost);
 
@@ -61,23 +79,26 @@ maxlength="200" rows=5 cols=20>
   exitBtn.addEventListener('click', exit);
 
   // editPost
-  const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
-      editPost(newText, dataPost)
-      .then(() => {
+  // const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
+  //     editPost(newText, dataPost)
+  //     .then(() => {
 
-      }) 
-        // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
-        // pego o texto a ser editado pelo id?
+  //     }) 
+  //       // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
+  //       // pego o texto a ser editado pelo id?
       
-      .catch((error) =>{
-
-
-        alert('erro ao atualizar postagem', error);
-      })
+  //     .catch((error) =>{
+  //       alert('erro ao atualizar postagem', error);
+  //     })
         
+ 
+//    container.querySelector('#favorite-btn').addEventListener('click', (event) => {
+//     console.log(event.target.dataset)
+// //      likePost(likePost);
+//       });
+    // });
   return container;
-});
-
+};
 
 
 // armazenar no firebase
