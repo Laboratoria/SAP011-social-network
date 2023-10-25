@@ -78,7 +78,6 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 * Fazer com que o nome do usuário apareça nas postagens 
 * Botão Vinculado ao Google esteja em funcionamento para Autenticação
 * Fazer a função de "Esquecer Senha"
-  
 * Testes Unitários
 
 ## 9. Créditos 🔗
