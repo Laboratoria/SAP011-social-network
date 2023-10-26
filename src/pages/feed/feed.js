@@ -68,6 +68,7 @@ maxlength="200" rows=5 cols=20>
         console.log(event.target.dataset);
       });
     });
+
     const postDelete = container.querySelector('#delete-btn');
     postDelete.addEventListener('click', () => {
       console.log('eu to tentando');
@@ -82,23 +83,23 @@ maxlength="200" rows=5 cols=20>
   exitBtn.addEventListener('click', exit);
 
   // editPost
-  // const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
-  //     editPost(newText, dataPost)
-  //     .then(() => {
+  const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
+      editPost(newText, dataPost)
+      .then(() => {
 
-  //     })
-  //       // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
-  //       // pego o texto a ser editado pelo id?
+      })
+        // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
+        // pego o texto a ser editado pelo id?
 
-  //     .catch((error) =>{
-  //       alert('erro ao atualizar postagem', error);
-  //     })
+      .catch((error) => {
+        alert('erro ao atualizar postagem', error);
+      })
 
-  //    container.querySelector('#favorite-btn').addEventListener('click', (event) => {
-  //     console.log(event.target.dataset)
-  //      likePost(likePost);
-  //       });
-  // });
+     container.querySelector('#favorite-btn').addEventListener('click', (event) => {
+      console.log(event.target.dataset)
+       likePost(likePost);
+        });
+  });
   return container;
 };
 
