@@ -30,6 +30,7 @@ export function lerPosts(exibirPosts) {
   });
 }
 
+// createPost
 export async function createPost(textPost) {
   await addDoc(collection(db, 'posts'), {
     data: new Date(), // pega a data atual
@@ -38,11 +39,12 @@ export async function createPost(textPost) {
   });
 }
 
-// export function likePost(postId) {
-//   updateDoc(doc(db, 'posts', postId), {
-//    like: 1,
-//  });
-// }
+// likePost
+export function likePost(postId) {
+  updateDoc(doc(db, 'posts', postId), {
+    like: 1,
+  });
+}
 
 // editPost
 export async function editPost(idPost, newText) {
@@ -52,10 +54,9 @@ export async function editPost(idPost, newText) {
   });
 }
 
-export async function deletePost(idPost){
+// deletePosts
+export async function deletePost(idPost) {
   await deleteDoc(doc(db, 'posts', idPost), {
-  idPost: idPost,
+    idPost: idPost,
 });
 }
-
-
