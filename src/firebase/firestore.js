@@ -6,6 +6,7 @@ import {
   addDoc,
   doc,
   updateDoc,
+  deleteDoc,
 } from 'firebase/firestore';
 // collection são o conjunto de post lá em narnia
 import { db } from './config.js';
@@ -56,7 +57,5 @@ export async function editPost(idPost, newText) {
 
 // deletePosts
 export async function deletePost(idPost) {
-  await deleteDoc(doc(db, 'posts', idPost), {
-    idPost: idPost,
-});
+  await deleteDoc(doc(db, 'posts', idPost));
 }

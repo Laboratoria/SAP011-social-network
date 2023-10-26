@@ -53,30 +53,31 @@ maxlength="200" rows=5 cols=20>
       `;
 
       postsExibir.innerHTML += containerPosts;
-      let buttonId = `#edit-btn-${id}`;
-      const editButton = postsExibir.querySelector(buttonId); // armazena numa array e add um event de click em cada btn
-      id++
-     // editAllButtons.forEach((editButton) => {
-        console.log('testando All');
-        editButton.addEventListener('click', (event) => {
-          console.log('chamando o ícone botão de editar');
-          console.log(event.target.dataset.postid);
+      const buttonId = `#edit-btn-${id}`;
+      const editButton = container.querySelector(buttonId); // armazena numa array e add um event de click em cada btn
+      console.log(editButton);
+      
+      editButton.addEventListener('click', (event) => {
           const novoTexto = 'Novo texto do post da Narooka!'; // habilitar o text area
           editPost(event.target.dataset.postid, novoTexto);
         });
         // método para habilitar edição na textarea
         // pegar o novo valor da textarea
       // });
+    
       /*container.querySelector('#favorite-btn').addEventListener('click', (event) => {
         console.log(event.target.dataset);
       });*/
-     });
-
-    const postDelete = container.querySelector('#delete-btn');
-    postDelete.addEventListener('click', () => {
+     
+    const deleteButtonId = `#delete-btn-${id}`;
+    const postDelete = postsExibir.querySelector(deleteButtonId);
+    postDelete.addEventListener('click', (event) => {
       console.log('eu to tentando');
-      deletePost(postDelete);
+      deletePost(event.target.dataset.postid);
     });
+    id++
+    });
+
   }
 
   lerPosts(exibirPost);
@@ -86,24 +87,24 @@ maxlength="200" rows=5 cols=20>
   exitBtn.addEventListener('click', exit);
 
   // editPost
-  const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
-    editPost(newText, dataPost)
-      .then(() => {
+  // const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
+  //   editPost(newText, dataPost)
+  //     .then(() => {
 
-      })
-      // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
-      // pego o texto a ser editado pelo id?
+  //     })
+  //     // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
+  //     // pego o texto a ser editado pelo id?
 
-      .catch((error) => {
-        alert('erro ao atualizar postagem', error);
-      }); 
+  //     .catch((error) => {
+  //       alert('erro ao atualizar postagem', error);
+  //     });
 
     // likePost
-    container.querySelector('#favorite-btn').addEventListener('click', (event) => {
-      console.log(event.target.dataset)
-      likePost(likePost);
-    });
-  });
+    // container.querySelector('#favorite-btn').addEventListener('click', (event) => {
+    //   console.log(event.target.dataset)
+    //   likePost(likePost);
+    // });
+  
   return container;
 };
 
