@@ -41,20 +41,23 @@ maxlength="200" rows=5 cols=20>
 
   function exibirPost(posts) {
     const postsExibir = container.querySelector('#posts');
+    let id = 1;
     postsExibir.innerHTML = ' '; // limpa a tela e começa a colocar os posts em tela
     posts.forEach((element) => {
       const containerPosts = `
-      <label id="container-posts"></label>
-      <textarea id="container-posts" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
-      <img class="btn-edit-all" id="edit-btn" alt="botão editar" src="${editbutton}" data-postid="${element.idPost}"/>
-      <img class="btn-favorite-all" id="favorite-btn" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
-      <img class="btn-delete-all" id="delete-btn" alt="apagar postagem" class="delete-btn" src="${deletebutton}" data-postid="${element.idPost}"/>
+      <label id="label-posts-${id}"></label>
+      <textarea id="container-posts-${id}" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
+      <img class="btn-edit-all" id="edit-btn-${id}" alt="botão editar" src="${editbutton}" data-postid="${element.idPost}"/>
+      <img class="btn-favorite-all" id="favorite-btn-${id}" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
+      <img class="btn-delete-all" id="delete-btn-${id}" alt="apagar postagem" class="delete-btn" src="${deletebutton}" data-postid="${element.idPost}"/>
       `;
 
       postsExibir.innerHTML += containerPosts;
-
-      const editAllButtons = container.querySelectorAll('.btn-edit-all'); // armazena numa array e add um event de click em cada btn
-      editAllButtons.forEach((editButton) => {
+      let buttonId = `#edit-btn-${id}`;
+      const editButton = postsExibir.querySelector(buttonId); // armazena numa array e add um event de click em cada btn
+      id++
+     // editAllButtons.forEach((editButton) => {
+        console.log('testando All');
         editButton.addEventListener('click', (event) => {
           console.log('chamando o ícone botão de editar');
           console.log(event.target.dataset.postid);
@@ -63,11 +66,11 @@ maxlength="200" rows=5 cols=20>
         });
         // método para habilitar edição na textarea
         // pegar o novo valor da textarea
-      });
-      container.querySelector('#favorite-btn').addEventListener('click', (event) => {
+      // });
+      /*container.querySelector('#favorite-btn').addEventListener('click', (event) => {
         console.log(event.target.dataset);
-      });
-    });
+      });*/
+     });
 
     const postDelete = container.querySelector('#delete-btn');
     postDelete.addEventListener('click', () => {
@@ -84,21 +87,22 @@ maxlength="200" rows=5 cols=20>
 
   // editPost
   const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
-      editPost(newText, dataPost)
+    editPost(newText, dataPost)
       .then(() => {
 
       })
-        // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
-        // pego o texto a ser editado pelo id?
+      // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
+      // pego o texto a ser editado pelo id?
 
       .catch((error) => {
         alert('erro ao atualizar postagem', error);
-      })
+      }); 
 
-     container.querySelector('#favorite-btn').addEventListener('click', (event) => {
+    // likePost
+    container.querySelector('#favorite-btn').addEventListener('click', (event) => {
       console.log(event.target.dataset)
-       likePost(likePost);
-        });
+      likePost(likePost);
+    });
   });
   return container;
 };
