@@ -7,7 +7,9 @@ import {
 import { exit } from '../../firebase/firebase.js';
 import editbutton from '../../img/editbutton.png';
 import favoritebutton from '../../img/favorite.png';
+import savepostbutton from '../../img/savepost.png';
 import deletebutton from '../../img/delete.png';
+import { queryEqual } from 'firebase/firestore';
 
 export default () => {
   const container = document.createElement('div');
@@ -23,10 +25,10 @@ export default () => {
 maxlength="200" rows=5 cols=20>
 </textarea>
 <p>
-<button id="post-btn" type="submit">Postar</button>/
+<button id="post-btn" type="submit">Postar</button>
 <p>
 <i class="material-icons custom-icon like" id="like">
-<a href="/#feed">favorite</a></i> <!-- Ícone de like do post -->
+<!-- <a href="/#feed">favorite</a></i> -->
 <p>
 
 <section id ='posts'></section>
@@ -49,6 +51,7 @@ maxlength="200" rows=5 cols=20>
       <label id="label-posts-${id}"></label>
       <textarea id="container-posts-${id}" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
       <img class="btn-edit-all" id="edit-btn-${id}" alt="botão editar" src="${editbutton}" data-postid="${element.idPost}"/>
+      <img class="btn-save-all" id="save-edit-btn-${id}" alt="salvar edição post" src="${savepostbutton}" data-postid="${element.idPost}"/>
       <img class="btn-favorite-all" id="favorite-btn-${id}" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
       <img class="btn-delete-all" id="delete-btn-${id}" alt="apagar postagem" class="delete-btn" src="${deletebutton}" data-postid="${element.idPost}"/>
       `;
@@ -56,31 +59,40 @@ maxlength="200" rows=5 cols=20>
 
       postsExibir.appendChild(postTemplate);
 
+      // pegando o botão editar
       const buttonId = `#edit-btn-${id}`;
-      const editButton = postTemplate.querySelector(buttonId); // armazena numa array e add um event de click em cada btn
+      const editButton = postTemplate.querySelector(buttonId);
       console.log(editButton);
-      
-      editButton.addEventListener('click', (event) => {
-          const novoTexto = 'Novo texto do post da Narooka!'; // habilitar o text area
-          editPost(event.target.dataset.postid, novoTexto);
-        });
-        // método para habilitar edição na textarea
-        // pegar o novo valor da textarea
-      // });
-    
-      /*container.querySelector('#favorite-btn').addEventListener('click', (event) => {
-        console.log(event.target.dataset);
-      });*/
-     
-    const deleteButtonId = `#delete-btn-${id}`;
-    const postDelete = postTemplate.querySelector(deleteButtonId);
-    postDelete.addEventListener('click', (event) => {
-      console.log('eu to tentando');
-      deletePost(event.target.dataset.postid);
-    });
-    id++
-    });
 
+      // para salvar a edição feita no template string
+      const buttonSaveId = `#save-edt-btn-${id}`;
+      const saveButton = postTemplate.querySelector(buttonSaveId);
+
+      editButton.addEventListener('click', (event) => {
+        const textoantigo = postTemplate(`${element.textoDoPost}`);
+        textoantigo.addEventListener('click', (saveButton) => {
+          
+        })
+        const novoTexto = postTemplate.querySelector; // habilitar o text area
+        editPost(event.target.dataset.postid, novoTexto);
+      });
+
+      // método para habilitar edição na textarea
+      // pegar o novo valor da textarea
+      // });
+
+      // /*container.querySelector('#favorite-btn').addEventListener('click', (event) => {
+      // console.log(event.target.dataset);
+      // });*/
+
+      const deleteButtonId = `#delete-btn-${id}`;
+      const postDelete = postTemplate.querySelector(deleteButtonId);
+      postDelete.addEventListener('click', (event) => {
+        console.log('eu to tentando');
+        deletePost(event.target.dataset.postid);
+      });
+      id++
+    });
   }
 
   lerPosts(exibirPost);
@@ -102,18 +114,11 @@ maxlength="200" rows=5 cols=20>
   //       alert('erro ao atualizar postagem', error);
   //     });
 
-    // likePost
-    // container.querySelector('#favorite-btn').addEventListener('click', (event) => {
-    //   console.log(event.target.dataset)
-    //   likePost(likePost);
-    // });
-  
+  // likePost
+  // container.querySelector('#favorite-btn').addEventListener('click', (event) => {
+  //   console.log(event.target.dataset)
+  //   likePost(likePost);
+  // });
+
   return container;
 };
-
-// armazenar no firebase
-// adição(addDoc), leitura (getDoc), atualizar (UpdateDoc), deletar (deletDoc) metódos do firestore
-// adição precisa de um id, firebase cria com getDoc
-
-// printar o post em tela
-// firebase lê o banco de dados e armazena na array, depois printa
