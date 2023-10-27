@@ -64,10 +64,7 @@ maxlength="200" rows=5 cols=20>
         // método para habilitar edição na textarea
         // pegar o novo valor da textarea
       // });
-    
-      /*container.querySelector('#favorite-btn').addEventListener('click', (event) => {
-        console.log(event.target.dataset);
-      });*/
+
      
     const deleteButtonId = `#delete-btn-${id}`;
     const postDelete = postsExibir.querySelector(deleteButtonId);
@@ -97,16 +94,18 @@ maxlength="200" rows=5 cols=20>
 
   //     .catch((error) => {
   //       alert('erro ao atualizar postagem', error);
-  //     });
+  //     })
+  //   })
 
-    // likePost
-    // container.querySelector('#favorite-btn').addEventListener('click', (event) => {
-    //   console.log(event.target.dataset)
-    //   likePost(likePost);
-    // });
+  //   likePost
+  //   container.querySelector('#favorite-btn').addEventListener('click', (event) => {
+  //     console.log(event.target.dataset)
+  //     likePost(likePost);
+  //   });
   
   return container;
-};
+  }
+
 
 // armazenar no firebase
 // adição(addDoc), leitura (getDoc), atualizar (UpdateDoc), deletar (deletDoc) metódos do firestore

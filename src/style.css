@@ -166,7 +166,8 @@ button {
     }
 
     .logotipo {
-        margin-left: 180px;
+        display: flex;
+        
         width: 130px;
         height: 160px;
     }
