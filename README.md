@@ -35,13 +35,11 @@ empreendedoras, incentivando o apoio mútuo e o empoderamento.
 
 
 ## 3. História de Usuários ⌨️
-*  História de usuário 1: "Como cliente, solicitou que o verde poderia ser um tom mais fechado"
-*  História de usuário 2: "Login com Facebook. Hoje só uso Facebook pra logar em outros apps pq nem sempre quero conectar meu e-mail principal."
-*  História de usuário 3: "Acho que poderiam pensar em fechar parcerias com alguns restaurantes e fornecer desconto ou algum tipo de benefício aos usuários, algo que também incentive que eles conhecem de fato o estabelecimento"
-
+- História de Usuário 1: "Como cliente, recebemos uma solicitação para ajustar a tonalidade do botão, tornando-a um verde mais escuro" <p>Aplicação Realizada: Para atender a essa solicitação, modificamos a cor do botão, escolhendo um tom de verde mais escuro que harmonizasse com a nossa paleta de cores. Isso resultou em uma aparência mais equilibrada na página inicial.</p>
+- História de usuário 2: "Login com Facebook. Hoje só uso Facebook pra logar em outros apps pq nem sempre quero conectar meu e-mail principal"<p> Aplicação Futura: Para atender a essa necessidade, estamos planejando implementar a opção de login com o Facebook, proporcionando aos nossos usuários uma alternativa prática para acessar a plataforma. Além disso, estamos explorando a possibilidade de adicionar suporte para o login com o Google, visando maior flexibilidade na autenticação.</p>
+- História de usuário 3: "Acho que poderiam pensar em fechar parcerias com alguns restaurantes e fornecer desconto ou algum tipo de benefício aos usuários, algo que também incentive que eles conhecem de fato o estabelecimento" <p>Aplicação Futura: Estamos considerando a implementação dessa ideia no futuro, visando a criação de um recurso que permita aos usuários receber descontos exclusivos (valores estipulados por cada restaurante) em sua primeira visita a estabelecimentos mencionados e avaliados em nossa plataforma. Isso não apenas incentivaria a descoberta de novos lugares, mas também proporcionaria benefícios aos nossos usuários. </p>
   
 ## 4. Protótipo 🎨
-
 
 
 
