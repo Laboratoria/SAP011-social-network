@@ -41,39 +41,43 @@ maxlength="200" rows=5 cols=20>
 
   function exibirPost(posts) {
     const postsExibir = container.querySelector('#posts');
+    let id = 1;
     postsExibir.innerHTML = ' '; // limpa a tela e começa a colocar os posts em tela
     posts.forEach((element) => {
       const containerPosts = `
-      <label id="container-posts"></label>
-      <textarea id="container-posts" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
-      <img class="btn-edit-all" id="edit-btn" alt="botão editar" src="${editbutton}" data-postid="${element.idPost}"/>
-      <img class="btn-favorite-all" id="favorite-btn" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
-      <img class="btn-delete-all" id="delete-btn" alt="apagar postagem" class="delete-btn" src="${deletebutton}" data-postid="${element.idPost}"/>
+      <label id="label-posts-${id}"></label>
+      <textarea id="container-posts-${id}" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
+      <img class="btn-edit-all" id="edit-btn-${id}" alt="botão editar" src="${editbutton}" data-postid="${element.idPost}"/>
+      <img class="btn-favorite-all" id="favorite-btn-${id}" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
+      <img class="btn-delete-all" id="delete-btn-${id}" alt="apagar postagem" class="delete-btn" src="${deletebutton}" data-postid="${element.idPost}"/>
       `;
 
       postsExibir.innerHTML += containerPosts;
-
-      const editAllButtons = container.querySelectorAll('.btn-edit-all'); // armazena numa array e add um event de click em cada btn
-      editAllButtons.forEach((editButton) => {
-        editButton.addEventListener('click', (event) => {
-          console.log('chamando o ícone botão de editar');
-          console.log(event.target.dataset.postid);
+      const buttonId = `#edit-btn-${id}`;
+      const editButton = container.querySelector(buttonId); // armazena numa array e add um event de click em cada btn
+      console.log(editButton);
+      
+      editButton.addEventListener('click', (event) => {
           const novoTexto = 'Novo texto do post da Narooka!'; // habilitar o text area
           editPost(event.target.dataset.postid, novoTexto);
         });
         // método para habilitar edição na textarea
         // pegar o novo valor da textarea
-      });
-      container.querySelector('#favorite-btn').addEventListener('click', (event) => {
+      // });
+    
+      /*container.querySelector('#favorite-btn').addEventListener('click', (event) => {
         console.log(event.target.dataset);
-      });
+      });*/
+     
+    const deleteButtonId = `#delete-btn-${id}`;
+    const postDelete = postsExibir.querySelector(deleteButtonId);
+    postDelete.addEventListener('click', (event) => {
+      console.log('eu to tentando');
+      deletePost(event.target.dataset.postid);
+    });
+    id++
     });
 
-    const postDelete = container.querySelector('#delete-btn');
-    postDelete.addEventListener('click', () => {
-      console.log('eu to tentando');
-      deletePost(postDelete);
-    });
   }
 
   lerPosts(exibirPost);
@@ -83,23 +87,24 @@ maxlength="200" rows=5 cols=20>
   exitBtn.addEventListener('click', exit);
 
   // editPost
-  const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
-      editPost(newText, dataPost)
-      .then(() => {
+  // const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
+  //   editPost(newText, dataPost)
+  //     .then(() => {
 
-      })
-        // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
-        // pego o texto a ser editado pelo id?
+  //     })
+  //     // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
+  //     // pego o texto a ser editado pelo id?
 
-      .catch((error) => {
-        alert('erro ao atualizar postagem', error);
-      })
+  //     .catch((error) => {
+  //       alert('erro ao atualizar postagem', error);
+  //     });
 
-     container.querySelector('#favorite-btn').addEventListener('click', (event) => {
-      console.log(event.target.dataset)
-       likePost(likePost);
-        });
-  });
+    // likePost
+    // container.querySelector('#favorite-btn').addEventListener('click', (event) => {
+    //   console.log(event.target.dataset)
+    //   likePost(likePost);
+    // });
+  
   return container;
 };
 
