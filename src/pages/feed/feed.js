@@ -3,6 +3,7 @@ import {
   createPost,
   editPost,
   deletePost,
+  likePost,
 } from '../../firebase/firestore.js';
 import { exit } from '../../firebase/firebase.js';
 import editbutton from '../../img/editbutton.png';
@@ -52,7 +53,7 @@ maxlength="200" rows=5 cols=20>
       <textarea id="container-posts-${id}" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
       <img class="btn-edit-all" id="edit-btn-${id}" alt="botão editar" src="${editbutton}" data-postid="${element.idPost}"/>
       <img class="btn-save-all" id="save-edit-btn-${id}" alt="salvar edição post" src="${savepostbutton}" data-postid="${element.idPost}"/>
-      <img class="btn-favorite-all" id="favorite-btn-${id}" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
+      <span>${element.likeDoPost}</span><img class="btn-favorite-all" id="favorite-btn-${id}" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
       <img class="btn-delete-all" id="delete-btn-${id}" alt="apagar postagem" class="delete-btn" src="${deletebutton}" data-postid="${element.idPost}"/>
       `;
       postTemplate.innerHTML = containerPosts;
@@ -80,6 +81,14 @@ maxlength="200" rows=5 cols=20>
       // /*container.querySelector('#favorite-btn').addEventListener('click', (event) => {
       // console.log(event.target.dataset);
       // });*/
+    
+      const favoriteButtonId = `#favorite-btn-${id}`;
+      const postFavorite = postTemplate.querySelector(favoriteButtonId);
+      postFavorite.addEventListener('click', (event) => {
+        console.log('eu to tentando');
+        likePost(event.target.dataset.postid , element.likeDoPost +1);
+      });
+
 
       const deleteButtonId = `#delete-btn-${id}`;
       const postDelete = postTemplate.querySelector(deleteButtonId);
