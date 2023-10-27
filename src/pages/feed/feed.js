@@ -44,6 +44,7 @@ maxlength="200" rows=5 cols=20>
     let id = 1;
     postsExibir.innerHTML = ' '; // limpa a tela e começa a colocar os posts em tela
     posts.forEach((element) => {
+      const postTemplate = document.createElement('div');
       const containerPosts = `
       <label id="label-posts-${id}"></label>
       <textarea id="container-posts-${id}" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
@@ -51,10 +52,12 @@ maxlength="200" rows=5 cols=20>
       <img class="btn-favorite-all" id="favorite-btn-${id}" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
       <img class="btn-delete-all" id="delete-btn-${id}" alt="apagar postagem" class="delete-btn" src="${deletebutton}" data-postid="${element.idPost}"/>
       `;
+      postTemplate.innerHTML = containerPosts;
 
-      postsExibir.innerHTML += containerPosts;
+      postsExibir.appendChild(postTemplate);
+
       const buttonId = `#edit-btn-${id}`;
-      const editButton = container.querySelector(buttonId); // armazena numa array e add um event de click em cada btn
+      const editButton = postTemplate.querySelector(buttonId); // armazena numa array e add um event de click em cada btn
       console.log(editButton);
       
       editButton.addEventListener('click', (event) => {
@@ -70,7 +73,7 @@ maxlength="200" rows=5 cols=20>
       });*/
      
     const deleteButtonId = `#delete-btn-${id}`;
-    const postDelete = postsExibir.querySelector(deleteButtonId);
+    const postDelete = postTemplate.querySelector(deleteButtonId);
     postDelete.addEventListener('click', (event) => {
       console.log('eu to tentando');
       deletePost(event.target.dataset.postid);
