@@ -65,21 +65,17 @@ maxlength="200" rows=5 cols=20>
       console.log(editButton);
 
       // para salvar a edição feita no template string
-      const buttonSaveId = `#save-edt-btn-${id}`;
+      const buttonSaveId = `#save-edit-btn-${id}`;
       const saveButton = postTemplate.querySelector(buttonSaveId);
-
-      editButton.addEventListener('click', (event) => {
-        const textoantigo = postTemplate(`${element.textoDoPost}`);
-        textoantigo.addEventListener('click', (saveButton) => {
-          
-        })
-        const novoTexto = postTemplate.querySelector; // habilitar o text area
-        editPost(event.target.dataset.postid, novoTexto);
+      const textArea = postTemplate.querySelector(`#container-posts-${id}`);
+      saveButton.addEventListener('click', (event) => {
+        editPost(event.target.dataset.postid, textArea.value);
       });
 
-      // método para habilitar edição na textarea
-      // pegar o novo valor da textarea
-      // });
+      editButton.addEventListener('click', (event) => {
+        console.log(textArea, `#container-posts-${id}`);
+        textArea.removeAttribute('readonly');
+      });
 
       // /*container.querySelector('#favorite-btn').addEventListener('click', (event) => {
       // console.log(event.target.dataset);
