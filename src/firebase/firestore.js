@@ -23,6 +23,7 @@ export function lerPosts(exibirPosts) {
         dataDoPost: document.data().data,
         textoDoPost: document.data().text,
         likeDoPost: document.data().like,
+        uid: document.data().uid,
         idPost: document.id, // sequência de números e letras lá na collection que identifica o post
       };
       posts.push(userObj);
@@ -33,11 +34,13 @@ export function lerPosts(exibirPosts) {
 }
 
 // createPost
-export async function createPost(textPost) {
+export async function createPost(textPost, uidName) {
   await addDoc(collection(db, 'posts'), {
     data: new Date(), // pega a data atual
     text: textPost,
+    uid: uidName,
     like: 0,
+
   });
 }
 
@@ -60,3 +63,5 @@ export async function editPost(idPost, newText) {
 export async function deletePost(idPost) {
   await deleteDoc(doc(db, 'posts', idPost));
 }
+
+

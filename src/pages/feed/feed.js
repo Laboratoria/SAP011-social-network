@@ -50,6 +50,7 @@ maxlength="200" rows=5 cols=20>
       const postTemplate = document.createElement('div');
       const containerPosts = `
       <label id="label-posts-${id}"></label>
+      <span>${element.uidName}</span>
       <textarea id="container-posts-${id}" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
       <img class="btn-edit-all" id="edit-btn-${id}" alt="botão editar" src="${editbutton}" data-postid="${element.idPost}"/>
       <img class="btn-save-all" id="save-edit-btn-${id}" alt="salvar edição post" src="${savepostbutton}" data-postid="${element.idPost}"/>
@@ -93,9 +94,9 @@ maxlength="200" rows=5 cols=20>
       const deleteButtonId = `#delete-btn-${id}`;
       const postDelete = postTemplate.querySelector(deleteButtonId);
       postDelete.addEventListener('click', (event) => {
-        console.log('eu to tentando');
+        if(window.confirm("Certeza que deseja apagar esse post?")){
         deletePost(event.target.dataset.postid);
-      });
+      }});
       id++
     });
   }
@@ -106,25 +107,6 @@ maxlength="200" rows=5 cols=20>
   const exitBtn = container.querySelector('#exit-btn');
   exitBtn.addEventListener('click', exit);
 
-  // editPost
-  // const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
-  //   editPost(newText, dataPost)
-  //     .then(() => {
-
-  //     })
-  //     // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
-  //     // pego o texto a ser editado pelo id?
-
-  //     .catch((error) => {
-  //       alert('erro ao atualizar postagem', error);
-  //     })
-  //   })
-
-  // likePost
-  // container.querySelector('#favorite-btn').addEventListener('click', (event) => {
-  //   console.log(event.target.dataset)
-  //   likePost(likePost);
-  // });
 
   return container;
 };
