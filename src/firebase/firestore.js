@@ -10,6 +10,8 @@ import {
 } from 'firebase/firestore';
 // collection são o conjunto de post lá em narnia
 import { db } from './config.js';
+import { getAuth } from 'firebase/auth';
+import { app } from './config.js';
 
 // exibPost
 export function lerPosts(exibirPosts) {
@@ -34,13 +36,13 @@ export function lerPosts(exibirPosts) {
 }
 
 // createPost
-export async function createPost(textPost, uidName) {
+export async function createPost(textPost) {
+  const auth = getAuth(app);
   await addDoc(collection(db, 'posts'), {
     data: new Date(), // pega a data atual
     text: textPost,
-    uid: uidName,
     like: 0,
-
+    uid: auth.currentUser.uid,
   });
 }
 
@@ -53,7 +55,6 @@ export function likePost(postId, quantidadeLikes) {
 
 // editPost
 export async function editPost(idPost, newText) {
-  console.log(idPost, newText);
   await updateDoc(doc(db, 'posts', idPost), {
     text: newText,
   });

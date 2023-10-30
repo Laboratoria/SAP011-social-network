@@ -5,12 +5,16 @@ import {
   deletePost,
   likePost,
 } from '../../firebase/firestore.js';
+
 import { exit } from '../../firebase/firebase.js';
 import editbutton from '../../img/editbutton.png';
 import favoritebutton from '../../img/favorite.png';
 import savepostbutton from '../../img/savepost.png';
 import deletebutton from '../../img/delete.png';
 import { queryEqual } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
+import { app } from '../../firebase/config.js';
+
 
 export default () => {
   const container = document.createElement('div');
@@ -21,9 +25,11 @@ export default () => {
 </header>
 
 <label>Nome</label>
+
 <p>
 <textarea id="new-post-txt" placeholder="Digite seu post aqui..." minlength="20"
 maxlength="200" rows=5 cols=20>
+
 </textarea>
 <p>
 <button id="post-btn" type="submit">Postar</button>
@@ -50,13 +56,19 @@ maxlength="200" rows=5 cols=20>
       const postTemplate = document.createElement('div');
       const containerPosts = `
       <label id="label-posts-${id}"></label>
-      <span>${element.uidName}</span>
+      
+      <span>${element.uid ===getAuth(app).currentUser.uid}</span>
       <textarea id="container-posts-${id}" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
+      <span>${element.likeDoPost}</span><img class="btn-favorite-all" id="favorite-btn-${id}" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
+      ${element.uid === getAuth(app).currentUser.uid ? `
+      
       <img class="btn-edit-all" id="edit-btn-${id}" alt="botão editar" src="${editbutton}" data-postid="${element.idPost}"/>
       <img class="btn-save-all" id="save-edit-btn-${id}" alt="salvar edição post" src="${savepostbutton}" data-postid="${element.idPost}"/>
-      <span>${element.likeDoPost}</span><img class="btn-favorite-all" id="favorite-btn-${id}" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
       <img class="btn-delete-all" id="delete-btn-${id}" alt="apagar postagem" class="delete-btn" src="${deletebutton}" data-postid="${element.idPost}"/>
+      `: " "}
       `;
+      // operador ternario
+      // if antes do addEventListenner pra funcionar 
       postTemplate.innerHTML = containerPosts;
 
       postsExibir.appendChild(postTemplate);
@@ -78,10 +90,6 @@ maxlength="200" rows=5 cols=20>
         console.log(textArea, `#container-posts-${id}`);
         textArea.removeAttribute('readonly');
       });
-
-      // /*container.querySelector('#favorite-btn').addEventListener('click', (event) => {
-      // console.log(event.target.dataset);
-      // });*/
     
       const favoriteButtonId = `#favorite-btn-${id}`;
       const postFavorite = postTemplate.querySelector(favoriteButtonId);
