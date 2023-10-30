@@ -78,10 +78,6 @@ maxlength="200" rows=5 cols=20>
         textArea.removeAttribute('readonly');
       });
 
-      // /*container.querySelector('#favorite-btn').addEventListener('click', (event) => {
-      // console.log(event.target.dataset);
-      // });*/
-
       const favoriteButtonId = `#favorite-btn-${id}`;
       const postFavorite = postTemplate.querySelector(favoriteButtonId);
       postFavorite.addEventListener('click', (event) => {
