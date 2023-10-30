@@ -5,31 +5,29 @@ export default () => {
   const container = document.createElement('div');
 
   const template = `
-    <section>
-      <form id="cadastro-name">
-        <label>Nome:</label>
+  <section id='containers-login'>
+  <h1>Cadastro</h1>
+      <form id="name-cadastro">
         <input type="texto" id ="cadastro-name" placeholder="Digite seu nome..." name="nome"/>
       </form>
 
       <form id="cadastro-email"> 
-        <label>Email</label>
         <input type= "email" id="email-id" placeholder="seu@email.com" name="email"/>
       </form>
 
       <form id="cadastro-password">
-        <label>Senha:</label>
         <input type="password" id="password-id" placeholder= "Crie sua senha..." name="senha"/>
       </form>
 
-      <form id="confirm-password">
-        <label>Confirmação:</label>
+      <form id="password-confirm">
         <input type="password" id="confirm-password" placeholder= "Confirme sua senha..." name="confirmação-senha"/>
       </form>
-    </section>
+    
 
     <form id="register-login">
         <button id="confirm-btn">Cadastrar</button>
       </form>
+      </section>
     `;
   container.innerHTML = template;
 
@@ -48,8 +46,9 @@ export default () => {
       })
       .catch((error) => { // Será executado se der erro
         console.log(error);
-        alert('erro') 
+        alert('erro');
       });
   });
   return container;
 };
+

@@ -1,29 +1,180 @@
 * {
-    margin: 0;
     padding: 0;
-
+    font-family: "Chonburi";
 }
 
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #9b4922;
+    display: flex;
+    justify-content: center;
+    align-items: center, flex-start;
+    height: 100vh;
+    margin: 0;
 }
+
+
+
 h1 {
-    align-items: center;
-    font-family: "Chonburi";
     font-size: normal;
 }
-footer {
-    align-items: center;
 
+
+footer {
+    position: fixed;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #efd8c0;
+    color: #0a0a0a;
+    text-align: center;
+    padding: 5px;
 }
-#container {
+
+.container {
     background-color: #9b4922;
 }
+
+
 img {
-  text-align: center;
-  margin: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.like {
+    color: #efd8c0;
+}
+
+.like:active {
+    color: black;
+}
+
+#google-button {
+    width: 80px;
+    height: 40px;
+    background-color: #818c2b;
+    color: #FFF;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#register-btn {
+    width: 80px;
+    height: 40px;
+    background-color: #818c2b;
+    color: #FFF;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#enter-btn {
+    width: 80px;
+    height: 40px;
+    background-color: #efd8c0;
+    color: #9b4922;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#email-login {
+    height: 30px;
+    background-color: #efd8c0;
+    border-radius: 50px;
+}
+
+#password-login {
+    height: 30px;
+    background-color: #efd8c0;
+    border-radius: 50px;
+}
+
+button {
+    margin: 10px;
+}
+
+
+
+
+
+
+
+@media screen and (min-width:300px) and (max-width: 2000px) {
+    h1 {
+        color: #f8d2ae;
+    }
+    ::placeholder{
+        color: #9b4922;
+        font-size: 20px;
+        font-style: oblique;
+    }
+    #containers-login {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        font-size: 25px;
+        gap: 10px;
+        margin: auto;
+        margin-top: 70px;
+        align-items: center;
+        border-radius: 13px;
+    }
+
+    #cadastro-name,
+    #email-id,
+    #password-id,
+    #confirm-password {
+        background-color: #efd8c0;
+        width: 250px;
+        height: 70px;
+        border-color: #9b4922;
+        border-radius: 25px;
+        text-align: center;
+        color: #9b4922;
+        font-size: 20px;
+        font-style: oblique;
+    }
+
+    #confirm-btn {
+        width: 200px;
+        height: 50px;
+        color: #efd8c0;
+        background-color: #818c2b;
+        border-radius: 30px;
+
+    }
+
+    #container {
+        background-color: #9b4922;
+    }
+
+    #about {
+        font-size: 25px;
+        margin: 10%;
+        color: #f8d2ae;
+    }
+
+    .logotipo {
+        margin-left: 180px;
+        width: 130px;
+        height: 160px;
+    }
+
+    #desenvolvido {
+        color: #9b4922;
+        align-items: center;
+        font-size: 20px;
+        margin: 0%;
+    }
 }
