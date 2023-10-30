@@ -5,7 +5,7 @@ import {
   deletePost,
   likePost,
 } from '../../firebase/firestore.js';
-
+import { registerEmail } from '../../firebase/firebase.js';
 import { exit } from '../../firebase/firebase.js';
 import editbutton from '../../img/editbutton.png';
 import favoritebutton from '../../img/favorite.png';
@@ -57,7 +57,7 @@ maxlength="200" rows=5 cols=20>
       const containerPosts = `
       <label id="label-posts-${id}"></label>
       
-      <span>${element.uid ===getAuth(app).currentUser.uid}</span>
+      <span>${element.cadastroName}</span>
       <textarea id="container-posts-${id}" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
       <span>${element.likeDoPost}</span><img class="btn-favorite-all" id="favorite-btn-${id}" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
       ${element.uid === getAuth(app).currentUser.uid ? `
@@ -81,16 +81,19 @@ maxlength="200" rows=5 cols=20>
       // para salvar a edição feita no template string
       const buttonSaveId = `#save-edit-btn-${id}`;
       const saveButton = postTemplate.querySelector(buttonSaveId);
+      if(element.uid === getAuth(app).currentUser.uid){
       const textArea = postTemplate.querySelector(`#container-posts-${id}`);
       saveButton.addEventListener('click', (event) => {
         editPost(event.target.dataset.postid, textArea.value);
-      });
+      })
+      }
 
+      if(element.uid === getAuth(app).currentUser.uid){
       editButton.addEventListener('click', (event) => {
-        console.log(textArea, `#container-posts-${id}`);
         textArea.removeAttribute('readonly');
       });
-    
+      }
+      
       const favoriteButtonId = `#favorite-btn-${id}`;
       const postFavorite = postTemplate.querySelector(favoriteButtonId);
       postFavorite.addEventListener('click', (event) => {
@@ -100,11 +103,13 @@ maxlength="200" rows=5 cols=20>
 
 
       const deleteButtonId = `#delete-btn-${id}`;
+      if(element.uid === getAuth(app).currentUser.uid){
       const postDelete = postTemplate.querySelector(deleteButtonId);
       postDelete.addEventListener('click', (event) => {
         if(window.confirm("Certeza que deseja apagar esse post?")){
         deletePost(event.target.dataset.postid);
       }});
+    }
       id++
     });
   }
