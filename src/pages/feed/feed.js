@@ -86,7 +86,7 @@ maxlength="200" rows=5 cols=20>
       const postFavorite = postTemplate.querySelector(favoriteButtonId);
       postFavorite.addEventListener('click', (event) => {
         console.log('eu to tentando');
-        likePost(event.target.dataset.postid , element.likeDoPost +1);
+        likePost(event.target.dataset.postid, element.likeDoPost +1);
       });
 
       const deleteButtonId = `#delete-btn-${id}`;
