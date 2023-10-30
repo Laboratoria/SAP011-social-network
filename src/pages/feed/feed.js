@@ -81,14 +81,13 @@ maxlength="200" rows=5 cols=20>
       // /*container.querySelector('#favorite-btn').addEventListener('click', (event) => {
       // console.log(event.target.dataset);
       // });*/
-    
+
       const favoriteButtonId = `#favorite-btn-${id}`;
       const postFavorite = postTemplate.querySelector(favoriteButtonId);
       postFavorite.addEventListener('click', (event) => {
         console.log('eu to tentando');
         likePost(event.target.dataset.postid , element.likeDoPost +1);
       });
-
 
       const deleteButtonId = `#delete-btn-${id}`;
       const postDelete = postTemplate.querySelector(deleteButtonId);
