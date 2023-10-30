@@ -7,6 +7,9 @@ import {
 } from '../../firebase/firestore.js';
 import { exit } from '../../firebase/firebase.js';
 import editbutton from '../../img/editbutton.png';
+import home from '../../img/home.png';
+import logout from '../../img/logout.png';
+import post from '../../img/post.png';
 import favoritebutton from '../../img/favorite.png';
 import savepostbutton from '../../img/savepost.png';
 import deletebutton from '../../img/delete.png';
@@ -17,22 +20,33 @@ export default () => {
 
   const template = `
 <header> 
-<button type="submit">Sobre</button> <button id="exit-btn" type="submit">Sair</button> 
+  <section id="menu">
+    <i class="material-icons custom-icon">
+      <a href="/#home">home</a></i> 
+      
+<i class="material-icons custom-icon">
+<a href="/#about">favorite</a></i> <!-- Ícone para ir ao about-->
+<i class="material-icons custom-icon">
+onclick="irParaExit()">exit_to_app</i> <!-- Ícone para ir ao login -->
+</head>
+</section>
+<button id="about-btn" type="submit">Sobre</button> 
+<button id="exit-btn" type="submit">Sair</button>
 </header>
 
+<section id ='posts'>
 <label>Nome</label>
-<p>
+
 <textarea id="new-post-txt" placeholder="Digite seu post aqui..." minlength="20"
 maxlength="200" rows=5 cols=20>
 </textarea>
-<p>
-<button id="post-btn" type="submit">Postar</button>
-<p>
+
+<button id="post-btn" type="submit">Compartilhar</button>
+
 <i class="material-icons custom-icon like" id="like">
 <!-- <a href="/#feed">favorite</a></i> -->
-<p>
 
-<section id ='posts'></section>
+</section>
       `;
 
   container.innerHTML = template;
@@ -86,7 +100,7 @@ maxlength="200" rows=5 cols=20>
       const postFavorite = postTemplate.querySelector(favoriteButtonId);
       postFavorite.addEventListener('click', (event) => {
         console.log('eu to tentando');
-        likePost(event.target.dataset.postid , element.likeDoPost +1);
+        likePost(event.target.dataset.postid, element.likeDoPost +1);
       });
 
       const deleteButtonId = `#delete-btn-${id}`;
