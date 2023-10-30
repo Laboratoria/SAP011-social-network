@@ -22,6 +22,7 @@ export function lerPosts(exibirPosts) {
       const userObj = {
         dataDoPost: document.data().data,
         textoDoPost: document.data().text,
+        likeDoPost: document.data().like,
         idPost: document.id, // sequência de números e letras lá na collection que identifica o post
       };
       posts.push(userObj);
@@ -41,9 +42,9 @@ export async function createPost(textPost) {
 }
 
 // likePost
-export function likePost(postId) {
+export function likePost(postId, quantidadeLikes) {
   updateDoc(doc(db, 'posts', postId), {
-    like: 1,
+    like: quantidadeLikes,
   });
 }
 
