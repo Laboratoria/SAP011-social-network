@@ -10,8 +10,8 @@ const init = () => { // função que inicializa a página, analiza as mudanças 
   window.addEventListener('hashchange', () => { // 5ª ação cada vez que a hash é alterada o evento "escuta"
     main.innerHTML = ' '; // vai apagar todas as informações antes de trazer a hash nova
     switch (window.location.hash) {
-      case '': // se for vazio ele vai mostrar a home
-        main.appendChild(home());
+      case '': // se o hash for vazio ele vai mlevar para a home
+        main.appendChild(home()); // a função home retorna o template string e fazemos o appendChild na main
         break;
       case '#about':
         main.appendChild(about());

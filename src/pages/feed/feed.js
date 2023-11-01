@@ -21,17 +21,11 @@ export default () => {
   const template = `
 <header> 
   <section id="menu">
-    <i class="material-icons custom-icon">
-      <a href="/#home">home</a></i> 
-      
-<i class="material-icons custom-icon">
-<a href="/#about">favorite</a></i> <!-- Ícone para ir ao about-->
-<i class="material-icons custom-icon">
-onclick="irParaExit()">exit_to_app</i> <!-- Ícone para ir ao login -->
-</head>
-</section>
-<button id="about-btn" type="submit">Sobre</button> 
-<button id="exit-btn" type="submit">Sair</button>
+      <a href="/#home"><img class="home" src="${home}" alt="página de login"></a>
+      <a href="/#about">Sobre Nós</a>
+      // <button id="about-btn" type="submit">Sobre</button> 
+      <img src="${logout}" id="exit-btn" type="submit"  />
+  </section>     
 </header>
 
 <section id ='posts'>
@@ -42,9 +36,6 @@ maxlength="200" rows=5 cols=20>
 </textarea>
 
 <button id="post-btn" type="submit">Compartilhar</button>
-
-<i class="material-icons custom-icon like" id="like">
-<!-- <a href="/#feed">favorite</a></i> -->
 
 </section>
       `;
