@@ -8,6 +8,7 @@ import {
 import { exit } from '../../firebase/firebase.js';
 import editbutton from '../../img/editbutton.png';
 import home from '../../img/home.png';
+import about from '../../img/about.png';
 import logout from '../../img/logout.png';
 import post from '../../img/post.png';
 import favoritebutton from '../../img/favorite.png';
@@ -22,9 +23,8 @@ export default () => {
 <header> 
   <section id="menu">
       <a href="/#home"><img class="home" src="${home}" alt="página de login"></a>
-      <a href="/#about">Sobre Nós</a>
-      // <button id="about-btn" type="submit">Sobre</button> 
-      <img src="${logout}" id="exit-btn" type="submit"  />
+      <a href="/#about"><img class="home" src="${about}" alt="ícone sobre nós"></a>
+      <img src="${logout}" id="exit-btn" type="submit"/>
   </section>     
 </header>
 
