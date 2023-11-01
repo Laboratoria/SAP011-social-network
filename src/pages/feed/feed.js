@@ -5,16 +5,13 @@ import {
   deletePost,
   likePost,
 } from '../../firebase/firestore.js';
-import { registerEmail } from '../../firebase/firebase.js';
 import { exit } from '../../firebase/firebase.js';
 import editbutton from '../../img/editbutton.png';
 import home from '../../img/home.png';
 import logout from '../../img/logout.png';
-import post from '../../img/post.png';
 import favoritebutton from '../../img/favorite.png';
 import savepostbutton from '../../img/savepost.png';
 import deletebutton from '../../img/delete.png';
-import { queryEqual } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 import { app } from '../../firebase/config.js';
 
@@ -27,21 +24,16 @@ export default () => {
   <section id="menu">
       <a href="/#home"><img class="home" src="${home}" alt="página de login"></a>
       <a href="/#about">Sobre Nós</a>
-      // <button id="about-btn" type="submit">Sobre</button> 
-      <img src="${logout}" id="exit-btn" type="submit"  />
+      <button id="about-btn" type="submit">Sobre</button> 
+      <img src="${logout}" id="exit-btn" type="submit"/>
   </section>     
 </header>
 
-<section id ='posts'>
-<label>Nome</label>
-
 <textarea id="new-post-txt" placeholder="Digite seu post aqui..." minlength="20"
-maxlength="200" rows=5 cols=20>
-
-</textarea>
+maxlength="200" rows=5 cols=20></textarea>
 
 <button id="post-btn" type="submit">Compartilhar</button>
-
+<section id ='posts'>
 </section>
       `;
 
@@ -60,12 +52,11 @@ maxlength="200" rows=5 cols=20>
       const postTemplate = document.createElement('div');
       const containerPosts = `
       <label id="label-posts-${id}"></label>
-      
       <span>${element.userEmail}</span>
       <textarea id="container-posts-${id}" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
       <span>${element.likeDoPost}</span><img class="btn-favorite-all" id="favorite-btn-${id}" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
-      ${element.uid === getAuth(app).currentUser.uid ? `
-      
+      ${element.uid === getAuth(app).currentUser.uid ? 
+        `
       <img class="btn-edit-all" id="edit-btn-${id}" alt="botão editar" src="${editbutton}" data-postid="${element.idPost}"/>
       <img class="btn-save-all" id="save-edit-btn-${id}" alt="salvar edição post" src="${savepostbutton}" data-postid="${element.idPost}"/>
       <img class="btn-delete-all" id="delete-btn-${id}" alt="apagar postagem" class="delete-btn" src="${deletebutton}" data-postid="${element.idPost}"/>
@@ -84,8 +75,8 @@ maxlength="200" rows=5 cols=20>
       // para salvar a edição feita no template string
       const buttonSaveId = `#save-edit-btn-${id}`;
       const saveButton = postTemplate.querySelector(buttonSaveId);
-      if(element.uid === getAuth(app).currentUser.uid){
       const textArea = postTemplate.querySelector(`#container-posts-${id}`);
+      if(element.uid === getAuth(app).currentUser.uid){
       saveButton.addEventListener('click', (event) => {
         editPost(event.target.dataset.postid, textArea.value);
       })
