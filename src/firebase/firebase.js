@@ -14,9 +14,9 @@ import { app } from './config.js';
 // função autenticação
 
 // função para cadastrar usuário
-export function registerEmail(email, password, cadastroName) {
+export function registerEmail(email, password) {
   const auth = getAuth(app);
-  return createUserWithEmailAndPassword(auth, email, password, cadastroName);
+  return createUserWithEmailAndPassword(auth, email, password);
 }
 
 // função login

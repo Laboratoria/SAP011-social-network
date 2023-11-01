@@ -57,7 +57,7 @@ maxlength="200" rows=5 cols=20>
       const containerPosts = `
       <label id="label-posts-${id}"></label>
       
-      <span>${element.cadastroName}</span>
+      <span>${element.userEmail}</span>
       <textarea id="container-posts-${id}" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
       <span>${element.likeDoPost}</span><img class="btn-favorite-all" id="favorite-btn-${id}" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
       ${element.uid === getAuth(app).currentUser.uid ? `
@@ -68,7 +68,6 @@ maxlength="200" rows=5 cols=20>
       `: " "}
       `;
       // operador ternario
-      // if antes do addEventListenner pra funcionar 
       postTemplate.innerHTML = containerPosts;
 
       postsExibir.appendChild(postTemplate);

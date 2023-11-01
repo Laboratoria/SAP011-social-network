@@ -26,6 +26,7 @@ export function lerPosts(exibirPosts) {
         textoDoPost: document.data().text,
         likeDoPost: document.data().like,
         uid: document.data().uid,
+        userEmail: document.data().userEmail,
         idPost: document.id, // sequência de números e letras lá na collection que identifica o post
       };
       posts.push(userObj);
@@ -43,6 +44,7 @@ export async function createPost(textPost) {
     text: textPost,
     like: 0,
     uid: auth.currentUser.uid,
+    userEmail: auth.currentUser.email,
   });
 }
 
