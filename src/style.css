@@ -3,122 +3,65 @@
     font-family: "Chonburi";
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: #9b4922;
-    display: flex;
-    justify-content: center;
-    align-items: center, flex-start;
-    height: 100vh;
-    margin: 0;
-}
-
-
-
-h1 {
-    font-size: normal;
-}
-
-
-footer {
-    position: fixed;
-    align-items: center;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #efd8c0;
-    color: #0a0a0a;
-    text-align: center;
-    padding: 5px;
-}
-
-.container {
-    background-color: #9b4922;
-}
-
-
-img {
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-}
-
-.like {
-    color: #efd8c0;
-}
-
-.like:active {
-    color: black;
-}
-
-#google-button {
-    width: 80px;
-    height: 40px;
-    background-color: #818c2b;
-    color: #FFF;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#register-btn {
-    width: 80px;
-    height: 40px;
-    background-color: #818c2b;
-    color: #FFF;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#enter-btn {
-    width: 80px;
-    height: 40px;
-    background-color: #efd8c0;
-    color: #9b4922;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#email-login {
-    height: 30px;
-    background-color: #efd8c0;
-    border-radius: 50px;
-}
-
-#password-login {
-    height: 30px;
-    background-color: #efd8c0;
-    border-radius: 50px;
-}
-
-button {
-    margin: 10px;
-}
-
-
-
-
-
-
 
 @media screen and (min-width:300px) and (max-width: 2000px) {
+
+    .logo-header{
+        width: 330px;
+        height: 430px;
+    }
+
+    .center-content{
+        align-items: center;
+        text-align: center;
+    }
+    /* botoes: */
+    #register-btn {
+        width: 90px;
+        height: 50px;
+        background-color: #818c2b;
+        color: #FFF;
+        border-radius: 20px;
+        font-size: 16px;
+        margin-left: 30px;
+        font-style: oblique;
+    }
+    
+    #enter-btn {
+        width: 90px;
+        height: 50px;
+        background-color: #efd8c0;
+        color: #4b1f0b;
+        border-radius: 20px;
+        font-size: 16px;
+        font-style: oblique;
+
+    }
+    
+
+    #email-login,
+    #password-login {
+        width: 250px;
+        height: 40px;
+        background-color: #efd8c0;
+        border-radius: 50px;
+        text-align: center;
+        color: #9b4922;
+        font-size: 30px;
+        justify-content: center;
+    }
+
     h1 {
         color: #f8d2ae;
+        font-size: normal;
     }
+    
     ::placeholder{
         color: #9b4922;
         font-size: 20px;
         font-style: oblique;
     }
+
     #containers-login {
         display: flex;
         flex-direction: column;
@@ -134,7 +77,7 @@ button {
     #cadastro-name,
     #email-id,
     #password-id,
-    #confirm-password {
+    #confirm-password{
         background-color: #efd8c0;
         width: 250px;
         height: 70px;
@@ -142,7 +85,7 @@ button {
         border-radius: 25px;
         text-align: center;
         color: #9b4922;
-        font-size: 20px;
+        font-size: 30px;
         font-style: oblique;
     }
 
@@ -152,7 +95,7 @@ button {
         color: #efd8c0;
         background-color: #818c2b;
         border-radius: 30px;
-
+        font-size: 20px;
     }
 
     #container {
@@ -165,16 +108,47 @@ button {
         color: #f8d2ae;
     }
 
-    .logotipo {
-        margin-left: 180px;
-        width: 130px;
-        height: 160px;
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        background-color: #9b4922;
+        display: flex;
+        justify-content: center;
+        align-items: center, flex-start;
+    }
+    
+    
+    footer {
+        position: fixed;
+        align-items: center;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #efd8c0;
+        color: #0a0a0a;
+        text-align: center;
+        padding: 5px;
+    }
+    
+    .container {
+        background-color: #9b4922;
+    }
+    
+
+    .like {
+        color: #efd8c0;
+    }
+    
+    .like:active {
+        color: black;
     }
 
-    #desenvolvido {
-        color: #9b4922;
-        align-items: center;
-        font-size: 20px;
-        margin: 0%;
+
+    
+    button {
+        margin: 20px;
     }
+  
 }

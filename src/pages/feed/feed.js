@@ -1,3 +1,4 @@
+import { getAuth } from 'firebase/auth';
 import {
   lerPosts,
   createPost,
@@ -7,32 +8,32 @@ import {
 } from '../../firebase/firestore.js';
 import { exit } from '../../firebase/firebase.js';
 import editbutton from '../../img/editbutton.png';
+import home from '../../img/home.png';
+import about from '../../img/about.png';
+import logout from '../../img/logout.png';
 import favoritebutton from '../../img/favorite.png';
 import savepostbutton from '../../img/savepost.png';
 import deletebutton from '../../img/delete.png';
-import { queryEqual } from 'firebase/firestore';
+import { app } from '../../firebase/config.js';
 
 export default () => {
   const container = document.createElement('div');
 
   const template = `
 <header> 
-<button type="submit">Sobre</button> <button id="exit-btn" type="submit">Sair</button> 
+  <section id="menu">
+      <a href="/#home"><img class="home" src="${home}" alt="página de login"></a>
+      <a href="/#about"><img class="home" src="${about}" alt="ícone sobre nós"></a>
+      <img class="logout" src="${logout}" id="exit-btn" type="submit"/>
+  </section>     
 </header>
 
-<label>Nome</label>
-<p>
 <textarea id="new-post-txt" placeholder="Digite seu post aqui..." minlength="20"
-maxlength="200" rows=5 cols=20>
-</textarea>
-<p>
-<button id="post-btn" type="submit">Postar</button>
-<p>
-<i class="material-icons custom-icon like" id="like">
-<!-- <a href="/#feed">favorite</a></i> -->
-<p>
+maxlength="200" rows=5 cols=20></textarea>
 
-<section id ='posts'></section>
+<button id="post-btn" type="submit">Compartilhar</button>
+<section id ='posts'>
+</section>
       `;
 
   container.innerHTML = template;
@@ -50,12 +51,17 @@ maxlength="200" rows=5 cols=20>
       const postTemplate = document.createElement('div');
       const containerPosts = `
       <label id="label-posts-${id}"></label>
+      <span>${element.userEmail}</span>
       <textarea id="container-posts-${id}" minlength="20" maxlength="200" rows=5 cols=20 readonly>${element.textoDoPost}</textarea>
+      <span>${element.likeDoPost}</span><img class="btn-favorite-all" id="favorite-btn-${id}" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
+      ${element.uid === getAuth(app).currentUser.uid ?
+    `
       <img class="btn-edit-all" id="edit-btn-${id}" alt="botão editar" src="${editbutton}" data-postid="${element.idPost}"/>
       <img class="btn-save-all" id="save-edit-btn-${id}" alt="salvar edição post" src="${savepostbutton}" data-postid="${element.idPost}"/>
-      <span>${element.likeDoPost}</span><img class="btn-favorite-all" id="favorite-btn-${id}" alt="curtida coração" src="${favoritebutton}" data-postid="${element.idPost}"/>
       <img class="btn-delete-all" id="delete-btn-${id}" alt="apagar postagem" class="delete-btn" src="${deletebutton}" data-postid="${element.idPost}"/>
+      ` : ''}
       `;
+      // operador ternario
       postTemplate.innerHTML = containerPosts;
 
       postsExibir.appendChild(postTemplate);
@@ -69,14 +75,17 @@ maxlength="200" rows=5 cols=20>
       const buttonSaveId = `#save-edit-btn-${id}`;
       const saveButton = postTemplate.querySelector(buttonSaveId);
       const textArea = postTemplate.querySelector(`#container-posts-${id}`);
-      saveButton.addEventListener('click', (event) => {
-        editPost(event.target.dataset.postid, textArea.value);
-      });
+      if(element.uid === getAuth(app).currentUser.uid) {
+        saveButton.addEventListener('click', (event) => {
+          editPost(event.target.dataset.postid, textArea.value);
+        });
+      }
 
-      editButton.addEventListener('click', (event) => {
-        console.log(textArea, `#container-posts-${id}`);
-        textArea.removeAttribute('readonly');
-      });
+      if (element.uid === getAuth(app).currentUser.uid) {
+        editButton.addEventListener('click', (event) => {
+          textArea.removeAttribute('readonly');
+        });
+      }
 
       const favoriteButtonId = `#favorite-btn-${id}`;
       const postFavorite = postTemplate.querySelector(favoriteButtonId);
@@ -86,11 +95,14 @@ maxlength="200" rows=5 cols=20>
       });
 
       const deleteButtonId = `#delete-btn-${id}`;
-      const postDelete = postTemplate.querySelector(deleteButtonId);
-      postDelete.addEventListener('click', (event) => {
-        console.log('eu to tentando');
-        deletePost(event.target.dataset.postid);
-      });
+      if (element.uid === getAuth(app).currentUser.uid) {
+        const postDelete = postTemplate.querySelector(deleteButtonId);
+        postDelete.addEventListener('click', (event) => {
+          if (window.confirm('Certeza que deseja apagar esse post?')) {
+            deletePost(event.target.dataset.postid);
+          }
+        });
+      }
       id++
     });
   }
@@ -100,25 +112,6 @@ maxlength="200" rows=5 cols=20>
   // botão sair
   const exitBtn = container.querySelector('#exit-btn');
   exitBtn.addEventListener('click', exit);
-
-  // editPost
-  // const buttonEdit = container.querySelector('#edit-btn').addEventListener('click', () => {
-  //   editPost(newText, dataPost)
-  //     .then(() => {
-
-  //     })
-  //     // botão clicado, linkar com qual caixa de texto? a externa ou a interna?
-  //     // pego o texto a ser editado pelo id?
-
-  //     .catch((error) => {
-  //       alert('erro ao atualizar postagem', error);
-  //     });
-
-  // likePost
-  // container.querySelector('#favorite-btn').addEventListener('click', (event) => {
-  //   console.log(event.target.dataset)
-  //   likePost(likePost);
-  // });
 
   return container;
 };
