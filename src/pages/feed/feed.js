@@ -24,7 +24,7 @@ export default () => {
   <section id="menu">
       <a href="/#home"><img class="home" src="${home}" alt="página de login"></a>
       <a href="/#about"><img class="home" src="${about}" alt="ícone sobre nós"></a>
-      <img src="${logout}" id="exit-btn" type="submit"/>
+      <a href="/#exit"><img src="${logout}" id="exit-btn" type="submit"/>
   </section>     
 </header>
 
