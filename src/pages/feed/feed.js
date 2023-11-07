@@ -1,3 +1,4 @@
+import { getAuth } from 'firebase/auth';
 import {
   lerPosts,
   createPost,
@@ -8,13 +9,12 @@ import {
 import { exit } from '../../firebase/firebase.js';
 import editbutton from '../../img/editbutton.png';
 import home from '../../img/home.png';
+import about from '../../img/about.png';
 import logout from '../../img/logout.png';
 import favoritebutton from '../../img/favorite.png';
 import savepostbutton from '../../img/savepost.png';
 import deletebutton from '../../img/delete.png';
-import { getAuth } from 'firebase/auth';
 import { app } from '../../firebase/config.js';
-
 
 export default () => {
   const container = document.createElement('div');
@@ -23,9 +23,8 @@ export default () => {
 <header> 
   <section id="menu">
       <a href="/#home"><img class="home" src="${home}" alt="página de login"></a>
-      <a href="/#about">Sobre Nós</a>
-      <button id="about-btn" type="submit">Sobre</button> 
-      <img src="${logout}" id="exit-btn" type="submit"/>
+      <a href="/#about"><img class="home" src="${about}" alt="ícone sobre nós"></a>
+      <img class="logout" src="${logout}" id="exit-btn" type="submit"/>
   </section>     
 </header>
 
@@ -76,18 +75,18 @@ maxlength="200" rows=5 cols=20></textarea>
       const buttonSaveId = `#save-edit-btn-${id}`;
       const saveButton = postTemplate.querySelector(buttonSaveId);
       const textArea = postTemplate.querySelector(`#container-posts-${id}`);
-      if(element.uid === getAuth(app).currentUser.uid){
-      saveButton.addEventListener('click', (event) => {
-        editPost(event.target.dataset.postid, textArea.value);
-      })
+      if(element.uid === getAuth(app).currentUser.uid) {
+        saveButton.addEventListener('click', (event) => {
+          editPost(event.target.dataset.postid, textArea.value);
+        });
       }
 
-      if(element.uid === getAuth(app).currentUser.uid){
-      editButton.addEventListener('click', (event) => {
-        textArea.removeAttribute('readonly');
-      });
+      if (element.uid === getAuth(app).currentUser.uid) {
+        editButton.addEventListener('click', (event) => {
+          textArea.removeAttribute('readonly');
+        });
       }
-      
+
       const favoriteButtonId = `#favorite-btn-${id}`;
       const postFavorite = postTemplate.querySelector(favoriteButtonId);
       postFavorite.addEventListener('click', (event) => {
@@ -96,13 +95,14 @@ maxlength="200" rows=5 cols=20></textarea>
       });
 
       const deleteButtonId = `#delete-btn-${id}`;
-      if(element.uid === getAuth(app).currentUser.uid){
-      const postDelete = postTemplate.querySelector(deleteButtonId);
-      postDelete.addEventListener('click', (event) => {
-        if(window.confirm("Certeza que deseja apagar esse post?")){
-        deletePost(event.target.dataset.postid);
-      }});
-    }
+      if (element.uid === getAuth(app).currentUser.uid) {
+        const postDelete = postTemplate.querySelector(deleteButtonId);
+        postDelete.addEventListener('click', (event) => {
+          if (window.confirm('Certeza que deseja apagar esse post?')) {
+            deletePost(event.target.dataset.postid);
+          }
+        });
+      }
       id++
     });
   }
@@ -112,7 +112,6 @@ maxlength="200" rows=5 cols=20></textarea>
   // botão sair
   const exitBtn = container.querySelector('#exit-btn');
   exitBtn.addEventListener('click', exit);
-
 
   return container;
 };
