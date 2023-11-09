@@ -29,6 +29,7 @@
     "eslint-plugin-jest": "^25.3.0",
     "htmlhint": "^1.0.0",
     "jest": "^27.0.1",
+    "jest-environment-jsdom": "^29.7.0",
     "regenerator-runtime": "^0.13.1",
     "stylelint": "^14.1.0",
     "stylelint-config-recommended": "^6.0.0",
@@ -41,5 +42,13 @@
     "createdAt": "2023-08-14T14:43:09.410Z",
     "version": "6.6.0",
     "commit": "24f5a51ee0a15f345b59fcd2ef44c3616abdfce5"
-  }
+  },
+  "dependencies": {
+    "firebase": "^10.4.0",
+    "i": "^0.3.7"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "author": ""
 }
